@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_n_e_t_1_1_verify_master___re" xml:lang="en-US">
+<title>GNET::VerifyMaster_Re Class Reference</title>
+<indexterm><primary>GNET::VerifyMaster_Re</primary></indexterm>
+<para>
+
+<para>Класс протокола для обработки ответов верификации мастер-сервера </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;verifymaster_re.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for GNET::VerifyMaster_Re:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_verify_master___re.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_verify_master___re_1a549010699fc4534896e58ff3aef11b9d">Process</link> (Manager *manager, Manager::Session::ID sid)</para>
+
+<para>&lt; Включение структуры данных протокола (полей сообщения) </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Класс протокола для обработки ответов верификации мастер-сервера </para>
+
+
+
+<para>Наследует функциональность базового класса Protocol и реализует обработку ответов на запросы проверки мастер-сервера. Содержит данные протокола, автоматически генерируемые из описания в файле verifymaster_re. </para>
+<para>
+Definition at line <link linkend="_verifymaster__re_8hpp_source_1l00035">35</link> of file <link linkend="_verifymaster__re_8hpp_source">verifymaster_re.hpp</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_g_n_e_t_1_1_verify_master___re_1a549010699fc4534896e58ff3aef11b9d"/><section>
+    <title>Process()</title>
+<indexterm><primary>Process</primary><secondary>GNET::VerifyMaster_Re</secondary></indexterm>
+<indexterm><primary>GNET::VerifyMaster_Re</primary><secondary>Process</secondary></indexterm>
+<para><computeroutput>void GNET::VerifyMaster_Re::Process (Manager * manager, Manager::Session::ID sid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>&lt; Включение структуры данных протокола (полей сообщения) </para>
+</para>
+
+<para>Метод обработки полученного протокола 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>manager</entry><entry>
+<para>Указатель на менеджер протоколов </para>
+</entry>
+                            </row>
+                            <row>
+<entry>sid</entry><entry>
+<para>Идентификатор сессии, связанной с запросом</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                Вызывается автоматически при получении пакета. Реализует логику обработки ответа верификации мастер-сервера. Текущая реализация требует доработки.</para>
+
+<para><para><link linkend="_todo_1_todo000028">Todo</link> 
+<para>Реализовать обработку ответа верификации </para>
+</para></para>
+<para>
+Definition at line <link linkend="_verifymaster__re_8hpp_source_1l00051">51</link> of file <link linkend="_verifymaster__re_8hpp_source">verifymaster_re.hpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_verifymaster__re_8hpp">verifymaster_re.hpp</link></section>
+</section>

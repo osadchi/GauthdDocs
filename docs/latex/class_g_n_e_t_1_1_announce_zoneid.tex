@@ -1,0 +1,76 @@
+\doxysection{GNET\+::Announce\+Zoneid Class Reference}
+\hypertarget{class_g_n_e_t_1_1_announce_zoneid}{}\label{class_g_n_e_t_1_1_announce_zoneid}\index{GNET::AnnounceZoneid@{GNET::AnnounceZoneid}}
+
+
+Класс протокола для обработки уведомлений о идентификаторе зоны.  
+
+
+
+
+{\ttfamily \#include $<$announcezoneid.\+hpp$>$}
+
+Inheritance diagram for GNET\+::Announce\+Zoneid\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_n_e_t_1_1_announce_zoneid}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_announce_zoneid_af13174f610fa4dc7525ab104c856ac91}{Process}} (Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)
+\begin{DoxyCompactList}\small\item\em \texorpdfstring{$<$}{<} Включение автоматически сгенерированных данных протокола \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс протокола для обработки уведомлений о идентификаторе зоны. 
+
+Наследуется от GNET\+::\+Protocol. Используется для обновления информации о зонах и очистки связанных записей в базе данных. 
+
+Definition at line \mbox{\hyperlink{announcezoneid_8hpp_source_l00025}{25}} of file \mbox{\hyperlink{announcezoneid_8hpp_source}{announcezoneid.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_n_e_t_1_1_announce_zoneid_af13174f610fa4dc7525ab104c856ac91}\index{GNET::AnnounceZoneid@{GNET::AnnounceZoneid}!Process@{Process}}
+\index{Process@{Process}!GNET::AnnounceZoneid@{GNET::AnnounceZoneid}}
+\doxysubsubsection{\texorpdfstring{Process()}{Process()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_announce_zoneid_af13174f610fa4dc7525ab104c856ac91} 
+void GNET\+::\+Announce\+Zoneid\+::\+Process (\begin{DoxyParamCaption}\item[{Manager \texorpdfstring{$\ast$}{*}}]{manager}{, }\item[{Manager\+::\+Session\+::\+ID}]{sid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\texorpdfstring{$<$}{<} Включение автоматически сгенерированных данных протокола 
+
+Обработчик протокола.
+
+Выполняет следующие действия\+:
+\begin{DoxyItemize}
+\item Блокирует доступ к zonemap в \doxylink{class_g_n_e_t_1_1_g_auth_server}{GAuth\+Server} для потокобезопасности.
+\item Обновляет информацию о зоне в zonemap.
+\item Очищает онлайн-\/записи в базе данных через \doxylink{class_g_mysql_client}{GMysql\+Client}.
+\item Выводит лог о выполненных операциях.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em manager} & Указатель на менеджер, управляющий сессиями. \\
+\hline
+\mbox{\texttt{ in}}  & {\em sid} & Идентификатор сессии, от которой получено уведомление.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Используется мьютекс \doxylink{class_g_n_e_t_1_1_g_auth_server_a6632c6441ea93e9bbe7999301534e593}{GAuth\+Server\+::locker\+\_\+zonemap} для синхронизации доступа к zonemap. 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+Изменение zonemap и операции с базой данных должны выполняться атомарно. 
+\end{DoxyWarning}
+
+
+Definition at line \mbox{\hyperlink{announcezoneid_8hpp_source_l00045}{45}} of file \mbox{\hyperlink{announcezoneid_8hpp_source}{announcezoneid.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{announcezoneid_8hpp}{announcezoneid.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,64 @@
+\doxysection{GNET\+::Add\+Cash\+\_\+\+Re Class Reference}
+\hypertarget{class_g_n_e_t_1_1_add_cash___re}{}\label{class_g_n_e_t_1_1_add_cash___re}\index{GNET::AddCash\_Re@{GNET::AddCash\_Re}}
+
+
+Класс протокола для обработки ответов на операции пополнения игровой валюты.  
+
+
+
+
+{\ttfamily \#include $<$addcash\+\_\+re.\+hpp$>$}
+
+Inheritance diagram for GNET\+::Add\+Cash\+\_\+\+Re\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_n_e_t_1_1_add_cash___re}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_add_cash___re_a4ed01ac8071caf53c9a4031c12cbda6e}{Process}} (Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)
+\begin{DoxyCompactList}\small\item\em Основной метод обработки протокола. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс протокола для обработки ответов на операции пополнения игровой валюты. 
+
+Наследуется от GNET\+::\+Protocol. Содержит логику обработки успешных и неудачных транзакций, взаимодействует с базой данных через \doxylink{class_g_mysql_client}{GMysql\+Client}. 
+
+Definition at line \mbox{\hyperlink{addcash__re_8hpp_source_l00026}{26}} of file \mbox{\hyperlink{addcash__re_8hpp_source}{addcash\+\_\+re.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_n_e_t_1_1_add_cash___re_a4ed01ac8071caf53c9a4031c12cbda6e}\index{GNET::AddCash\_Re@{GNET::AddCash\_Re}!Process@{Process}}
+\index{Process@{Process}!GNET::AddCash\_Re@{GNET::AddCash\_Re}}
+\doxysubsubsection{\texorpdfstring{Process()}{Process()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_add_cash___re_a4ed01ac8071caf53c9a4031c12cbda6e} 
+void GNET\+::\+Add\+Cash\+\_\+\+Re\+::\+Process (\begin{DoxyParamCaption}\item[{Manager \texorpdfstring{$\ast$}{*}}]{manager}{, }\item[{Manager\+::\+Session\+::\+ID}]{sid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Основной метод обработки протокола. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em manager} & Указатель на менеджер управления. \\
+\hline
+{\em sid} & Идентификатор сессии.\\
+\hline
+\end{DoxyParams}
+В зависимости от кода возврата (retcode)\+:
+\begin{DoxyItemize}
+\item При retcode != 0\+: вызывает Send\+Fail\+Cash().
+\item При retcode == 0\+: фиксирует операцию в БД, обновляет баланс, логирует транзакцию. 
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{addcash__re_8hpp_source_l00054}{54}} of file \mbox{\hyperlink{addcash__re_8hpp_source}{addcash\+\_\+re.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{addcash__re_8hpp}{addcash\+\_\+re.\+hpp}}\end{DoxyCompactItemize}

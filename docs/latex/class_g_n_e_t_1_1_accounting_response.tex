@@ -1,0 +1,69 @@
+\doxysection{GNET\+::Accounting\+Response Class Reference}
+\hypertarget{class_g_n_e_t_1_1_accounting_response}{}\label{class_g_n_e_t_1_1_accounting_response}\index{GNET::AccountingResponse@{GNET::AccountingResponse}}
+
+
+Класс для обработки ответов от сервиса учётных записей.  
+
+
+
+
+{\ttfamily \#include $<$accountingresponse.\+hpp$>$}
+
+Inheritance diagram for GNET\+::Accounting\+Response\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_n_e_t_1_1_accounting_response}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_accounting_response_a58529a5d6f2697a88f5c3211571d705b}{Process}} (Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)
+\begin{DoxyCompactList}\small\item\em \texorpdfstring{$<$}{<} Включение автоматически сгенерированных данных (например, полей протокола). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс для обработки ответов от сервиса учётных записей. 
+
+Реализует протокол \doxylink{namespace_g_n_e_t}{GNET}, используется для передачи данных между клиентом и сервером.
+
+\begin{DoxyNote}{Note}
+Часть реализации класса генерируется автоматически через \#include "{}accountingresponse"{}. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{accountingresponse_8hpp_source_l00030}{30}} of file \mbox{\hyperlink{accountingresponse_8hpp_source}{accountingresponse.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_n_e_t_1_1_accounting_response_a58529a5d6f2697a88f5c3211571d705b}\index{GNET::AccountingResponse@{GNET::AccountingResponse}!Process@{Process}}
+\index{Process@{Process}!GNET::AccountingResponse@{GNET::AccountingResponse}}
+\doxysubsubsection{\texorpdfstring{Process()}{Process()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_accounting_response_a58529a5d6f2697a88f5c3211571d705b} 
+void GNET\+::\+Accounting\+Response\+::\+Process (\begin{DoxyParamCaption}\item[{Manager \texorpdfstring{$\ast$}{*}}]{manager}{, }\item[{Manager\+::\+Session\+::\+ID}]{sid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\texorpdfstring{$<$}{<} Включение автоматически сгенерированных данных (например, полей протокола). 
+
+Обработка полученного ответа от учётного сервиса.
+
+Вызывается менеджером при получении ответа. Реализация зависит от логики сервиса. 
+\begin{DoxyParams}{Parameters}
+{\em manager} & Указатель на менеджер, управляющий сессиями. \\
+\hline
+{\em sid} & Идентификатор сессии, связанной с запросом.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000002}{Todo}}]Реализовать логику обработки (например, обновление состояния учётной записи). \end{DoxyRefDesc}
+
+
+Definition at line \mbox{\hyperlink{accountingresponse_8hpp_source_l00043}{43}} of file \mbox{\hyperlink{accountingresponse_8hpp_source}{accountingresponse.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{accountingresponse_8hpp}{accountingresponse.\+hpp}}\end{DoxyCompactItemize}

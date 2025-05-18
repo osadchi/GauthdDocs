@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_gmkickoutuser_8hpp" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/gmkickoutuser.hpp File Reference</title>
+<indexterm><primary>D:/pwsrc2.0/docs/gauthd/gmkickoutuser.hpp</primary></indexterm>
+<para>
+
+<para>Заголовочный файл класса протокола GMKickoutUser для принудительного отключения пользователя </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;rpcdefs.h&quot;<?linebreak?>#include &quot;callid.hxx&quot;<?linebreak?>#include &quot;state.hxx&quot;<?linebreak?>#include &quot;gmkickoutuser&quot;<?linebreak?></programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_g_m_kickout_user">GNET::GMKickoutUser</link></para>
+
+<para>Протокол для принудительного отключения пользователя Game Master&apos;ом (GM) </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_g_n_e_t">GNET</link></para>
+
+<para>Основное пространство имен для сетевых компонентов системы. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Заголовочный файл класса протокола GMKickoutUser для принудительного отключения пользователя </para>
+
+<para><formalpara><title>Author</title>
+
+<para>[Ваше имя или никнейм] </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>1.0 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>[Дата создания]</para>
+</formalpara>
+<formalpara><title>Copyright</title>
+
+<para>Copyright (c) [Год] [Организация]. Все права защищены. </para>
+</formalpara>
+</para>
+<para>
+Definition in file <link linkend="_gmkickoutuser_8hpp_source">gmkickoutuser.hpp</link>.</para>
+</section>
+</section>

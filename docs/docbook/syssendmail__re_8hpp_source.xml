@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_syssendmail__re_8hpp_source" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/syssendmail_re.hpp</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_syssendmail__re_8hpp_source_1l00001"/>00001 
+<anchor xml:id="_syssendmail__re_8hpp_source_1l00008"/>00008 
+<anchor xml:id="_syssendmail__re_8hpp_source_1l00009"/>00009 <emphasis role="preprocessor">&#32;#ifndef&#32;__GNET_SYSSENDMAIL_RE_HPP</emphasis>
+<anchor xml:id="_syssendmail__re_8hpp_source_1l00010"/>00010 <emphasis role="preprocessor">&#32;#define&#32;__GNET_SYSSENDMAIL_RE_HPP</emphasis>
+<anchor xml:id="_syssendmail__re_8hpp_source_1l00011"/>00011 &#32;
+<anchor xml:id="_syssendmail__re_8hpp_source_1l00012"/>00012 <emphasis role="preprocessor">&#32;#include&#32;&quot;rpcdefs.h&quot;</emphasis>
+<anchor xml:id="_syssendmail__re_8hpp_source_1l00013"/>00013 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_callid_8hxx">callid.hxx</link>&quot;</emphasis>
+<anchor xml:id="_syssendmail__re_8hpp_source_1l00014"/>00014 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_state_8hxx">state.hxx</link>&quot;</emphasis>
+<anchor xml:id="_syssendmail__re_8hpp_source_1l00015"/>00015 &#32;
+<anchor xml:id="_syssendmail__re_8hpp_source_1l00016"/>00016 &#32;<emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_g_n_e_t">GNET</link>
+<anchor xml:id="_syssendmail__re_8hpp_source_1l00017"/>00017 &#32;{
+<anchor xml:id="_syssendmail__re_8hpp_source_1l00018"/>00018 &#32;
+<anchor xml:id="_syssendmail__re_8hpp_source_1l00023"/>00023 &#32;
+<anchor xml:id="_syssendmail__re_8hpp_source_1l00032"/><link linkend="_class_g_n_e_t_1_1_sys_send_mail___re">00032</link> &#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_g_n_e_t_1_1_sys_send_mail___re">SysSendMail_Re</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;GNET::Protocol
+<anchor xml:id="_syssendmail__re_8hpp_source_1l00033"/>00033 &#32;{
+<anchor xml:id="_syssendmail__re_8hpp_source_1l00034"/>00034 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;#include&#32;&quot;syssendmail_re&quot;</emphasis>&#32;&#32;
+<anchor xml:id="_syssendmail__re_8hpp_source_1l00035"/>00035 &#32;
+<anchor xml:id="_syssendmail__re_8hpp_source_1l00036"/>00036 &#32;<emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_syssendmail__re_8hpp_source_1l00049"/><link linkend="_class_g_n_e_t_1_1_sys_send_mail___re_1aee9b57bf0d0707a080303a041e0dab0d">00049</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_sys_send_mail___re_1aee9b57bf0d0707a080303a041e0dab0d">Process</link>(Manager&#32;*manager,&#32;Manager::Session::ID&#32;sid)
+<anchor xml:id="_syssendmail__re_8hpp_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_syssendmail__re_8hpp_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;TODO:&#32;Реализовать&#32;обработку&#32;ответа</emphasis>
+<anchor xml:id="_syssendmail__re_8hpp_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_syssendmail__re_8hpp_source_1l00053"/>00053 &#32;};
+<anchor xml:id="_syssendmail__re_8hpp_source_1l00054"/>00054 &#32;
+<anchor xml:id="_syssendmail__re_8hpp_source_1l00055"/>00055 &#32;};
+<anchor xml:id="_syssendmail__re_8hpp_source_1l00056"/>00056 &#32;
+<anchor xml:id="_syssendmail__re_8hpp_source_1l00057"/>00057 <emphasis role="preprocessor">&#32;#endif&#32;</emphasis><emphasis role="comment">//&#32;__GNET_SYSSENDMAIL_RE_HPP</emphasis>
+</programlisting></section>

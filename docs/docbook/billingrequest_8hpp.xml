@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_billingrequest_8hpp" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/billingrequest.hpp File Reference</title>
+<indexterm><primary>D:/pwsrc2.0/docs/gauthd/billingrequest.hpp</primary></indexterm>
+<para>
+
+<para>Заголовочный файл, содержащий объявление класса BillingRequest. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;rpcdefs.h&quot;<?linebreak?>#include &quot;callid.hxx&quot;<?linebreak?>#include &quot;state.hxx&quot;<?linebreak?>#include &quot;billingrequest&quot;<?linebreak?></programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_billing_request">GNET::BillingRequest</link></para>
+
+<para>Класс для обработки биллинг-запросов в системе. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_g_n_e_t">GNET</link></para>
+
+<para>Основное пространство имен для сетевых компонентов системы. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Заголовочный файл, содержащий объявление класса BillingRequest. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Ваше Имя </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>Дата последнего изменения </para>
+</formalpara>
+</para>
+<para>
+Definition in file <link linkend="_billingrequest_8hpp_source">billingrequest.hpp</link>.</para>
+</section>
+</section>

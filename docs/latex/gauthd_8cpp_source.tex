@@ -1,0 +1,72 @@
+\doxysection{D\+:/pwsrc2.0/docs/gauthd/gauthd.cpp}
+\hypertarget{gauthd_8cpp_source}{}\label{gauthd_8cpp_source}\mbox{\hyperlink{gauthd_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\ \#include\ "{}\mbox{\hyperlink{gauthserver_8hpp}{gauthserver.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\ \#include\ "{}\mbox{\hyperlink{gmysqlclient_8hpp}{gmysqlclient.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\ \#include\ "{}conf.h"{}}}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00010}00010\ \textcolor{preprocessor}{\ \#include\ "{}log.h"{}}}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00011}00011\ \textcolor{preprocessor}{\ \#include\ "{}thread.h"{}}}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00012}00012\ \textcolor{preprocessor}{\ \#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00013}00013\ \textcolor{preprocessor}{\ \#include\ <unistd.h>}}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00014}00014\ \ }
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00015}00015\ \ \textcolor{keyword}{using\ namespace\ }\mbox{\hyperlink{namespace_g_n_e_t}{GNET}};}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00016}00016\ \ }
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00042}\mbox{\hyperlink{gauthd_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{00042}}\ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{gauthd_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[])}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00043}00043\ \ \{}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00044}00044\ \ \ \ \ \ \textcolor{comment}{//\ Проверка\ аргументов\ командной\ строки}}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00045}00045\ \ \ \ \ \ \textcolor{keywordflow}{if}\ (argc\ !=\ 2\ ||\ access(argv[1],\ R\_OK)\ ==\ -\/1)}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00046}00046\ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Usage:\ "{}}\ <<\ argv[0]\ <<\ \textcolor{stringliteral}{"{}\ configurefile"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \ exit(-\/1);}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00049}00049\ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00050}00050\ \ }
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00051}00051\ \ \ \ \ \ \textcolor{comment}{//\ Инициализация\ конфигурации\ и\ логгера}}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00052}00052\ \ \ \ \ \ Conf\ *conf\ =\ Conf::GetInstance(argv[1]);}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00053}00053\ \ \ \ \ \ Log::setprogname(\textcolor{stringliteral}{"{}gauthd"{}});}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00054}00054\ \ }
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00055}00055\ \ \ \ \ \ \textcolor{comment}{//\ Настройка\ GAuthServer}}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00056}00056\ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server}{GAuthServer}}\ *manager\ =\ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a2fb6223e8492fcbc74f9b21ee12f25e7}{GAuthServer::GetInstance}}();}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \ manager-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a5604b75c37f4e864a4f73e1a4a8a5a81}{SetAccumulate}}(atoi(conf-\/>find(manager-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a93f073dbf9375aa226afb267d88a92c4}{Identification}}(),\ \textcolor{stringliteral}{"{}accumulate"{}}).c\_str()));}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \ std::string\ value\ =\ conf-\/>find(manager-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a93f073dbf9375aa226afb267d88a92c4}{Identification}}(),\ \textcolor{stringliteral}{"{}shared\_key"{}});}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \ manager-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a891812f02afb38b8d2cc9d37081e0c5a}{shared\_key}}\ =\ Octets(value.c\_str(),\ value.size());}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \ Protocol::Server(manager);}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00064}00064\ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00065}00065\ \ }
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00066}00066\ \ \ \ \ \ \textcolor{comment}{//\ Настройка\ GMysqlClient}}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00067}00067\ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_mysql_client}{GMysqlClient}}\ *manager\ =\ \mbox{\hyperlink{class_g_mysql_client_a87a90c9a2b827da79f451728f4109850}{GMysqlClient::GetInstance}}();\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *location\ =\ \textcolor{stringliteral}{"{}GMysqlClient"{}};}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \ manager-\/>\mbox{\hyperlink{class_g_mysql_client_a129ff21e968ae3c1218dd01ff10f9b09}{Init}}(}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ conf-\/>find(location,\ \textcolor{stringliteral}{"{}address"{}}).c\_str(),}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ atoi(conf-\/>find(location,\ \textcolor{stringliteral}{"{}port"{}}).c\_str()),}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ conf-\/>find(location,\ \textcolor{stringliteral}{"{}user"{}}).c\_str(),}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ conf-\/>find(location,\ \textcolor{stringliteral}{"{}passwd"{}}).c\_str(),}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ conf-\/>find(location,\ \textcolor{stringliteral}{"{}name"{}}).c\_str(),}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ atoi(conf-\/>find(location,\ \textcolor{stringliteral}{"{}hash"{}}).c\_str())}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \ manager-\/>\mbox{\hyperlink{class_g_mysql_client_a4e2c4854287bb8ffdcd12081f46e866a}{Connect}}();}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Применение\ патча\ AlexPatch}}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *alex\ =\ \textcolor{stringliteral}{"{}AlexPatch"{}};}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \ manager-\/>\mbox{\hyperlink{class_g_mysql_client_a14143f486913e7d3edff46e7458697cb}{AlexPatch}}(}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ atoi(conf-\/>find(alex,\ \textcolor{stringliteral}{"{}lkmod"{}}).c\_str()),}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ atoi(conf-\/>find(alex,\ \textcolor{stringliteral}{"{}loginlog"{}}).c\_str()),}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ conf-\/>find(alex,\ \textcolor{stringliteral}{"{}logoutshell"{}}).c\_str()}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00088}00088\ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00089}00089\ \ }
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00090}00090\ \ \ \ \ \ \textcolor{comment}{//\ Запуск\ задач}}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00091}00091\ \ \ \ \ \ Thread::Pool::AddTask(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_g_n_e_t_1_1_check_timer}{CheckTimer}}(10));\ }
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00092}00092\ \ \ \ \ \ Thread::Pool::AddTask(PollIO::Task::GetInstance());\ }
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00093}00093\ \ \ \ \ \ Thread::Pool::Run();\ }
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00094}00094\ \ }
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00095}00095\ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{gauthd_8cpp_source_l00096}00096\ \ \}}
+
+\end{DoxyCode}

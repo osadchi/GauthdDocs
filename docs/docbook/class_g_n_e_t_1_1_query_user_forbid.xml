@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_n_e_t_1_1_query_user_forbid" xml:lang="en-US">
+<title>GNET::QueryUserForbid Class Reference</title>
+<indexterm><primary>GNET::QueryUserForbid</primary></indexterm>
+<para>
+
+<para>Протокол для запроса информации о блокировке пользователя </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;queryuserforbid.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for GNET::QueryUserForbid:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_query_user_forbid.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+
+<para>Протокол для запроса информации о блокировке пользователя </para>
+
+
+
+<para>Наследуется от базового класса Protocol и используется для проверки статуса блокировки пользователя в системе. Содержит автоматически генерируемые поля протокола через include-файл. </para>
+<para>
+Definition at line <link linkend="_queryuserforbid_8hpp_source_1l00024">24</link> of file <link linkend="_queryuserforbid_8hpp_source">queryuserforbid.hpp</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_queryuserforbid_8hpp">queryuserforbid.hpp</link></section>
+</section>

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_announcezoneid_8hpp_source" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/announcezoneid.hpp</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_announcezoneid_8hpp_source_1l00001"/>00001 
+<anchor xml:id="_announcezoneid_8hpp_source_1l00005"/>00005 
+<anchor xml:id="_announcezoneid_8hpp_source_1l00006"/>00006 <emphasis role="preprocessor">&#32;#ifndef&#32;__GNET_ANNOUNCEZONEID_HPP</emphasis>
+<anchor xml:id="_announcezoneid_8hpp_source_1l00007"/>00007 <emphasis role="preprocessor">&#32;#define&#32;__GNET_ANNOUNCEZONEID_HPP</emphasis>
+<anchor xml:id="_announcezoneid_8hpp_source_1l00008"/>00008 &#32;
+<anchor xml:id="_announcezoneid_8hpp_source_1l00009"/>00009 <emphasis role="preprocessor">&#32;#include&#32;&quot;rpcdefs.h&quot;</emphasis>
+<anchor xml:id="_announcezoneid_8hpp_source_1l00010"/>00010 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_callid_8hxx">callid.hxx</link>&quot;</emphasis>
+<anchor xml:id="_announcezoneid_8hpp_source_1l00011"/>00011 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_state_8hxx">state.hxx</link>&quot;</emphasis>
+<anchor xml:id="_announcezoneid_8hpp_source_1l00012"/>00012 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_gmysqlclient_8hpp">gmysqlclient.hpp</link>&quot;</emphasis>
+<anchor xml:id="_announcezoneid_8hpp_source_1l00013"/>00013 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_gauthserver_8hpp">gauthserver.hpp</link>&quot;</emphasis>
+<anchor xml:id="_announcezoneid_8hpp_source_1l00014"/>00014 &#32;
+<anchor xml:id="_announcezoneid_8hpp_source_1l00015"/>00015 &#32;<emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_g_n_e_t">GNET</link>
+<anchor xml:id="_announcezoneid_8hpp_source_1l00016"/>00016 &#32;{
+<anchor xml:id="_announcezoneid_8hpp_source_1l00017"/>00017 &#32;
+<anchor xml:id="_announcezoneid_8hpp_source_1l00025"/><link linkend="_class_g_n_e_t_1_1_announce_zoneid">00025</link> &#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_g_n_e_t_1_1_announce_zoneid">AnnounceZoneid</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;GNET::Protocol
+<anchor xml:id="_announcezoneid_8hpp_source_1l00026"/>00026 &#32;{
+<anchor xml:id="_announcezoneid_8hpp_source_1l00027"/>00027 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;#include&#32;&quot;announcezoneid&quot;</emphasis>&#32;
+<anchor xml:id="_announcezoneid_8hpp_source_1l00028"/>00028 &#32;
+<anchor xml:id="_announcezoneid_8hpp_source_1l00029"/>00029 &#32;<emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_announcezoneid_8hpp_source_1l00045"/><link linkend="_class_g_n_e_t_1_1_announce_zoneid_1af13174f610fa4dc7525ab104c856ac91">00045</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_announce_zoneid_1af13174f610fa4dc7525ab104c856ac91">Process</link>(Manager&#32;*manager,&#32;Manager::Session::ID&#32;sid)
+<anchor xml:id="_announcezoneid_8hpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_announcezoneid_8hpp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Блокировка&#32;мьютекса&#32;для&#32;безопасного&#32;доступа&#32;к&#32;zonemap</emphasis>
+<anchor xml:id="_announcezoneid_8hpp_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Thread::Mutex::Scoped&#32;l(<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a2fb6223e8492fcbc74f9b21ee12f25e7">GAuthServer::GetInstance</link>()-&gt;locker_zonemap);
+<anchor xml:id="_announcezoneid_8hpp_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_announcezoneid_8hpp_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Обновление&#32;информации&#32;о&#32;зоне&#32;в&#32;auth-сервере</emphasis>
+<anchor xml:id="_announcezoneid_8hpp_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a2fb6223e8492fcbc74f9b21ee12f25e7">GAuthServer::GetInstance</link>()-&gt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a6f4c1af94c9642a78383d593f4b3fc60">zonemap</link>[sid]&#32;=&#32;zoneid;
+<anchor xml:id="_announcezoneid_8hpp_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_announcezoneid_8hpp_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Очистка&#32;записей&#32;онлайн-статуса&#32;для&#32;указанной&#32;зоны&#32;и&#32;аккаунта</emphasis>
+<anchor xml:id="_announcezoneid_8hpp_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_mysql_client_1a87a90c9a2b827da79f451728f4109850">GMysqlClient::GetInstance</link>()-&gt;<link linkend="_class_g_mysql_client_1a35fa8409b064722f23afb762910f1365">ClearOnlineRecord</link>(zoneid,&#32;aid);
+<anchor xml:id="_announcezoneid_8hpp_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_announcezoneid_8hpp_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Логирование&#32;операции</emphasis>
+<anchor xml:id="_announcezoneid_8hpp_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;gauthd::annoucezoneid:&#32;zoneid=%d,&#32;aid=%d&#32;belongs&#32;to&#32;session&#32;%d\n&quot;</emphasis>,&#32;zoneid,&#32;aid,&#32;sid);
+<anchor xml:id="_announcezoneid_8hpp_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_announcezoneid_8hpp_source_1l00059"/>00059 &#32;};
+<anchor xml:id="_announcezoneid_8hpp_source_1l00060"/>00060 &#32;
+<anchor xml:id="_announcezoneid_8hpp_source_1l00061"/>00061 &#32;};
+<anchor xml:id="_announcezoneid_8hpp_source_1l00062"/>00062 &#32;
+<anchor xml:id="_announcezoneid_8hpp_source_1l00063"/>00063 <emphasis role="preprocessor">&#32;#endif</emphasis>
+</programlisting></section>

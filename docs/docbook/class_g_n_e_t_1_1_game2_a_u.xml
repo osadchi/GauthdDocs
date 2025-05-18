@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_n_e_t_1_1_game2_a_u" xml:lang="en-US">
+<title>GNET::Game2AU Class Reference</title>
+<indexterm><primary>GNET::Game2AU</primary></indexterm>
+<para>
+
+<para>Протокол для взаимодействия между игровым сервером и сервером аутентификации/учётных записей (Auth/AU Server) </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;game2au.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for GNET::Game2AU:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_game2_a_u.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_game2_a_u_1a778ef1862d9abe838530c75c45882fb7">Process</link> (Manager *manager, Manager::Session::ID sid)</para>
+
+<para>&lt; Внутренние данные и структуры протокола </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Протокол для взаимодействия между игровым сервером и сервером аутентификации/учётных записей (Auth/AU Server) </para>
+
+
+
+<para>Наследует базовый класс Protocol и содержит обработчик для входящих сообщений. Реализация протокола должна быть завершена в методе <link linkend="_class_g_n_e_t_1_1_game2_a_u_1a778ef1862d9abe838530c75c45882fb7">Process()</link>. <literallayout><computeroutput></computeroutput></literallayout> (Внутренние данные протокола) </para>
+<para>
+Definition at line <link linkend="_game2au_8hpp_source_1l00024">24</link> of file <link linkend="_game2au_8hpp_source">game2au.hpp</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_g_n_e_t_1_1_game2_a_u_1a778ef1862d9abe838530c75c45882fb7"/><section>
+    <title>Process()</title>
+<indexterm><primary>Process</primary><secondary>GNET::Game2AU</secondary></indexterm>
+<indexterm><primary>GNET::Game2AU</primary><secondary>Process</secondary></indexterm>
+<para><computeroutput>void GNET::Game2AU::Process (Manager * manager, Manager::Session::ID sid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>&lt; Внутренние данные и структуры протокола </para>
+</para>
+
+<para>Обработчик входящих сообщений протокола 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>manager</entry><entry>
+<para>Указатель на менеджер протоколов </para>
+</entry>
+                            </row>
+                            <row>
+<entry>sid</entry><entry>
+<para>Идентификатор сессии, связанной с запросом</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                Реализация обработки сообщения должна быть добавлена здесь <para><link linkend="_todo_1_todo000014">Todo</link> 
+<para>Требуется реализация логики обработки сообщения </para>
+</para></para>
+<para>
+Definition at line <link linkend="_game2au_8hpp_source_1l00036">36</link> of file <link linkend="_game2au_8hpp_source">game2au.hpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_game2au_8hpp">game2au.hpp</link></section>
+</section>

@@ -1,0 +1,97 @@
+\doxysection{D\+:/pwsrc2.0/docs/gauthd/gauthserver.hpp}
+\hypertarget{gauthserver_8hpp_source}{}\label{gauthserver_8hpp_source}\mbox{\hyperlink{gauthserver_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\ \#ifndef\ \_\_GNET\_GAUTHSERVER\_HPP}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00007}00007\ \textcolor{preprocessor}{\ \#define\ \_\_GNET\_GAUTHSERVER\_HPP}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00008}00008\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\ \#include\ "{}protocol.h"{}}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00010}00010\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00011}00011\ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_g_n_e_t}{GNET}}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00012}00012\ \ \{}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00013}00013\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00018}\mbox{\hyperlink{struct_g_n_e_t_1_1_user_info}{00018}}\ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_g_n_e_t_1_1_user_info_a440c795e6198fbf419bc96ee97862788}{UserInfo}}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00019}00019\ \ \{}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00020}\mbox{\hyperlink{struct_g_n_e_t_1_1_user_info_ae02b5efdfe764b6d3192109c7848ad06}{00020}}\ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_g_n_e_t_1_1_user_info_ae02b5efdfe764b6d3192109c7848ad06}{sid}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00021}\mbox{\hyperlink{struct_g_n_e_t_1_1_user_info_afd7094222782e949809af25ac095d365}{00021}}\ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_g_n_e_t_1_1_user_info_afd7094222782e949809af25ac095d365}{localsid}};\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00022}\mbox{\hyperlink{struct_g_n_e_t_1_1_user_info_a9016cc20e1ed5be9ea60955de1cf4d62}{00022}}\ \ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_g_n_e_t_1_1_user_info_a9016cc20e1ed5be9ea60955de1cf4d62}{zoneid}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00023}00023\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00027}\mbox{\hyperlink{struct_g_n_e_t_1_1_user_info_a440c795e6198fbf419bc96ee97862788}{00027}}\ \ \ \ \ \ \mbox{\hyperlink{struct_g_n_e_t_1_1_user_info_a440c795e6198fbf419bc96ee97862788}{UserInfo}}()\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00028}00028\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00035}\mbox{\hyperlink{struct_g_n_e_t_1_1_user_info_ae886aad051bc6dd970480c7bc51d23b8}{00035}}\ \ \ \ \ \ \mbox{\hyperlink{struct_g_n_e_t_1_1_user_info_ae886aad051bc6dd970480c7bc51d23b8}{UserInfo}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_s,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \_l,\ \textcolor{keywordtype}{char}\ \_z)\ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{struct_g_n_e_t_1_1_user_info_ae02b5efdfe764b6d3192109c7848ad06}{sid}}(\_s),\ \mbox{\hyperlink{struct_g_n_e_t_1_1_user_info_afd7094222782e949809af25ac095d365}{localsid}}(\_l),\ \mbox{\hyperlink{struct_g_n_e_t_1_1_user_info_a9016cc20e1ed5be9ea60955de1cf4d62}{zoneid}}(\_z)\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00037}00037\ \ \};}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00038}00038\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00044}\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server}{00044}}\ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a807dbbef9b25bce26260a6cbbd4edd01}{GAuthServer}}\ :\ \textcolor{keyword}{public}\ Protocol::Manager}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00045}00045\ \ \{}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00046}00046\ \ \ \ \ \ \textcolor{keywordtype}{int}\ auth\_idx;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00047}00047\ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a807dbbef9b25bce26260a6cbbd4edd01}{GAuthServer}}\ instance;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00048}00048\ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ accumulate\_limit;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00049}00049\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00054}00054\ \ \ \ \ \ \textcolor{keyword}{const}\ Session::State\ *GetInitState()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00055}00055\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00061}00061\ \ \ \ \ \ \textcolor{keywordtype}{bool}\ OnCheckAccumulate(\textcolor{keywordtype}{size\_t}\ size)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ accumulate\_limit\ ==\ 0\ ||\ size\ <\ accumulate\_limit;\ \}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00062}00062\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00067}00067\ \ \ \ \ \ \textcolor{keywordtype}{void}\ OnAddSession(Session::ID\ sid);}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00068}00068\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00073}00073\ \ \ \ \ \ \textcolor{keywordtype}{void}\ OnDelSession(Session::ID\ sid);}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00074}00074\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00075}00075\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00080}\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a2fb6223e8492fcbc74f9b21ee12f25e7}{00080}}\ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a807dbbef9b25bce26260a6cbbd4edd01}{GAuthServer}}\ *\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a2fb6223e8492fcbc74f9b21ee12f25e7}{GetInstance}}()\ \{\ \textcolor{keywordflow}{return}\ \&instance;\ \}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00081}00081\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00086}\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a93f073dbf9375aa226afb267d88a92c4}{00086}}\ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a93f073dbf9375aa226afb267d88a92c4}{Identification}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}GAuthServer"{}};\ \}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00087}00087\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00092}\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a5604b75c37f4e864a4f73e1a4a8a5a81}{00092}}\ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a5604b75c37f4e864a4f73e1a4a8a5a81}{SetAccumulate}}(\textcolor{keywordtype}{size\_t}\ size)\ \{\ accumulate\_limit\ =\ size;\ \}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00093}00093\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00097}\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a807dbbef9b25bce26260a6cbbd4edd01}{00097}}\ \ \ \ \ \ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a807dbbef9b25bce26260a6cbbd4edd01}{GAuthServer}}()\ :\ accumulate\_limit(0)\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00098}00098\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00099}\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a891812f02afb38b8d2cc9d37081e0c5a}{00099}}\ \ \ \ \ \ Octets\ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a891812f02afb38b8d2cc9d37081e0c5a}{shared\_key}};\ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00100}00100\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00107}00107\ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a6b6bcb2c5dab0f794112337c7fcc556e}{ValidUser}}(Session::ID\ sid,\ \textcolor{keywordtype}{int}\ userid);}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00108}00108\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00109}\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a03dccad867b02013d61e8dde6785f3af}{00109}}\ \ \ \ \ \ Thread::RWLock\ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a03dccad867b02013d61e8dde6785f3af}{locker\_map}};\ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00110}00110\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00115}\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_aa0bc98036b2a04adf6ad2aaa1f5b86f9}{00115}}\ \ \ \ \ \ \textcolor{keyword}{typedef}\ std::map<int,\ UserInfo>\ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_aa0bc98036b2a04adf6ad2aaa1f5b86f9}{UserMap}};}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00116}\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_afcb09daf81ca16050c3e2467cb48c762}{00116}}\ \ \ \ \ \ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_aa0bc98036b2a04adf6ad2aaa1f5b86f9}{UserMap}}\ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_afcb09daf81ca16050c3e2467cb48c762}{usermap}};\ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00117}00117\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00122}\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_add2f735245396b7f7a31665266abb9f1}{00122}}\ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_add2f735245396b7f7a31665266abb9f1}{SetSidIdx}}(\textcolor{keywordtype}{int}\ idx)\ \{\ auth\_idx\ =\ idx;\ \}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00123}00123\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00128}\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a1416d84887657af3f1b58942e4277e67}{00128}}\ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a1416d84887657af3f1b58942e4277e67}{GetSidIdx}}()\ \{\ \textcolor{keywordflow}{return}\ auth\_idx;\ \}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00129}00129\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00130}\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a306c4188d47c0c0d4c653aafe420f706}{00130}}\ \ \ \ \ \ Thread::Mutex\ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a306c4188d47c0c0d4c653aafe420f706}{locker\_accntmap}};\ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00131}00131\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00136}\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_ac03c9bb89b7110d3e16715c81d72367d}{00136}}\ \ \ \ \ \ \textcolor{keyword}{typedef}\ std::map<int,\ unsigned\ int>\ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_ac03c9bb89b7110d3e16715c81d72367d}{AccountingMap}};}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00137}\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a7b474e4ba736b037e63f71e551724666}{00137}}\ \ \ \ \ \ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_ac03c9bb89b7110d3e16715c81d72367d}{AccountingMap}}\ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a7b474e4ba736b037e63f71e551724666}{accntmap}};\ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00138}00138\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00139}\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a6632c6441ea93e9bbe7999301534e593}{00139}}\ \ \ \ \ \ Thread::Mutex\ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a6632c6441ea93e9bbe7999301534e593}{locker\_zonemap}};\ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00140}00140\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00145}\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a259024f25d65d7de4a8d253af503ab24}{00145}}\ \ \ \ \ \ \textcolor{keyword}{typedef}\ std::map<unsigned\ int,\ char>\ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a259024f25d65d7de4a8d253af503ab24}{ZoneMap}};}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00146}\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a6f4c1af94c9642a78383d593f4b3fc60}{00146}}\ \ \ \ \ \ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a259024f25d65d7de4a8d253af503ab24}{ZoneMap}}\ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a6f4c1af94c9642a78383d593f4b3fc60}{zonemap}};\ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00147}00147\ \ \};}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00148}00148\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00149}00149\ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00150}00150\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00156}\mbox{\hyperlink{class_g_n_e_t_1_1_check_timer}{00156}}\ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_n_e_t_1_1_check_timer_a7a691f18f249d9bc5b50470edfaa21e6}{CheckTimer}}\ :\ \textcolor{keyword}{public}\ Thread::Runnable}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00157}00157\ \ \{}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00158}00158\ \ \ \ \ \ \textcolor{keywordtype}{int}\ clear\_time;\ \ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00159}00159\ \ \ \ \ \ \textcolor{keywordtype}{int}\ update\_time;\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00160}00160\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00161}00161\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00167}\mbox{\hyperlink{class_g_n_e_t_1_1_check_timer_a7a691f18f249d9bc5b50470edfaa21e6}{00167}}\ \ \ \ \ \ \mbox{\hyperlink{class_g_n_e_t_1_1_check_timer_a7a691f18f249d9bc5b50470edfaa21e6}{CheckTimer}}(\textcolor{keywordtype}{int}\ \_time,\ \textcolor{keywordtype}{int}\ \_proir\ =\ 1)\ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00168}00168\ \ \ \ \ \ \ \ \ \ :\ Runnable(\_proir),\ update\_time(\_time)\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00169}00169\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00173}00173\ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_e_t_1_1_check_timer_afb7c8e11b1f82f73a44f2b6db53427e2}{Run}}();}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00174}00174\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00175}00175\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00179}00179\ \ \ \ \ \ \textcolor{keywordtype}{void}\ CheckAddCashcn();}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00180}00180\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00184}00184\ \ \ \ \ \ \textcolor{keywordtype}{void}\ AntibrutClear();}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00185}00185\ \ \};}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00186}00186\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00187}00187\ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00188}00188\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00189}00189\ \ \};}
+\DoxyCodeLine{\Hypertarget{gauthserver_8hpp_source_l00190}00190\ \textcolor{preprocessor}{\ \#endif}}
+
+\end{DoxyCode}

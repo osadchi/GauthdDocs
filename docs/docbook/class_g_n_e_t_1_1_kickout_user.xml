@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_n_e_t_1_1_kickout_user" xml:lang="en-US">
+<title>GNET::KickoutUser Class Reference</title>
+<indexterm><primary>GNET::KickoutUser</primary></indexterm>
+<para>
+
+<para>Протокол для принудительного отключения пользователя от сервера </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;kickoutuser.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for GNET::KickoutUser:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_kickout_user.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+
+<para>Протокол для принудительного отключения пользователя от сервера </para>
+
+
+
+<para>Наследует базовый класс Protocol и предоставляет механизм обработки запросов на отключение пользователей. Используется администраторами или системой для управления подключениями.</para>
+
+<para><note><title>Note</title>
+
+<para>Включение файла &quot;kickoutuser&quot; содержит автоматически генерируемые поля протокола </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_kickoutuser_8hpp_source_1l00027">27</link> of file <link linkend="_kickoutuser_8hpp_source">kickoutuser.hpp</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_kickoutuser_8hpp">kickoutuser.hpp</link></section>
+</section>

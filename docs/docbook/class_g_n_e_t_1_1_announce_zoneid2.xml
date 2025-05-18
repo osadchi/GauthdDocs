@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_n_e_t_1_1_announce_zoneid2" xml:lang="en-US">
+<title>GNET::AnnounceZoneid2 Class Reference</title>
+<indexterm><primary>GNET::AnnounceZoneid2</primary></indexterm>
+<para>
+
+<para>Класс протокола для обработки объявлений идентификаторов игровых зон </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;announcezoneid2.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for GNET::AnnounceZoneid2:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_announce_zoneid2.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+
+<para>Класс протокола для обработки объявлений идентификаторов игровых зон </para>
+
+
+
+<para>Наследуется от базового класса Protocol. Используется для синхронизации информации о зонах между компонентами системы. Обрабатывает привязку идентификаторов зон к сессиям, очистку связанных данных и логирование операций. </para>
+<para>
+Definition at line <link linkend="_announcezoneid2_8hpp_source_1l00026">26</link> of file <link linkend="_announcezoneid2_8hpp_source">announcezoneid2.hpp</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_announcezoneid2_8hpp">announcezoneid2.hpp</link></section>
+</section>

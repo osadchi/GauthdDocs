@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_addcash_8hpp_source" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/addcash.hpp</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_addcash_8hpp_source_1l00001"/>00001 
+<anchor xml:id="_addcash_8hpp_source_1l00005"/>00005 
+<anchor xml:id="_addcash_8hpp_source_1l00006"/>00006 <emphasis role="preprocessor">&#32;#ifndef&#32;__GNET_ADDCASH_HPP</emphasis>
+<anchor xml:id="_addcash_8hpp_source_1l00007"/><link linkend="_addcash_8hpp_1a67670fd28e285f6e41f590f20970bcac">00007</link> <emphasis role="preprocessor">&#32;#define&#32;__GNET_ADCAPSH_HPP</emphasis>
+<anchor xml:id="_addcash_8hpp_source_1l00008"/>00008 &#32;
+<anchor xml:id="_addcash_8hpp_source_1l00009"/>00009 <emphasis role="preprocessor">&#32;#include&#32;&quot;rpcdefs.h&quot;</emphasis>
+<anchor xml:id="_addcash_8hpp_source_1l00010"/>00010 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_callid_8hxx">callid.hxx</link>&quot;</emphasis>
+<anchor xml:id="_addcash_8hpp_source_1l00011"/>00011 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_state_8hxx">state.hxx</link>&quot;</emphasis>
+<anchor xml:id="_addcash_8hpp_source_1l00012"/>00012 &#32;
+<anchor xml:id="_addcash_8hpp_source_1l00013"/>00013 &#32;<emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_g_n_e_t">GNET</link>
+<anchor xml:id="_addcash_8hpp_source_1l00014"/>00014 &#32;{
+<anchor xml:id="_addcash_8hpp_source_1l00015"/>00015 &#32;
+<anchor xml:id="_addcash_8hpp_source_1l00023"/><link linkend="_class_g_n_e_t_1_1_add_cash">00023</link> &#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_g_n_e_t_1_1_add_cash">AddCash</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;GNET::Protocol
+<anchor xml:id="_addcash_8hpp_source_1l00024"/>00024 &#32;{
+<anchor xml:id="_addcash_8hpp_source_1l00025"/>00025 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;#include&#32;&quot;addcash&quot;</emphasis>&#32;&#32;
+<anchor xml:id="_addcash_8hpp_source_1l00026"/>00026 &#32;
+<anchor xml:id="_addcash_8hpp_source_1l00027"/>00027 &#32;<emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_addcash_8hpp_source_1l00037"/><link linkend="_class_g_n_e_t_1_1_add_cash_1ad20cf7684a67d064a559e96a79ae5675">00037</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_add_cash_1ad20cf7684a67d064a559e96a79ae5675">Process</link>(Manager&#32;*manager,&#32;Manager::Session::ID&#32;sid)
+<anchor xml:id="_addcash_8hpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_addcash_8hpp_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;TODO</emphasis>
+<anchor xml:id="_addcash_8hpp_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_addcash_8hpp_source_1l00041"/>00041 &#32;};
+<anchor xml:id="_addcash_8hpp_source_1l00042"/>00042 &#32;
+<anchor xml:id="_addcash_8hpp_source_1l00043"/>00043 &#32;};
+<anchor xml:id="_addcash_8hpp_source_1l00044"/>00044 &#32;
+<anchor xml:id="_addcash_8hpp_source_1l00045"/>00045 <emphasis role="preprocessor">&#32;#endif</emphasis>
+</programlisting></section>

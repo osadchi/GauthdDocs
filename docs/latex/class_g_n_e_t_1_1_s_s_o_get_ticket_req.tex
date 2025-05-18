@@ -1,0 +1,73 @@
+\doxysection{GNET\+::SSOGet\+Ticket\+Req Class Reference}
+\hypertarget{class_g_n_e_t_1_1_s_s_o_get_ticket_req}{}\label{class_g_n_e_t_1_1_s_s_o_get_ticket_req}\index{GNET::SSOGetTicketReq@{GNET::SSOGetTicketReq}}
+
+
+Класс протокола для запроса SSO-\/билета аутентификации  
+
+
+
+
+{\ttfamily \#include $<$ssogetticketreq.\+hpp$>$}
+
+Inheritance diagram for GNET\+::SSOGet\+Ticket\+Req\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_n_e_t_1_1_s_s_o_get_ticket_req}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_s_s_o_get_ticket_req_a7d2f631129750466c71a3c53910adad9}{Process}} (Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)
+\begin{DoxyCompactList}\small\item\em Основной метод обработки протокола \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс протокола для запроса SSO-\/билета аутентификации 
+
+Наследует базовый класс Protocol и реализует обработку запросов на получение временного билета для единой аутентификации. 
+
+Definition at line \mbox{\hyperlink{ssogetticketreq_8hpp_source_l00025}{25}} of file \mbox{\hyperlink{ssogetticketreq_8hpp_source}{ssogetticketreq.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_n_e_t_1_1_s_s_o_get_ticket_req_a7d2f631129750466c71a3c53910adad9}\index{GNET::SSOGetTicketReq@{GNET::SSOGetTicketReq}!Process@{Process}}
+\index{Process@{Process}!GNET::SSOGetTicketReq@{GNET::SSOGetTicketReq}}
+\doxysubsubsection{\texorpdfstring{Process()}{Process()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_s_s_o_get_ticket_req_a7d2f631129750466c71a3c53910adad9} 
+void GNET\+::\+SSOGet\+Ticket\+Req\+::\+Process (\begin{DoxyParamCaption}\item[{Manager \texorpdfstring{$\ast$}{*}}]{manager}{, }\item[{Manager\+::\+Session\+::\+ID}]{sid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Основной метод обработки протокола 
+
+
+\begin{DoxyParams}{Parameters}
+{\em manager} & Указатель на менеджер протоколов \\
+\hline
+{\em sid} & Идентификатор сессии \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000023}{Todo}}]Требуется реализация логики обработки запроса\end{DoxyRefDesc}
+
+
+\begin{DoxyParagraph}{Пример использования\+:}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{SSOGetTicketReq\ request;}
+\DoxyCodeLine{request.Process(manager,\ session\_id);}
+
+\end{DoxyCode}
+ 
+\end{DoxyParagraph}
+
+
+Definition at line \mbox{\hyperlink{ssogetticketreq_8hpp_source_l00043}{43}} of file \mbox{\hyperlink{ssogetticketreq_8hpp_source}{ssogetticketreq.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{ssogetticketreq_8hpp}{ssogetticketreq.\+hpp}}\end{DoxyCompactItemize}

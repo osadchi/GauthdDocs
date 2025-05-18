@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_n_e_t_1_1_matrix_failure" xml:lang="en-US">
+<title>GNET::MatrixFailure Class Reference</title>
+<indexterm><primary>GNET::MatrixFailure</primary></indexterm>
+<para>
+
+<para>Класс протокола для обработки ошибок матрицы </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;matrixfailure.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for GNET::MatrixFailure:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_matrix_failure.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+
+<para>Класс протокола для обработки ошибок матрицы </para>
+
+
+
+<para>Наследует функциональность базового класса Protocol и используется для обработки ошибок, связанных с операциями матрицы в сетевом взаимодействии. </para>
+<para>
+Definition at line <link linkend="_matrixfailure_8hpp_source_1l00027">27</link> of file <link linkend="_matrixfailure_8hpp_source">matrixfailure.hpp</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_matrixfailure_8hpp">matrixfailure.hpp</link></section>
+</section>

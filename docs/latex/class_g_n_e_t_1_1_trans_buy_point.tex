@@ -1,0 +1,62 @@
+\doxysection{GNET\+::Trans\+Buy\+Point Class Reference}
+\hypertarget{class_g_n_e_t_1_1_trans_buy_point}{}\label{class_g_n_e_t_1_1_trans_buy_point}\index{GNET::TransBuyPoint@{GNET::TransBuyPoint}}
+
+
+Класс протокола для обработки транзакций покупки баллов @inherits Protocol.  
+
+
+
+
+{\ttfamily \#include $<$transbuypoint.\+hpp$>$}
+
+Inheritance diagram for GNET\+::Trans\+Buy\+Point\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_n_e_t_1_1_trans_buy_point}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_trans_buy_point_aad328b963d528b2d8a695e3793c73529}{Process}} (Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)
+\begin{DoxyCompactList}\small\item\em Обрабатывает транзакцию покупки баллов \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс протокола для обработки транзакций покупки баллов @inherits Protocol. 
+
+Реализует логику обработки запросов на покупку баллов, включая валидацию и выполнение транзакций. Наследует базовые механизмы работы с протоколами из GNET\+::\+Protocol. 
+
+Definition at line \mbox{\hyperlink{transbuypoint_8hpp_source_l00026}{26}} of file \mbox{\hyperlink{transbuypoint_8hpp_source}{transbuypoint.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_n_e_t_1_1_trans_buy_point_aad328b963d528b2d8a695e3793c73529}\index{GNET::TransBuyPoint@{GNET::TransBuyPoint}!Process@{Process}}
+\index{Process@{Process}!GNET::TransBuyPoint@{GNET::TransBuyPoint}}
+\doxysubsubsection{\texorpdfstring{Process()}{Process()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_trans_buy_point_aad328b963d528b2d8a695e3793c73529} 
+void GNET\+::\+Trans\+Buy\+Point\+::\+Process (\begin{DoxyParamCaption}\item[{Manager \texorpdfstring{$\ast$}{*}}]{manager}{, }\item[{Manager\+::\+Session\+::\+ID}]{sid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Обрабатывает транзакцию покупки баллов 
+
+
+\begin{DoxyParams}{Parameters}
+{\em manager} & Указатель на менеджер управления протоколами \\
+\hline
+{\em sid} & Идентификатор сессии, связанной с транзакцией\\
+\hline
+\end{DoxyParams}
+Метод вызывается для выполнения основной логики обработки запроса. В текущей реализации требует доработки (TODO). \begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000027}{Todo}}]Реализовать обработку транзакций, включая проверку данных, выполнение платежа и обновление состояния системы \end{DoxyRefDesc}
+
+
+Definition at line \mbox{\hyperlink{transbuypoint_8hpp_source_l00039}{39}} of file \mbox{\hyperlink{transbuypoint_8hpp_source}{transbuypoint.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{transbuypoint_8hpp}{transbuypoint.\+hpp}}\end{DoxyCompactItemize}

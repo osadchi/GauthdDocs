@@ -1,0 +1,64 @@
+\doxysection{GNET\+::Verify\+Master\+\_\+\+Re Class Reference}
+\hypertarget{class_g_n_e_t_1_1_verify_master___re}{}\label{class_g_n_e_t_1_1_verify_master___re}\index{GNET::VerifyMaster\_Re@{GNET::VerifyMaster\_Re}}
+
+
+Класс протокола для обработки ответов верификации мастер-\/сервера  
+
+
+
+
+{\ttfamily \#include $<$verifymaster\+\_\+re.\+hpp$>$}
+
+Inheritance diagram for GNET\+::Verify\+Master\+\_\+\+Re\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_n_e_t_1_1_verify_master___re}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_verify_master___re_a549010699fc4534896e58ff3aef11b9d}{Process}} (Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)
+\begin{DoxyCompactList}\small\item\em \texorpdfstring{$<$}{<} Включение структуры данных протокола (полей сообщения) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс протокола для обработки ответов верификации мастер-\/сервера 
+
+Наследует функциональность базового класса Protocol и реализует обработку ответов на запросы проверки мастер-\/сервера. Содержит данные протокола, автоматически генерируемые из описания в файле verifymaster\+\_\+re. 
+
+Definition at line \mbox{\hyperlink{verifymaster__re_8hpp_source_l00035}{35}} of file \mbox{\hyperlink{verifymaster__re_8hpp_source}{verifymaster\+\_\+re.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_n_e_t_1_1_verify_master___re_a549010699fc4534896e58ff3aef11b9d}\index{GNET::VerifyMaster\_Re@{GNET::VerifyMaster\_Re}!Process@{Process}}
+\index{Process@{Process}!GNET::VerifyMaster\_Re@{GNET::VerifyMaster\_Re}}
+\doxysubsubsection{\texorpdfstring{Process()}{Process()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_verify_master___re_a549010699fc4534896e58ff3aef11b9d} 
+void GNET\+::\+Verify\+Master\+\_\+\+Re\+::\+Process (\begin{DoxyParamCaption}\item[{Manager \texorpdfstring{$\ast$}{*}}]{manager}{, }\item[{Manager\+::\+Session\+::\+ID}]{sid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\texorpdfstring{$<$}{<} Включение структуры данных протокола (полей сообщения) 
+
+Метод обработки полученного протокола 
+\begin{DoxyParams}{Parameters}
+{\em manager} & Указатель на менеджер протоколов \\
+\hline
+{\em sid} & Идентификатор сессии, связанной с запросом\\
+\hline
+\end{DoxyParams}
+Вызывается автоматически при получении пакета. Реализует логику обработки ответа верификации мастер-\/сервера. Текущая реализация требует доработки.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000028}{Todo}}]Реализовать обработку ответа верификации \end{DoxyRefDesc}
+
+
+Definition at line \mbox{\hyperlink{verifymaster__re_8hpp_source_l00051}{51}} of file \mbox{\hyperlink{verifymaster__re_8hpp_source}{verifymaster\+\_\+re.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{verifymaster__re_8hpp}{verifymaster\+\_\+re.\+hpp}}\end{DoxyCompactItemize}

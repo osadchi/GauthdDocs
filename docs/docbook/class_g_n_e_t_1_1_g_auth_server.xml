@@ -1,0 +1,447 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_n_e_t_1_1_g_auth_server" xml:lang="en-US">
+<title>GNET::GAuthServer Class Reference</title>
+<indexterm><primary>GNET::GAuthServer</primary></indexterm>
+<para>
+
+<para>Main authentication server class handling sessions and user validation. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;gauthserver.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for GNET::GAuthServer:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_g_auth_server.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>typedef std::map&lt; int, <link linkend="_struct_g_n_e_t_1_1_user_info">UserInfo</link> &gt; <link linkend="_class_g_n_e_t_1_1_g_auth_server_1aa0bc98036b2a04adf6ad2aaa1f5b86f9">UserMap</link></para>
+
+<para>Map для хранения информации о пользователях (userid -&gt; <link linkend="_struct_g_n_e_t_1_1_user_info">UserInfo</link>). </para>
+</listitem>
+            <listitem><para>typedef std::map&lt; int, unsigned int &gt; <link linkend="_class_g_n_e_t_1_1_g_auth_server_1ac03c9bb89b7110d3e16715c81d72367d">AccountingMap</link></para>
+
+<para>Map для учета времени онлайн (userid -&gt; время в секундах). </para>
+</listitem>
+            <listitem><para>typedef std::map&lt; unsigned int, char &gt; <link linkend="_class_g_n_e_t_1_1_g_auth_server_1a259024f25d65d7de4a8d253af503ab24">ZoneMap</link></para>
+
+<para>Map для связи сессий и зон (session id -&gt; zoneid). </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>std::string <link linkend="_class_g_n_e_t_1_1_g_auth_server_1a93f073dbf9375aa226afb267d88a92c4">Identification</link> () const</para>
+
+<para>Идентификатор протокола. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_g_auth_server_1a5604b75c37f4e864a4f73e1a4a8a5a81">SetAccumulate</link> (size_t size)</para>
+
+<para>Установить лимит накопления данных. </para>
+</listitem>
+            <listitem><para><link linkend="_class_g_n_e_t_1_1_g_auth_server_1a807dbbef9b25bce26260a6cbbd4edd01">GAuthServer</link> ()</para>
+
+<para>Конструктор по умолчанию. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_g_n_e_t_1_1_g_auth_server_1a6b6bcb2c5dab0f794112337c7fcc556e">ValidUser</link> (Session::ID sid, int userid)</para>
+
+<para>Проверить валидность пользователя. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_g_auth_server_1add2f735245396b7f7a31665266abb9f1">SetSidIdx</link> (int idx)</para>
+
+<para>Установить индекс аутентификации. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_g_n_e_t_1_1_g_auth_server_1a1416d84887657af3f1b58942e4277e67">GetSidIdx</link> ()</para>
+
+<para>Получить индекс аутентификации. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_class_g_n_e_t_1_1_g_auth_server">GAuthServer</link> * <link linkend="_class_g_n_e_t_1_1_g_auth_server_1a2fb6223e8492fcbc74f9b21ee12f25e7">GetInstance</link> ()</para>
+
+<para>Получить экземпляр синглтона. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>Octets <link linkend="_class_g_n_e_t_1_1_g_auth_server_1a891812f02afb38b8d2cc9d37081e0c5a">shared_key</link></para>
+
+<para>Общий ключ для шифрования. </para>
+</listitem>
+            <listitem><para>Thread::RWLock <link linkend="_class_g_n_e_t_1_1_g_auth_server_1a03dccad867b02013d61e8dde6785f3af">locker_map</link></para>
+
+<para>Блокировка для доступа к usermap. </para>
+</listitem>
+            <listitem><para><link linkend="_class_g_n_e_t_1_1_g_auth_server_1aa0bc98036b2a04adf6ad2aaa1f5b86f9">UserMap</link> <link linkend="_class_g_n_e_t_1_1_g_auth_server_1afcb09daf81ca16050c3e2467cb48c762">usermap</link></para>
+
+<para>Контейнер с данными пользователей. </para>
+</listitem>
+            <listitem><para>Thread::Mutex <link linkend="_class_g_n_e_t_1_1_g_auth_server_1a306c4188d47c0c0d4c653aafe420f706">locker_accntmap</link></para>
+
+<para>Блокировка для доступа к accntmap. </para>
+</listitem>
+            <listitem><para><link linkend="_class_g_n_e_t_1_1_g_auth_server_1ac03c9bb89b7110d3e16715c81d72367d">AccountingMap</link> <link linkend="_class_g_n_e_t_1_1_g_auth_server_1a7b474e4ba736b037e63f71e551724666">accntmap</link></para>
+
+<para>Контейнер с данными о времени онлайн. </para>
+</listitem>
+            <listitem><para>Thread::Mutex <link linkend="_class_g_n_e_t_1_1_g_auth_server_1a6632c6441ea93e9bbe7999301534e593">locker_zonemap</link></para>
+
+<para>Блокировка для доступа к zonemap. </para>
+</listitem>
+            <listitem><para><link linkend="_class_g_n_e_t_1_1_g_auth_server_1a259024f25d65d7de4a8d253af503ab24">ZoneMap</link> <link linkend="_class_g_n_e_t_1_1_g_auth_server_1a6f4c1af94c9642a78383d593f4b3fc60">zonemap</link></para>
+
+<para>Контейнер с данными о зонах. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Main authentication server class handling sessions and user validation. </para>
+
+
+
+<para>Класс-менеджер для управления аутентификацией и сессиями пользователей.</para>
+
+<para>Singleton instance managing client sessions, zone mappings, and user authentication. </para>
+<para>
+Definition at line <link linkend="_gauthserver_8hpp_source_1l00044">44</link> of file <link linkend="_gauthserver_8hpp_source">gauthserver.hpp</link>.</para>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_class_g_n_e_t_1_1_g_auth_server_1ac03c9bb89b7110d3e16715c81d72367d"/><section>
+    <title>AccountingMap</title>
+<indexterm><primary>AccountingMap</primary><secondary>GNET::GAuthServer</secondary></indexterm>
+<indexterm><primary>GNET::GAuthServer</primary><secondary>AccountingMap</secondary></indexterm>
+<para><computeroutput>typedef std::map&lt;int, unsigned int&gt; <link linkend="_class_g_n_e_t_1_1_g_auth_server_1ac03c9bb89b7110d3e16715c81d72367d">GNET::GAuthServer::AccountingMap</link></computeroutput></para><para>
+
+<para>Map для учета времени онлайн (userid -&gt; время в секундах). </para>
+</para>
+<para>
+Definition at line <link linkend="_gauthserver_8hpp_source_1l00136">136</link> of file <link linkend="_gauthserver_8hpp_source">gauthserver.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_g_auth_server_1aa0bc98036b2a04adf6ad2aaa1f5b86f9"/><section>
+    <title>UserMap</title>
+<indexterm><primary>UserMap</primary><secondary>GNET::GAuthServer</secondary></indexterm>
+<indexterm><primary>GNET::GAuthServer</primary><secondary>UserMap</secondary></indexterm>
+<para><computeroutput>typedef std::map&lt;int, <link linkend="_struct_g_n_e_t_1_1_user_info">UserInfo</link>&gt; <link linkend="_class_g_n_e_t_1_1_g_auth_server_1aa0bc98036b2a04adf6ad2aaa1f5b86f9">GNET::GAuthServer::UserMap</link></computeroutput></para><para>
+
+<para>Map для хранения информации о пользователях (userid -&gt; <link linkend="_struct_g_n_e_t_1_1_user_info">UserInfo</link>). </para>
+</para>
+<para>
+Definition at line <link linkend="_gauthserver_8hpp_source_1l00115">115</link> of file <link linkend="_gauthserver_8hpp_source">gauthserver.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_g_auth_server_1a259024f25d65d7de4a8d253af503ab24"/><section>
+    <title>ZoneMap</title>
+<indexterm><primary>ZoneMap</primary><secondary>GNET::GAuthServer</secondary></indexterm>
+<indexterm><primary>GNET::GAuthServer</primary><secondary>ZoneMap</secondary></indexterm>
+<para><computeroutput>typedef std::map&lt;unsigned int, char&gt; <link linkend="_class_g_n_e_t_1_1_g_auth_server_1a259024f25d65d7de4a8d253af503ab24">GNET::GAuthServer::ZoneMap</link></computeroutput></para><para>
+
+<para>Map для связи сессий и зон (session id -&gt; zoneid). </para>
+</para>
+<para>
+Definition at line <link linkend="_gauthserver_8hpp_source_1l00145">145</link> of file <link linkend="_gauthserver_8hpp_source">gauthserver.hpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_g_n_e_t_1_1_g_auth_server_1a807dbbef9b25bce26260a6cbbd4edd01"/><section>
+    <title>GAuthServer()</title>
+<indexterm><primary>GAuthServer</primary><secondary>GNET::GAuthServer</secondary></indexterm>
+<indexterm><primary>GNET::GAuthServer</primary><secondary>GAuthServer</secondary></indexterm>
+<para><computeroutput>GNET::GAuthServer::GAuthServer ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Конструктор по умолчанию. </para>
+</para>
+<para>
+Definition at line <link linkend="_gauthserver_8hpp_source_1l00097">97</link> of file <link linkend="_gauthserver_8hpp_source">gauthserver.hpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_g_n_e_t_1_1_g_auth_server_1a2fb6223e8492fcbc74f9b21ee12f25e7"/><section>
+    <title>GetInstance()</title>
+<indexterm><primary>GetInstance</primary><secondary>GNET::GAuthServer</secondary></indexterm>
+<indexterm><primary>GNET::GAuthServer</primary><secondary>GetInstance</secondary></indexterm>
+<para><computeroutput>static <link linkend="_class_g_n_e_t_1_1_g_auth_server">GAuthServer</link> * GNET::GAuthServer::GetInstance ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Получить экземпляр синглтона. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Указатель на <link linkend="_class_g_n_e_t_1_1_g_auth_server">GAuthServer</link>. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_gauthserver_8hpp_source_1l00080">80</link> of file <link linkend="_gauthserver_8hpp_source">gauthserver.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_g_auth_server_1a1416d84887657af3f1b58942e4277e67"/><section>
+    <title>GetSidIdx()</title>
+<indexterm><primary>GetSidIdx</primary><secondary>GNET::GAuthServer</secondary></indexterm>
+<indexterm><primary>GNET::GAuthServer</primary><secondary>GetSidIdx</secondary></indexterm>
+<para><computeroutput>int GNET::GAuthServer::GetSidIdx ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Получить индекс аутентификации. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Текущий индекс. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_gauthserver_8hpp_source_1l00128">128</link> of file <link linkend="_gauthserver_8hpp_source">gauthserver.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_g_auth_server_1a93f073dbf9375aa226afb267d88a92c4"/><section>
+    <title>Identification()</title>
+<indexterm><primary>Identification</primary><secondary>GNET::GAuthServer</secondary></indexterm>
+<indexterm><primary>GNET::GAuthServer</primary><secondary>Identification</secondary></indexterm>
+<para><computeroutput>std::string GNET::GAuthServer::Identification ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Идентификатор протокола. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Строка &quot;GAuthServer&quot;. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_gauthserver_8hpp_source_1l00086">86</link> of file <link linkend="_gauthserver_8hpp_source">gauthserver.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_g_auth_server_1a5604b75c37f4e864a4f73e1a4a8a5a81"/><section>
+    <title>SetAccumulate()</title>
+<indexterm><primary>SetAccumulate</primary><secondary>GNET::GAuthServer</secondary></indexterm>
+<indexterm><primary>GNET::GAuthServer</primary><secondary>SetAccumulate</secondary></indexterm>
+<para><computeroutput>void GNET::GAuthServer::SetAccumulate (size_t size)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Установить лимит накопления данных. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>size</entry><entry>
+<para>Новый лимит. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_gauthserver_8hpp_source_1l00092">92</link> of file <link linkend="_gauthserver_8hpp_source">gauthserver.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_g_auth_server_1add2f735245396b7f7a31665266abb9f1"/><section>
+    <title>SetSidIdx()</title>
+<indexterm><primary>SetSidIdx</primary><secondary>GNET::GAuthServer</secondary></indexterm>
+<indexterm><primary>GNET::GAuthServer</primary><secondary>SetSidIdx</secondary></indexterm>
+<para><computeroutput>void GNET::GAuthServer::SetSidIdx (int idx)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Установить индекс аутентификации. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>idx</entry><entry>
+<para>Новый индекс. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_gauthserver_8hpp_source_1l00122">122</link> of file <link linkend="_gauthserver_8hpp_source">gauthserver.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_g_auth_server_1a6b6bcb2c5dab0f794112337c7fcc556e"/><section>
+    <title>ValidUser()</title>
+<indexterm><primary>ValidUser</primary><secondary>GNET::GAuthServer</secondary></indexterm>
+<indexterm><primary>GNET::GAuthServer</primary><secondary>ValidUser</secondary></indexterm>
+<para><computeroutput>bool GNET::GAuthServer::ValidUser (Session::ID sid, int userid)</computeroutput></para><para>
+
+<para>Проверить валидность пользователя. </para>
+</para>
+
+<para>Validates user-session association.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>sid</entry><entry>
+<para>Идентификатор сессии. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>userid</entry><entry>
+<para>Идентификатор пользователя. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true если пользователь валиден, иначе false.</para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>sid</entry><entry>
+<para>Session ID to validate. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>userid</entry><entry>
+<para>User ID to check. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true if user exists and is bound to the specified session, false otherwise.</para>
+</formalpara>
+Uses read lock for thread-safe access to usermap. </para>
+<para>
+Definition at line <link linkend="_gauthserver_8cpp_source_1l00065">65</link> of file <link linkend="_gauthserver_8cpp_source">gauthserver.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_g_n_e_t_1_1_g_auth_server_1a7b474e4ba736b037e63f71e551724666"/><section>
+    <title>accntmap</title>
+<indexterm><primary>accntmap</primary><secondary>GNET::GAuthServer</secondary></indexterm>
+<indexterm><primary>GNET::GAuthServer</primary><secondary>accntmap</secondary></indexterm>
+<para><computeroutput><link linkend="_class_g_n_e_t_1_1_g_auth_server_1ac03c9bb89b7110d3e16715c81d72367d">AccountingMap</link> GNET::GAuthServer::accntmap</computeroutput></para><para>
+
+<para>Контейнер с данными о времени онлайн. </para>
+</para>
+<para>
+Definition at line <link linkend="_gauthserver_8hpp_source_1l00137">137</link> of file <link linkend="_gauthserver_8hpp_source">gauthserver.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_g_auth_server_1a306c4188d47c0c0d4c653aafe420f706"/><section>
+    <title>locker_accntmap</title>
+<indexterm><primary>locker_accntmap</primary><secondary>GNET::GAuthServer</secondary></indexterm>
+<indexterm><primary>GNET::GAuthServer</primary><secondary>locker_accntmap</secondary></indexterm>
+<para><computeroutput>Thread::Mutex GNET::GAuthServer::locker_accntmap</computeroutput></para><para>
+
+<para>Блокировка для доступа к accntmap. </para>
+</para>
+<para>
+Definition at line <link linkend="_gauthserver_8hpp_source_1l00130">130</link> of file <link linkend="_gauthserver_8hpp_source">gauthserver.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_g_auth_server_1a03dccad867b02013d61e8dde6785f3af"/><section>
+    <title>locker_map</title>
+<indexterm><primary>locker_map</primary><secondary>GNET::GAuthServer</secondary></indexterm>
+<indexterm><primary>GNET::GAuthServer</primary><secondary>locker_map</secondary></indexterm>
+<para><computeroutput>Thread::RWLock GNET::GAuthServer::locker_map</computeroutput></para><para>
+
+<para>Блокировка для доступа к usermap. </para>
+</para>
+<para>
+Definition at line <link linkend="_gauthserver_8hpp_source_1l00109">109</link> of file <link linkend="_gauthserver_8hpp_source">gauthserver.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_g_auth_server_1a6632c6441ea93e9bbe7999301534e593"/><section>
+    <title>locker_zonemap</title>
+<indexterm><primary>locker_zonemap</primary><secondary>GNET::GAuthServer</secondary></indexterm>
+<indexterm><primary>GNET::GAuthServer</primary><secondary>locker_zonemap</secondary></indexterm>
+<para><computeroutput>Thread::Mutex GNET::GAuthServer::locker_zonemap</computeroutput></para><para>
+
+<para>Блокировка для доступа к zonemap. </para>
+</para>
+<para>
+Definition at line <link linkend="_gauthserver_8hpp_source_1l00139">139</link> of file <link linkend="_gauthserver_8hpp_source">gauthserver.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_g_auth_server_1a891812f02afb38b8d2cc9d37081e0c5a"/><section>
+    <title>shared_key</title>
+<indexterm><primary>shared_key</primary><secondary>GNET::GAuthServer</secondary></indexterm>
+<indexterm><primary>GNET::GAuthServer</primary><secondary>shared_key</secondary></indexterm>
+<para><computeroutput>Octets GNET::GAuthServer::shared_key</computeroutput></para><para>
+
+<para>Общий ключ для шифрования. </para>
+</para>
+<para>
+Definition at line <link linkend="_gauthserver_8hpp_source_1l00099">99</link> of file <link linkend="_gauthserver_8hpp_source">gauthserver.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_g_auth_server_1afcb09daf81ca16050c3e2467cb48c762"/><section>
+    <title>usermap</title>
+<indexterm><primary>usermap</primary><secondary>GNET::GAuthServer</secondary></indexterm>
+<indexterm><primary>GNET::GAuthServer</primary><secondary>usermap</secondary></indexterm>
+<para><computeroutput><link linkend="_class_g_n_e_t_1_1_g_auth_server_1aa0bc98036b2a04adf6ad2aaa1f5b86f9">UserMap</link> GNET::GAuthServer::usermap</computeroutput></para><para>
+
+<para>Контейнер с данными пользователей. </para>
+</para>
+<para>
+Definition at line <link linkend="_gauthserver_8hpp_source_1l00116">116</link> of file <link linkend="_gauthserver_8hpp_source">gauthserver.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_g_auth_server_1a6f4c1af94c9642a78383d593f4b3fc60"/><section>
+    <title>zonemap</title>
+<indexterm><primary>zonemap</primary><secondary>GNET::GAuthServer</secondary></indexterm>
+<indexterm><primary>GNET::GAuthServer</primary><secondary>zonemap</secondary></indexterm>
+<para><computeroutput><link linkend="_class_g_n_e_t_1_1_g_auth_server_1a259024f25d65d7de4a8d253af503ab24">ZoneMap</link> GNET::GAuthServer::zonemap</computeroutput></para><para>
+
+<para>Контейнер с данными о зонах. </para>
+</para>
+<para>
+Definition at line <link linkend="_gauthserver_8hpp_source_1l00146">146</link> of file <link linkend="_gauthserver_8hpp_source">gauthserver.hpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_gauthserver_8hpp">gauthserver.hpp</link>D:/pwsrc2.0/docs/gauthd/<link linkend="_gauthserver_8cpp">gauthserver.cpp</link></section>
+</section>

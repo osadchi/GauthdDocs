@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_annotated" xml:lang="en-US">
+<title>Class List</title>
+Here are the classes, structs, unions and interfaces with brief descriptions:<link linkend="_class_g_n_e_t_1_1_accounting_request">GNET::AccountingRequest</link>
+<para>Класс для обработки учётных запросов (например, старт/стоп сессии, учёт трафика) </para>
+<link linkend="_class_g_n_e_t_1_1_accounting_response">GNET::AccountingResponse</link>
+<para>Класс для обработки ответов от сервиса учётных записей </para>
+<link linkend="_class_g_n_e_t_1_1_a_c_forbid_cheater">GNET::ACForbidCheater</link>
+<para>Протокол для обработки запросов блокировки нечестных игроков </para>
+<link linkend="_class_g_n_e_t_1_1_add_cash">GNET::AddCash</link>
+<para>Класс протокола для обработки запросов на добавление средств </para>
+<link linkend="_class_g_n_e_t_1_1_add_cash___re">GNET::AddCash_Re</link>
+<para>Класс протокола для обработки ответов на операции пополнения игровой валюты </para>
+<link linkend="_class_g_n_e_t_1_1_announce_zoneid">GNET::AnnounceZoneid</link>
+<para>Класс протокола для обработки уведомлений о идентификаторе зоны </para>
+<link linkend="_class_g_n_e_t_1_1_announce_zoneid2">GNET::AnnounceZoneid2</link>
+<para>Класс протокола для обработки объявлений идентификаторов игровых зон </para>
+<link linkend="_class_g_n_e_t_1_1_announce_zoneid3">GNET::AnnounceZoneid3</link>
+<para>Протокол для обработки информации о зональных идентификаторах </para>
+<link linkend="_class_g_n_e_t_1_1_a_u2_game">GNET::AU2Game</link>
+<para>Класс протокола для передачи данных между сервером аутентификации и игровым сервером </para>
+<link linkend="_class_g_n_e_t_1_1_authd_version">GNET::AuthdVersion</link>
+<para>Класс протокола для обработки версии аутентификационного демона </para>
+<link linkend="_class_g_n_e_t_1_1_billing_balance">GNET::BillingBalance</link>
+<para>Класс протокола для работы с балансом биллинговой системы </para>
+<link linkend="_class_g_n_e_t_1_1_billing_balance_s_a">GNET::BillingBalanceSA</link>
+<para>Протокол для запроса/получения информации о балансе в биллинговой системе </para>
+<link linkend="_class_g_n_e_t_1_1_billing_cancel">GNET::BillingCancel</link>
+<para>Протокол для обработки запросов отмены биллинговых транзакций @inherits Protocol </para>
+<link linkend="_class_g_n_e_t_1_1_billing_confirm">GNET::BillingConfirm</link>
+<para>Класс протокола для обработки подтверждений биллинговых операций </para>
+<link linkend="_class_g_n_e_t_1_1_billing_request">GNET::BillingRequest</link>
+<para>Класс для обработки биллинг-запросов в системе </para>
+<link linkend="_class_g_n_e_t_1_1_check_timer">GNET::CheckTimer</link>
+<para>Periodic task manager for financial and security checks </para>
+<link linkend="_class_g_n_e_t_1_1_discount_announce">GNET::DiscountAnnounce</link>
+<para>Протокол для оповещения о скидках и специальных предложениях </para>
+<link linkend="_class_g_n_e_t_1_1_fee">GNET::Fee</link>
+<para>Класс для управления тарифами и платежами </para>
+<link linkend="_class_g_n_e_t_1_1_game2_a_u">GNET::Game2AU</link>
+<para>Протокол для взаимодействия между игровым сервером и сервером аутентификации/учётных записей (Auth/AU Server) </para>
+<link linkend="_class_g_n_e_t_1_1_g_auth_server">GNET::GAuthServer</link>
+<para>Main authentication server class handling sessions and user validation </para>
+<link linkend="_class_g_n_e_t_1_1_get_player_i_d_by_name___re">GNET::GetPlayerIDByName_Re</link>
+<para>Класс протокола для ответов на запрос получения ID игрока по имени @inherits Protocol </para>
+<link linkend="_class_g_n_e_t_1_1_g_m_forbid_sell_point">GNET::GMForbidSellPoint</link>
+<para>Класс протокола для управления запретами точек продаж </para>
+<link linkend="_class_g_n_e_t_1_1_g_m_kickout_user">GNET::GMKickoutUser</link>
+<para>Протокол для принудительного отключения пользователя Game Master&apos;ом (GM) </para>
+<link linkend="_class_g_n_e_t_1_1_g_m_shutup">GNET::GMShutup</link>
+<para>Протокол блокировки чата пользователя </para>
+<link linkend="_class_g_mysql_client">GMysqlClient</link>
+<para>Основной класс для работы с MySQL базой данных </para>
+<link linkend="_class_g_n_e_t_1_1_key_exchange">GNET::KeyExchange</link>
+<para>Протокол обмена криптографическими ключами </para>
+<link linkend="_class_g_n_e_t_1_1_kickout_user">GNET::KickoutUser</link>
+<para>Протокол для принудительного отключения пользователя от сервера </para>
+<link linkend="_class_g_n_e_t_1_1_matrix_failure">GNET::MatrixFailure</link>
+<para>Класс протокола для обработки ошибок матрицы </para>
+<link linkend="_class_g_n_e_t_1_1_query_user_forbid">GNET::QueryUserForbid</link>
+<para>Протокол для запроса информации о блокировке пользователя </para>
+<link linkend="_class_g_n_e_t_1_1_query_user_forbid___re">GNET::QueryUserForbid_Re</link>
+<para>Класс протокола ответа на запрос статуса блокировки пользователя </para>
+<link linkend="_class_g_n_e_t_1_1_query_user_privilege">GNET::QueryUserPrivilege</link>
+<para>Протокол для запроса и обработки привилегий пользователя </para>
+<link linkend="_class_g_n_e_t_1_1_query_user_privilege___re">GNET::QueryUserPrivilege_Re</link>
+<para>Класс-ответ для запроса информации о привилегиях пользователя </para>
+<link linkend="_class_g_n_e_t_1_1_s_s_o_get_ticket_req">GNET::SSOGetTicketReq</link>
+<para>Класс протокола для запроса SSO-билета аутентификации </para>
+<link linkend="_class_g_n_e_t_1_1_status_announce">GNET::StatusAnnounce</link>
+<para>Протокол обработки статусных уведомлений </para>
+<link linkend="_class_g_n_e_t_1_1_sys_send_mail3___re">GNET::SysSendMail3_Re</link>
+<para>Класс протокола для обработки ответов на отправку системной почты (версия 3) </para>
+<link linkend="_class_g_n_e_t_1_1_sys_send_mail___re">GNET::SysSendMail_Re</link>
+<para>Класс протокола для обработки ответов на отправку системных писем @inherits Protocol </para>
+<link linkend="_class_g_n_e_t_1_1_trans_buy_point">GNET::TransBuyPoint</link>
+<para>Класс протокола для обработки транзакций покупки баллов @inherits Protocol </para>
+<link linkend="_struct_g_n_e_t_1_1_user_info">GNET::UserInfo</link>
+<para>Структура для хранения информации о пользователе </para>
+<link linkend="_class_g_n_e_t_1_1_verify_master">GNET::VerifyMaster</link><link linkend="_class_g_n_e_t_1_1_verify_master___re">GNET::VerifyMaster_Re</link>
+<para>Класс протокола для обработки ответов верификации мастер-сервера </para>
+</section>

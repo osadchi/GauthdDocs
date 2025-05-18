@@ -1,0 +1,1717 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_mysql_client" xml:lang="en-US">
+<title>GMysqlClient Class Reference</title>
+<indexterm><primary>GMysqlClient</primary></indexterm>
+<para>
+
+<para>Основной класс для работы с MySQL базой данных </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;gmysqlclient.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_g_mysql_client_1a129ff21e968ae3c1218dd01ff10f9b09">Init</link> (const char *ip, const int port, const char *user, const char *passwd, const char *db, const int h)</para>
+
+<para>Инициализация параметров подключения </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_mysql_client_1a14143f486913e7d3edff46e7458697cb">AlexPatch</link> (const bool lkmod, const bool log, const char *shell)</para>
+
+<para>Дополнительные настройки </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_g_mysql_client_1a4e2c4854287bb8ffdcd12081f46e866a">Connect</link> ()</para>
+
+<para>Установить соединение с БД </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_mysql_client_1a50dd2028ef5a6c498a7784a014606fb8">Disconnect</link> ()</para>
+
+<para>Разорвать соединение с БД </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_g_mysql_client_1a50e93bdf74da424077e864ba8bbfe42c">IsActive</link> ()</para>
+
+<para>Проверить активность соединения </para>
+</listitem>
+            <listitem><para>char <link linkend="_class_g_mysql_client_1a623a50fa9c2dbe90519ac099bfa492f0">GetAid</link> ()</para>
+
+<para>Получить ID приложения </para>
+</listitem>
+            <listitem><para>char <link linkend="_class_g_mysql_client_1acb10864e5152be98cb60ca379e5401bc">GetZoneid</link> ()</para>
+
+<para>Получить ID зоны </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_g_mysql_client_1a1be593d128e947bbb05fdee22e9c2a89">MysqlQuery</link> (char *ptr, size_t len)</para>
+
+<para>Выполнить SQL запрос </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_g_mysql_client_1a315b9d03daf23fd3ccf9089290e155b7">DeleteErrorRow</link> (int status, int uid, char *creatime)</para>
+
+<para>Удаление ошибочных записей из таблицы usecashnow. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_g_mysql_client_1ae74167391b7e749c390203ea4f0ec5e5">MatrixPasswd</link> (int &amp;uid, char *login, char *passwd, int ipaddr)</para>
+
+<para>Проверка учетных данных пользователя. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_g_mysql_client_1a35fa8409b064722f23afb762910f1365">ClearOnlineRecord</link> (char zoneid, char aid)</para>
+
+<para>Очистка онлайн-записей для указанной зоны и аккаунта </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_g_mysql_client_1a7c6a4b72d981e0c88568e453221dd06a">OnlineRecord</link> (int uid, char aid, char &amp;zoneid, int &amp;zonelocalid, int &amp;overwrite)</para>
+
+<para>Запись информации о входе пользователя в онлайн </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_g_mysql_client_1a524bc45740cb01aabdbf2b012407925f">OnfflineRecord</link> (int uid, char aid, char &amp;zoneid, int &amp;zonelocalid, int &amp;overwrite)</para>
+
+<para>Запись информации о выходе пользователя из онлайн </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_g_mysql_client_1ac581c4885d0cd84f507760d32177b4f3">UserCreatime</link> (int uid, int &amp;timestamp)</para>
+
+<para>Получение времени создания пользователя в UNIX-формате </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_g_mysql_client_1a916a21bf80a3b7aaaebaebf1855a429b">UserGMPrivilege</link> (int uid, char zoneid, bool &amp;IsGM)</para>
+
+<para>Получение времени создания пользователя в UNIX-формате </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_g_mysql_client_1aee26570bd0c44f31da836916cf77ec23">QueryGMPrivilege</link> (int uid, char zoneid, unsigned char *gm_auth, int &amp;count)</para>
+
+<para>Получение списка GM-привилегий пользователя </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_g_mysql_client_1a196ae8753a336df2cfcbea330f1a1e13">GetUseCashNow</link> (int status, int &amp;count)</para>
+
+<para>Получение записей usecashnow по статусу </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_g_mysql_client_1a5ad2854f8238ad2008cf0358adf9325b">SetUseCashNow</link> (int status, int sn, int userid, char *creatime)</para>
+
+<para>Обновление статуса записи в usecashnow. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_g_mysql_client_1a0260ea3e3b3ba9b0e289a7b97bc4fd67">DelUseCashNow</link> (int status, int uid, int sn)</para>
+
+<para>Удаление записи из usecashnow. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_g_mysql_client_1a0cba2ae6714706fa26b2b39f91c34665">AddCashLog</link> (int uid, int zoneid, int sn, int aid, int point, int cash, int status, char *creatime)</para>
+
+<para>Добавление записи в лог операций с наличностью </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_g_mysql_client_1a8875011e1658a40cefc82eac737bba58">AlexAddLogin</link> (int uid, int action)</para>
+
+<para>Логирование действия входа/выхода (специальный функционал) </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_g_mysql_client_1a3e52c51fa1af93cb93da4547f877dba6">AlexShell</link> (int uid)</para>
+
+<para>Выполнение shell-команды при выходе пользователя </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_g_mysql_client_1ab7ff1536bda77626eaecf55da93aab92">GetUser</link> (int userid)</para>
+
+<para>Найти пользователя по ID. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_g_mysql_client_1af95566b524271d47c9e9baddb7efda4a">DelUser</link> (int userid)</para>
+
+<para>Удалить пользователя из онлайн-списка </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_g_mysql_client_1abdc4799af3e56eb878e0595b1d54b8fa">AddUser</link> (int userid, int zoneid, char *login, int ipaddr)</para>
+
+<para>Добавить пользователя в онлайн-список </para>
+</listitem>
+            <listitem><para>ONLINE_USER * <link linkend="_class_g_mysql_client_1a197d13b53a9987edf047df74c8d73a2e">GetUserData</link> (int userid)</para>
+
+<para>Получить данные пользователя </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_g_mysql_client_1a4379c3f714045e1afd240d3e006ef34e">ClearCash</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_g_mysql_client_1a9da8bc562d0fd8440935df068aa50922">GetCashSize</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_mysql_client_1a01a8870566416cb8446699c93cd1557b">DelCashUser</link> (int idx)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_mysql_client_1ac4379ab9d87013d1578a381558e9cdae">AddCashUser</link> (int userid, int zoneid, int sn, int point, int cash, char *creatime)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_g_mysql_client_1ad4ac431eba947493223affceccff7990">GetCashUser</link> (int userid)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_mysql_client_1a56c16b331659609464396e2b1cf85d0f">GetAllCashUser</link> (int idx, int &amp;userid, int &amp;zoneid)</para>
+</listitem>
+            <listitem><para>char * <link linkend="_class_g_mysql_client_1afa65eb70f3df9ead6d515aa084f3f415">GetCashCreaTime</link> (int idx)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_g_mysql_client_1aca8d88358cbbd6033e81272381cb0911">GetCashCash</link> (int idx)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_g_mysql_client_1a872aead647ae16442ef1ded0cfab4710">GetCashPoint</link> (int idx)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_mysql_client_1ac6af30f08fc5c7f21a54fe66848308d1">ClearAntibrutUser</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_g_mysql_client_1aae78133acca23894a428d104cd582168">SizeAntibrutUser</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_g_mysql_client_1a9d2cce01742a63ed739c4c3cbe233296">GetAntibrutUser</link> (int ip)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_g_mysql_client_1a8867d598bb11fca0045a206ab04c04c9">DelAntibrutUser</link> (int ip)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_g_mysql_client_1abe6e61839f3cca64f864f4a9078b0ba5">AddAntibrutUser</link> (int ip)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_g_mysql_client_1a8b60b7430a3413aeae8f36df7bbf7f57">ATOI</link> (const char *ptr)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_mysql_client_1af14249f643329398179702dd82f867fc">Auth0xMD5</link> (char *out, char *in)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_mysql_client_1a98b602a010fc50254381bcc3ad35d74b">AuthBase64</link> (char *passwd, char *auth)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_g_mysql_client_1a4d62a501b69e922fae0c53fcc6342169">AuthPasswd</link> (char *passwd, char *auth)</para>
+
+<para>Преобразование аутентификационных данных </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_g_mysql_client_1a477a9db403d718b8ea1fb2f3e8ba2561">ValidLogin</link> (char *login, int size)</para>
+
+<para>Проверка валидности логина </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_mysql_client_1a2c15bbf59d3fb1b73005ad07a8dba455">AddrToStr</link> (unsigned int ip, char *address)</para>
+
+<para>Преобразование IP адреса в строку </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_class_g_mysql_client">GMysqlClient</link> * <link linkend="_class_g_mysql_client_1a87a90c9a2b827da79f451728f4109850">GetInstance</link> ()</para>
+
+<para>Получить экземпляр класса (Singleton) </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_class_g_mysql_client">GMysqlClient</link> * <link linkend="_class_g_mysql_client_1a4d84ec5f99dcdeb604a4c2a7b34e23bf">instance</link> = NULL</para>
+
+<para>Единственный экземпляр класса </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Основной класс для работы с MySQL базой данных </para>
+
+
+
+<para><warning><title>Warning</title>
+
+<para>Реализован как Singleton. Использовать через <link linkend="_class_g_mysql_client_1a87a90c9a2b827da79f451728f4109850">GetInstance()</link> </para>
+</warning>
+</para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00026">26</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_g_mysql_client_1abe6e61839f3cca64f864f4a9078b0ba5"/><section>
+    <title>AddAntibrutUser()</title>
+<indexterm><primary>AddAntibrutUser</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>AddAntibrutUser</secondary></indexterm>
+<para><computeroutput>int GMysqlClient::AddAntibrutUser (int ip)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00374">374</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a0cba2ae6714706fa26b2b39f91c34665"/><section>
+    <title>AddCashLog()</title>
+<indexterm><primary>AddCashLog</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>AddCashLog</secondary></indexterm>
+<para><computeroutput>bool GMysqlClient::AddCashLog (int uid, int zoneid, int sn, int aid, int point, int cash, int status, char * creatime)</computeroutput></para><para>
+
+<para>Добавление записи в лог операций с наличностью </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>uid</entry><entry>
+<para>Идентификатор пользователя </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>zoneid</entry><entry>
+<para>Идентификатор зоны </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>sn</entry><entry>
+<para>Серийный номер операции </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>aid</entry><entry>
+<para>Идентификатор аккаунта </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>point</entry><entry>
+<para>Количество баллов </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>cash</entry><entry>
+<para>Сумма денег </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>status</entry><entry>
+<para>Статус операции </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>creatime</entry><entry>
+<para>Время создания записи </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true - запись успешна, false - ошибка выполнения </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>Использует REPLACE INTO для обновления существующих записей </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00451">451</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1ac4379ab9d87013d1578a381558e9cdae"/><section>
+    <title>AddCashUser()</title>
+<indexterm><primary>AddCashUser</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>AddCashUser</secondary></indexterm>
+<para><computeroutput>void GMysqlClient::AddCashUser (int userid, int zoneid, int sn, int point, int cash, char * creatime)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00278">278</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a2c15bbf59d3fb1b73005ad07a8dba455"/><section>
+    <title>AddrToStr()</title>
+<indexterm><primary>AddrToStr</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>AddrToStr</secondary></indexterm>
+<para><computeroutput>void GMysqlClient::AddrToStr (unsigned int ip, char * address)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Преобразование IP адреса в строку </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ip</entry><entry>
+<para>Адрес в сетевом порядке байт </para>
+</entry>
+                            </row>
+                            <row>
+<entry>address</entry><entry>
+<para>Буфер для результата (минимум 16 байт) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00467">467</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1abdc4799af3e56eb878e0595b1d54b8fa"/><section>
+    <title>AddUser()</title>
+<indexterm><primary>AddUser</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>AddUser</secondary></indexterm>
+<para><computeroutput>int GMysqlClient::AddUser (int userid, int zoneid, char * login, int ipaddr)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Добавить пользователя в онлайн-список </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>userid</entry><entry>
+<para>ID пользователя </para>
+</entry>
+                            </row>
+                            <row>
+<entry>zoneid</entry><entry>
+<para>ID зоны </para>
+</entry>
+                            </row>
+                            <row>
+<entry>login</entry><entry>
+<para>Логин </para>
+</entry>
+                            </row>
+                            <row>
+<entry>ipaddr</entry><entry>
+<para>IP адрес </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Индекс добавленного пользователя </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00229">229</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a8875011e1658a40cefc82eac737bba58"/><section>
+    <title>AlexAddLogin()</title>
+<indexterm><primary>AlexAddLogin</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>AlexAddLogin</secondary></indexterm>
+<para><computeroutput>bool GMysqlClient::AlexAddLogin (int uid, int action)</computeroutput></para><para>
+
+<para>Логирование действия входа/выхода (специальный функционал) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>uid</entry><entry>
+<para>Идентификатор пользователя </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>action</entry><entry>
+<para>Тип действия (1 - вход, 0 - выход) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true - запись успешна, false - отключен функционал или ошибка </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>Требует активации lkmod и loginlog через AlexPatch </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00467">467</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a14143f486913e7d3edff46e7458697cb"/><section>
+    <title>AlexPatch()</title>
+<indexterm><primary>AlexPatch</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>AlexPatch</secondary></indexterm>
+<para><computeroutput>void GMysqlClient::AlexPatch (const bool lkmod, const bool log, const char * shell)</computeroutput></para><para>
+
+<para>Дополнительные настройки </para>
+</para>
+
+<para>Активация специального режима работы (патч Алекса).</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry></entry><entry>lkmod</entry><entry>
+<para>Режим блокировки </para>
+</entry>
+                            </row>
+                            <row>
+<entry></entry><entry>log</entry><entry>
+<para>Флаг логирования </para>
+</entry>
+                            </row>
+                            <row>
+<entry></entry><entry>shell</entry><entry>
+<para>Команда для выполнения при выходе</para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>lkmod</entry><entry>
+<para>Флаг активации модификации </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>log</entry><entry>
+<para>Флаг логирования входа </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>shell</entry><entry>
+<para>Шаблон команды для выполнения при выходе </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <warning><title>Warning</title>
+
+<para>Команда выполняется через system(), необходима валидация входных данных! </para>
+</warning>
+</para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00077">77</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a3e52c51fa1af93cb93da4547f877dba6"/><section>
+    <title>AlexShell()</title>
+<indexterm><primary>AlexShell</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>AlexShell</secondary></indexterm>
+<para><computeroutput>bool GMysqlClient::AlexShell (int uid)</computeroutput></para><para>
+
+<para>Выполнение shell-команды при выходе пользователя </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>uid</entry><entry>
+<para>Идентификатор пользователя </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true - команда выполнена, false - функционал отключен </para>
+</formalpara>
+<warning><title>Warning</title>
+
+<para>Выполняет произвольные команды из logoutshell! Риск SQL-инъекций! </para>
+</warning>
+<note><title>Note</title>
+
+<para>Формат команды: printf-шаблон с одним параметром (uid) </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00489">489</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a8b60b7430a3413aeae8f36df7bbf7f57"/><section>
+    <title>ATOI()</title>
+<indexterm><primary>ATOI</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>ATOI</secondary></indexterm>
+<para><computeroutput>int GMysqlClient::ATOI (const char * ptr)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00388">388</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1af14249f643329398179702dd82f867fc"/><section>
+    <title>Auth0xMD5()</title>
+<indexterm><primary>Auth0xMD5</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>Auth0xMD5</secondary></indexterm>
+<para><computeroutput>void GMysqlClient::Auth0xMD5 (char * out, char * in)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00395">395</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a98b602a010fc50254381bcc3ad35d74b"/><section>
+    <title>AuthBase64()</title>
+<indexterm><primary>AuthBase64</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>AuthBase64</secondary></indexterm>
+<para><computeroutput>void GMysqlClient::AuthBase64 (char * passwd, char * auth)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00406">406</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a4d62a501b69e922fae0c53fcc6342169"/><section>
+    <title>AuthPasswd()</title>
+<indexterm><primary>AuthPasswd</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>AuthPasswd</secondary></indexterm>
+<para><computeroutput>bool GMysqlClient::AuthPasswd (char * passwd, char * auth)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Преобразование аутентификационных данных </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>passwd</entry><entry>
+<para>Выходной буфер для пароля (16 байт) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>auth</entry><entry>
+<para>Входные аутентификационные данные </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true если преобразование успешно </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>Поддерживаемые типы хешей: 1 - бинарный формат 2 - 0xMD5 (hex строка с префиксом 0x) 3 - base64 </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00425">425</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1ac6af30f08fc5c7f21a54fe66848308d1"/><section>
+    <title>ClearAntibrutUser()</title>
+<indexterm><primary>ClearAntibrutUser</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>ClearAntibrutUser</secondary></indexterm>
+<para><computeroutput>void GMysqlClient::ClearAntibrutUser ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00338">338</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a4379c3f714045e1afd240d3e006ef34e"/><section>
+    <title>ClearCash()</title>
+<indexterm><primary>ClearCash</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>ClearCash</secondary></indexterm>
+<para><computeroutput>int GMysqlClient::ClearCash ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00252">252</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a35fa8409b064722f23afb762910f1365"/><section>
+    <title>ClearOnlineRecord()</title>
+<indexterm><primary>ClearOnlineRecord</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>ClearOnlineRecord</secondary></indexterm>
+<para><computeroutput>bool GMysqlClient::ClearOnlineRecord (char zoneid, char aid)</computeroutput></para><para>
+
+<para>Очистка онлайн-записей для указанной зоны и аккаунта </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>zoneid</entry><entry>
+<para>Идентификатор зоны </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>aid</entry><entry>
+<para>Идентификатор аккаунта </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true - операция успешна, false - ошибка выполнения </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>Устанавливает mysql_state = 2 перед выполнением операции </para>
+</note>
+<warning><title>Warning</title>
+
+<para>Требует предварительной установки соединения с БД </para>
+</warning>
+</para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00197">197</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a4e2c4854287bb8ffdcd12081f46e866a"/><section>
+    <title>Connect()</title>
+<indexterm><primary>Connect</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>Connect</secondary></indexterm>
+<para><computeroutput>bool GMysqlClient::Connect ( )</computeroutput></para><para>
+
+<para>Установить соединение с БД </para>
+</para>
+
+<para>Установка соединения с базой данных.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>true - подключение успешно, false - ошибка подключения </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>Выводит сообщение о статусе подключения в консоль. </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00092">92</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a8867d598bb11fca0045a206ab04c04c9"/><section>
+    <title>DelAntibrutUser()</title>
+<indexterm><primary>DelAntibrutUser</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>DelAntibrutUser</secondary></indexterm>
+<para><computeroutput>int GMysqlClient::DelAntibrutUser (int ip)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00364">364</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a01a8870566416cb8446699c93cd1557b"/><section>
+    <title>DelCashUser()</title>
+<indexterm><primary>DelCashUser</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>DelCashUser</secondary></indexterm>
+<para><computeroutput>void GMysqlClient::DelCashUser (int idx)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00268">268</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a315b9d03daf23fd3ccf9089290e155b7"/><section>
+    <title>DeleteErrorRow()</title>
+<indexterm><primary>DeleteErrorRow</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>DeleteErrorRow</secondary></indexterm>
+<para><computeroutput>bool GMysqlClient::DeleteErrorRow (int status, int uid, char * creatime)</computeroutput></para><para>
+
+<para>Удаление ошибочных записей из таблицы usecashnow. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>status</entry><entry>
+<para>Статус записи для удаления </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>uid</entry><entry>
+<para>Идентификатор пользователя </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>creatime</entry><entry>
+<para>Время создания записи </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true - удаление успешно, false - ошибка выполнения </para>
+</formalpara>
+<warning><title>Warning</title>
+
+<para>Не выполняет проверку формата параметра creatime </para>
+</warning>
+</para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00362">362</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a0260ea3e3b3ba9b0e289a7b97bc4fd67"/><section>
+    <title>DelUseCashNow()</title>
+<indexterm><primary>DelUseCashNow</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>DelUseCashNow</secondary></indexterm>
+<para><computeroutput>bool GMysqlClient::DelUseCashNow (int status, int uid, int sn)</computeroutput></para><para>
+
+<para>Удаление записи из usecashnow. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>status</entry><entry>
+<para>Статус записи </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>uid</entry><entry>
+<para>Идентификатор пользователя </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>sn</entry><entry>
+<para>Серийный номер операции </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true - удаление успешно, false - ошибка выполнения </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00429">429</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1af95566b524271d47c9e9baddb7efda4a"/><section>
+    <title>DelUser()</title>
+<indexterm><primary>DelUser</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>DelUser</secondary></indexterm>
+<para><computeroutput>int GMysqlClient::DelUser (int userid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Удалить пользователя из онлайн-списка </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>userid</entry><entry>
+<para>ID пользователя </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Индекс удаленного элемента или -1 </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00211">211</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a50dd2028ef5a6c498a7784a014606fb8"/><section>
+    <title>Disconnect()</title>
+<indexterm><primary>Disconnect</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>Disconnect</secondary></indexterm>
+<para><computeroutput>void GMysqlClient::Disconnect ( )</computeroutput></para><para>
+
+<para>Разорвать соединение с БД </para>
+</para>
+
+<para>Разрыв соединения с базой данных.</para>
+
+<para><note><title>Note</title>
+
+<para>Автоматически вызывается при разрушении объекта. </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00119">119</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a623a50fa9c2dbe90519ac099bfa492f0"/><section>
+    <title>GetAid()</title>
+<indexterm><primary>GetAid</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>GetAid</secondary></indexterm>
+<para><computeroutput>char GMysqlClient::GetAid ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Получить ID приложения </para>
+</para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00164">164</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a56c16b331659609464396e2b1cf85d0f"/><section>
+    <title>GetAllCashUser()</title>
+<indexterm><primary>GetAllCashUser</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>GetAllCashUser</secondary></indexterm>
+<para><computeroutput>void GMysqlClient::GetAllCashUser (int idx, int &amp; userid, int &amp; zoneid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00296">296</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a9d2cce01742a63ed739c4c3cbe233296"/><section>
+    <title>GetAntibrutUser()</title>
+<indexterm><primary>GetAntibrutUser</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>GetAntibrutUser</secondary></indexterm>
+<para><computeroutput>int GMysqlClient::GetAntibrutUser (int ip)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00354">354</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1aca8d88358cbbd6033e81272381cb0911"/><section>
+    <title>GetCashCash()</title>
+<indexterm><primary>GetCashCash</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>GetCashCash</secondary></indexterm>
+<para><computeroutput>int GMysqlClient::GetCashCash (int idx)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00317">317</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1afa65eb70f3df9ead6d515aa084f3f415"/><section>
+    <title>GetCashCreaTime()</title>
+<indexterm><primary>GetCashCreaTime</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>GetCashCreaTime</secondary></indexterm>
+<para><computeroutput>char * GMysqlClient::GetCashCreaTime (int idx)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00307">307</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a872aead647ae16442ef1ded0cfab4710"/><section>
+    <title>GetCashPoint()</title>
+<indexterm><primary>GetCashPoint</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>GetCashPoint</secondary></indexterm>
+<para><computeroutput>int GMysqlClient::GetCashPoint (int idx)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00327">327</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a9da8bc562d0fd8440935df068aa50922"/><section>
+    <title>GetCashSize()</title>
+<indexterm><primary>GetCashSize</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>GetCashSize</secondary></indexterm>
+<para><computeroutput>int GMysqlClient::GetCashSize ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00259">259</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1ad4ac431eba947493223affceccff7990"/><section>
+    <title>GetCashUser()</title>
+<indexterm><primary>GetCashUser</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>GetCashUser</secondary></indexterm>
+<para><computeroutput>int GMysqlClient::GetCashUser (int userid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00286">286</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a87a90c9a2b827da79f451728f4109850"/><section>
+    <title>GetInstance()</title>
+<indexterm><primary>GetInstance</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>GetInstance</secondary></indexterm>
+<para><computeroutput>static <link linkend="_class_g_mysql_client">GMysqlClient</link> * GMysqlClient::GetInstance ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Получить экземпляр класса (Singleton) </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Указатель на единственный экземпляр <link linkend="_class_g_mysql_client">GMysqlClient</link> </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00481">481</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a196ae8753a336df2cfcbea330f1a1e13"/><section>
+    <title>GetUseCashNow()</title>
+<indexterm><primary>GetUseCashNow</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>GetUseCashNow</secondary></indexterm>
+<para><computeroutput>bool GMysqlClient::GetUseCashNow (int status, int &amp; count)</computeroutput></para><para>
+
+<para>Получение записей usecashnow по статусу </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>status</entry><entry>
+<para>Статус для фильтрации </para>
+</entry>
+                            </row>
+                            <row>
+<entry>out</entry><entry>count</entry><entry>
+<para>Количество найденных записей </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true - запрос выполнен, false - ошибка выполнения </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>Очищает кэш перед заполнением новых данных </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00378">378</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1ab7ff1536bda77626eaecf55da93aab92"/><section>
+    <title>GetUser()</title>
+<indexterm><primary>GetUser</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>GetUser</secondary></indexterm>
+<para><computeroutput>int GMysqlClient::GetUser (int userid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Найти пользователя по ID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>userid</entry><entry>
+<para>ID пользователя </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Индекс в векторе или -1 если не найден </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00196">196</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a197d13b53a9987edf047df74c8d73a2e"/><section>
+    <title>GetUserData()</title>
+<indexterm><primary>GetUserData</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>GetUserData</secondary></indexterm>
+<para><computeroutput>ONLINE_USER * GMysqlClient::GetUserData (int userid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Получить данные пользователя </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>userid</entry><entry>
+<para>ID пользователя </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Указатель на структуру ONLINE_USER или NULL </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00243">243</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1acb10864e5152be98cb60ca379e5401bc"/><section>
+    <title>GetZoneid()</title>
+<indexterm><primary>GetZoneid</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>GetZoneid</secondary></indexterm>
+<para><computeroutput>char GMysqlClient::GetZoneid ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Получить ID зоны </para>
+</para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00165">165</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a129ff21e968ae3c1218dd01ff10f9b09"/><section>
+    <title>Init()</title>
+<indexterm><primary>Init</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>Init</secondary></indexterm>
+<para><computeroutput>void GMysqlClient::Init (const char * ip, const int port, const char * user, const char * passwd, const char * db, const int h)</computeroutput></para><para>
+
+<para>Инициализация параметров подключения </para>
+</para>
+
+<para>Инициализация параметров подключения к базе данных.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry></entry><entry>ip</entry><entry>
+<para>IP адрес сервера БД </para>
+</entry>
+                            </row>
+                            <row>
+<entry></entry><entry>port</entry><entry>
+<para>Порт сервера БД </para>
+</entry>
+                            </row>
+                            <row>
+<entry></entry><entry>user</entry><entry>
+<para>Имя пользователя </para>
+</entry>
+                            </row>
+                            <row>
+<entry></entry><entry>passwd</entry><entry>
+<para>Пароль </para>
+</entry>
+                            </row>
+                            <row>
+<entry></entry><entry>db</entry><entry>
+<para>Имя базы данных </para>
+</entry>
+                            </row>
+                            <row>
+<entry></entry><entry>h</entry><entry>
+<para>Тип хеширования (1-binary, 2-0xMD5, 3-base64)</para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>ip</entry><entry>
+<para>IP-адрес сервера MySQL (макс. 19 символов) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>port</entry><entry>
+<para>Порт сервера MySQL </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>user</entry><entry>
+<para>Имя пользователя БД (макс. 127 символов) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>passwd</entry><entry>
+<para>Пароль пользователя БД (макс. 127 символов) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>db</entry><entry>
+<para>Название базы данных (макс. 127 символов) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>h</entry><entry>
+<para>Хэш-идентификатор (дополнительный параметр) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>Инициализирует мьютексы и резервирует память для контейнеров. </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00030">30</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a50e93bdf74da424077e864ba8bbfe42c"/><section>
+    <title>IsActive()</title>
+<indexterm><primary>IsActive</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>IsActive</secondary></indexterm>
+<para><computeroutput>bool GMysqlClient::IsActive ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Проверить активность соединения </para>
+</para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00163">163</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1ae74167391b7e749c390203ea4f0ec5e5"/><section>
+    <title>MatrixPasswd()</title>
+<indexterm><primary>MatrixPasswd</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>MatrixPasswd</secondary></indexterm>
+<para><computeroutput>bool GMysqlClient::MatrixPasswd (int &amp; uid, char * login, char * passwd, int ipaddr)</computeroutput></para><para>
+
+<para>Проверка учетных данных пользователя. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>out</entry><entry>uid</entry><entry>
+<para>Идентификатор пользователя (при успешной проверке) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>login</entry><entry>
+<para>Логин пользователя </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>passwd</entry><entry>
+<para>Пароль пользователя (открытый текст) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>ipaddr</entry><entry>
+<para>IP-адрес клиента (сетевой порядок) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true - аутентификация успешна, false - ошибка</para>
+</formalpara>
+Использует хранимую процедуру acquireuserpasswd. </para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00163">163</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a1be593d128e947bbb05fdee22e9c2a89"/><section>
+    <title>MysqlQuery()</title>
+<indexterm><primary>MysqlQuery</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>MysqlQuery</secondary></indexterm>
+<para><computeroutput>bool GMysqlClient::MysqlQuery (char * ptr, size_t len)</computeroutput></para><para>
+
+<para>Выполнить SQL запрос </para>
+</para>
+
+<para>Выполнение SQL-запроса.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ptr</entry><entry>
+<para>Текст запроса </para>
+</entry>
+                            </row>
+                            <row>
+<entry>len</entry><entry>
+<para>Длина запроса </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true если запрос выполнен успешно</para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>ptr</entry><entry>
+<para>Указатель на буфер с запросом </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>len</entry><entry>
+<para>Длина запроса (макс. 1024 байта) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true - запрос выполнен успешно, false - ошибка выполнения </para>
+</formalpara>
+<warning><title>Warning</title>
+
+<para>Не использовать для запросов длиной более 1024 байт! </para>
+</warning>
+</para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00136">136</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a524bc45740cb01aabdbf2b012407925f"/><section>
+    <title>OnfflineRecord()</title>
+<indexterm><primary>OnfflineRecord</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>OnfflineRecord</secondary></indexterm>
+<para><computeroutput>bool GMysqlClient::OnfflineRecord (int uid, char aid, char &amp; zoneid, int &amp; zonelocalid, int &amp; overwrite)</computeroutput></para><para>
+
+<para>Запись информации о выходе пользователя из онлайн </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>uid</entry><entry>
+<para>Идентификатор пользователя </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>aid</entry><entry>
+<para>Идентификатор аккаунта </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in,out</entry><entry>zoneid</entry><entry>
+<para>Идентификатор зоны (входное и выходное значение) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in,out</entry><entry>zonelocalid</entry><entry>
+<para>Локальный ID в зоне (входное и выходное значение) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>out</entry><entry>overwrite</entry><entry>
+<para>Флаг перезаписи (0 - нет перезаписи, 1 - перезапись) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true - операция успешна, false - ошибка выполнения </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>Автоматически удаляет пользователя из внутреннего хранилища </para>
+</note>
+<warning><title>Warning</title>
+
+<para>Блокирует мьютекс на время работы с результатами запроса </para>
+</warning>
+</para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00254">254</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a7c6a4b72d981e0c88568e453221dd06a"/><section>
+    <title>OnlineRecord()</title>
+<indexterm><primary>OnlineRecord</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>OnlineRecord</secondary></indexterm>
+<para><computeroutput>bool GMysqlClient::OnlineRecord (int uid, char aid, char &amp; zoneid, int &amp; zonelocalid, int &amp; overwrite)</computeroutput></para><para>
+
+<para>Запись информации о входе пользователя в онлайн </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>uid</entry><entry>
+<para>Идентификатор пользователя </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>aid</entry><entry>
+<para>Идентификатор аккаунта </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in,out</entry><entry>zoneid</entry><entry>
+<para>Идентификатор зоны (входное и выходное значение) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in,out</entry><entry>zonelocalid</entry><entry>
+<para>Локальный ID в зоне (входное и выходное значение) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>out</entry><entry>overwrite</entry><entry>
+<para>Флаг перезаписи (0 - нет перезаписи, 1 - перезапись) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true - операция успешна, false - ошибка выполнения</para>
+</formalpara>
+Использует хранимые процедуры и временные переменные MySQL <warning><title>Warning</title>
+
+<para>Требует обработки результатов через mysql_store_result </para>
+</warning>
+</para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00219">219</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1aee26570bd0c44f31da836916cf77ec23"/><section>
+    <title>QueryGMPrivilege()</title>
+<indexterm><primary>QueryGMPrivilege</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>QueryGMPrivilege</secondary></indexterm>
+<para><computeroutput>bool GMysqlClient::QueryGMPrivilege (int uid, char zoneid, unsigned char * gm_auth, int &amp; count)</computeroutput></para><para>
+
+<para>Получение списка GM-привилегий пользователя </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>uid</entry><entry>
+<para>Идентификатор пользователя </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>zoneid</entry><entry>
+<para>Идентификатор зоны </para>
+</entry>
+                            </row>
+                            <row>
+<entry>out</entry><entry>gm_auth</entry><entry>
+<para>Массив для хранения привилегий </para>
+</entry>
+                            </row>
+                            <row>
+<entry>out</entry><entry>count</entry><entry>
+<para>Количество найденных привилегий </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true - запрос выполнен, false - ошибка выполнения </para>
+</formalpara>
+<warning><title>Warning</title>
+
+<para>Не контролирует размер выходного массива gm_auth </para>
+</warning>
+</para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00336">336</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a5ad2854f8238ad2008cf0358adf9325b"/><section>
+    <title>SetUseCashNow()</title>
+<indexterm><primary>SetUseCashNow</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>SetUseCashNow</secondary></indexterm>
+<para><computeroutput>bool GMysqlClient::SetUseCashNow (int status, int sn, int uid, char * creatime)</computeroutput></para><para>
+
+<para>Обновление статуса записи в usecashnow. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>status</entry><entry>
+<para>Новый статус записи </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>sn</entry><entry>
+<para>Серийный номер операции </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>uid</entry><entry>
+<para>Идентификатор пользователя </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>creatime</entry><entry>
+<para>Время создания записи </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true - обновление успешно, false - ошибка выполнения </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>Выполняет проверку существования записи перед обновлением </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00405">405</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1aae78133acca23894a428d104cd582168"/><section>
+    <title>SizeAntibrutUser()</title>
+<indexterm><primary>SizeAntibrutUser</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>SizeAntibrutUser</secondary></indexterm>
+<para><computeroutput>int GMysqlClient::SizeAntibrutUser ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00345">345</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1ac581c4885d0cd84f507760d32177b4f3"/><section>
+    <title>UserCreatime()</title>
+<indexterm><primary>UserCreatime</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>UserCreatime</secondary></indexterm>
+<para><computeroutput>bool GMysqlClient::UserCreatime (int uid, int &amp; timestamp)</computeroutput></para><para>
+
+<para>Получение времени создания пользователя в UNIX-формате </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>uid</entry><entry>
+<para>Идентификатор пользователя </para>
+</entry>
+                            </row>
+                            <row>
+<entry>out</entry><entry>timestamp</entry><entry>
+<para>Время создания пользователя </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true - данные получены, false - ошибка запроса </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>Использует функцию MySQL UNIX_TIMESTAMP() </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00286">286</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a916a21bf80a3b7aaaebaebf1855a429b"/><section>
+    <title>UserGMPrivilege()</title>
+<indexterm><primary>UserGMPrivilege</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>UserGMPrivilege</secondary></indexterm>
+<para><computeroutput>bool GMysqlClient::UserGMPrivilege (int uid, char zoneid, bool &amp; IsGM)</computeroutput></para><para>
+
+<para>Получение времени создания пользователя в UNIX-формате </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>uid</entry><entry>
+<para>Идентификатор пользователя </para>
+</entry>
+                            </row>
+                            <row>
+<entry>out</entry><entry>timestamp</entry><entry>
+<para>Время создания пользователя </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true - данные получены, false - ошибка запроса </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>Использует функцию MySQL UNIX_TIMESTAMP() </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00311">311</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_mysql_client_1a477a9db403d718b8ea1fb2f3e8ba2561"/><section>
+    <title>ValidLogin()</title>
+<indexterm><primary>ValidLogin</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>ValidLogin</secondary></indexterm>
+<para><computeroutput>bool GMysqlClient::ValidLogin (char * login, int size)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Проверка валидности логина </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>login</entry><entry>
+<para>Логин для проверки </para>
+</entry>
+                            </row>
+                            <row>
+<entry>size</entry><entry>
+<para>Длина логина </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true если логин содержит только буквы и цифры </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00450">450</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_g_mysql_client_1a4d84ec5f99dcdeb604a4c2a7b34e23bf"/><section>
+    <title>instance</title>
+<indexterm><primary>instance</primary><secondary>GMysqlClient</secondary></indexterm>
+<indexterm><primary>GMysqlClient</primary><secondary>instance</secondary></indexterm>
+<para><computeroutput><link linkend="_class_g_mysql_client">GMysqlClient</link> * GMysqlClient::instance = NULL<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Единственный экземпляр класса </para>
+</para>
+
+<para>Статический указатель на единственный экземпляр класса (Singleton) </para>
+<para>
+Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00487">487</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_gmysqlclient_8hpp">gmysqlclient.hpp</link>D:/pwsrc2.0/docs/gauthd/<link linkend="_gmysqlclient_8cpp">gmysqlclient.cpp</link></section>
+</section>

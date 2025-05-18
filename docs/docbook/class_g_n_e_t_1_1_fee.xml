@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_n_e_t_1_1_fee" xml:lang="en-US">
+<title>GNET::Fee Class Reference</title>
+<indexterm><primary>GNET::Fee</primary></indexterm>
+<para>
+
+<para>Класс для управления тарифами и платежами </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;fee.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum { <?linebreak?><link linkend="_class_g_n_e_t_1_1_fee_1ab4caa34c952cc4efbed053dec96ae353a0c6c9db762f0f25217e3df464c0a5394">FEE_TIME</link>
+, <link linkend="_class_g_n_e_t_1_1_fee_1ab4caa34c952cc4efbed053dec96ae353a7a5fb0ee83bf78e2566cae0ea45a7f82">FEE_OCTETS</link>
+, <link linkend="_class_g_n_e_t_1_1_fee_1ab4caa34c952cc4efbed053dec96ae353ad9709ec4aa55cfc61b47045546cd94a8">FEE_MONTH</link>
+, <link linkend="_class_g_n_e_t_1_1_fee_1ab4caa34c952cc4efbed053dec96ae353a0f2e9a5d76aa116397a8f108523ef02d">FEE_SEASON</link>
+, <?linebreak?><link linkend="_class_g_n_e_t_1_1_fee_1ab4caa34c952cc4efbed053dec96ae353a848dad6c83a784e16471fc2981f94104">FEE_BONUS</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_g_n_e_t_1_1_fee_1ae9fed4745942d3e3c1191207e46645b3">Fee</link> ()</para>
+
+<para>Конструктор по умолчанию </para>
+</listitem>
+            <listitem><para><link linkend="_class_g_n_e_t_1_1_fee_1add88c8fd1435367eb93830e85a1b3aa0">~Fee</link> ()</para>
+
+<para>Деструктор класса </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Класс для управления тарифами и платежами </para>
+
+
+
+<para>Класс содержит перечисление типов тарификации и хранит текущее значение платежа. Может использоваться для расчетов стоимости услуг в различных тарифных моделях. </para>
+<para>
+Definition at line <link linkend="_fee_8h_source_1l00018">18</link> of file <link linkend="_fee_8h_source">fee.h</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_g_n_e_t_1_1_fee_1ab4caa34c952cc4efbed053dec96ae353"/><section>
+    <title>anonymous enum</title>
+<para><computeroutput>anonymous enum</computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>FEE_TIME</primary><secondary>GNET::Fee</secondary></indexterm>
+<indexterm><primary>GNET::Fee</primary><secondary>FEE_TIME</secondary></indexterm>
+<anchor xml:id="_class_g_n_e_t_1_1_fee_1ab4caa34c952cc4efbed053dec96ae353a0c6c9db762f0f25217e3df464c0a5394"/>FEE_TIME</entry><entry>
+<para>Оплата за время использования </para>
+</entry></row><row><entry><indexterm><primary>FEE_OCTETS</primary><secondary>GNET::Fee</secondary></indexterm>
+<indexterm><primary>GNET::Fee</primary><secondary>FEE_OCTETS</secondary></indexterm>
+<anchor xml:id="_class_g_n_e_t_1_1_fee_1ab4caa34c952cc4efbed053dec96ae353a7a5fb0ee83bf78e2566cae0ea45a7f82"/>FEE_OCTETS</entry><entry>
+<para>Оплата за объем переданных данных </para>
+</entry></row><row><entry><indexterm><primary>FEE_MONTH</primary><secondary>GNET::Fee</secondary></indexterm>
+<indexterm><primary>GNET::Fee</primary><secondary>FEE_MONTH</secondary></indexterm>
+<anchor xml:id="_class_g_n_e_t_1_1_fee_1ab4caa34c952cc4efbed053dec96ae353ad9709ec4aa55cfc61b47045546cd94a8"/>FEE_MONTH</entry><entry>
+<para>Месячная подписка </para>
+</entry></row><row><entry><indexterm><primary>FEE_SEASON</primary><secondary>GNET::Fee</secondary></indexterm>
+<indexterm><primary>GNET::Fee</primary><secondary>FEE_SEASON</secondary></indexterm>
+<anchor xml:id="_class_g_n_e_t_1_1_fee_1ab4caa34c952cc4efbed053dec96ae353a0f2e9a5d76aa116397a8f108523ef02d"/>FEE_SEASON</entry><entry>
+<para>Сезонная подписка </para>
+</entry></row><row><entry><indexterm><primary>FEE_BONUS</primary><secondary>GNET::Fee</secondary></indexterm>
+<indexterm><primary>GNET::Fee</primary><secondary>FEE_BONUS</secondary></indexterm>
+<anchor xml:id="_class_g_n_e_t_1_1_fee_1ab4caa34c952cc4efbed053dec96ae353a848dad6c83a784e16471fc2981f94104"/>FEE_BONUS</entry><entry>
+<para>Бонусный режим оплаты </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_fee_8h_source_1l00027">27</link> of file <link linkend="_fee_8h_source">fee.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_g_n_e_t_1_1_fee_1ae9fed4745942d3e3c1191207e46645b3"/><section>
+    <title>Fee()</title>
+<indexterm><primary>Fee</primary><secondary>GNET::Fee</secondary></indexterm>
+<indexterm><primary>GNET::Fee</primary><secondary>Fee</secondary></indexterm>
+<para><computeroutput>GNET::Fee::Fee ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Конструктор по умолчанию </para>
+</para>
+
+<para><formalpara><title>Postcondition</title>
+
+<para>Инициализирует внутренний счетчик платежа нулевым значением </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_fee_8h_source_1l00039">39</link> of file <link linkend="_fee_8h_source">fee.h</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_fee_1add88c8fd1435367eb93830e85a1b3aa0"/><section>
+    <title>~Fee()</title>
+<indexterm><primary>~Fee</primary><secondary>GNET::Fee</secondary></indexterm>
+<indexterm><primary>GNET::Fee</primary><secondary>~Fee</secondary></indexterm>
+<para><computeroutput>GNET::Fee::~Fee ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Деструктор класса </para>
+</para>
+
+<para><warning><title>Warning</title>
+
+<para>Не выполняет никаких специальных действий </para>
+</warning>
+</para>
+<para>
+Definition at line <link linkend="_fee_8h_source_1l00045">45</link> of file <link linkend="_fee_8h_source">fee.h</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_fee_8h">fee.h</link></section>
+</section>

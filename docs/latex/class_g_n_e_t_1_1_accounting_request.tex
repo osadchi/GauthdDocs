@@ -1,0 +1,69 @@
+\doxysection{GNET\+::Accounting\+Request Class Reference}
+\hypertarget{class_g_n_e_t_1_1_accounting_request}{}\label{class_g_n_e_t_1_1_accounting_request}\index{GNET::AccountingRequest@{GNET::AccountingRequest}}
+
+
+Класс для обработки учётных запросов (например, старт/стоп сессии, учёт трафика).  
+
+
+
+
+{\ttfamily \#include $<$accountingrequest.\+hpp$>$}
+
+Inheritance diagram for GNET\+::Accounting\+Request\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_n_e_t_1_1_accounting_request}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_accounting_request_aa11c0d3bdfe8aecec33fab6e918126cc}{Process}} (Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)
+\begin{DoxyCompactList}\small\item\em Основной метод обработки запроса. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс для обработки учётных запросов (например, старт/стоп сессии, учёт трафика). 
+
+Наследуется от GNET\+::\+Protocol. Используется для валидации, обработки данных и отправки ответов. 
+
+Definition at line \mbox{\hyperlink{accountingrequest_8hpp_source_l00027}{27}} of file \mbox{\hyperlink{accountingrequest_8hpp_source}{accountingrequest.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_n_e_t_1_1_accounting_request_aa11c0d3bdfe8aecec33fab6e918126cc}\index{GNET::AccountingRequest@{GNET::AccountingRequest}!Process@{Process}}
+\index{Process@{Process}!GNET::AccountingRequest@{GNET::AccountingRequest}}
+\doxysubsubsection{\texorpdfstring{Process()}{Process()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_accounting_request_aa11c0d3bdfe8aecec33fab6e918126cc} 
+void GNET\+::\+Accounting\+Request\+::\+Process (\begin{DoxyParamCaption}\item[{Manager \texorpdfstring{$\ast$}{*}}]{manager}{, }\item[{Manager\+::\+Session\+::\+ID}]{sid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Основной метод обработки запроса. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em manager} & Указатель на менеджер. \\
+\hline
+{\em sid} & Идентификатор сессии. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Последовательность действий\+:
+\begin{DoxyEnumerate}
+\item Проверка аутентичности (в случае неудачи — тихий сброс).
+\item Обработка всех параметров запроса (Generate\+Fee).
+\item Отправка ответа, если требуется (need\+\_\+response и успешная запись в БД).
+\item Проверка валидности пользователя (если невалиден — отправка \doxylink{class_g_n_e_t_1_1_kickout_user}{Kickout\+User}). 
+\end{DoxyEnumerate}
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{accountingrequest_8hpp_source_l00131}{131}} of file \mbox{\hyperlink{accountingrequest_8hpp_source}{accountingrequest.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{accountingrequest_8hpp}{accountingrequest.\+hpp}}\end{DoxyCompactItemize}

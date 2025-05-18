@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_gmysqlclient_8hpp" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/gmysqlclient.hpp File Reference</title>
+<indexterm><primary>D:/pwsrc2.0/docs/gauthd/gmysqlclient.hpp</primary></indexterm>
+<para>
+
+<para>MySQL клиент для работы с базой данных игрового сервера </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;mysql/mysql.h&gt;<?linebreak?>#include &lt;vector&gt;<?linebreak?>#include &quot;protocol.h&quot;<?linebreak?>#include &quot;thread.h&quot;<?linebreak?>#include &quot;timersender.h&quot;<?linebreak?>#include &quot;octets.h&quot;<?linebreak?>#include &quot;base64.h&quot;<?linebreak?></programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_g_mysql_client">GMysqlClient</link></para>
+
+<para>Основной класс для работы с MySQL базой данных </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>MySQL клиент для работы с базой данных игрового сервера </para>
+
+<para>Содержит методы для управления подключением, выполнения запросов, обработки онлайн-пользователей, кэширования данных и защиты от brute-force атак </para>
+<para>
+Definition in file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+</section>
+</section>

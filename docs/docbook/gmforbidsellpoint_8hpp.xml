@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_gmforbidsellpoint_8hpp" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/gmforbidsellpoint.hpp File Reference</title>
+<indexterm><primary>D:/pwsrc2.0/docs/gauthd/gmforbidsellpoint.hpp</primary></indexterm>
+<para>
+
+<para>Заголовочный файл класса GMForbidSellPoint, реализующего протокол запрета точек продаж. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;rpcdefs.h&quot;<?linebreak?>#include &quot;callid.hxx&quot;<?linebreak?>#include &quot;state.hxx&quot;<?linebreak?>#include &quot;gmforbidsellpoint&quot;<?linebreak?></programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_g_m_forbid_sell_point">GNET::GMForbidSellPoint</link></para>
+
+<para>Класс протокола для управления запретами точек продаж. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_g_n_e_t">GNET</link></para>
+
+<para>Основное пространство имен для сетевых компонентов системы. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Заголовочный файл класса GMForbidSellPoint, реализующего протокол запрета точек продаж. </para>
+
+<para>Этот файл содержит объявление класса GMForbidSellPoint, который используется для управления запретами на определенные точки продаж в системе. Класс наследуется от базового протокола <link linkend="_namespace_g_n_e_t">GNET</link>. </para>
+<para>
+Definition in file <link linkend="_gmforbidsellpoint_8hpp_source">gmforbidsellpoint.hpp</link>.</para>
+</section>
+</section>

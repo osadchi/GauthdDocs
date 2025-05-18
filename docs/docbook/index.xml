@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="en-US">
+    <info>
+    <title>gauthd</title>
+    </info>
+    <xi:include href="todo.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<chapter>
+    <title>Topic Documentation</title>
+    <xi:include href="group___accounting.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___g_n_e_t___protocol.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___g_n_e_t___p_r_o_t_o_c_o_l_s.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Namespace Documentation</title>
+<xi:include href="namespace_g_n_e_t.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Class Documentation</title>
+    <xi:include href="class_g_n_e_t_1_1_accounting_request.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_accounting_response.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_a_c_forbid_cheater.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_add_cash.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_add_cash___re.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_announce_zoneid.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_announce_zoneid2.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_announce_zoneid3.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_a_u2_game.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_authd_version.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_billing_balance.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_billing_balance_s_a.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_billing_cancel.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_billing_confirm.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_billing_request.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_check_timer.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_discount_announce.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_fee.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_game2_a_u.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_g_auth_server.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_get_player_i_d_by_name___re.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_g_m_forbid_sell_point.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_g_m_kickout_user.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_g_m_shutup.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_mysql_client.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_key_exchange.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_kickout_user.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_matrix_failure.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_query_user_forbid.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_query_user_forbid___re.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_query_user_privilege.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_query_user_privilege___re.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_s_s_o_get_ticket_req.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_status_announce.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_sys_send_mail3___re.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_sys_send_mail___re.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_trans_buy_point.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_g_n_e_t_1_1_user_info.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_verify_master.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_g_n_e_t_1_1_verify_master___re.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>File Documentation</title>
+    <xi:include href="accountingrequest_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="accountingrequest_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="accountingresponse_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="accountingresponse_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="acforbidcheater_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="acforbidcheater_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="addcash_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="addcash_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="addcash__re_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="addcash__re_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="announcezoneid_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="announcezoneid_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="announcezoneid2_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="announcezoneid2_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="announcezoneid3_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="announcezoneid3_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="au2game_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="au2game_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="authdversion_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="authdversion_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="billingbalance_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="billingbalance_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="billingbalancesa_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="billingbalancesa_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="billingcancel_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="billingcancel_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="billingconfirm_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="billingconfirm_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="billingrequest_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="billingrequest_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="callid_8hxx.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="callid_8hxx_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="discountannounce_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="discountannounce_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="fee_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="fee_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="game2au_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="game2au_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="gauthd_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="gauthd_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="gauthserver_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="gauthserver_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="gauthserver_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="gauthserver_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="getplayeridbyname__re_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="getplayeridbyname__re_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="gmforbidsellpoint_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="gmforbidsellpoint_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="gmkickoutuser_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="gmkickoutuser_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="gmshutup_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="gmshutup_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="gmysqlclient_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="gmysqlclient_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="gmysqlclient_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="gmysqlclient_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="keyexchange_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="keyexchange_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="kickoutuser_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="kickoutuser_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="matrixfailure_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="matrixfailure_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="queryuserforbid_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="queryuserforbid_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="queryuserforbid__re_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="queryuserforbid__re_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="queryuserprivilege_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="queryuserprivilege_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="queryuserprivilege__re_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="queryuserprivilege__re_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="ssogetticketreq_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="ssogetticketreq_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="state_8cxx.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="state_8cxx_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="state_8hxx.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="state_8hxx_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="statusannounce_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="statusannounce_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="stubs_8cxx.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="stubs_8cxx_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="syssendmail3__re_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="syssendmail3__re_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="syssendmail__re_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="syssendmail__re_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="transbuypoint_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="transbuypoint_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="verifymaster_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="verifymaster_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="verifymaster__re_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="verifymaster__re_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

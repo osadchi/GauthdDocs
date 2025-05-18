@@ -1,0 +1,108 @@
+\doxysection{D\+:/pwsrc2.0/docs/gauthd/gauthserver.cpp}
+\hypertarget{gauthserver_8cpp_source}{}\label{gauthserver_8cpp_source}\mbox{\hyperlink{gauthserver_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\ \#include\ "{}\mbox{\hyperlink{gmysqlclient_8hpp}{gmysqlclient.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\ \#include\ "{}getaddcashsn.hrp"{}}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\ \#include\ "{}\mbox{\hyperlink{addcash_8hpp}{addcash.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00010}00010\ \textcolor{preprocessor}{\ \#include\ "{}\mbox{\hyperlink{gauthserver_8hpp}{gauthserver.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00011}00011\ \textcolor{preprocessor}{\ \#include\ "{}\mbox{\hyperlink{state_8hxx}{state.hxx}}"{}}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00012}00012\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00013}00013\ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_g_n_e_t}{GNET}}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00014}00014\ \ \{}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00015}00015\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00022}00022\ \ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server}{GAuthServer}}\ GAuthServer::instance;}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00023}00023\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00028}00028\ \ \textcolor{keyword}{const}\ Protocol::Manager::Session::State*\ GAuthServer::GetInitState()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00029}00029\ \textcolor{keyword}{\ }\{}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00030}00030\ \ \ \ \ \ \textcolor{keywordflow}{return}\ \&\mbox{\hyperlink{namespace_g_n_e_t_a8db527ca0cb7dc440322bdb8481c2d13}{state\_GAuthServer}};}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00031}00031\ \ \}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00032}00032\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00038}00038\ \ \textcolor{keywordtype}{void}\ GAuthServer::OnAddSession(Session::ID\ sid)}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00039}00039\ \ \{}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00040}00040\ \ \ \ \ \ \textcolor{comment}{//TODO:\ Add\ custom\ logic\ on\ session\ creation}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00041}00041\ \ \ \ \ \ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_add2f735245396b7f7a31665266abb9f1}{SetSidIdx}}(sid);}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00042}00042\ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}GAuthServer::OnAddSession\ \%d\ \(\backslash\)n"{}},\ sid);}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00043}00043\ \ \}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00044}00044\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00050}00050\ \ \textcolor{keywordtype}{void}\ GAuthServer::OnDelSession(Session::ID\ sid)}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00051}00051\ \ \{}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00052}00052\ \ \ \ \ \ \textcolor{comment}{//TODO:\ Add\ custom\ logic\ on\ session\ deletion}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00053}00053\ \ \ \ \ \ Thread::Mutex::Scoped\ l(\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a6632c6441ea93e9bbe7999301534e593}{locker\_zonemap}});}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00054}00054\ \ \ \ \ \ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a6f4c1af94c9642a78383d593f4b3fc60}{zonemap}}.erase(sid);}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00055}00055\ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}GAuthServer::OnDelSession\ \%d\ \(\backslash\)n"{}},\ sid);}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00056}00056\ \ \}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00057}00057\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00065}\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a6b6bcb2c5dab0f794112337c7fcc556e}{00065}}\ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a6b6bcb2c5dab0f794112337c7fcc556e}{GAuthServer::ValidUser}}(Session::ID\ sid,\ \textcolor{keywordtype}{int}\ userid)}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00066}00066\ \ \{}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00067}00067\ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}GAuthServer::ValidUser\ userid=\%d\ \(\backslash\)n"{}},\ userid);}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00068}00068\ \ \ \ \ \ Thread::RWLock::RDScoped\ l(\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a03dccad867b02013d61e8dde6785f3af}{locker\_map}});}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00069}00069\ \ \ \ \ \ UserMap::iterator\ it\ =\ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_afcb09daf81ca16050c3e2467cb48c762}{usermap}}.find(userid);}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00070}00070\ \ \ \ \ \ \textcolor{keywordflow}{if}\ (it\ ==\ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_afcb09daf81ca16050c3e2467cb48c762}{usermap}}.end())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00071}00071\ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((*it).second.sid\ !=\ sid)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00072}00072\ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00073}00073\ \ \}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00074}00074\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00075}00075\ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00076}00076\ \ \textcolor{comment}{//-\/-\/GOLD\ CHECKER\ IMPLEMENTATION-\/-\/}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00077}00077\ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00078}00078\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00083}00083\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00092}00092\ \ \textcolor{keywordtype}{void}\ CheckTimer::CheckAddCashcn()}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00093}00093\ \ \{}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00094}00094\ \ \ \ \ \ \mbox{\hyperlink{class_g_mysql_client}{GMysqlClient}}\ *db\ =\ \mbox{\hyperlink{class_g_mysql_client_a87a90c9a2b827da79f451728f4109850}{GMysqlClient::GetInstance}}();}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00095}00095\ \ \ \ \ \ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server}{GAuthServer}}\ *aum\ =\ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a2fb6223e8492fcbc74f9b21ee12f25e7}{GAuthServer::GetInstance}}();}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00096}00096\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00097}00097\ \ \ \ \ \ \textcolor{keywordflow}{if}\ (db-\/>\mbox{\hyperlink{class_g_mysql_client_a9da8bc562d0fd8440935df068aa50922}{GetCashSize}}()\ >\ 0)\ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00098}00098\ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!(clear\_time++\ \%\ 3))}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ db-\/>\mbox{\hyperlink{class_g_mysql_client_a4379c3f714045e1afd240d3e006ef34e}{ClearCash}}();}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00102}00102\ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00103}00103\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00104}00104\ \ \ \ \ \ \textcolor{keywordtype}{int}\ sid\ =\ aum-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a1416d84887657af3f1b58942e4277e67}{GetSidIdx}}();}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00105}00105\ \ \ \ \ \ \textcolor{keywordtype}{int}\ count\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00106}00106\ \ \ \ \ \ db-\/>\mbox{\hyperlink{class_g_mysql_client_a196ae8753a336df2cfcbea330f1a1e13}{GetUseCashNow}}(0,\ count);}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00107}00107\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00108}00108\ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ count;\ i++)}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00109}00109\ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ userid\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ zoneid\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00112}00112\ \ \ \ \ \ \ \ \ \ db-\/>\mbox{\hyperlink{class_g_mysql_client_a56c16b331659609464396e2b1cf85d0f}{GetAllCashUser}}(i,\ userid,\ zoneid);}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00113}00113\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (userid\ >\ 0)}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ and\ process\ cash\ request}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ GetAddCashSN\ CashSN\ =\ GetAddCashSN(514,\ NULL,\ NULL);}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ GetAddCashSNArg\ arg;}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ arg.userid\ =\ userid;}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ arg.zoneid\ =\ zoneid;}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ CashSN.SetArgument(arg);}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ CashSN.SetRequest();}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ CashSN.Process(aum,\ sid);}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ db-\/>\mbox{\hyperlink{class_g_mysql_client_a01a8870566416cb8446699c93cd1557b}{DelCashUser}}(i);}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00129}00129\ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00130}00130\ \ \}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00131}00131\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00136}00136\ \ \textcolor{keywordtype}{void}\ CheckTimer::AntibrutClear()}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00137}00137\ \ \{}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00138}00138\ \ \ \ \ \ GMysqlClient\ *db\ =\ \mbox{\hyperlink{class_g_mysql_client_a87a90c9a2b827da79f451728f4109850}{GMysqlClient::GetInstance}}();}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00139}00139\ \ \ \ \ \ \textcolor{keywordflow}{if}\ (db-\/>\mbox{\hyperlink{class_g_mysql_client_aae78133acca23894a428d104cd582168}{SizeAntibrutUser}}())}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00140}00140\ \ \ \ \ \ \ \ \ \ db-\/>\mbox{\hyperlink{class_g_mysql_client_ac6af30f08fc5c7f21a54fe66848308d1}{ClearAntibrutUser}}();}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00141}00141\ \ \}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00142}00142\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00150}\mbox{\hyperlink{class_g_n_e_t_1_1_check_timer_afb7c8e11b1f82f73a44f2b6db53427e2}{00150}}\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_e_t_1_1_check_timer_afb7c8e11b1f82f73a44f2b6db53427e2}{CheckTimer::Run}}()}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00151}00151\ \ \{}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00152}00152\ \ \ \ \ \ AntibrutClear();}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00153}00153\ \ \ \ \ \ CheckAddCashcn();}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00154}00154\ \ \ \ \ \ Thread::HouseKeeper::AddTimerTask(\textcolor{keyword}{this},\ update\_time);}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00155}00155\ \ \}}
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00156}00156\ \ }
+\DoxyCodeLine{\Hypertarget{gauthserver_8cpp_source_l00157}00157\ \ \};\ \textcolor{comment}{//\ namespace\ GNET}}
+
+\end{DoxyCode}

@@ -1,0 +1,64 @@
+\doxysection{GNET\+::AU2\+Game Class Reference}
+\hypertarget{class_g_n_e_t_1_1_a_u2_game}{}\label{class_g_n_e_t_1_1_a_u2_game}\index{GNET::AU2Game@{GNET::AU2Game}}
+
+
+Класс протокола для передачи данных между сервером аутентификации и игровым сервером.  
+
+
+
+
+{\ttfamily \#include $<$au2game.\+hpp$>$}
+
+Inheritance diagram for GNET\+::AU2\+Game\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_n_e_t_1_1_a_u2_game}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_a_u2_game_a1a973d7ce830a0141f60f202a5c0809f}{Process}} (Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)
+\begin{DoxyCompactList}\small\item\em Метод обработки полученного протокола. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс протокола для передачи данных между сервером аутентификации и игровым сервером. 
+
+Наследует GNET\+::\+Protocol и содержит данные, специфичные для этого протокола. Используется для обработки запросов аутентификации, передачи информации о пользователях и других взаимодействий. 
+
+Definition at line \mbox{\hyperlink{au2game_8hpp_source_l00023}{23}} of file \mbox{\hyperlink{au2game_8hpp_source}{au2game.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_n_e_t_1_1_a_u2_game_a1a973d7ce830a0141f60f202a5c0809f}\index{GNET::AU2Game@{GNET::AU2Game}!Process@{Process}}
+\index{Process@{Process}!GNET::AU2Game@{GNET::AU2Game}}
+\doxysubsubsection{\texorpdfstring{Process()}{Process()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_a_u2_game_a1a973d7ce830a0141f60f202a5c0809f} 
+void GNET\+::\+AU2\+Game\+::\+Process (\begin{DoxyParamCaption}\item[{Manager \texorpdfstring{$\ast$}{*}}]{manager}{, }\item[{Manager\+::\+Session\+::\+ID}]{sid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Метод обработки полученного протокола. 
+
+Вызывается менеджером при получении пакета. Реализует логику обработки запроса/ответа.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em manager} & Указатель на менеджер, управляющий сессиями. \\
+\hline
+\mbox{\texttt{ in}}  & {\em sid} & Идентификатор сессии, от которой получены данные.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000006}{Todo}}]Реализовать обработку данных (например, валидацию токена, обновление статуса пользователя и т.\+п.). \end{DoxyRefDesc}
+
+
+Definition at line \mbox{\hyperlink{au2game_8hpp_source_l00038}{38}} of file \mbox{\hyperlink{au2game_8hpp_source}{au2game.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{au2game_8hpp}{au2game.\+hpp}}\end{DoxyCompactItemize}

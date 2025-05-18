@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_fee_8h_source" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/fee.h</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_fee_8h_source_1l00001"/>00001 
+<anchor xml:id="_fee_8h_source_1l00005"/>00005 
+<anchor xml:id="_fee_8h_source_1l00006"/>00006 <emphasis role="preprocessor">&#32;#ifndef&#32;__GNET_FEE_H</emphasis>
+<anchor xml:id="_fee_8h_source_1l00007"/>00007 <emphasis role="preprocessor">&#32;#define&#32;__GNET_FEE_H</emphasis>
+<anchor xml:id="_fee_8h_source_1l00008"/>00008 &#32;
+<anchor xml:id="_fee_8h_source_1l00009"/>00009 &#32;<emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_g_n_e_t">GNET</link>
+<anchor xml:id="_fee_8h_source_1l00010"/>00010 &#32;{
+<anchor xml:id="_fee_8h_source_1l00018"/><link linkend="_class_g_n_e_t_1_1_fee">00018</link> &#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_g_n_e_t_1_1_fee_1ae9fed4745942d3e3c1191207e46645b3">Fee</link>
+<anchor xml:id="_fee_8h_source_1l00019"/>00019 &#32;{
+<anchor xml:id="_fee_8h_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;fee;&#32;
+<anchor xml:id="_fee_8h_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_fee_8h_source_1l00022"/>00022 &#32;<emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_fee_8h_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">enum</emphasis>&#32;{&#32;
+<anchor xml:id="_fee_8h_source_1l00028"/><link linkend="_class_g_n_e_t_1_1_fee_1ab4caa34c952cc4efbed053dec96ae353a0c6c9db762f0f25217e3df464c0a5394">00028</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_n_e_t_1_1_fee_1ab4caa34c952cc4efbed053dec96ae353a0c6c9db762f0f25217e3df464c0a5394">FEE_TIME</link>,&#32;&#32;&#32;&#32;
+<anchor xml:id="_fee_8h_source_1l00029"/><link linkend="_class_g_n_e_t_1_1_fee_1ab4caa34c952cc4efbed053dec96ae353a7a5fb0ee83bf78e2566cae0ea45a7f82">00029</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_n_e_t_1_1_fee_1ab4caa34c952cc4efbed053dec96ae353a7a5fb0ee83bf78e2566cae0ea45a7f82">FEE_OCTETS</link>,&#32;&#32;
+<anchor xml:id="_fee_8h_source_1l00030"/><link linkend="_class_g_n_e_t_1_1_fee_1ab4caa34c952cc4efbed053dec96ae353ad9709ec4aa55cfc61b47045546cd94a8">00030</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_n_e_t_1_1_fee_1ab4caa34c952cc4efbed053dec96ae353ad9709ec4aa55cfc61b47045546cd94a8">FEE_MONTH</link>,&#32;&#32;&#32;
+<anchor xml:id="_fee_8h_source_1l00031"/><link linkend="_class_g_n_e_t_1_1_fee_1ab4caa34c952cc4efbed053dec96ae353a0f2e9a5d76aa116397a8f108523ef02d">00031</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_n_e_t_1_1_fee_1ab4caa34c952cc4efbed053dec96ae353a0f2e9a5d76aa116397a8f108523ef02d">FEE_SEASON</link>,&#32;&#32;
+<anchor xml:id="_fee_8h_source_1l00032"/><link linkend="_class_g_n_e_t_1_1_fee_1ab4caa34c952cc4efbed053dec96ae353a848dad6c83a784e16471fc2981f94104">00032</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_n_e_t_1_1_fee_1ab4caa34c952cc4efbed053dec96ae353a848dad6c83a784e16471fc2981f94104">FEE_BONUS</link>&#32;&#32;&#32;&#32;
+<anchor xml:id="_fee_8h_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;};
+<anchor xml:id="_fee_8h_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_fee_8h_source_1l00039"/><link linkend="_class_g_n_e_t_1_1_fee_1ae9fed4745942d3e3c1191207e46645b3">00039</link> &#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_n_e_t_1_1_fee_1ae9fed4745942d3e3c1191207e46645b3">Fee</link>()&#32;:&#32;fee(0)&#32;{}
+<anchor xml:id="_fee_8h_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_fee_8h_source_1l00045"/><link linkend="_class_g_n_e_t_1_1_fee_1add88c8fd1435367eb93830e85a1b3aa0">00045</link> &#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_n_e_t_1_1_fee_1add88c8fd1435367eb93830e85a1b3aa0">~Fee</link>()&#32;{}
+<anchor xml:id="_fee_8h_source_1l00046"/>00046 &#32;};
+<anchor xml:id="_fee_8h_source_1l00047"/>00047 &#32;
+<anchor xml:id="_fee_8h_source_1l00048"/>00048 &#32;};&#32;<emphasis role="comment">//&#32;namespace&#32;GNET</emphasis>
+<anchor xml:id="_fee_8h_source_1l00049"/>00049 &#32;
+<anchor xml:id="_fee_8h_source_1l00050"/>00050 <emphasis role="preprocessor">&#32;#endif&#32;</emphasis><emphasis role="comment">//&#32;__GNET_FEE_H</emphasis>
+</programlisting></section>

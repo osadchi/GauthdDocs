@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_n_e_t_1_1_key_exchange" xml:lang="en-US">
+<title>GNET::KeyExchange Class Reference</title>
+<indexterm><primary>GNET::KeyExchange</primary></indexterm>
+<para>
+
+<para>Протокол обмена криптографическими ключами </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;keyexchange.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for GNET::KeyExchange:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_key_exchange.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_key_exchange_1a59d9dff58cb00261d155d622d24af391">Process</link> (Manager *manager, Manager::Session::ID sid)</para>
+
+<para>Внутренние данные протокола </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Протокол обмена криптографическими ключами </para>
+
+
+
+<para>@inherits Protocol</para>
+
+<para>Реализует механизм безопасного обмена ключами между клиентом и сервером. Содержит данные, специфичные для реализации протокола, включая криптографические параметры и временные метки.</para>
+
+<para><warning><title>Warning</title>
+
+<para>Этот протокол должен использоваться только в защищенных каналах связи </para>
+</warning>
+</para>
+<para>
+Definition at line <link linkend="_keyexchange_8hpp_source_1l00045">45</link> of file <link linkend="_keyexchange_8hpp_source">keyexchange.hpp</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_g_n_e_t_1_1_key_exchange_1a59d9dff58cb00261d155d622d24af391"/><section>
+    <title>Process()</title>
+<indexterm><primary>Process</primary><secondary>GNET::KeyExchange</secondary></indexterm>
+<indexterm><primary>GNET::KeyExchange</primary><secondary>Process</secondary></indexterm>
+<para><computeroutput>void GNET::KeyExchange::Process (Manager * manager, Manager::Session::ID sid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Внутренние данные протокола </para>
+</para>
+
+<para>Данный include содержит специфичные для реализации поля протокола, объявленные через макросы системы <link linkend="_namespace_g_n_e_t">GNET</link>.</para>
+
+<para><formalpara><title>See also</title>
+
+<para>RPC_DEFS</para>
+</formalpara>
+Обработчик входящего сообщения</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>manager</entry><entry>
+<para>Указатель на менеджер сессий </para>
+</entry>
+                            </row>
+                            <row>
+<entry>sid</entry><entry>
+<para>Идентификатор сессии</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                Вызывается при получении сообщения <link linkend="_class_g_n_e_t_1_1_key_exchange">KeyExchange</link>. Обрабатывает:<itemizedlist>
+<listitem>
+<para>Проверку целостности данных</para>
+</listitem></itemizedlist>
+</para>
+
+<para>Генерацию сессионных ключей<itemizedlist>
+<listitem>
+<para>Обновление состояния безопасности сессии</para>
+
+<para><para><link linkend="_todo_1_todo000019">Todo</link> 
+<para>Реализовать обработку обмена ключами </para>
+
+<para>Добавить проверку временных меток </para>
+
+<para>Реализовать обработку ошибок </para>
+</para></para>
+</listitem></itemizedlist>
+</para>
+<para>
+Definition at line <link linkend="_keyexchange_8hpp_source_1l00073">73</link> of file <link linkend="_keyexchange_8hpp_source">keyexchange.hpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_keyexchange_8hpp">keyexchange.hpp</link></section>
+</section>

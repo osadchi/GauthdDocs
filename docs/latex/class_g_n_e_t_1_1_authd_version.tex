@@ -1,0 +1,64 @@
+\doxysection{GNET\+::Authd\+Version Class Reference}
+\hypertarget{class_g_n_e_t_1_1_authd_version}{}\label{class_g_n_e_t_1_1_authd_version}\index{GNET::AuthdVersion@{GNET::AuthdVersion}}
+
+
+Класс протокола для обработки версии аутентификационного демона.  
+
+
+
+
+{\ttfamily \#include $<$authdversion.\+hpp$>$}
+
+Inheritance diagram for GNET\+::Authd\+Version\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_n_e_t_1_1_authd_version}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_authd_version_a005c37c0e0449e61837bd0a80d3c5f83}{Process}} (Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)
+\begin{DoxyCompactList}\small\item\em \texorpdfstring{$<$}{<} Включение автоматически сгенерированных полей протокола \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс протокола для обработки версии аутентификационного демона. 
+
+Наследуется от GNET\+::\+Protocol и реализует логику обработки данных о версии. Включает автоматически сгенерированные поля протокола из файла "{}authdversion"{}. Используется менеджером для обработки сессий. 
+
+Definition at line \mbox{\hyperlink{authdversion_8hpp_source_l00027}{27}} of file \mbox{\hyperlink{authdversion_8hpp_source}{authdversion.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_n_e_t_1_1_authd_version_a005c37c0e0449e61837bd0a80d3c5f83}\index{GNET::AuthdVersion@{GNET::AuthdVersion}!Process@{Process}}
+\index{Process@{Process}!GNET::AuthdVersion@{GNET::AuthdVersion}}
+\doxysubsubsection{\texorpdfstring{Process()}{Process()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_authd_version_a005c37c0e0449e61837bd0a80d3c5f83} 
+void GNET\+::\+Authd\+Version\+::\+Process (\begin{DoxyParamCaption}\item[{Manager \texorpdfstring{$\ast$}{*}}]{manager}{, }\item[{Manager\+::\+Session\+::\+ID}]{sid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\texorpdfstring{$<$}{<} Включение автоматически сгенерированных полей протокола 
+
+Метод обработки протокола.
+
+Вызывается менеджером для обработки данных протокола в контексте конкретной сессии. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em manager} & Указатель на менеджер, управляющий обработкой. \\
+\hline
+\mbox{\texttt{ in}}  & {\em sid} & Идентификатор сессии, в рамках которой происходит обработка. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000007}{Todo}}]Реализовать логику обработки версии аутентификационного демона. \end{DoxyRefDesc}
+
+
+Definition at line \mbox{\hyperlink{authdversion_8hpp_source_l00040}{40}} of file \mbox{\hyperlink{authdversion_8hpp_source}{authdversion.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{authdversion_8hpp}{authdversion.\+hpp}}\end{DoxyCompactItemize}

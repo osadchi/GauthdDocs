@@ -1,0 +1,383 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_gmysqlclient_8hpp_source" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/gmysqlclient.hpp</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_gmysqlclient_8hpp_source_1l00001"/>00001 
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00007"/>00007 
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00008"/>00008 <emphasis role="preprocessor">&#32;#ifndef&#32;__GNET_GMYSQLCLIENT_HPP</emphasis>
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00009"/>00009 <emphasis role="preprocessor">&#32;#define&#32;__GNET_GMYSQLCLIENT_HPP</emphasis>
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00010"/>00010 &#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00011"/>00011 <emphasis role="preprocessor">&#32;#include&#32;&lt;mysql/mysql.h&gt;</emphasis>
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00012"/>00012 <emphasis role="preprocessor">&#32;#include&#32;&lt;vector&gt;</emphasis>
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00013"/>00013 <emphasis role="preprocessor">&#32;#include&#32;&quot;protocol.h&quot;</emphasis>
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00014"/>00014 <emphasis role="preprocessor">&#32;#include&#32;&quot;thread.h&quot;</emphasis>
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00015"/>00015 <emphasis role="preprocessor">&#32;#include&#32;&quot;timersender.h&quot;</emphasis>
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00016"/>00016 <emphasis role="preprocessor">&#32;#include&#32;&quot;octets.h&quot;</emphasis>
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00017"/>00017 <emphasis role="preprocessor">&#32;#include&#32;&quot;base64.h&quot;</emphasis>
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00018"/>00018 &#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00019"/>00019 &#32;<emphasis role="keyword">using&#32;namespace&#32;</emphasis><link linkend="_namespace_g_n_e_t">GNET</link>;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00020"/>00020 &#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00026"/><link linkend="_class_g_mysql_client">00026</link> &#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_g_mysql_client">GMysqlClient</link>
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00027"/>00027 &#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00028"/>00028 &#32;<emphasis role="keyword">private</emphasis>:
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;active;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;mysql_state;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;pthread_mutex_t&#32;mysql_mutex;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;pthread_mutex_t&#32;online_mutex;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;pthread_mutex_t&#32;cash_mutex;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;pthread_mutex_t&#32;antibrut_mutex;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;MYSQL&#32;*DBMysql;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;MYSQL_RES&#32;*&#32;result;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;MYSQL_ROW&#32;row;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;query_state;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00040"/>00040 &#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Конфигурационные&#32;параметры</emphasis>
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;ip[20];&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;&#32;port;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;user[128];&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;passwd[128];&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;db[128];&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;&#32;hash;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00048"/>00048 &#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;zoneid;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;aid;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;lkmod;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;loginlog;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;logoutshell[1024];&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">struct&#32;</emphasis>ONLINE_USER
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;userid;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;zoneid;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;ipaddr;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;login[64];&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00066"/>00066 &#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ONLINE_USER(<emphasis role="keywordtype">int</emphasis>&#32;userid,&#32;<emphasis role="keywordtype">int</emphasis>&#32;zoneid,&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;login,&#32;<emphasis role="keywordtype">int</emphasis>&#32;ipaddr)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;userid&#32;=&#32;userid;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;zoneid&#32;=&#32;zoneid;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;ipaddr&#32;=&#32;ipaddr;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memset(this-&gt;login,0x00,64);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(this-&gt;login,login,strlen(login));
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;};&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;std::vector&#32;&lt;ONLINE_USER&gt;&#32;online_user;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">struct&#32;</emphasis>CASH_USER
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;userid;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;zoneid;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;sn;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;point;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;cash;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;creatime[20];&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00097"/>00097 &#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CASH_USER(<emphasis role="keywordtype">int</emphasis>&#32;userid,&#32;<emphasis role="keywordtype">int</emphasis>&#32;zoneid,&#32;<emphasis role="keywordtype">int</emphasis>&#32;sn,&#32;<emphasis role="keywordtype">int</emphasis>&#32;point,&#32;<emphasis role="keywordtype">int</emphasis>&#32;cash,&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;creatime)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;userid&#32;=&#32;userid;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;zoneid&#32;=&#32;zoneid;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;cash&#32;=&#32;cash;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;sn&#32;=&#32;sn;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;point&#32;=&#32;point;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memset(this-&gt;creatime,0x00,20);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(this-&gt;creatime,creatime,19);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;};&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;std::vector&#32;&lt;CASH_USER&gt;&#32;cash_user;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00119"/>00119 &#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">struct&#32;</emphasis>ANTIBRUT_USER
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;ip;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;count;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00128"/>00128 &#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00133"/>00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ANTIBRUT_USER(<emphasis role="keywordtype">int</emphasis>&#32;ip)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00134"/>00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00135"/>00135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;ip&#32;=&#32;ip;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00136"/>00136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;count&#32;=&#32;0;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00137"/>00137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00138"/>00138 &#32;&#32;&#32;&#32;&#32;};&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00139"/>00139 &#32;&#32;&#32;&#32;&#32;std::vector&#32;&lt;ANTIBRUT_USER&gt;&#32;antibrut_user;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00140"/>00140 &#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00141"/>00141 &#32;<emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00151"/>00151 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_mysql_client_1a129ff21e968ae3c1218dd01ff10f9b09">Init</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;ip,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;port,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;user,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;passwd,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;db,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;h);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00152"/>00152 &#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00159"/>00159 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_mysql_client_1a14143f486913e7d3edff46e7458697cb">AlexPatch</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;lkmod,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;log,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;shell);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00160"/>00160 &#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00161"/>00161 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_g_mysql_client_1a4e2c4854287bb8ffdcd12081f46e866a">Connect</link>();&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00162"/>00162 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_mysql_client_1a50dd2028ef5a6c498a7784a014606fb8">Disconnect</link>();&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00163"/><link linkend="_class_g_mysql_client_1a50e93bdf74da424077e864ba8bbfe42c">00163</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_g_mysql_client_1a50e93bdf74da424077e864ba8bbfe42c">IsActive</link>()&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;active;&#32;}&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00164"/><link linkend="_class_g_mysql_client_1a623a50fa9c2dbe90519ac099bfa492f0">00164</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_class_g_mysql_client_1a623a50fa9c2dbe90519ac099bfa492f0">GetAid</link>()&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;aid;&#32;}&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00165"/><link linkend="_class_g_mysql_client_1acb10864e5152be98cb60ca379e5401bc">00165</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_class_g_mysql_client_1acb10864e5152be98cb60ca379e5401bc">GetZoneid</link>()&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;zoneid;&#32;}
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00166"/>00166 &#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00173"/>00173 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_g_mysql_client_1a1be593d128e947bbb05fdee22e9c2a89">MysqlQuery</link>(<emphasis role="keywordtype">char</emphasis>&#32;*&#32;ptr,&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;len);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00174"/>00174 &#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00175"/>00175 &#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Далее&#32;идут&#32;методы&#32;для&#32;работы&#32;с&#32;базой&#32;данных</emphasis>
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00176"/>00176 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_g_mysql_client_1a315b9d03daf23fd3ccf9089290e155b7">DeleteErrorRow</link>(<emphasis role="keywordtype">int</emphasis>&#32;status,&#32;<emphasis role="keywordtype">int</emphasis>&#32;uid,&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;creatime);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00177"/>00177 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_g_mysql_client_1ae74167391b7e749c390203ea4f0ec5e5">MatrixPasswd</link>(<emphasis role="keywordtype">int</emphasis>&#32;&amp;uid,&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;login,&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;passwd,&#32;<emphasis role="keywordtype">int</emphasis>&#32;ipaddr);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00178"/>00178 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_g_mysql_client_1a35fa8409b064722f23afb762910f1365">ClearOnlineRecord</link>(<emphasis role="keywordtype">char</emphasis>&#32;zoneid,&#32;<emphasis role="keywordtype">char</emphasis>&#32;aid);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00179"/>00179 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_g_mysql_client_1a7c6a4b72d981e0c88568e453221dd06a">OnlineRecord</link>(<emphasis role="keywordtype">int</emphasis>&#32;uid,&#32;<emphasis role="keywordtype">char</emphasis>&#32;aid,&#32;<emphasis role="keywordtype">char</emphasis>&#32;&amp;zoneid,&#32;<emphasis role="keywordtype">int</emphasis>&#32;&amp;zonelocalid,&#32;<emphasis role="keywordtype">int</emphasis>&#32;&amp;overwrite);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00180"/>00180 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_g_mysql_client_1a524bc45740cb01aabdbf2b012407925f">OnfflineRecord</link>(<emphasis role="keywordtype">int</emphasis>&#32;uid,&#32;<emphasis role="keywordtype">char</emphasis>&#32;aid,&#32;<emphasis role="keywordtype">char</emphasis>&#32;&amp;zoneid,&#32;<emphasis role="keywordtype">int</emphasis>&#32;&amp;zonelocalid,&#32;<emphasis role="keywordtype">int</emphasis>&#32;&amp;overwrite);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00181"/>00181 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_g_mysql_client_1ac581c4885d0cd84f507760d32177b4f3">UserCreatime</link>(<emphasis role="keywordtype">int</emphasis>&#32;uid,&#32;<emphasis role="keywordtype">int</emphasis>&#32;&amp;timestamp);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00182"/>00182 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_g_mysql_client_1a916a21bf80a3b7aaaebaebf1855a429b">UserGMPrivilege</link>(<emphasis role="keywordtype">int</emphasis>&#32;uid,&#32;<emphasis role="keywordtype">char</emphasis>&#32;zoneid,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;&amp;IsGM);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00183"/>00183 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_g_mysql_client_1aee26570bd0c44f31da836916cf77ec23">QueryGMPrivilege</link>(<emphasis role="keywordtype">int</emphasis>&#32;uid,&#32;<emphasis role="keywordtype">char</emphasis>&#32;zoneid,&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;gm_auth,&#32;<emphasis role="keywordtype">int</emphasis>&#32;&amp;count);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00184"/>00184 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_g_mysql_client_1a196ae8753a336df2cfcbea330f1a1e13">GetUseCashNow</link>(<emphasis role="keywordtype">int</emphasis>&#32;status,&#32;<emphasis role="keywordtype">int</emphasis>&#32;&amp;count);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00185"/>00185 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_g_mysql_client_1a5ad2854f8238ad2008cf0358adf9325b">SetUseCashNow</link>(<emphasis role="keywordtype">int</emphasis>&#32;status,&#32;<emphasis role="keywordtype">int</emphasis>&#32;sn,&#32;<emphasis role="keywordtype">int</emphasis>&#32;userid,&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;creatime);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00186"/>00186 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_g_mysql_client_1a0260ea3e3b3ba9b0e289a7b97bc4fd67">DelUseCashNow</link>(<emphasis role="keywordtype">int</emphasis>&#32;status,&#32;<emphasis role="keywordtype">int</emphasis>&#32;uid,&#32;<emphasis role="keywordtype">int</emphasis>&#32;sn);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00187"/>00187 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_g_mysql_client_1a0cba2ae6714706fa26b2b39f91c34665">AddCashLog</link>(<emphasis role="keywordtype">int</emphasis>&#32;uid,&#32;<emphasis role="keywordtype">int</emphasis>&#32;zoneid,&#32;<emphasis role="keywordtype">int</emphasis>&#32;sn,&#32;<emphasis role="keywordtype">int</emphasis>&#32;aid,&#32;<emphasis role="keywordtype">int</emphasis>&#32;point,&#32;<emphasis role="keywordtype">int</emphasis>&#32;cash,&#32;<emphasis role="keywordtype">int</emphasis>&#32;status,&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;creatime);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00188"/>00188 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_g_mysql_client_1a8875011e1658a40cefc82eac737bba58">AlexAddLogin</link>(<emphasis role="keywordtype">int</emphasis>&#32;uid,&#32;<emphasis role="keywordtype">int</emphasis>&#32;action);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00189"/>00189 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_g_mysql_client_1a3e52c51fa1af93cb93da4547f877dba6">AlexShell</link>(<emphasis role="keywordtype">int</emphasis>&#32;uid);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00190"/>00190 &#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00196"/><link linkend="_class_g_mysql_client_1ab7ff1536bda77626eaecf55da93aab92">00196</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_g_mysql_client_1ab7ff1536bda77626eaecf55da93aab92">GetUser</link>(<emphasis role="keywordtype">int</emphasis>&#32;userid)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00197"/>00197 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00198"/>00198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;res&#32;=&#32;-1;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00199"/>00199 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_lock(&amp;online_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00200"/>00200 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;online_user.size();&#32;i++)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00201"/>00201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;&#32;(online_user.at(i).userid&#32;==&#32;userid)&#32;res&#32;=&#32;i;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00202"/>00202 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_unlock(&amp;online_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00203"/>00203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;res;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00204"/>00204 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00205"/>00205 &#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00211"/><link linkend="_class_g_mysql_client_1af95566b524271d47c9e9baddb7efda4a">00211</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_g_mysql_client_1af95566b524271d47c9e9baddb7efda4a">DelUser</link>(<emphasis role="keywordtype">int</emphasis>&#32;userid)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00212"/>00212 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00213"/>00213 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;idx&#32;=&#32;&#32;<link linkend="_class_g_mysql_client_1ab7ff1536bda77626eaecf55da93aab92">GetUser</link>(userid);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00214"/>00214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_lock(&amp;online_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00215"/>00215 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(&#32;idx&#32;&gt;=&#32;0)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00216"/>00216 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;online_user.erase(online_user.begin()&#32;+&#32;idx);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00217"/>00217 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_unlock(&amp;online_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00218"/>00218 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;idx;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00219"/>00219 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00220"/>00220 &#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00229"/><link linkend="_class_g_mysql_client_1abdc4799af3e56eb878e0595b1d54b8fa">00229</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_g_mysql_client_1abdc4799af3e56eb878e0595b1d54b8fa">AddUser</link>(<emphasis role="keywordtype">int</emphasis>&#32;userid,&#32;<emphasis role="keywordtype">int</emphasis>&#32;zoneid,&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;login,&#32;<emphasis role="keywordtype">int</emphasis>&#32;ipaddr)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00230"/>00230 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00231"/>00231 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_mysql_client_1af95566b524271d47c9e9baddb7efda4a">DelUser</link>(userid);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00232"/>00232 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_lock(&amp;online_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00233"/>00233 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;online_user.push_back(ONLINE_USER(userid,zoneid,login,ipaddr));
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00234"/>00234 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_unlock(&amp;online_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00235"/>00235 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_g_mysql_client_1ab7ff1536bda77626eaecf55da93aab92">GetUser</link>(userid);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00236"/>00236 &#32;&#32;&#32;&#32;&#32;}&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00237"/>00237 &#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00243"/><link linkend="_class_g_mysql_client_1a197d13b53a9987edf047df74c8d73a2e">00243</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">inline</emphasis>&#32;ONLINE_USER&#32;*&#32;<link linkend="_class_g_mysql_client_1a197d13b53a9987edf047df74c8d73a2e">GetUserData</link>(<emphasis role="keywordtype">int</emphasis>&#32;userid)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00244"/>00244 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00245"/>00245 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;idx&#32;=&#32;&#32;<link linkend="_class_g_mysql_client_1ab7ff1536bda77626eaecf55da93aab92">GetUser</link>(userid);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00246"/>00246 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(&#32;idx&#32;&gt;=&#32;0)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00247"/>00247 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;&amp;online_user.at(idx);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00248"/>00248 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;NULL;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00249"/>00249 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00250"/>00250 &#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00251"/>00251 &#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Методы&#32;для&#32;работы&#32;с&#32;кэшем</emphasis>
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00252"/><link linkend="_class_g_mysql_client_1a4379c3f714045e1afd240d3e006ef34e">00252</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_g_mysql_client_1a4379c3f714045e1afd240d3e006ef34e">ClearCash</link>()
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00253"/>00253 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00254"/>00254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_lock(&amp;cash_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00255"/>00255 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cash_user.clear();
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00256"/>00256 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_unlock(&amp;cash_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00257"/>00257 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00258"/>00258 &#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00259"/><link linkend="_class_g_mysql_client_1a9da8bc562d0fd8440935df068aa50922">00259</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_g_mysql_client_1a9da8bc562d0fd8440935df068aa50922">GetCashSize</link>()
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00260"/>00260 &#32;&#32;&#32;&#32;&#32;{&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00261"/>00261 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;size&#32;=&#32;0;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00262"/>00262 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_lock(&amp;cash_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00263"/>00263 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;size&#32;=&#32;cash_user.size();
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00264"/>00264 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_unlock(&amp;cash_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00265"/>00265 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;size;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00266"/>00266 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00267"/>00267 &#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00268"/><link linkend="_class_g_mysql_client_1a01a8870566416cb8446699c93cd1557b">00268</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_mysql_client_1a01a8870566416cb8446699c93cd1557b">DelCashUser</link>(<emphasis role="keywordtype">int</emphasis>&#32;idx)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00269"/>00269 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00270"/>00270 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_lock(&amp;cash_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00271"/>00271 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(&#32;idx&#32;&gt;=&#32;0&#32;&amp;&amp;&#32;idx&#32;&lt;&#32;cash_user.size()&#32;)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00272"/>00272 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00273"/>00273 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cash_user.erase(cash_user.begin()&#32;+&#32;idx);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00274"/>00274 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00275"/>00275 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_unlock(&amp;cash_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00276"/>00276 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00277"/>00277 &#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00278"/><link linkend="_class_g_mysql_client_1ac4379ab9d87013d1578a381558e9cdae">00278</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_mysql_client_1ac4379ab9d87013d1578a381558e9cdae">AddCashUser</link>(<emphasis role="keywordtype">int</emphasis>&#32;userid,&#32;<emphasis role="keywordtype">int</emphasis>&#32;zoneid,&#32;<emphasis role="keywordtype">int</emphasis>&#32;sn,&#32;<emphasis role="keywordtype">int</emphasis>&#32;point,&#32;<emphasis role="keywordtype">int</emphasis>&#32;cash,&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;creatime)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00279"/>00279 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00280"/>00280 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_lock(&amp;cash_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00281"/>00281 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(creatime)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00282"/>00282 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cash_user.push_back(CASH_USER(&#32;userid,zoneid,sn,point,cash,creatime));
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00283"/>00283 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_unlock(&amp;cash_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00284"/>00284 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00285"/>00285 &#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00286"/><link linkend="_class_g_mysql_client_1ad4ac431eba947493223affceccff7990">00286</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_g_mysql_client_1ad4ac431eba947493223affceccff7990">GetCashUser</link>(<emphasis role="keywordtype">int</emphasis>&#32;userid)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00287"/>00287 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00288"/>00288 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;res&#32;=&#32;-1;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00289"/>00289 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_lock(&amp;cash_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00290"/>00290 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;cash_user.size();&#32;i++)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00291"/>00291 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;&#32;(cash_user.at(i).userid&#32;==&#32;userid)&#32;res&#32;=&#32;i;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00292"/>00292 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_unlock(&amp;cash_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00293"/>00293 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;res;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00294"/>00294 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00295"/>00295 &#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00296"/><link linkend="_class_g_mysql_client_1a56c16b331659609464396e2b1cf85d0f">00296</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_mysql_client_1a56c16b331659609464396e2b1cf85d0f">GetAllCashUser</link>(<emphasis role="keywordtype">int</emphasis>&#32;idx,&#32;<emphasis role="keywordtype">int</emphasis>&#32;&amp;userid,&#32;<emphasis role="keywordtype">int</emphasis>&#32;&amp;zoneid)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00297"/>00297 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00298"/>00298 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_lock(&amp;cash_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00299"/>00299 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(&#32;idx&#32;&gt;=&#32;0&#32;&amp;&amp;&#32;idx&#32;&lt;&#32;cash_user.size()&#32;)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00300"/>00300 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00301"/>00301 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;userid&#32;=&#32;cash_user.at(idx).userid;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00302"/>00302 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;zoneid&#32;=&#32;cash_user.at(idx).zoneid;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00303"/>00303 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00304"/>00304 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_unlock(&amp;cash_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00305"/>00305 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00306"/>00306 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00307"/><link linkend="_class_g_mysql_client_1afa65eb70f3df9ead6d515aa084f3f415">00307</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;<link linkend="_class_g_mysql_client_1afa65eb70f3df9ead6d515aa084f3f415">GetCashCreaTime</link>(<emphasis role="keywordtype">int</emphasis>&#32;idx)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00308"/>00308 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00309"/>00309 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;creatime&#32;=&#32;NULL;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00310"/>00310 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_lock(&amp;cash_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00311"/>00311 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(&#32;idx&#32;&gt;=&#32;0&#32;&amp;&amp;&#32;idx&#32;&lt;&#32;cash_user.size()&#32;)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00312"/>00312 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;creatime&#32;=&#32;cash_user.at(idx).creatime;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00313"/>00313 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_unlock(&amp;cash_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00314"/>00314 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;creatime;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00315"/>00315 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00316"/>00316 &#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00317"/><link linkend="_class_g_mysql_client_1aca8d88358cbbd6033e81272381cb0911">00317</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_g_mysql_client_1aca8d88358cbbd6033e81272381cb0911">GetCashCash</link>(<emphasis role="keywordtype">int</emphasis>&#32;idx)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00318"/>00318 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00319"/>00319 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;res&#32;=&#32;0;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00320"/>00320 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_lock(&amp;cash_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00321"/>00321 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(&#32;idx&#32;&gt;=&#32;0&#32;&amp;&amp;&#32;idx&#32;&lt;&#32;cash_user.size()&#32;)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00322"/>00322 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;res&#32;=&#32;cash_user.at(idx).cash;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00323"/>00323 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_unlock(&amp;cash_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00324"/>00324 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;res;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00325"/>00325 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00326"/>00326 &#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00327"/><link linkend="_class_g_mysql_client_1a872aead647ae16442ef1ded0cfab4710">00327</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_g_mysql_client_1a872aead647ae16442ef1ded0cfab4710">GetCashPoint</link>(<emphasis role="keywordtype">int</emphasis>&#32;idx)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00328"/>00328 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00329"/>00329 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;res&#32;=&#32;0;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00330"/>00330 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_lock(&amp;cash_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00331"/>00331 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(&#32;idx&#32;&gt;=&#32;0&#32;&amp;&amp;&#32;idx&#32;&lt;&#32;cash_user.size()&#32;)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00332"/>00332 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;res&#32;=&#32;cash_user.at(idx).point;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00333"/>00333 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_unlock(&amp;cash_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00334"/>00334 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;res;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00335"/>00335 &#32;&#32;&#32;&#32;&#32;}&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00336"/>00336 &#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00337"/>00337 &#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Методы&#32;для&#32;защиты&#32;от&#32;brute-force</emphasis>
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00338"/><link linkend="_class_g_mysql_client_1ac6af30f08fc5c7f21a54fe66848308d1">00338</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_mysql_client_1ac6af30f08fc5c7f21a54fe66848308d1">ClearAntibrutUser</link>()
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00339"/>00339 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00340"/>00340 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_lock(&amp;antibrut_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00341"/>00341 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;antibrut_user.clear();
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00342"/>00342 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_unlock(&amp;antibrut_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00343"/>00343 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00344"/>00344 &#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00345"/><link linkend="_class_g_mysql_client_1aae78133acca23894a428d104cd582168">00345</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_g_mysql_client_1aae78133acca23894a428d104cd582168">SizeAntibrutUser</link>()
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00346"/>00346 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00347"/>00347 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;res&#32;=&#32;0;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00348"/>00348 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_lock(&amp;antibrut_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00349"/>00349 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;res&#32;=&#32;antibrut_user.size();
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00350"/>00350 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_unlock(&amp;antibrut_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00351"/>00351 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;res;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00352"/>00352 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00353"/>00353 &#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00354"/><link linkend="_class_g_mysql_client_1a9d2cce01742a63ed739c4c3cbe233296">00354</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_g_mysql_client_1a9d2cce01742a63ed739c4c3cbe233296">GetAntibrutUser</link>(<emphasis role="keywordtype">int</emphasis>&#32;ip)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00355"/>00355 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00356"/>00356 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;res&#32;=&#32;-1;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00357"/>00357 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_lock(&amp;antibrut_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00358"/>00358 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;antibrut_user.size();&#32;i++)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00359"/>00359 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;&#32;(antibrut_user.at(i).ip&#32;==&#32;ip)&#32;res&#32;=&#32;i;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00360"/>00360 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_unlock(&amp;antibrut_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00361"/>00361 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;res;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00362"/>00362 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00363"/>00363 &#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00364"/><link linkend="_class_g_mysql_client_1a8867d598bb11fca0045a206ab04c04c9">00364</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_g_mysql_client_1a8867d598bb11fca0045a206ab04c04c9">DelAntibrutUser</link>(<emphasis role="keywordtype">int</emphasis>&#32;ip)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00365"/>00365 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00366"/>00366 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;idx&#32;=&#32;<link linkend="_class_g_mysql_client_1a9d2cce01742a63ed739c4c3cbe233296">GetAntibrutUser</link>(ip);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00367"/>00367 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_lock(&amp;antibrut_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00368"/>00368 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(&#32;idx&#32;&gt;=&#32;0)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00369"/>00369 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;antibrut_user.erase(antibrut_user.begin()&#32;+&#32;idx);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00370"/>00370 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_unlock(&amp;antibrut_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00371"/>00371 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;idx;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00372"/>00372 &#32;&#32;&#32;&#32;&#32;}&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00373"/>00373 &#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00374"/><link linkend="_class_g_mysql_client_1abe6e61839f3cca64f864f4a9078b0ba5">00374</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_g_mysql_client_1abe6e61839f3cca64f864f4a9078b0ba5">AddAntibrutUser</link>(<emphasis role="keywordtype">int</emphasis>&#32;ip)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00375"/>00375 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00376"/>00376 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;res&#32;=&#32;0;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00377"/>00377 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;idx&#32;=&#32;<link linkend="_class_g_mysql_client_1a9d2cce01742a63ed739c4c3cbe233296">GetAntibrutUser</link>(ip);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00378"/>00378 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_lock(&amp;antibrut_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00379"/>00379 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(&#32;idx&#32;&gt;=&#32;0)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00380"/>00380 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;res&#32;=&#32;++antibrut_user.at(idx).count;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00381"/>00381 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00382"/>00382 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;antibrut_user.push_back(ANTIBRUT_USER(ip));
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00383"/>00383 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pthread_mutex_unlock(&amp;antibrut_mutex);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00384"/>00384 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;res;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00385"/>00385 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00386"/>00386 &#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00387"/>00387 &#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Вспомогательные&#32;методы</emphasis>
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00388"/><link linkend="_class_g_mysql_client_1a8b60b7430a3413aeae8f36df7bbf7f57">00388</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_g_mysql_client_1a8b60b7430a3413aeae8f36df7bbf7f57">ATOI</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;ptr)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00389"/>00389 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00390"/>00390 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(ptr)&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00391"/>00391 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;atoi(ptr);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00392"/>00392 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00393"/>00393 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00394"/>00394 &#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00395"/><link linkend="_class_g_mysql_client_1af14249f643329398179702dd82f867fc">00395</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_mysql_client_1af14249f643329398179702dd82f867fc">Auth0xMD5</link>(<emphasis role="keywordtype">char</emphasis>&#32;*&#32;out,&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;in)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00396"/>00396 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00397"/>00397 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;nt&#32;=&#32;0;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00398"/>00398 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(in[0]&#32;==&#32;<emphasis role="charliteral">&apos;0&apos;</emphasis>&#32;&amp;&amp;&#32;in[1]&#32;==&#32;<emphasis role="charliteral">&apos;x&apos;</emphasis>)&#32;in&#32;+=&#32;2;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00399"/>00399 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;16;&#32;++i)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00400"/>00400 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00401"/>00401 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sscanf(&amp;in[i*2],&#32;<emphasis role="stringliteral">&quot;%02x&quot;</emphasis>,&#32;&amp;nt);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00402"/>00402 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;out[i]&#32;=&#32;(char)nt;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00403"/>00403 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00404"/>00404 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00405"/>00405 &#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00406"/><link linkend="_class_g_mysql_client_1a98b602a010fc50254381bcc3ad35d74b">00406</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_mysql_client_1a98b602a010fc50254381bcc3ad35d74b">AuthBase64</link>(<emphasis role="keywordtype">char</emphasis>&#32;*&#32;passwd,&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;auth)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00407"/>00407 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00408"/>00408 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Octets&#32;in;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00409"/>00409 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Octets&#32;out;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00410"/>00410 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;in.replace(auth,&#32;strlen(auth));
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00411"/>00411 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Base64Decoder::Convert(out,&#32;in);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00412"/>00412 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(passwd,out.begin(),16);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00413"/>00413 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00414"/>00414 &#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00425"/><link linkend="_class_g_mysql_client_1a4d62a501b69e922fae0c53fcc6342169">00425</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_g_mysql_client_1a4d62a501b69e922fae0c53fcc6342169">AuthPasswd</link>(<emphasis role="keywordtype">char</emphasis>&#32;*&#32;passwd,&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;auth)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00426"/>00426 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00427"/>00427 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(hash)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00428"/>00428 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00429"/>00429 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;1:&#32;<emphasis role="comment">//binary</emphasis>
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00430"/>00430 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(passwd,auth,16);&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00431"/>00431 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00432"/>00432 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;2:&#32;<emphasis role="comment">//0xMD5</emphasis>
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00433"/>00433 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_mysql_client_1af14249f643329398179702dd82f867fc">Auth0xMD5</link>(passwd,auth);&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00434"/>00434 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00435"/>00435 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;3:&#32;<emphasis role="comment">//base64</emphasis>
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00436"/>00436 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_mysql_client_1a98b602a010fc50254381bcc3ad35d74b">AuthBase64</link>(passwd,auth);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00437"/>00437 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00438"/>00438 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00439"/>00439 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00440"/>00440 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00441"/>00441 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00442"/>00442 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00443"/>00443 &#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00450"/><link linkend="_class_g_mysql_client_1a477a9db403d718b8ea1fb2f3e8ba2561">00450</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_g_mysql_client_1a477a9db403d718b8ea1fb2f3e8ba2561">ValidLogin</link>(<emphasis role="keywordtype">char</emphasis>&#32;*&#32;login,&#32;<emphasis role="keywordtype">int</emphasis>&#32;size)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00451"/>00451 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00452"/>00452 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;size&#32;&amp;&amp;&#32;i&#32;&lt;&#32;32;&#32;i++)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00453"/>00453 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00454"/>00454 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(&#32;!(login[i]&#32;&gt;=&#32;<emphasis role="charliteral">&apos;0&apos;</emphasis>&#32;&amp;&amp;&#32;login[i]&#32;&lt;=&#32;<emphasis role="charliteral">&apos;9&apos;</emphasis>)&#32;&amp;&amp;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00455"/>00455 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;!(login[i]&#32;&gt;=&#32;<emphasis role="charliteral">&apos;A&apos;</emphasis>&#32;&amp;&amp;&#32;login[i]&#32;&lt;=&#32;<emphasis role="charliteral">&apos;Z&apos;</emphasis>)&#32;&amp;&amp;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00456"/>00456 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;!(login[i]&#32;&gt;=&#32;<emphasis role="charliteral">&apos;a&apos;</emphasis>&#32;&amp;&amp;&#32;login[i]&#32;&lt;=&#32;<emphasis role="charliteral">&apos;z&apos;</emphasis>)&#32;&#32;)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00457"/>00457 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00458"/>00458 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00459"/>00459 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00460"/>00460 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00461"/>00461 &#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00467"/><link linkend="_class_g_mysql_client_1a2c15bbf59d3fb1b73005ad07a8dba455">00467</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_mysql_client_1a2c15bbf59d3fb1b73005ad07a8dba455">AddrToStr</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;ip,&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;address)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00468"/>00468 &#32;&#32;&#32;&#32;&#32;{&#32;&#32;&#32;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00469"/>00469 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;bytes[4];
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00470"/>00470 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bytes[0]&#32;=&#32;ip&#32;&amp;&#32;0xFF;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00471"/>00471 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bytes[1]&#32;=&#32;(ip&#32;&gt;&gt;&#32;8)&#32;&amp;&#32;0xFF;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00472"/>00472 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bytes[2]&#32;=&#32;(ip&#32;&gt;&gt;&#32;16)&#32;&amp;&#32;0xFF;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00473"/>00473 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bytes[3]&#32;=&#32;(ip&#32;&gt;&gt;&#32;24)&#32;&amp;&#32;0xFF;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00474"/>00474 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sprintf(address,<emphasis role="stringliteral">&quot;%d.%d.%d.%d&quot;</emphasis>,&#32;bytes[3],&#32;bytes[2],&#32;bytes[1],&#32;bytes[0]);
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00475"/>00475 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00476"/>00476 &#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00481"/><link linkend="_class_g_mysql_client_1a87a90c9a2b827da79f451728f4109850">00481</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_class_g_mysql_client">GMysqlClient</link>&#32;*&#32;<link linkend="_class_g_mysql_client_1a87a90c9a2b827da79f451728f4109850">GetInstance</link>()
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00482"/>00482 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00483"/>00483 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!<link linkend="_class_g_mysql_client_1a4d84ec5f99dcdeb604a4c2a7b34e23bf">instance</link>)
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00484"/>00484 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_mysql_client_1a4d84ec5f99dcdeb604a4c2a7b34e23bf">instance</link>&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_class_g_mysql_client">GMysqlClient</link>();
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00485"/>00485 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_g_mysql_client_1a4d84ec5f99dcdeb604a4c2a7b34e23bf">instance</link>;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00486"/>00486 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00487"/><link linkend="_class_g_mysql_client_1a4d84ec5f99dcdeb604a4c2a7b34e23bf">00487</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_class_g_mysql_client">GMysqlClient</link>&#32;*&#32;<link linkend="_class_g_mysql_client_1a4d84ec5f99dcdeb604a4c2a7b34e23bf">instance</link>;&#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00488"/>00488 &#32;};
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00489"/>00489 &#32;
+<anchor xml:id="_gmysqlclient_8hpp_source_1l00490"/>00490 <emphasis role="preprocessor">&#32;#endif</emphasis>
+</programlisting></section>

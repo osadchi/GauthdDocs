@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_gauthd_8cpp" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/gauthd.cpp File Reference</title>
+<indexterm><primary>D:/pwsrc2.0/docs/gauthd/gauthd.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;gauthserver.hpp&quot;<?linebreak?>#include &quot;gmysqlclient.hpp&quot;<?linebreak?>#include &quot;conf.h&quot;<?linebreak?>#include &quot;log.h&quot;<?linebreak?>#include &quot;thread.h&quot;<?linebreak?>#include &lt;iostream&gt;<?linebreak?>#include &lt;unistd.h&gt;<?linebreak?></programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_gauthd_8cpp_1a0ddf1224851353fc92bfbff6f499fa97">main</link> (int argc, char *argv[])</para>
+
+<para>Главная функция программы. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_gauthd_8cpp_1a0ddf1224851353fc92bfbff6f499fa97"/><section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>gauthd.cpp</secondary></indexterm>
+<indexterm><primary>gauthd.cpp</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main (int argc, char * argv[])</computeroutput></para><para>
+
+<para>Главная функция программы. </para>
+</para>
+
+<para>Инициализирует конфигурацию, сервер аутентификации, MySQL-клиент и запускает пул потоков.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>argc</entry><entry>
+<para>Количество аргументов командной строки. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>argv</entry><entry>
+<para>Аргументы командной строки:<itemizedlist>
+<listitem>
+<para>argv[0] Имя исполняемого файла.</para>
+</listitem><listitem>
+<para>argv[1] Путь к файлу конфигурации (обязательный параметр).</para>
+</listitem></itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>0 при успешном завершении, -1 при ошибке.</para>
+</formalpara>
+<note><title>Note</title>
+
+<para>Программа завершится с ошибкой, если:<itemizedlist>
+<listitem>
+<para>Не указан файл конфигурации</para>
+</listitem><listitem>
+<para>Нет доступа к файлу конфигурации</para>
+</listitem></itemizedlist>
+</para>
+</note>
+<formalpara><title>See also</title>
+
+<para><link linkend="_class_g_n_e_t_1_1_g_auth_server">GAuthServer</link> </para>
+
+<para><link linkend="_class_g_mysql_client">GMysqlClient</link> </para>
+
+<para>Conf </para>
+
+<para>Thread::Pool</para>
+</formalpara>
+<formalpara>
+<title>Пример использования:</title>
+<para><literallayout><computeroutput>./gauthd&#32;/path/to/config.cfg
+</computeroutput></literallayout> </para>
+</formalpara>
+</para>
+
+<para>&lt; Проверка таймеров каждые 10 мс</para>
+
+<para>&lt; Задача для обработки ввода/вывода</para>
+
+<para>&lt; Старт пула потоков</para>
+<para>
+Definition at line <link linkend="_gauthd_8cpp_source_1l00042">42</link> of file <link linkend="_gauthd_8cpp_source">gauthd.cpp</link>.</para>
+</section>
+</section>
+</section>

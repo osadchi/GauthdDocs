@@ -1,0 +1,60 @@
+\doxysection{GNET\+::Query\+User\+Forbid\+\_\+\+Re Class Reference}
+\hypertarget{class_g_n_e_t_1_1_query_user_forbid___re}{}\label{class_g_n_e_t_1_1_query_user_forbid___re}\index{GNET::QueryUserForbid\_Re@{GNET::QueryUserForbid\_Re}}
+
+
+Класс протокола ответа на запрос статуса блокировки пользователя  
+
+
+
+
+{\ttfamily \#include $<$queryuserforbid\+\_\+re.\+hpp$>$}
+
+Inheritance diagram for GNET\+::Query\+User\+Forbid\+\_\+\+Re\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_n_e_t_1_1_query_user_forbid___re}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_query_user_forbid___re_a18986c6cce039cf24ecbd72c4acfcd76}{Process}} (Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)
+\begin{DoxyCompactList}\small\item\em Обработчик получения протокола \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс протокола ответа на запрос статуса блокировки пользователя 
+
+Наследуется от базового класса Protocol и содержит данные ответа сервера на запрос информации о блокировке пользователя. Использует механизмы сериализации/десериализации данных \doxylink{namespace_g_n_e_t}{GNET}. 
+
+Definition at line \mbox{\hyperlink{queryuserforbid__re_8hpp_source_l00027}{27}} of file \mbox{\hyperlink{queryuserforbid__re_8hpp_source}{queryuserforbid\+\_\+re.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_n_e_t_1_1_query_user_forbid___re_a18986c6cce039cf24ecbd72c4acfcd76}\index{GNET::QueryUserForbid\_Re@{GNET::QueryUserForbid\_Re}!Process@{Process}}
+\index{Process@{Process}!GNET::QueryUserForbid\_Re@{GNET::QueryUserForbid\_Re}}
+\doxysubsubsection{\texorpdfstring{Process()}{Process()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_query_user_forbid___re_a18986c6cce039cf24ecbd72c4acfcd76} 
+void GNET\+::\+Query\+User\+Forbid\+\_\+\+Re\+::\+Process (\begin{DoxyParamCaption}\item[{Manager \texorpdfstring{$\ast$}{*}}]{manager}{, }\item[{Manager\+::\+Session\+::\+ID}]{sid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Обработчик получения протокола 
+
+
+\begin{DoxyParams}{Parameters}
+{\em manager} & Указатель на менеджер управления протоколами \\
+\hline
+{\em sid} & Идентификатор сессии, связанной с запросом\\
+\hline
+\end{DoxyParams}
+Метод вызывается при получении ответа о статусе блокировки пользователя. Реализация обработки должна быть добавлена в соответствии с логикой приложения. 
+
+Definition at line \mbox{\hyperlink{queryuserforbid__re_8hpp_source_l00041}{41}} of file \mbox{\hyperlink{queryuserforbid__re_8hpp_source}{queryuserforbid\+\_\+re.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{queryuserforbid__re_8hpp}{queryuserforbid\+\_\+re.\+hpp}}\end{DoxyCompactItemize}

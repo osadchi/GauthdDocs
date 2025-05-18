@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_g_n_e_t_1_1_user_info" xml:lang="en-US">
+<title>GNET::UserInfo Struct Reference</title>
+<indexterm><primary>GNET::UserInfo</primary></indexterm>
+<para>
+
+<para>Структура для хранения информации о пользователе. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;gauthserver.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_g_n_e_t_1_1_user_info_1a440c795e6198fbf419bc96ee97862788">UserInfo</link> ()</para>
+
+<para>Конструктор по умолчанию. </para>
+</listitem>
+            <listitem><para><link linkend="_struct_g_n_e_t_1_1_user_info_1ae886aad051bc6dd970480c7bc51d23b8">UserInfo</link> (unsigned int _s, unsigned int _l, char _z)</para>
+
+<para>Конструктор с параметрами. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>unsigned int <link linkend="_struct_g_n_e_t_1_1_user_info_1ae02b5efdfe764b6d3192109c7848ad06">sid</link></para>
+
+<para>Уникальный идентификатор сессии. </para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_struct_g_n_e_t_1_1_user_info_1afd7094222782e949809af25ac095d365">localsid</link></para>
+
+<para>Локальный идентификатор сессии. </para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_g_n_e_t_1_1_user_info_1a9016cc20e1ed5be9ea60955de1cf4d62">zoneid</link></para>
+
+<para>Идентификатор зоны пользователя. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Структура для хранения информации о пользователе. </para>
+<para>
+Definition at line <link linkend="_gauthserver_8hpp_source_1l00018">18</link> of file <link linkend="_gauthserver_8hpp_source">gauthserver.hpp</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_struct_g_n_e_t_1_1_user_info_1a440c795e6198fbf419bc96ee97862788"/><section>
+    <title>UserInfo()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>UserInfo</primary><secondary>GNET::UserInfo</secondary></indexterm>
+<indexterm><primary>GNET::UserInfo</primary><secondary>UserInfo</secondary></indexterm>
+<para><computeroutput>GNET::UserInfo::UserInfo ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Конструктор по умолчанию. </para>
+</para>
+<para>
+Definition at line <link linkend="_gauthserver_8hpp_source_1l00027">27</link> of file <link linkend="_gauthserver_8hpp_source">gauthserver.hpp</link>.</para>
+</section>
+<anchor xml:id="_struct_g_n_e_t_1_1_user_info_1ae886aad051bc6dd970480c7bc51d23b8"/><section>
+    <title>UserInfo()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>UserInfo</primary><secondary>GNET::UserInfo</secondary></indexterm>
+<indexterm><primary>GNET::UserInfo</primary><secondary>UserInfo</secondary></indexterm>
+<para><computeroutput>GNET::UserInfo::UserInfo (unsigned int _s, unsigned int _l, char _z)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Конструктор с параметрами. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_s</entry><entry>
+<para>Идентификатор сессии. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_l</entry><entry>
+<para>Локальный идентификатор сессии. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_z</entry><entry>
+<para>Идентификатор зоны. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_gauthserver_8hpp_source_1l00035">35</link> of file <link linkend="_gauthserver_8hpp_source">gauthserver.hpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_g_n_e_t_1_1_user_info_1afd7094222782e949809af25ac095d365"/><section>
+    <title>localsid</title>
+<indexterm><primary>localsid</primary><secondary>GNET::UserInfo</secondary></indexterm>
+<indexterm><primary>GNET::UserInfo</primary><secondary>localsid</secondary></indexterm>
+<para><computeroutput>unsigned int GNET::UserInfo::localsid</computeroutput></para><para>
+
+<para>Локальный идентификатор сессии. </para>
+</para>
+<para>
+Definition at line <link linkend="_gauthserver_8hpp_source_1l00021">21</link> of file <link linkend="_gauthserver_8hpp_source">gauthserver.hpp</link>.</para>
+</section>
+<anchor xml:id="_struct_g_n_e_t_1_1_user_info_1ae02b5efdfe764b6d3192109c7848ad06"/><section>
+    <title>sid</title>
+<indexterm><primary>sid</primary><secondary>GNET::UserInfo</secondary></indexterm>
+<indexterm><primary>GNET::UserInfo</primary><secondary>sid</secondary></indexterm>
+<para><computeroutput>unsigned int GNET::UserInfo::sid</computeroutput></para><para>
+
+<para>Уникальный идентификатор сессии. </para>
+</para>
+<para>
+Definition at line <link linkend="_gauthserver_8hpp_source_1l00020">20</link> of file <link linkend="_gauthserver_8hpp_source">gauthserver.hpp</link>.</para>
+</section>
+<anchor xml:id="_struct_g_n_e_t_1_1_user_info_1a9016cc20e1ed5be9ea60955de1cf4d62"/><section>
+    <title>zoneid</title>
+<indexterm><primary>zoneid</primary><secondary>GNET::UserInfo</secondary></indexterm>
+<indexterm><primary>GNET::UserInfo</primary><secondary>zoneid</secondary></indexterm>
+<para><computeroutput>char GNET::UserInfo::zoneid</computeroutput></para><para>
+
+<para>Идентификатор зоны пользователя. </para>
+</para>
+<para>
+Definition at line <link linkend="_gauthserver_8hpp_source_1l00022">22</link> of file <link linkend="_gauthserver_8hpp_source">gauthserver.hpp</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_gauthserver_8hpp">gauthserver.hpp</link></section>
+</section>

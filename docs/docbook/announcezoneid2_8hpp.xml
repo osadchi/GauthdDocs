@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_announcezoneid2_8hpp" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/announcezoneid2.hpp File Reference</title>
+<indexterm><primary>D:/pwsrc2.0/docs/gauthd/announcezoneid2.hpp</primary></indexterm>
+<para>
+
+<para>Заголовочный файл, содержащий объявление класса <link linkend="_class_g_n_e_t_1_1_announce_zoneid2">AnnounceZoneid2</link> для работы с протоколом объявления идентификаторов зон. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;rpcdefs.h&quot;<?linebreak?>#include &quot;callid.hxx&quot;<?linebreak?>#include &quot;state.hxx&quot;<?linebreak?>#include &quot;gmysqlclient.hpp&quot;<?linebreak?>#include &quot;gauthserver.hpp&quot;<?linebreak?>#include &quot;announcezoneid2&quot;<?linebreak?></programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_announce_zoneid2">GNET::AnnounceZoneid2</link></para>
+
+<para>Класс протокола для обработки объявлений идентификаторов игровых зон </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_g_n_e_t">GNET</link></para>
+
+<para>Основное пространство имен для сетевых компонентов системы. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Заголовочный файл, содержащий объявление класса <link linkend="_class_g_n_e_t_1_1_announce_zoneid2">AnnounceZoneid2</link> для работы с протоколом объявления идентификаторов зон. </para>
+<para>
+Definition in file <link linkend="_announcezoneid2_8hpp_source">announcezoneid2.hpp</link>.</para>
+</section>
+</section>

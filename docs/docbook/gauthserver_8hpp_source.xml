@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_gauthserver_8hpp_source" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/gauthserver.hpp</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_gauthserver_8hpp_source_1l00001"/>00001 
+<anchor xml:id="_gauthserver_8hpp_source_1l00005"/>00005 
+<anchor xml:id="_gauthserver_8hpp_source_1l00006"/>00006 <emphasis role="preprocessor">&#32;#ifndef&#32;__GNET_GAUTHSERVER_HPP</emphasis>
+<anchor xml:id="_gauthserver_8hpp_source_1l00007"/>00007 <emphasis role="preprocessor">&#32;#define&#32;__GNET_GAUTHSERVER_HPP</emphasis>
+<anchor xml:id="_gauthserver_8hpp_source_1l00008"/>00008 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00009"/>00009 <emphasis role="preprocessor">&#32;#include&#32;&quot;protocol.h&quot;</emphasis>
+<anchor xml:id="_gauthserver_8hpp_source_1l00010"/>00010 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00011"/>00011 &#32;<emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_g_n_e_t">GNET</link>
+<anchor xml:id="_gauthserver_8hpp_source_1l00012"/>00012 &#32;{
+<anchor xml:id="_gauthserver_8hpp_source_1l00013"/>00013 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00018"/><link linkend="_struct_g_n_e_t_1_1_user_info">00018</link> &#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_g_n_e_t_1_1_user_info_1a440c795e6198fbf419bc96ee97862788">UserInfo</link>
+<anchor xml:id="_gauthserver_8hpp_source_1l00019"/>00019 &#32;{
+<anchor xml:id="_gauthserver_8hpp_source_1l00020"/><link linkend="_struct_g_n_e_t_1_1_user_info_1ae02b5efdfe764b6d3192109c7848ad06">00020</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_g_n_e_t_1_1_user_info_1ae02b5efdfe764b6d3192109c7848ad06">sid</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00021"/><link linkend="_struct_g_n_e_t_1_1_user_info_1afd7094222782e949809af25ac095d365">00021</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_g_n_e_t_1_1_user_info_1afd7094222782e949809af25ac095d365">localsid</link>;&#32;&#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00022"/><link linkend="_struct_g_n_e_t_1_1_user_info_1a9016cc20e1ed5be9ea60955de1cf4d62">00022</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_struct_g_n_e_t_1_1_user_info_1a9016cc20e1ed5be9ea60955de1cf4d62">zoneid</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00023"/>00023 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00027"/><link linkend="_struct_g_n_e_t_1_1_user_info_1a440c795e6198fbf419bc96ee97862788">00027</link> &#32;&#32;&#32;&#32;&#32;<link linkend="_struct_g_n_e_t_1_1_user_info_1a440c795e6198fbf419bc96ee97862788">UserInfo</link>()&#32;{&#32;}
+<anchor xml:id="_gauthserver_8hpp_source_1l00028"/>00028 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00035"/><link linkend="_struct_g_n_e_t_1_1_user_info_1ae886aad051bc6dd970480c7bc51d23b8">00035</link> &#32;&#32;&#32;&#32;&#32;<link linkend="_struct_g_n_e_t_1_1_user_info_1ae886aad051bc6dd970480c7bc51d23b8">UserInfo</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;_s,&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;_l,&#32;<emphasis role="keywordtype">char</emphasis>&#32;_z)&#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;<link linkend="_struct_g_n_e_t_1_1_user_info_1ae02b5efdfe764b6d3192109c7848ad06">sid</link>(_s),&#32;<link linkend="_struct_g_n_e_t_1_1_user_info_1afd7094222782e949809af25ac095d365">localsid</link>(_l),&#32;<link linkend="_struct_g_n_e_t_1_1_user_info_1a9016cc20e1ed5be9ea60955de1cf4d62">zoneid</link>(_z)&#32;{&#32;}
+<anchor xml:id="_gauthserver_8hpp_source_1l00037"/>00037 &#32;};
+<anchor xml:id="_gauthserver_8hpp_source_1l00038"/>00038 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00044"/><link linkend="_class_g_n_e_t_1_1_g_auth_server">00044</link> &#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_g_n_e_t_1_1_g_auth_server_1a807dbbef9b25bce26260a6cbbd4edd01">GAuthServer</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;Protocol::Manager
+<anchor xml:id="_gauthserver_8hpp_source_1l00045"/>00045 &#32;{
+<anchor xml:id="_gauthserver_8hpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;auth_idx;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a807dbbef9b25bce26260a6cbbd4edd01">GAuthServer</link>&#32;instance;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;accumulate_limit;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00049"/>00049 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;Session::State&#32;*GetInitState()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_gauthserver_8hpp_source_1l00055"/>00055 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;OnCheckAccumulate(<emphasis role="keywordtype">size_t</emphasis>&#32;size)<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;accumulate_limit&#32;==&#32;0&#32;||&#32;size&#32;&lt;&#32;accumulate_limit;&#32;}
+<anchor xml:id="_gauthserver_8hpp_source_1l00062"/>00062 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnAddSession(Session::ID&#32;sid);
+<anchor xml:id="_gauthserver_8hpp_source_1l00068"/>00068 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnDelSession(Session::ID&#32;sid);
+<anchor xml:id="_gauthserver_8hpp_source_1l00074"/>00074 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00075"/>00075 &#32;<emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_gauthserver_8hpp_source_1l00080"/><link linkend="_class_g_n_e_t_1_1_g_auth_server_1a2fb6223e8492fcbc74f9b21ee12f25e7">00080</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a807dbbef9b25bce26260a6cbbd4edd01">GAuthServer</link>&#32;*<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a2fb6223e8492fcbc74f9b21ee12f25e7">GetInstance</link>()&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;&amp;instance;&#32;}
+<anchor xml:id="_gauthserver_8hpp_source_1l00081"/>00081 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00086"/><link linkend="_class_g_n_e_t_1_1_g_auth_server_1a93f073dbf9375aa226afb267d88a92c4">00086</link> &#32;&#32;&#32;&#32;&#32;std::string&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a93f073dbf9375aa226afb267d88a92c4">Identification</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;GAuthServer&quot;</emphasis>;&#32;}
+<anchor xml:id="_gauthserver_8hpp_source_1l00087"/>00087 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00092"/><link linkend="_class_g_n_e_t_1_1_g_auth_server_1a5604b75c37f4e864a4f73e1a4a8a5a81">00092</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a5604b75c37f4e864a4f73e1a4a8a5a81">SetAccumulate</link>(<emphasis role="keywordtype">size_t</emphasis>&#32;size)&#32;{&#32;accumulate_limit&#32;=&#32;size;&#32;}
+<anchor xml:id="_gauthserver_8hpp_source_1l00093"/>00093 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00097"/><link linkend="_class_g_n_e_t_1_1_g_auth_server_1a807dbbef9b25bce26260a6cbbd4edd01">00097</link> &#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a807dbbef9b25bce26260a6cbbd4edd01">GAuthServer</link>()&#32;:&#32;accumulate_limit(0)&#32;{&#32;}
+<anchor xml:id="_gauthserver_8hpp_source_1l00098"/>00098 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00099"/><link linkend="_class_g_n_e_t_1_1_g_auth_server_1a891812f02afb38b8d2cc9d37081e0c5a">00099</link> &#32;&#32;&#32;&#32;&#32;Octets&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a891812f02afb38b8d2cc9d37081e0c5a">shared_key</link>;&#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00100"/>00100 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a6b6bcb2c5dab0f794112337c7fcc556e">ValidUser</link>(Session::ID&#32;sid,&#32;<emphasis role="keywordtype">int</emphasis>&#32;userid);
+<anchor xml:id="_gauthserver_8hpp_source_1l00108"/>00108 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00109"/><link linkend="_class_g_n_e_t_1_1_g_auth_server_1a03dccad867b02013d61e8dde6785f3af">00109</link> &#32;&#32;&#32;&#32;&#32;Thread::RWLock&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a03dccad867b02013d61e8dde6785f3af">locker_map</link>;&#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00110"/>00110 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00115"/><link linkend="_class_g_n_e_t_1_1_g_auth_server_1aa0bc98036b2a04adf6ad2aaa1f5b86f9">00115</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">typedef</emphasis>&#32;std::map&lt;int,&#32;UserInfo&gt;&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1aa0bc98036b2a04adf6ad2aaa1f5b86f9">UserMap</link>;
+<anchor xml:id="_gauthserver_8hpp_source_1l00116"/><link linkend="_class_g_n_e_t_1_1_g_auth_server_1afcb09daf81ca16050c3e2467cb48c762">00116</link> &#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1aa0bc98036b2a04adf6ad2aaa1f5b86f9">UserMap</link>&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1afcb09daf81ca16050c3e2467cb48c762">usermap</link>;&#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00117"/>00117 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00122"/><link linkend="_class_g_n_e_t_1_1_g_auth_server_1add2f735245396b7f7a31665266abb9f1">00122</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1add2f735245396b7f7a31665266abb9f1">SetSidIdx</link>(<emphasis role="keywordtype">int</emphasis>&#32;idx)&#32;{&#32;auth_idx&#32;=&#32;idx;&#32;}
+<anchor xml:id="_gauthserver_8hpp_source_1l00123"/>00123 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00128"/><link linkend="_class_g_n_e_t_1_1_g_auth_server_1a1416d84887657af3f1b58942e4277e67">00128</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a1416d84887657af3f1b58942e4277e67">GetSidIdx</link>()&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;auth_idx;&#32;}
+<anchor xml:id="_gauthserver_8hpp_source_1l00129"/>00129 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00130"/><link linkend="_class_g_n_e_t_1_1_g_auth_server_1a306c4188d47c0c0d4c653aafe420f706">00130</link> &#32;&#32;&#32;&#32;&#32;Thread::Mutex&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a306c4188d47c0c0d4c653aafe420f706">locker_accntmap</link>;&#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00131"/>00131 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00136"/><link linkend="_class_g_n_e_t_1_1_g_auth_server_1ac03c9bb89b7110d3e16715c81d72367d">00136</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">typedef</emphasis>&#32;std::map&lt;int,&#32;unsigned&#32;int&gt;&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1ac03c9bb89b7110d3e16715c81d72367d">AccountingMap</link>;
+<anchor xml:id="_gauthserver_8hpp_source_1l00137"/><link linkend="_class_g_n_e_t_1_1_g_auth_server_1a7b474e4ba736b037e63f71e551724666">00137</link> &#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1ac03c9bb89b7110d3e16715c81d72367d">AccountingMap</link>&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a7b474e4ba736b037e63f71e551724666">accntmap</link>;&#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00138"/>00138 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00139"/><link linkend="_class_g_n_e_t_1_1_g_auth_server_1a6632c6441ea93e9bbe7999301534e593">00139</link> &#32;&#32;&#32;&#32;&#32;Thread::Mutex&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a6632c6441ea93e9bbe7999301534e593">locker_zonemap</link>;&#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00140"/>00140 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00145"/><link linkend="_class_g_n_e_t_1_1_g_auth_server_1a259024f25d65d7de4a8d253af503ab24">00145</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">typedef</emphasis>&#32;std::map&lt;unsigned&#32;int,&#32;char&gt;&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a259024f25d65d7de4a8d253af503ab24">ZoneMap</link>;
+<anchor xml:id="_gauthserver_8hpp_source_1l00146"/><link linkend="_class_g_n_e_t_1_1_g_auth_server_1a6f4c1af94c9642a78383d593f4b3fc60">00146</link> &#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a259024f25d65d7de4a8d253af503ab24">ZoneMap</link>&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a6f4c1af94c9642a78383d593f4b3fc60">zonemap</link>;&#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00147"/>00147 &#32;};
+<anchor xml:id="_gauthserver_8hpp_source_1l00148"/>00148 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00149"/>00149 &#32;<emphasis role="comment">//-----------------------------------------------------------------------------------</emphasis>
+<anchor xml:id="_gauthserver_8hpp_source_1l00150"/>00150 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00156"/><link linkend="_class_g_n_e_t_1_1_check_timer">00156</link> &#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_g_n_e_t_1_1_check_timer_1a7a691f18f249d9bc5b50470edfaa21e6">CheckTimer</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;Thread::Runnable
+<anchor xml:id="_gauthserver_8hpp_source_1l00157"/>00157 &#32;{
+<anchor xml:id="_gauthserver_8hpp_source_1l00158"/>00158 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;clear_time;&#32;&#32;&#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00159"/>00159 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;update_time;&#32;&#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00160"/>00160 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00161"/>00161 &#32;<emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_gauthserver_8hpp_source_1l00167"/><link linkend="_class_g_n_e_t_1_1_check_timer_1a7a691f18f249d9bc5b50470edfaa21e6">00167</link> &#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_n_e_t_1_1_check_timer_1a7a691f18f249d9bc5b50470edfaa21e6">CheckTimer</link>(<emphasis role="keywordtype">int</emphasis>&#32;_time,&#32;<emphasis role="keywordtype">int</emphasis>&#32;_proir&#32;=&#32;1)&#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00168"/>00168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;Runnable(_proir),&#32;update_time(_time)&#32;{&#32;}
+<anchor xml:id="_gauthserver_8hpp_source_1l00169"/>00169 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00173"/>00173 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_check_timer_1afb7c8e11b1f82f73a44f2b6db53427e2">Run</link>();
+<anchor xml:id="_gauthserver_8hpp_source_1l00174"/>00174 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00175"/>00175 &#32;<emphasis role="keyword">private</emphasis>:
+<anchor xml:id="_gauthserver_8hpp_source_1l00179"/>00179 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;CheckAddCashcn();
+<anchor xml:id="_gauthserver_8hpp_source_1l00180"/>00180 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00184"/>00184 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;AntibrutClear();
+<anchor xml:id="_gauthserver_8hpp_source_1l00185"/>00185 &#32;};
+<anchor xml:id="_gauthserver_8hpp_source_1l00186"/>00186 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00187"/>00187 &#32;<emphasis role="comment">//-----------------------------------------------------------------------------------</emphasis>
+<anchor xml:id="_gauthserver_8hpp_source_1l00188"/>00188 &#32;
+<anchor xml:id="_gauthserver_8hpp_source_1l00189"/>00189 &#32;};
+<anchor xml:id="_gauthserver_8hpp_source_1l00190"/>00190 <emphasis role="preprocessor">&#32;#endif</emphasis>
+</programlisting></section>

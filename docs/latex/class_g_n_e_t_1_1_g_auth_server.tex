@@ -1,0 +1,371 @@
+\doxysection{GNET\+::GAuth\+Server Class Reference}
+\hypertarget{class_g_n_e_t_1_1_g_auth_server}{}\label{class_g_n_e_t_1_1_g_auth_server}\index{GNET::GAuthServer@{GNET::GAuthServer}}
+
+
+Main authentication server class handling sessions and user validation.  
+
+
+
+
+{\ttfamily \#include $<$gauthserver.\+hpp$>$}
+
+Inheritance diagram for GNET\+::GAuth\+Server\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_n_e_t_1_1_g_auth_server}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ int, \mbox{\hyperlink{struct_g_n_e_t_1_1_user_info}{User\+Info}} $>$ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_aa0bc98036b2a04adf6ad2aaa1f5b86f9}{User\+Map}}
+\begin{DoxyCompactList}\small\item\em Map для хранения информации о пользователях (userid -\/\texorpdfstring{$>$}{>} \doxylink{struct_g_n_e_t_1_1_user_info}{User\+Info}). \end{DoxyCompactList}\item 
+typedef std\+::map$<$ int, unsigned int $>$ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_ac03c9bb89b7110d3e16715c81d72367d}{Accounting\+Map}}
+\begin{DoxyCompactList}\small\item\em Map для учета времени онлайн (userid -\/\texorpdfstring{$>$}{>} время в секундах). \end{DoxyCompactList}\item 
+typedef std\+::map$<$ unsigned int, char $>$ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a259024f25d65d7de4a8d253af503ab24}{Zone\+Map}}
+\begin{DoxyCompactList}\small\item\em Map для связи сессий и зон (session id -\/\texorpdfstring{$>$}{>} zoneid). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a93f073dbf9375aa226afb267d88a92c4}{Identification}} () const
+\begin{DoxyCompactList}\small\item\em Идентификатор протокола. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a5604b75c37f4e864a4f73e1a4a8a5a81}{Set\+Accumulate}} (size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Установить лимит накопления данных. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a807dbbef9b25bce26260a6cbbd4edd01}{GAuth\+Server}} ()
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a6b6bcb2c5dab0f794112337c7fcc556e}{Valid\+User}} (Session\+::\+ID sid, int userid)
+\begin{DoxyCompactList}\small\item\em Проверить валидность пользователя. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_add2f735245396b7f7a31665266abb9f1}{Set\+Sid\+Idx}} (int idx)
+\begin{DoxyCompactList}\small\item\em Установить индекс аутентификации. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a1416d84887657af3f1b58942e4277e67}{Get\+Sid\+Idx}} ()
+\begin{DoxyCompactList}\small\item\em Получить индекс аутентификации. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server}{GAuth\+Server}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a2fb6223e8492fcbc74f9b21ee12f25e7}{Get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Получить экземпляр синглтона. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Octets \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a891812f02afb38b8d2cc9d37081e0c5a}{shared\+\_\+key}}
+\begin{DoxyCompactList}\small\item\em Общий ключ для шифрования. \end{DoxyCompactList}\item 
+Thread\+::\+RWLock \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a03dccad867b02013d61e8dde6785f3af}{locker\+\_\+map}}
+\begin{DoxyCompactList}\small\item\em Блокировка для доступа к usermap. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_aa0bc98036b2a04adf6ad2aaa1f5b86f9}{User\+Map}} \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_afcb09daf81ca16050c3e2467cb48c762}{usermap}}
+\begin{DoxyCompactList}\small\item\em Контейнер с данными пользователей. \end{DoxyCompactList}\item 
+Thread\+::\+Mutex \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a306c4188d47c0c0d4c653aafe420f706}{locker\+\_\+accntmap}}
+\begin{DoxyCompactList}\small\item\em Блокировка для доступа к accntmap. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_ac03c9bb89b7110d3e16715c81d72367d}{Accounting\+Map}} \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a7b474e4ba736b037e63f71e551724666}{accntmap}}
+\begin{DoxyCompactList}\small\item\em Контейнер с данными о времени онлайн. \end{DoxyCompactList}\item 
+Thread\+::\+Mutex \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a6632c6441ea93e9bbe7999301534e593}{locker\+\_\+zonemap}}
+\begin{DoxyCompactList}\small\item\em Блокировка для доступа к zonemap. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a259024f25d65d7de4a8d253af503ab24}{Zone\+Map}} \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a6f4c1af94c9642a78383d593f4b3fc60}{zonemap}}
+\begin{DoxyCompactList}\small\item\em Контейнер с данными о зонах. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main authentication server class handling sessions and user validation. 
+
+Класс-\/менеджер для управления аутентификацией и сессиями пользователей.
+
+Singleton instance managing client sessions, zone mappings, and user authentication. 
+
+Definition at line \mbox{\hyperlink{gauthserver_8hpp_source_l00044}{44}} of file \mbox{\hyperlink{gauthserver_8hpp_source}{gauthserver.\+hpp}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{class_g_n_e_t_1_1_g_auth_server_ac03c9bb89b7110d3e16715c81d72367d}\index{GNET::GAuthServer@{GNET::GAuthServer}!AccountingMap@{AccountingMap}}
+\index{AccountingMap@{AccountingMap}!GNET::GAuthServer@{GNET::GAuthServer}}
+\doxysubsubsection{\texorpdfstring{AccountingMap}{AccountingMap}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_g_auth_server_ac03c9bb89b7110d3e16715c81d72367d} 
+typedef std\+::map$<$int, unsigned int$>$ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_ac03c9bb89b7110d3e16715c81d72367d}{GNET\+::\+GAuth\+Server\+::\+Accounting\+Map}}}
+
+
+
+Map для учета времени онлайн (userid -\/\texorpdfstring{$>$}{>} время в секундах). 
+
+
+
+Definition at line \mbox{\hyperlink{gauthserver_8hpp_source_l00136}{136}} of file \mbox{\hyperlink{gauthserver_8hpp_source}{gauthserver.\+hpp}}.
+
+\Hypertarget{class_g_n_e_t_1_1_g_auth_server_aa0bc98036b2a04adf6ad2aaa1f5b86f9}\index{GNET::GAuthServer@{GNET::GAuthServer}!UserMap@{UserMap}}
+\index{UserMap@{UserMap}!GNET::GAuthServer@{GNET::GAuthServer}}
+\doxysubsubsection{\texorpdfstring{UserMap}{UserMap}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_g_auth_server_aa0bc98036b2a04adf6ad2aaa1f5b86f9} 
+typedef std\+::map$<$int, \mbox{\hyperlink{struct_g_n_e_t_1_1_user_info}{User\+Info}}$>$ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_aa0bc98036b2a04adf6ad2aaa1f5b86f9}{GNET\+::\+GAuth\+Server\+::\+User\+Map}}}
+
+
+
+Map для хранения информации о пользователях (userid -\/\texorpdfstring{$>$}{>} \doxylink{struct_g_n_e_t_1_1_user_info}{User\+Info}). 
+
+
+
+Definition at line \mbox{\hyperlink{gauthserver_8hpp_source_l00115}{115}} of file \mbox{\hyperlink{gauthserver_8hpp_source}{gauthserver.\+hpp}}.
+
+\Hypertarget{class_g_n_e_t_1_1_g_auth_server_a259024f25d65d7de4a8d253af503ab24}\index{GNET::GAuthServer@{GNET::GAuthServer}!ZoneMap@{ZoneMap}}
+\index{ZoneMap@{ZoneMap}!GNET::GAuthServer@{GNET::GAuthServer}}
+\doxysubsubsection{\texorpdfstring{ZoneMap}{ZoneMap}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_g_auth_server_a259024f25d65d7de4a8d253af503ab24} 
+typedef std\+::map$<$unsigned int, char$>$ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a259024f25d65d7de4a8d253af503ab24}{GNET\+::\+GAuth\+Server\+::\+Zone\+Map}}}
+
+
+
+Map для связи сессий и зон (session id -\/\texorpdfstring{$>$}{>} zoneid). 
+
+
+
+Definition at line \mbox{\hyperlink{gauthserver_8hpp_source_l00145}{145}} of file \mbox{\hyperlink{gauthserver_8hpp_source}{gauthserver.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_g_n_e_t_1_1_g_auth_server_a807dbbef9b25bce26260a6cbbd4edd01}\index{GNET::GAuthServer@{GNET::GAuthServer}!GAuthServer@{GAuthServer}}
+\index{GAuthServer@{GAuthServer}!GNET::GAuthServer@{GNET::GAuthServer}}
+\doxysubsubsection{\texorpdfstring{GAuthServer()}{GAuthServer()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_g_auth_server_a807dbbef9b25bce26260a6cbbd4edd01} 
+GNET\+::\+GAuth\+Server\+::\+GAuth\+Server (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор по умолчанию. 
+
+
+
+Definition at line \mbox{\hyperlink{gauthserver_8hpp_source_l00097}{97}} of file \mbox{\hyperlink{gauthserver_8hpp_source}{gauthserver.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_n_e_t_1_1_g_auth_server_a2fb6223e8492fcbc74f9b21ee12f25e7}\index{GNET::GAuthServer@{GNET::GAuthServer}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!GNET::GAuthServer@{GNET::GAuthServer}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_g_auth_server_a2fb6223e8492fcbc74f9b21ee12f25e7} 
+static \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server}{GAuth\+Server}} \texorpdfstring{$\ast$}{*} GNET\+::\+GAuth\+Server\+::\+Get\+Instance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Получить экземпляр синглтона. 
+
+\begin{DoxyReturn}{Returns}
+Указатель на \doxylink{class_g_n_e_t_1_1_g_auth_server}{GAuth\+Server}. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{gauthserver_8hpp_source_l00080}{80}} of file \mbox{\hyperlink{gauthserver_8hpp_source}{gauthserver.\+hpp}}.
+
+\Hypertarget{class_g_n_e_t_1_1_g_auth_server_a1416d84887657af3f1b58942e4277e67}\index{GNET::GAuthServer@{GNET::GAuthServer}!GetSidIdx@{GetSidIdx}}
+\index{GetSidIdx@{GetSidIdx}!GNET::GAuthServer@{GNET::GAuthServer}}
+\doxysubsubsection{\texorpdfstring{GetSidIdx()}{GetSidIdx()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_g_auth_server_a1416d84887657af3f1b58942e4277e67} 
+int GNET\+::\+GAuth\+Server\+::\+Get\+Sid\+Idx (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Получить индекс аутентификации. 
+
+\begin{DoxyReturn}{Returns}
+Текущий индекс. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{gauthserver_8hpp_source_l00128}{128}} of file \mbox{\hyperlink{gauthserver_8hpp_source}{gauthserver.\+hpp}}.
+
+\Hypertarget{class_g_n_e_t_1_1_g_auth_server_a93f073dbf9375aa226afb267d88a92c4}\index{GNET::GAuthServer@{GNET::GAuthServer}!Identification@{Identification}}
+\index{Identification@{Identification}!GNET::GAuthServer@{GNET::GAuthServer}}
+\doxysubsubsection{\texorpdfstring{Identification()}{Identification()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_g_auth_server_a93f073dbf9375aa226afb267d88a92c4} 
+std\+::string GNET\+::\+GAuth\+Server\+::\+Identification (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Идентификатор протокола. 
+
+\begin{DoxyReturn}{Returns}
+Строка "{}\+GAuth\+Server"{}. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{gauthserver_8hpp_source_l00086}{86}} of file \mbox{\hyperlink{gauthserver_8hpp_source}{gauthserver.\+hpp}}.
+
+\Hypertarget{class_g_n_e_t_1_1_g_auth_server_a5604b75c37f4e864a4f73e1a4a8a5a81}\index{GNET::GAuthServer@{GNET::GAuthServer}!SetAccumulate@{SetAccumulate}}
+\index{SetAccumulate@{SetAccumulate}!GNET::GAuthServer@{GNET::GAuthServer}}
+\doxysubsubsection{\texorpdfstring{SetAccumulate()}{SetAccumulate()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_g_auth_server_a5604b75c37f4e864a4f73e1a4a8a5a81} 
+void GNET\+::\+GAuth\+Server\+::\+Set\+Accumulate (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Установить лимит накопления данных. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Новый лимит. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{gauthserver_8hpp_source_l00092}{92}} of file \mbox{\hyperlink{gauthserver_8hpp_source}{gauthserver.\+hpp}}.
+
+\Hypertarget{class_g_n_e_t_1_1_g_auth_server_add2f735245396b7f7a31665266abb9f1}\index{GNET::GAuthServer@{GNET::GAuthServer}!SetSidIdx@{SetSidIdx}}
+\index{SetSidIdx@{SetSidIdx}!GNET::GAuthServer@{GNET::GAuthServer}}
+\doxysubsubsection{\texorpdfstring{SetSidIdx()}{SetSidIdx()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_g_auth_server_add2f735245396b7f7a31665266abb9f1} 
+void GNET\+::\+GAuth\+Server\+::\+Set\+Sid\+Idx (\begin{DoxyParamCaption}\item[{int}]{idx}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Установить индекс аутентификации. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & Новый индекс. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{gauthserver_8hpp_source_l00122}{122}} of file \mbox{\hyperlink{gauthserver_8hpp_source}{gauthserver.\+hpp}}.
+
+\Hypertarget{class_g_n_e_t_1_1_g_auth_server_a6b6bcb2c5dab0f794112337c7fcc556e}\index{GNET::GAuthServer@{GNET::GAuthServer}!ValidUser@{ValidUser}}
+\index{ValidUser@{ValidUser}!GNET::GAuthServer@{GNET::GAuthServer}}
+\doxysubsubsection{\texorpdfstring{ValidUser()}{ValidUser()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_g_auth_server_a6b6bcb2c5dab0f794112337c7fcc556e} 
+bool GNET\+::\+GAuth\+Server\+::\+Valid\+User (\begin{DoxyParamCaption}\item[{Session\+::\+ID}]{sid}{, }\item[{int}]{userid}{}\end{DoxyParamCaption})}
+
+
+
+Проверить валидность пользователя. 
+
+Validates user-\/session association.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sid} & Идентификатор сессии. \\
+\hline
+{\em userid} & Идентификатор пользователя. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true если пользователь валиден, иначе false.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em sid} & Session ID to validate. \\
+\hline
+{\em userid} & User ID to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if user exists and is bound to the specified session, false otherwise.
+\end{DoxyReturn}
+Uses read lock for thread-\/safe access to usermap. 
+
+Definition at line \mbox{\hyperlink{gauthserver_8cpp_source_l00065}{65}} of file \mbox{\hyperlink{gauthserver_8cpp_source}{gauthserver.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_g_n_e_t_1_1_g_auth_server_a7b474e4ba736b037e63f71e551724666}\index{GNET::GAuthServer@{GNET::GAuthServer}!accntmap@{accntmap}}
+\index{accntmap@{accntmap}!GNET::GAuthServer@{GNET::GAuthServer}}
+\doxysubsubsection{\texorpdfstring{accntmap}{accntmap}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_g_auth_server_a7b474e4ba736b037e63f71e551724666} 
+\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_ac03c9bb89b7110d3e16715c81d72367d}{Accounting\+Map}} GNET\+::\+GAuth\+Server\+::accntmap}
+
+
+
+Контейнер с данными о времени онлайн. 
+
+
+
+Definition at line \mbox{\hyperlink{gauthserver_8hpp_source_l00137}{137}} of file \mbox{\hyperlink{gauthserver_8hpp_source}{gauthserver.\+hpp}}.
+
+\Hypertarget{class_g_n_e_t_1_1_g_auth_server_a306c4188d47c0c0d4c653aafe420f706}\index{GNET::GAuthServer@{GNET::GAuthServer}!locker\_accntmap@{locker\_accntmap}}
+\index{locker\_accntmap@{locker\_accntmap}!GNET::GAuthServer@{GNET::GAuthServer}}
+\doxysubsubsection{\texorpdfstring{locker\_accntmap}{locker\_accntmap}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_g_auth_server_a306c4188d47c0c0d4c653aafe420f706} 
+Thread\+::\+Mutex GNET\+::\+GAuth\+Server\+::locker\+\_\+accntmap}
+
+
+
+Блокировка для доступа к accntmap. 
+
+
+
+Definition at line \mbox{\hyperlink{gauthserver_8hpp_source_l00130}{130}} of file \mbox{\hyperlink{gauthserver_8hpp_source}{gauthserver.\+hpp}}.
+
+\Hypertarget{class_g_n_e_t_1_1_g_auth_server_a03dccad867b02013d61e8dde6785f3af}\index{GNET::GAuthServer@{GNET::GAuthServer}!locker\_map@{locker\_map}}
+\index{locker\_map@{locker\_map}!GNET::GAuthServer@{GNET::GAuthServer}}
+\doxysubsubsection{\texorpdfstring{locker\_map}{locker\_map}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_g_auth_server_a03dccad867b02013d61e8dde6785f3af} 
+Thread\+::\+RWLock GNET\+::\+GAuth\+Server\+::locker\+\_\+map}
+
+
+
+Блокировка для доступа к usermap. 
+
+
+
+Definition at line \mbox{\hyperlink{gauthserver_8hpp_source_l00109}{109}} of file \mbox{\hyperlink{gauthserver_8hpp_source}{gauthserver.\+hpp}}.
+
+\Hypertarget{class_g_n_e_t_1_1_g_auth_server_a6632c6441ea93e9bbe7999301534e593}\index{GNET::GAuthServer@{GNET::GAuthServer}!locker\_zonemap@{locker\_zonemap}}
+\index{locker\_zonemap@{locker\_zonemap}!GNET::GAuthServer@{GNET::GAuthServer}}
+\doxysubsubsection{\texorpdfstring{locker\_zonemap}{locker\_zonemap}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_g_auth_server_a6632c6441ea93e9bbe7999301534e593} 
+Thread\+::\+Mutex GNET\+::\+GAuth\+Server\+::locker\+\_\+zonemap}
+
+
+
+Блокировка для доступа к zonemap. 
+
+
+
+Definition at line \mbox{\hyperlink{gauthserver_8hpp_source_l00139}{139}} of file \mbox{\hyperlink{gauthserver_8hpp_source}{gauthserver.\+hpp}}.
+
+\Hypertarget{class_g_n_e_t_1_1_g_auth_server_a891812f02afb38b8d2cc9d37081e0c5a}\index{GNET::GAuthServer@{GNET::GAuthServer}!shared\_key@{shared\_key}}
+\index{shared\_key@{shared\_key}!GNET::GAuthServer@{GNET::GAuthServer}}
+\doxysubsubsection{\texorpdfstring{shared\_key}{shared\_key}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_g_auth_server_a891812f02afb38b8d2cc9d37081e0c5a} 
+Octets GNET\+::\+GAuth\+Server\+::shared\+\_\+key}
+
+
+
+Общий ключ для шифрования. 
+
+
+
+Definition at line \mbox{\hyperlink{gauthserver_8hpp_source_l00099}{99}} of file \mbox{\hyperlink{gauthserver_8hpp_source}{gauthserver.\+hpp}}.
+
+\Hypertarget{class_g_n_e_t_1_1_g_auth_server_afcb09daf81ca16050c3e2467cb48c762}\index{GNET::GAuthServer@{GNET::GAuthServer}!usermap@{usermap}}
+\index{usermap@{usermap}!GNET::GAuthServer@{GNET::GAuthServer}}
+\doxysubsubsection{\texorpdfstring{usermap}{usermap}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_g_auth_server_afcb09daf81ca16050c3e2467cb48c762} 
+\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_aa0bc98036b2a04adf6ad2aaa1f5b86f9}{User\+Map}} GNET\+::\+GAuth\+Server\+::usermap}
+
+
+
+Контейнер с данными пользователей. 
+
+
+
+Definition at line \mbox{\hyperlink{gauthserver_8hpp_source_l00116}{116}} of file \mbox{\hyperlink{gauthserver_8hpp_source}{gauthserver.\+hpp}}.
+
+\Hypertarget{class_g_n_e_t_1_1_g_auth_server_a6f4c1af94c9642a78383d593f4b3fc60}\index{GNET::GAuthServer@{GNET::GAuthServer}!zonemap@{zonemap}}
+\index{zonemap@{zonemap}!GNET::GAuthServer@{GNET::GAuthServer}}
+\doxysubsubsection{\texorpdfstring{zonemap}{zonemap}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_g_auth_server_a6f4c1af94c9642a78383d593f4b3fc60} 
+\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a259024f25d65d7de4a8d253af503ab24}{Zone\+Map}} GNET\+::\+GAuth\+Server\+::zonemap}
+
+
+
+Контейнер с данными о зонах. 
+
+
+
+Definition at line \mbox{\hyperlink{gauthserver_8hpp_source_l00146}{146}} of file \mbox{\hyperlink{gauthserver_8hpp_source}{gauthserver.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{gauthserver_8hpp}{gauthserver.\+hpp}}\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{gauthserver_8cpp}{gauthserver.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,47 @@
+\doxysection{D\+:/pwsrc2.0/docs/gauthd/statusannounce.hpp}
+\hypertarget{statusannounce_8hpp_source}{}\label{statusannounce_8hpp_source}\mbox{\hyperlink{statusannounce_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00007}00007\ \textcolor{preprocessor}{\ \#ifndef\ \_\_GNET\_STATUSANNOUNCE\_HPP}}
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\ \#define\ \_\_GNET\_STATUSANNOUNCE\_HPP}}
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00009}00009\ \ }
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\ \#include\ "{}rpcdefs.h"{}}}
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00011}00011\ \textcolor{preprocessor}{\ \#include\ "{}\mbox{\hyperlink{callid_8hxx}{callid.hxx}}"{}}}
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00012}00012\ \textcolor{preprocessor}{\ \#include\ "{}\mbox{\hyperlink{state_8hxx}{state.hxx}}"{}}}
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00013}00013\ \textcolor{preprocessor}{\ \#include\ "{}\mbox{\hyperlink{gauthserver_8hpp}{gauthserver.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00014}00014\ \ }
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00015}00015\ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_g_n_e_t}{GNET}}}
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00016}00016\ \ \{}
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00017}00017\ \ }
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00026}\mbox{\hyperlink{class_g_n_e_t_1_1_status_announce}{00026}}\ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_n_e_t_1_1_status_announce}{StatusAnnounce}}\ :\ \textcolor{keyword}{public}\ GNET::Protocol}
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00027}00027\ \ \{}
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00028}00028\ \textcolor{preprocessor}{\ \ \ \ \ \#include\ "{}statusannounce"{}}\ \ \textcolor{comment}{//\ Включение\ автоматически\ сгенерированных\ данных\ протокола}}
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00029}00029\ \ }
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00030}00030\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00045}\mbox{\hyperlink{class_g_n_e_t_1_1_status_announce_ae5a6d07d7f9047b0d0a53cce09ed94b9}{00045}}\ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_e_t_1_1_status_announce_ae5a6d07d7f9047b0d0a53cce09ed94b9}{Process}}(Manager\ *manager,\ Manager::Session::ID\ sid)}
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00046}00046\ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server}{GAuthServer}}*\ ausm\ =\ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a2fb6223e8492fcbc74f9b21ee12f25e7}{GAuthServer::GetInstance}}();}
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Блокировка\ карты\ пользователей\ для\ безопасной\ модификации}}
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \ Thread::RWLock::WRScoped\ l(ausm-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a03dccad867b02013d61e8dde6785f3af}{locker\_map}});}
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Поиск\ пользователя\ в\ карте}}
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \ GAuthServer::UserMap::const\_iterator\ it\ =\ ausm-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_afcb09daf81ca16050c3e2467cb48c762}{usermap}}.find(userid);}
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (it\ !=\ ausm-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_afcb09daf81ca16050c3e2467cb48c762}{usermap}}.end()\ \&\&\ (*it).second.sid\ ==\ sid)}
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Удаление\ пользователя\ из\ карты}}
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ ausm-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_afcb09daf81ca16050c3e2467cb48c762}{usermap}}.erase(userid);}
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ DEBUG\_PRINT(\textcolor{stringliteral}{"{}gauthd::\ user\ \%d\ offline.\ online\ user\ count\ is\ \%d\(\backslash\)n"{}},}
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ userid,\ ausm-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_afcb09daf81ca16050c3e2467cb48c762}{usermap}}.size());}
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00063}00063\ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00064}00064\ \ \};}
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00065}00065\ \ }
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00066}00066\ \ \};\ \textcolor{comment}{//\ namespace\ GNET}}
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00067}00067\ \ }
+\DoxyCodeLine{\Hypertarget{statusannounce_8hpp_source_l00068}00068\ \textcolor{preprocessor}{\ \#endif\ }\textcolor{comment}{//\ \_\_GNET\_STATUSANNOUNCE\_HPP}}
+
+\end{DoxyCode}

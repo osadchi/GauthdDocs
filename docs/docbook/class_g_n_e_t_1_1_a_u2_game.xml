@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_n_e_t_1_1_a_u2_game" xml:lang="en-US">
+<title>GNET::AU2Game Class Reference</title>
+<indexterm><primary>GNET::AU2Game</primary></indexterm>
+<para>
+
+<para>Класс протокола для передачи данных между сервером аутентификации и игровым сервером. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;au2game.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for GNET::AU2Game:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_a_u2_game.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_a_u2_game_1a1a973d7ce830a0141f60f202a5c0809f">Process</link> (Manager *manager, Manager::Session::ID sid)</para>
+
+<para>Метод обработки полученного протокола. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Класс протокола для передачи данных между сервером аутентификации и игровым сервером. </para>
+
+
+
+<para>Наследует GNET::Protocol и содержит данные, специфичные для этого протокола. Используется для обработки запросов аутентификации, передачи информации о пользователях и других взаимодействий. </para>
+<para>
+Definition at line <link linkend="_au2game_8hpp_source_1l00023">23</link> of file <link linkend="_au2game_8hpp_source">au2game.hpp</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_g_n_e_t_1_1_a_u2_game_1a1a973d7ce830a0141f60f202a5c0809f"/><section>
+    <title>Process()</title>
+<indexterm><primary>Process</primary><secondary>GNET::AU2Game</secondary></indexterm>
+<indexterm><primary>GNET::AU2Game</primary><secondary>Process</secondary></indexterm>
+<para><computeroutput>void GNET::AU2Game::Process (Manager * manager, Manager::Session::ID sid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Метод обработки полученного протокола. </para>
+</para>
+
+<para>Вызывается менеджером при получении пакета. Реализует логику обработки запроса/ответа.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>manager</entry><entry>
+<para>Указатель на менеджер, управляющий сессиями. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>sid</entry><entry>
+<para>Идентификатор сессии, от которой получены данные.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <para><link linkend="_todo_1_todo000006">Todo</link> 
+<para>Реализовать обработку данных (например, валидацию токена, обновление статуса пользователя и т.п.). </para>
+</para></para>
+<para>
+Definition at line <link linkend="_au2game_8hpp_source_1l00038">38</link> of file <link linkend="_au2game_8hpp_source">au2game.hpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_au2game_8hpp">au2game.hpp</link></section>
+</section>

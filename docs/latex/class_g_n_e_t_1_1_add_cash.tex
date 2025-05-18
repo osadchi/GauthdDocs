@@ -1,0 +1,66 @@
+\doxysection{GNET\+::Add\+Cash Class Reference}
+\hypertarget{class_g_n_e_t_1_1_add_cash}{}\label{class_g_n_e_t_1_1_add_cash}\index{GNET::AddCash@{GNET::AddCash}}
+
+
+Класс протокола для обработки запросов на добавление средств.  
+
+
+
+
+{\ttfamily \#include $<$addcash.\+hpp$>$}
+
+Inheritance diagram for GNET\+::Add\+Cash\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_n_e_t_1_1_add_cash}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_add_cash_ad20cf7684a67d064a559e96a79ae5675}{Process}} (Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)
+\begin{DoxyCompactList}\small\item\em \texorpdfstring{$<$}{<} Включение автоматически сгенерированных полей протокола \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс протокола для обработки запросов на добавление средств. 
+
+Наследуется от GNET\+::\+Protocol. Содержит автоматически генерируемую часть (через \#include "{}addcash"{}), которая включает поля протокола (например, идентификатор пользователя, сумму и т.\+д.). 
+
+Definition at line \mbox{\hyperlink{addcash_8hpp_source_l00023}{23}} of file \mbox{\hyperlink{addcash_8hpp_source}{addcash.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_n_e_t_1_1_add_cash_ad20cf7684a67d064a559e96a79ae5675}\index{GNET::AddCash@{GNET::AddCash}!Process@{Process}}
+\index{Process@{Process}!GNET::AddCash@{GNET::AddCash}}
+\doxysubsubsection{\texorpdfstring{Process()}{Process()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_add_cash_ad20cf7684a67d064a559e96a79ae5675} 
+void GNET\+::\+Add\+Cash\+::\+Process (\begin{DoxyParamCaption}\item[{Manager \texorpdfstring{$\ast$}{*}}]{manager}{, }\item[{Manager\+::\+Session\+::\+ID}]{sid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\texorpdfstring{$<$}{<} Включение автоматически сгенерированных полей протокола 
+
+Обработчик получения протокола.
+
+Вызывается менеджером при получении протокола. Текущая реализация является заглушкой.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em manager} & Указатель на менеджер, управляющий обработкой. \\
+\hline
+\mbox{\texttt{ in}}  & {\em sid} & Идентификатор сессии, связанной с запросом. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000004}{Todo}}]Реализовать логику обработки запроса (проверки, начисление средств и т.\+д.). \end{DoxyRefDesc}
+
+
+Definition at line \mbox{\hyperlink{addcash_8hpp_source_l00037}{37}} of file \mbox{\hyperlink{addcash_8hpp_source}{addcash.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{addcash_8hpp}{addcash.\+hpp}}\end{DoxyCompactItemize}

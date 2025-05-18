@@ -1,0 +1,54 @@
+\doxysection{D\+:/pwsrc2.0/docs/gauthd/addcash\+\_\+re.hpp}
+\hypertarget{addcash__re_8hpp_source}{}\label{addcash__re_8hpp_source}\mbox{\hyperlink{addcash__re_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\ \#ifndef\ \_\_GNET\_ADDCASH\_RE\_HPP}}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\ \#define\ \_\_GNET\_ADDCASH\_RE\_HPP}}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00011}00011\ \ }
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00012}00012\ \textcolor{preprocessor}{\ \#include\ "{}rpcdefs.h"{}}}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00013}00013\ \textcolor{preprocessor}{\ \#include\ "{}\mbox{\hyperlink{callid_8hxx}{callid.hxx}}"{}}}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00014}00014\ \textcolor{preprocessor}{\ \#include\ "{}\mbox{\hyperlink{state_8hxx}{state.hxx}}"{}}}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00015}00015\ \ }
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00016}00016\ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_g_n_e_t}{GNET}}}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00017}00017\ \ \{}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00018}00018\ \ }
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00026}\mbox{\hyperlink{class_g_n_e_t_1_1_add_cash___re}{00026}}\ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_n_e_t_1_1_add_cash___re}{AddCash\_Re}}\ :\ \textcolor{keyword}{public}\ GNET::Protocol}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00027}00027\ \ \{}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00028}00028\ \ \ \ \ \ \textcolor{comment}{//\ Включаем\ автоматически\ сгенерированные\ поля\ (userid,\ retcode,\ zoneid,\ sn\ и\ др.)}}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00029}00029\ \textcolor{preprocessor}{\ \ \ \ \ \#include\ "{}addcash\_re"{}}}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00030}00030\ \ }
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00031}00031\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00037}00037\ \ \ \ \ \ \textcolor{keywordtype}{void}\ SendFailCash()}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00038}00038\ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}AddCash\_Re::SendFailCash:\ userid\ =\ \%d\ \(\backslash\)n"{}},\ userid);}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_mysql_client}{GMysqlClient}}\ *db\ =\ \mbox{\hyperlink{class_g_mysql_client_a87a90c9a2b827da79f451728f4109850}{GMysqlClient::GetInstance}}();}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ idx\ =\ db-\/>\mbox{\hyperlink{class_g_mysql_client_ad4ac431eba947493223affceccff7990}{GetCashUser}}(userid);}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \ db-\/>\mbox{\hyperlink{class_g_mysql_client_a01a8870566416cb8446699c93cd1557b}{DelCashUser}}(idx);}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00043}00043\ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00044}00044\ \ }
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00045}00045\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00054}\mbox{\hyperlink{class_g_n_e_t_1_1_add_cash___re_a4ed01ac8071caf53c9a4031c12cbda6e}{00054}}\ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_e_t_1_1_add_cash___re_a4ed01ac8071caf53c9a4031c12cbda6e}{Process}}(Manager\ *manager,\ Manager::Session::ID\ sid)}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00055}00055\ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(retcode\ !=\ 0)\ \{\ }
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ SendFailCash();\ }
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};\ }
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_mysql_client}{GMysqlClient}}\ *db\ =\ \mbox{\hyperlink{class_g_mysql_client_a87a90c9a2b827da79f451728f4109850}{GMysqlClient::GetInstance}}();}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ idx\ =\ db-\/>\mbox{\hyperlink{class_g_mysql_client_ad4ac431eba947493223affceccff7990}{GetCashUser}}(userid);}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cash\ =\ db-\/>\mbox{\hyperlink{class_g_mysql_client_aca8d88358cbbd6033e81272381cb0911}{GetCashCash}}(idx);}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ point\ =\ db-\/>\mbox{\hyperlink{class_g_mysql_client_a872aead647ae16442ef1ded0cfab4710}{GetCashPoint}}(idx);}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ *\ creatime\ =\ db-\/>\mbox{\hyperlink{class_g_mysql_client_afa65eb70f3df9ead6d515aa084f3f415}{GetCashCreaTime}}(idx);}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \ db-\/>\mbox{\hyperlink{class_g_mysql_client_a0cba2ae6714706fa26b2b39f91c34665}{AddCashLog}}(userid,\ zoneid,\ sn,\ db-\/>\mbox{\hyperlink{class_g_mysql_client_a623a50fa9c2dbe90519ac099bfa492f0}{GetAid}}(),\ point,\ cash,\ 1,\ creatime);}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \ db-\/>\mbox{\hyperlink{class_g_mysql_client_a0260ea3e3b3ba9b0e289a7b97bc4fd67}{DelUseCashNow}}(1,\ userid,\ sn);}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \ db-\/>\mbox{\hyperlink{class_g_mysql_client_a01a8870566416cb8446699c93cd1557b}{DelCashUser}}(idx);}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00070}00070\ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00071}00071\ \ \};}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00072}00072\ \ }
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00073}00073\ \ \};}
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00074}00074\ \ }
+\DoxyCodeLine{\Hypertarget{addcash__re_8hpp_source_l00075}00075\ \textcolor{preprocessor}{\ \#endif}}
+
+\end{DoxyCode}

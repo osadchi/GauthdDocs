@@ -1,0 +1,51 @@
+\doxysection{D\+:/pwsrc2.0/docs/gauthd/queryuserprivilege.hpp}
+\hypertarget{queryuserprivilege_8hpp_source}{}\label{queryuserprivilege_8hpp_source}\mbox{\hyperlink{queryuserprivilege_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00012}00012\ \textcolor{preprocessor}{\ \#ifndef\ \_\_GNET\_QUERYUSERPRIVILEGE\_HPP}}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00013}00013\ \textcolor{preprocessor}{\ \#define\ \_\_GNET\_QUERYUSERPRIVILEGE\_HPP}}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00014}00014\ \ }
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00015}00015\ \textcolor{preprocessor}{\ \#include\ "{}rpcdefs.h"{}}}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00016}00016\ \textcolor{preprocessor}{\ \#include\ "{}\mbox{\hyperlink{callid_8hxx}{callid.hxx}}"{}}}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00017}00017\ \textcolor{preprocessor}{\ \#include\ "{}\mbox{\hyperlink{state_8hxx}{state.hxx}}"{}}}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00018}00018\ \textcolor{preprocessor}{\ \#include\ "{}\mbox{\hyperlink{gmysqlclient_8hpp}{gmysqlclient.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00019}00019\ \textcolor{preprocessor}{\ \#include\ "{}\mbox{\hyperlink{queryuserprivilege__re_8hpp}{queryuserprivilege\_re.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00020}00020\ \ }
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00021}00021\ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_g_n_e_t}{GNET}}}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00022}00022\ \ \{}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00030}\mbox{\hyperlink{class_g_n_e_t_1_1_query_user_privilege}{00030}}\ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_n_e_t_1_1_query_user_privilege}{QueryUserPrivilege}}\ :\ \textcolor{keyword}{public}\ GNET::Protocol}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00031}00031\ \ \{}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00032}00032\ \textcolor{preprocessor}{\ \ \ \ \ \#include\ "{}queryuserprivilege"{}}\ \textcolor{comment}{//\ Включаем\ определение\ полей\ протокола}}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00033}00033\ \ }
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00034}00034\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00047}\mbox{\hyperlink{class_g_n_e_t_1_1_query_user_privilege_a9571b9d65b613b5d264da5df13d866f6}{00047}}\ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_e_t_1_1_query_user_privilege_a9571b9d65b613b5d264da5df13d866f6}{Process}}(Manager\ *manager,\ Manager::Session::ID\ sid)}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00048}00048\ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_mysql_client}{GMysqlClient}}\ *db\ =\ \mbox{\hyperlink{class_g_mysql_client_a87a90c9a2b827da79f451728f4109850}{GMysqlClient::GetInstance}}();}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ count\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ gm\_auth[256];}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \ memset(gm\_auth,\ 0x00,\ \textcolor{keyword}{sizeof}(gm\_auth));}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Выполняем\ запрос\ к\ базе\ данных}}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \ db-\/>\mbox{\hyperlink{class_g_mysql_client_aee26570bd0c44f31da836916cf77ec23}{QueryGMPrivilege}}(userid,\ db-\/>\mbox{\hyperlink{class_g_mysql_client_acb10864e5152be98cb60ca379e5401bc}{GetZoneid}}(),\ gm\_auth,\ count);}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Формируем\ ответный\ пакет}}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_n_e_t_1_1_query_user_privilege___re}{QueryUserPrivilege\_Re}}\ qup\_re;}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \ qup\_re.userid\ =\ userid;}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Копируем\ привилегии\ в\ ответ\ (не\ более\ 256\ элементов)}}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ count\ \&\&\ i\ <\ 256;\ ++i)}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ qup\_re.auth.add(gm\_auth[i]);}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Отправляем\ ответ\ клиенту}}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \ manager-\/>Send(sid,\ qup\_re);}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00069}00069\ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00070}00070\ \ \};}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00071}00071\ \ }
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00072}00072\ \ \}\ \textcolor{comment}{//\ namespace\ GNET}}
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00073}00073\ \ }
+\DoxyCodeLine{\Hypertarget{queryuserprivilege_8hpp_source_l00074}00074\ \textcolor{preprocessor}{\ \#endif\ }\textcolor{comment}{//\ \_\_GNET\_QUERYUSERPRIVILEGE\_HPP}}
+
+\end{DoxyCode}

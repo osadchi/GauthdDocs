@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___g_n_e_t___protocol" xml:lang="en-US">
+<title>Протокол GNET</title>
+<indexterm><primary>Протокол GNET</primary></indexterm>
+<para>
+
+<para>Группа компонентов, связанных с сетевым протоколом <link linkend="_namespace_g_n_e_t">GNET</link>. </para>
+ 
+</para>
+
+<para>Группа компонентов, связанных с сетевым протоколом <link linkend="_namespace_g_n_e_t">GNET</link>. </para>
+</section>

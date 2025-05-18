@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_state_8hxx_source" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/state.hxx</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_state_8hxx_source_1l00001"/>00001 
+<anchor xml:id="_state_8hxx_source_1l00006"/>00006 
+<anchor xml:id="_state_8hxx_source_1l00007"/>00007 <emphasis role="preprocessor">&#32;#ifndef&#32;__GNET_GAUTHD_STATE</emphasis>
+<anchor xml:id="_state_8hxx_source_1l00008"/>00008 <emphasis role="preprocessor">&#32;#define&#32;__GNET_GAUTHD_STATE</emphasis>
+<anchor xml:id="_state_8hxx_source_1l00009"/>00009 &#32;
+<anchor xml:id="_state_8hxx_source_1l00014"/>00014 &#32;
+<anchor xml:id="_state_8hxx_source_1l00015"/>00015 <emphasis role="preprocessor">&#32;#ifdef&#32;WIN32</emphasis>
+<anchor xml:id="_state_8hxx_source_1l00016"/>00016 <emphasis role="preprocessor">&#32;#include&#32;&quot;gnproto.h&quot;</emphasis>&#32;&#32;&#32;&#32;
+<anchor xml:id="_state_8hxx_source_1l00017"/>00017 <emphasis role="preprocessor">&#32;#else</emphasis>
+<anchor xml:id="_state_8hxx_source_1l00018"/>00018 <emphasis role="preprocessor">&#32;#include&#32;&quot;protocol.h&quot;</emphasis>&#32;&#32;&#32;
+<anchor xml:id="_state_8hxx_source_1l00019"/>00019 <emphasis role="preprocessor">&#32;#endif</emphasis>
+<anchor xml:id="_state_8hxx_source_1l00020"/>00020 &#32;
+<anchor xml:id="_state_8hxx_source_1l00021"/>00021 &#32;<emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_g_n_e_t">GNET</link>
+<anchor xml:id="_state_8hxx_source_1l00022"/>00022 &#32;{
+<anchor xml:id="_state_8hxx_source_1l00027"/>00027 &#32;
+<anchor xml:id="_state_8hxx_source_1l00043"/>00043 &#32;<emphasis role="keyword">extern</emphasis>&#32;Protocol::Manager::Session::State&#32;<link linkend="_namespace_g_n_e_t_1a8db527ca0cb7dc440322bdb8481c2d13">state_GAuthServer</link>;
+<anchor xml:id="_state_8hxx_source_1l00044"/>00044 &#32;
+<anchor xml:id="_state_8hxx_source_1l00045"/>00045 &#32;};&#32;<emphasis role="comment">//&#32;namespace&#32;GNET</emphasis>
+<anchor xml:id="_state_8hxx_source_1l00046"/>00046 &#32;
+<anchor xml:id="_state_8hxx_source_1l00047"/>00047 <emphasis role="preprocessor">&#32;#endif&#32;</emphasis><emphasis role="comment">/*&#32;__GNET_GAUTHD_STATE&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

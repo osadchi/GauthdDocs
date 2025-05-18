@@ -1,0 +1,73 @@
+\doxysection{GNET\+::Billing\+Balance\+SA Class Reference}
+\hypertarget{class_g_n_e_t_1_1_billing_balance_s_a}{}\label{class_g_n_e_t_1_1_billing_balance_s_a}\index{GNET::BillingBalanceSA@{GNET::BillingBalanceSA}}
+
+
+Протокол для запроса/получения информации о балансе в биллинговой системе  
+
+
+
+
+{\ttfamily \#include $<$billingbalancesa.\+hpp$>$}
+
+Inheritance diagram for GNET\+::Billing\+Balance\+SA\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_n_e_t_1_1_billing_balance_s_a}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_billing_balance_s_a_a6ffab641422705d824ce73926786e682}{Process}} (Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)
+\begin{DoxyCompactList}\small\item\em Обработчик полученного протокола \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Протокол для запроса/получения информации о балансе в биллинговой системе 
+
+Наследуется от базового класса Protocol. Содержит автоматически генерируемые поля данных, которые включаются через директиву \#include "{}billingbalancesa"{} \begin{DoxySeeAlso}{See also}
+Protocol 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{billingbalancesa_8hpp_source_l00023}{23}} of file \mbox{\hyperlink{billingbalancesa_8hpp_source}{billingbalancesa.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_n_e_t_1_1_billing_balance_s_a_a6ffab641422705d824ce73926786e682}\index{GNET::BillingBalanceSA@{GNET::BillingBalanceSA}!Process@{Process}}
+\index{Process@{Process}!GNET::BillingBalanceSA@{GNET::BillingBalanceSA}}
+\doxysubsubsection{\texorpdfstring{Process()}{Process()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_billing_balance_s_a_a6ffab641422705d824ce73926786e682} 
+void GNET\+::\+Billing\+Balance\+SA\+::\+Process (\begin{DoxyParamCaption}\item[{Manager \texorpdfstring{$\ast$}{*}}]{manager}{, }\item[{Manager\+::\+Session\+::\+ID}]{sid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Обработчик полученного протокола 
+
+
+\begin{DoxyParams}{Parameters}
+{\em manager} & Указатель на менеджер протоколов \\
+\hline
+{\em sid} & Идентификатор сессии менеджера \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000009}{Todo}}]Реализовать обработку запроса баланса\+:
+\begin{DoxyItemize}
+\item Аутентификация пользователя
+\item Запрос в базу данных/внешний сервис
+\item Формирование ответа 
+\end{DoxyItemize}\end{DoxyRefDesc}
+\begin{DoxyNote}{Note}
+Для интеграции требуется подключение к биллинг-\/\+API 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{billingbalancesa_8hpp_source_l00039}{39}} of file \mbox{\hyperlink{billingbalancesa_8hpp_source}{billingbalancesa.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{billingbalancesa_8hpp}{billingbalancesa.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_gmysqlclient_8cpp" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/gmysqlclient.cpp File Reference</title>
+<indexterm><primary>D:/pwsrc2.0/docs/gauthd/gmysqlclient.cpp</primary></indexterm>
+<para>
+
+<para>Реализация класса <link linkend="_class_g_mysql_client">GMysqlClient</link> для работы с MySQL базой данных. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;gmysqlclient.hpp&quot;<?linebreak?>#include &quot;state.hxx&quot;<?linebreak?>#include &quot;timertask.h&quot;<?linebreak?></programlisting><section>
+<title>Detailed Description</title>
+
+<para>Реализация класса <link linkend="_class_g_mysql_client">GMysqlClient</link> для работы с MySQL базой данных. </para>
+
+<para>Этот файл содержит методы для подключения, выполнения запросов и управления данными пользователей. <formalpara><title>Author</title>
+
+<para>Ваше Имя </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>Дата создания </para>
+</formalpara>
+</para>
+<para>
+Definition in file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+</section>
+</section>

@@ -1,0 +1,114 @@
+\doxysection{GNET\+::Fee Class Reference}
+\hypertarget{class_g_n_e_t_1_1_fee}{}\label{class_g_n_e_t_1_1_fee}\index{GNET::Fee@{GNET::Fee}}
+
+
+Класс для управления тарифами и платежами  
+
+
+
+
+{\ttfamily \#include $<$fee.\+h$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{class_g_n_e_t_1_1_fee_ab4caa34c952cc4efbed053dec96ae353a0c6c9db762f0f25217e3df464c0a5394}{FEE\+\_\+\+TIME}}
+, \mbox{\hyperlink{class_g_n_e_t_1_1_fee_ab4caa34c952cc4efbed053dec96ae353a7a5fb0ee83bf78e2566cae0ea45a7f82}{FEE\+\_\+\+OCTETS}}
+, \mbox{\hyperlink{class_g_n_e_t_1_1_fee_ab4caa34c952cc4efbed053dec96ae353ad9709ec4aa55cfc61b47045546cd94a8}{FEE\+\_\+\+MONTH}}
+, \mbox{\hyperlink{class_g_n_e_t_1_1_fee_ab4caa34c952cc4efbed053dec96ae353a0f2e9a5d76aa116397a8f108523ef02d}{FEE\+\_\+\+SEASON}}
+, \newline
+\mbox{\hyperlink{class_g_n_e_t_1_1_fee_ab4caa34c952cc4efbed053dec96ae353a848dad6c83a784e16471fc2981f94104}{FEE\+\_\+\+BONUS}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_n_e_t_1_1_fee_ae9fed4745942d3e3c1191207e46645b3}{Fee}} ()
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_g_n_e_t_1_1_fee_add88c8fd1435367eb93830e85a1b3aa0}{\texorpdfstring{$\sim$}{\string~}\+Fee}} ()
+\begin{DoxyCompactList}\small\item\em Деструктор класса \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс для управления тарифами и платежами 
+
+Класс содержит перечисление типов тарификации и хранит текущее значение платежа. Может использоваться для расчетов стоимости услуг в различных тарифных моделях. 
+
+Definition at line \mbox{\hyperlink{fee_8h_source_l00018}{18}} of file \mbox{\hyperlink{fee_8h_source}{fee.\+h}}.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_g_n_e_t_1_1_fee_ab4caa34c952cc4efbed053dec96ae353}\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_fee_ab4caa34c952cc4efbed053dec96ae353} 
+anonymous enum}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FEE\_TIME@{FEE\_TIME}!GNET::Fee@{GNET::Fee}}\index{GNET::Fee@{GNET::Fee}!FEE\_TIME@{FEE\_TIME}}}\Hypertarget{class_g_n_e_t_1_1_fee_ab4caa34c952cc4efbed053dec96ae353a0c6c9db762f0f25217e3df464c0a5394}\label{class_g_n_e_t_1_1_fee_ab4caa34c952cc4efbed053dec96ae353a0c6c9db762f0f25217e3df464c0a5394} 
+FEE\+\_\+\+TIME&Оплата за время использования \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FEE\_OCTETS@{FEE\_OCTETS}!GNET::Fee@{GNET::Fee}}\index{GNET::Fee@{GNET::Fee}!FEE\_OCTETS@{FEE\_OCTETS}}}\Hypertarget{class_g_n_e_t_1_1_fee_ab4caa34c952cc4efbed053dec96ae353a7a5fb0ee83bf78e2566cae0ea45a7f82}\label{class_g_n_e_t_1_1_fee_ab4caa34c952cc4efbed053dec96ae353a7a5fb0ee83bf78e2566cae0ea45a7f82} 
+FEE\+\_\+\+OCTETS&Оплата за объем переданных данных \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FEE\_MONTH@{FEE\_MONTH}!GNET::Fee@{GNET::Fee}}\index{GNET::Fee@{GNET::Fee}!FEE\_MONTH@{FEE\_MONTH}}}\Hypertarget{class_g_n_e_t_1_1_fee_ab4caa34c952cc4efbed053dec96ae353ad9709ec4aa55cfc61b47045546cd94a8}\label{class_g_n_e_t_1_1_fee_ab4caa34c952cc4efbed053dec96ae353ad9709ec4aa55cfc61b47045546cd94a8} 
+FEE\+\_\+\+MONTH&Месячная подписка \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FEE\_SEASON@{FEE\_SEASON}!GNET::Fee@{GNET::Fee}}\index{GNET::Fee@{GNET::Fee}!FEE\_SEASON@{FEE\_SEASON}}}\Hypertarget{class_g_n_e_t_1_1_fee_ab4caa34c952cc4efbed053dec96ae353a0f2e9a5d76aa116397a8f108523ef02d}\label{class_g_n_e_t_1_1_fee_ab4caa34c952cc4efbed053dec96ae353a0f2e9a5d76aa116397a8f108523ef02d} 
+FEE\+\_\+\+SEASON&Сезонная подписка \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FEE\_BONUS@{FEE\_BONUS}!GNET::Fee@{GNET::Fee}}\index{GNET::Fee@{GNET::Fee}!FEE\_BONUS@{FEE\_BONUS}}}\Hypertarget{class_g_n_e_t_1_1_fee_ab4caa34c952cc4efbed053dec96ae353a848dad6c83a784e16471fc2981f94104}\label{class_g_n_e_t_1_1_fee_ab4caa34c952cc4efbed053dec96ae353a848dad6c83a784e16471fc2981f94104} 
+FEE\+\_\+\+BONUS&Бонусный режим оплаты \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{fee_8h_source_l00027}{27}} of file \mbox{\hyperlink{fee_8h_source}{fee.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_g_n_e_t_1_1_fee_ae9fed4745942d3e3c1191207e46645b3}\index{GNET::Fee@{GNET::Fee}!Fee@{Fee}}
+\index{Fee@{Fee}!GNET::Fee@{GNET::Fee}}
+\doxysubsubsection{\texorpdfstring{Fee()}{Fee()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_fee_ae9fed4745942d3e3c1191207e46645b3} 
+GNET\+::\+Fee\+::\+Fee (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор по умолчанию 
+
+\begin{DoxyPostcond}{Postcondition}
+Инициализирует внутренний счетчик платежа нулевым значением 
+\end{DoxyPostcond}
+
+
+Definition at line \mbox{\hyperlink{fee_8h_source_l00039}{39}} of file \mbox{\hyperlink{fee_8h_source}{fee.\+h}}.
+
+\Hypertarget{class_g_n_e_t_1_1_fee_add88c8fd1435367eb93830e85a1b3aa0}\index{GNET::Fee@{GNET::Fee}!````~Fee@{\texorpdfstring{$\sim$}{\string~}Fee}}
+\index{````~Fee@{\texorpdfstring{$\sim$}{\string~}Fee}!GNET::Fee@{GNET::Fee}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Fee()}{\string~Fee()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_fee_add88c8fd1435367eb93830e85a1b3aa0} 
+GNET\+::\+Fee\+::\texorpdfstring{$\sim$}{\string~}\+Fee (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Деструктор класса 
+
+\begin{DoxyWarning}{Warning}
+Не выполняет никаких специальных действий 
+\end{DoxyWarning}
+
+
+Definition at line \mbox{\hyperlink{fee_8h_source_l00045}{45}} of file \mbox{\hyperlink{fee_8h_source}{fee.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{fee_8h}{fee.\+h}}\end{DoxyCompactItemize}

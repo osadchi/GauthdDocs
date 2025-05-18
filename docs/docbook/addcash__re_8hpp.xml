@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_addcash__re_8hpp" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/addcash_re.hpp File Reference</title>
+<indexterm><primary>D:/pwsrc2.0/docs/gauthd/addcash_re.hpp</primary></indexterm>
+<para>
+
+<para>Заголовочный файл, содержащий объявление класса AddCash_Re для обработки ответов на пополнение игровой валюты. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;rpcdefs.h&quot;<?linebreak?>#include &quot;callid.hxx&quot;<?linebreak?>#include &quot;state.hxx&quot;<?linebreak?>#include &quot;addcash_re&quot;<?linebreak?></programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_add_cash___re">GNET::AddCash_Re</link></para>
+
+<para>Класс протокола для обработки ответов на операции пополнения игровой валюты. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_g_n_e_t">GNET</link></para>
+
+<para>Основное пространство имен для сетевых компонентов системы. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Заголовочный файл, содержащий объявление класса AddCash_Re для обработки ответов на пополнение игровой валюты. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Ваше имя </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>Дата создания </para>
+</formalpara>
+<formalpara><title>Copyright</title>
+
+<para>Ваша компания </para>
+</formalpara>
+</para>
+<para>
+Definition in file <link linkend="_addcash__re_8hpp_source">addcash_re.hpp</link>.</para>
+</section>
+</section>

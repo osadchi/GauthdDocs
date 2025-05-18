@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_n_e_t_1_1_accounting_response" xml:lang="en-US">
+<title>GNET::AccountingResponse Class Reference</title>
+<indexterm><primary>GNET::AccountingResponse</primary></indexterm>
+<para>
+
+<para>Класс для обработки ответов от сервиса учётных записей. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;accountingresponse.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for GNET::AccountingResponse:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_accounting_response.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_accounting_response_1a58529a5d6f2697a88f5c3211571d705b">Process</link> (Manager *manager, Manager::Session::ID sid)</para>
+
+<para>&lt; Включение автоматически сгенерированных данных (например, полей протокола). </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Класс для обработки ответов от сервиса учётных записей. </para>
+
+
+
+<para>Реализует протокол <link linkend="_namespace_g_n_e_t">GNET</link>, используется для передачи данных между клиентом и сервером.</para>
+
+<para><note><title>Note</title>
+
+<para>Часть реализации класса генерируется автоматически через #include &quot;accountingresponse&quot;. </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_accountingresponse_8hpp_source_1l00030">30</link> of file <link linkend="_accountingresponse_8hpp_source">accountingresponse.hpp</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_g_n_e_t_1_1_accounting_response_1a58529a5d6f2697a88f5c3211571d705b"/><section>
+    <title>Process()</title>
+<indexterm><primary>Process</primary><secondary>GNET::AccountingResponse</secondary></indexterm>
+<indexterm><primary>GNET::AccountingResponse</primary><secondary>Process</secondary></indexterm>
+<para><computeroutput>void GNET::AccountingResponse::Process (Manager * manager, Manager::Session::ID sid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>&lt; Включение автоматически сгенерированных данных (например, полей протокола). </para>
+</para>
+
+<para>Обработка полученного ответа от учётного сервиса.</para>
+
+<para>Вызывается менеджером при получении ответа. Реализация зависит от логики сервиса. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>manager</entry><entry>
+<para>Указатель на менеджер, управляющий сессиями. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>sid</entry><entry>
+<para>Идентификатор сессии, связанной с запросом.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <para><link linkend="_todo_1_todo000002">Todo</link> 
+<para>Реализовать логику обработки (например, обновление состояния учётной записи). </para>
+</para></para>
+<para>
+Definition at line <link linkend="_accountingresponse_8hpp_source_1l00043">43</link> of file <link linkend="_accountingresponse_8hpp_source">accountingresponse.hpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_accountingresponse_8hpp">accountingresponse.hpp</link></section>
+</section>

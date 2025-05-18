@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_n_e_t_1_1_discount_announce" xml:lang="en-US">
+<title>GNET::DiscountAnnounce Class Reference</title>
+<indexterm><primary>GNET::DiscountAnnounce</primary></indexterm>
+<para>
+
+<para>Протокол для оповещения о скидках и специальных предложениях </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;discountannounce.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for GNET::DiscountAnnounce:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_discount_announce.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+
+<para>Протокол для оповещения о скидках и специальных предложениях </para>
+
+
+
+<para>Наследуется от базового класса Protocol и используется для рассылки информации об изменениях в системе скидок между серверами и клиентами. Содержит данные о маркетинговых акциях и специальных предложениях от продавцов.</para>
+
+<para><para><link linkend="_todo_1_todo000013">Todo</link> 
+<para>Реализовать обработку протокола в методе Process() </para>
+</para></para>
+<para>
+Definition at line <link linkend="_discountannounce_8hpp_source_1l00027">27</link> of file <link linkend="_discountannounce_8hpp_source">discountannounce.hpp</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_discountannounce_8hpp">discountannounce.hpp</link></section>
+</section>

@@ -1,0 +1,575 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_g_n_e_t" xml:lang="en-US">
+<title>GNET Namespace Reference</title>
+<indexterm><primary>GNET</primary></indexterm>
+<para>
+
+<para>Основное пространство имен для сетевых компонентов системы. </para>
+ 
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_accounting_request">AccountingRequest</link></para>
+
+<para>Класс для обработки учётных запросов (например, старт/стоп сессии, учёт трафика). </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_accounting_response">AccountingResponse</link></para>
+
+<para>Класс для обработки ответов от сервиса учётных записей. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_a_c_forbid_cheater">ACForbidCheater</link></para>
+
+<para>Протокол для обработки запросов блокировки нечестных игроков </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_add_cash">AddCash</link></para>
+
+<para>Класс протокола для обработки запросов на добавление средств. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_add_cash___re">AddCash_Re</link></para>
+
+<para>Класс протокола для обработки ответов на операции пополнения игровой валюты. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_announce_zoneid">AnnounceZoneid</link></para>
+
+<para>Класс протокола для обработки уведомлений о идентификаторе зоны. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_announce_zoneid2">AnnounceZoneid2</link></para>
+
+<para>Класс протокола для обработки объявлений идентификаторов игровых зон </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_announce_zoneid3">AnnounceZoneid3</link></para>
+
+<para>Протокол для обработки информации о зональных идентификаторах </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_a_u2_game">AU2Game</link></para>
+
+<para>Класс протокола для передачи данных между сервером аутентификации и игровым сервером. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_authd_version">AuthdVersion</link></para>
+
+<para>Класс протокола для обработки версии аутентификационного демона. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_billing_balance">BillingBalance</link></para>
+
+<para>Класс протокола для работы с балансом биллинговой системы </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_billing_balance_s_a">BillingBalanceSA</link></para>
+
+<para>Протокол для запроса/получения информации о балансе в биллинговой системе </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_billing_cancel">BillingCancel</link></para>
+
+<para>Протокол для обработки запросов отмены биллинговых транзакций @inherits Protocol. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_billing_confirm">BillingConfirm</link></para>
+
+<para>Класс протокола для обработки подтверждений биллинговых операций. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_billing_request">BillingRequest</link></para>
+
+<para>Класс для обработки биллинг-запросов в системе. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_check_timer">CheckTimer</link></para>
+
+<para>Periodic task manager for financial and security checks. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_discount_announce">DiscountAnnounce</link></para>
+
+<para>Протокол для оповещения о скидках и специальных предложениях </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_fee">Fee</link></para>
+
+<para>Класс для управления тарифами и платежами </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_game2_a_u">Game2AU</link></para>
+
+<para>Протокол для взаимодействия между игровым сервером и сервером аутентификации/учётных записей (Auth/AU Server) </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_g_auth_server">GAuthServer</link></para>
+
+<para>Main authentication server class handling sessions and user validation. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_get_player_i_d_by_name___re">GetPlayerIDByName_Re</link></para>
+
+<para>Класс протокола для ответов на запрос получения ID игрока по имени @inherits Protocol. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_g_m_forbid_sell_point">GMForbidSellPoint</link></para>
+
+<para>Класс протокола для управления запретами точек продаж. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_g_m_kickout_user">GMKickoutUser</link></para>
+
+<para>Протокол для принудительного отключения пользователя Game Master&apos;ом (GM) </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_g_m_shutup">GMShutup</link></para>
+
+<para>Протокол блокировки чата пользователя </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_key_exchange">KeyExchange</link></para>
+
+<para>Протокол обмена криптографическими ключами </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_kickout_user">KickoutUser</link></para>
+
+<para>Протокол для принудительного отключения пользователя от сервера </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_matrix_failure">MatrixFailure</link></para>
+
+<para>Класс протокола для обработки ошибок матрицы </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_query_user_forbid">QueryUserForbid</link></para>
+
+<para>Протокол для запроса информации о блокировке пользователя </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_query_user_forbid___re">QueryUserForbid_Re</link></para>
+
+<para>Класс протокола ответа на запрос статуса блокировки пользователя </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_query_user_privilege">QueryUserPrivilege</link></para>
+
+<para>Протокол для запроса и обработки привилегий пользователя </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_query_user_privilege___re">QueryUserPrivilege_Re</link></para>
+
+<para>Класс-ответ для запроса информации о привилегиях пользователя </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_s_s_o_get_ticket_req">SSOGetTicketReq</link></para>
+
+<para>Класс протокола для запроса SSO-билета аутентификации </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_status_announce">StatusAnnounce</link></para>
+
+<para>Протокол обработки статусных уведомлений </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_sys_send_mail3___re">SysSendMail3_Re</link></para>
+
+<para>Класс протокола для обработки ответов на отправку системной почты (версия 3) </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_sys_send_mail___re">SysSendMail_Re</link></para>
+
+<para>Класс протокола для обработки ответов на отправку системных писем @inherits Protocol. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_trans_buy_point">TransBuyPoint</link></para>
+
+<para>Класс протокола для обработки транзакций покупки баллов @inherits Protocol. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_g_n_e_t_1_1_user_info">UserInfo</link></para>
+
+<para>Структура для хранения информации о пользователе. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_verify_master">VerifyMaster</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_verify_master___re">VerifyMaster_Re</link></para>
+
+<para>Класс протокола для обработки ответов верификации мастер-сервера </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_namespace_g_n_e_t_1a1338a6988f7a1190e5734c97666013a2">CallID</link> { <?linebreak?><link linkend="_namespace_g_n_e_t_1a1338a6988f7a1190e5734c97666013a2aa4c822a0ac6cc042286570fc63ac47b4">RPC_GQUERYPASSWD</link> = 502
+, <link linkend="_namespace_g_n_e_t_1a1338a6988f7a1190e5734c97666013a2a531d3b248d11a4ac12280117f696b9ab">RPC_USERLOGIN</link> = 15
+, <link linkend="_namespace_g_n_e_t_1a1338a6988f7a1190e5734c97666013a2a1fc81e9d15ff71235cf582edffacf905">RPC_USERLOGIN2</link> = 8067
+, <link linkend="_namespace_g_n_e_t_1a1338a6988f7a1190e5734c97666013a2afaa4083eb20ffb16a1c1210a8b3365aa">RPC_USERLOGOUT</link> = 33
+, <?linebreak?><link linkend="_namespace_g_n_e_t_1a1338a6988f7a1190e5734c97666013a2aa1afbe42cd1fa7864c68c706a0c94590">RPC_CASHSERIAL</link> = 8009
+, <link linkend="_namespace_g_n_e_t_1a1338a6988f7a1190e5734c97666013a2afa9fbff6937f8790d97711334f0379a1">RPC_GETADDCASHSN</link> = 514
+, <link linkend="_namespace_g_n_e_t_1a1338a6988f7a1190e5734c97666013a2a90d298195ca3076c5fb473314e6b518f">RPC_MATRIXPASSWD</link> = 550
+, <link linkend="_namespace_g_n_e_t_1a1338a6988f7a1190e5734c97666013a2a3720d36cc791f779aeb205604ac4bc21">RPC_MATRIXPASSWD2</link> = 8066
+, <?linebreak?><link linkend="_namespace_g_n_e_t_1a1338a6988f7a1190e5734c97666013a2a27c5348716f502757d9d5e1544248291">RPC_MATRIXTOKEN</link> = 8070
+, <link linkend="_namespace_g_n_e_t_1a1338a6988f7a1190e5734c97666013a2aa65a8c30ce2f1a46514cf66e970f85eb">RPC_GETUSERCOUPON</link> = 8062
+, <link linkend="_namespace_g_n_e_t_1a1338a6988f7a1190e5734c97666013a2a4ad2e3cd63b3fea51f3c2cf96c1faaaf">RPC_COUPONEXCHANGE</link> = 8063
+ }</para>
+
+<para>Идентификаторы удаленных вызовов процедур (RPC). </para>
+</listitem>
+            <listitem><para>enum <link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120">ProtocolType</link> { <?linebreak?><link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120ad775146f0b4980b91f85a1ad89d2464c">PROTOCOL_QUERYUSERPRIVILEGE_RE</link> = 507
+, <link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a0961670e6c10e7c96400a8375e5430b3">PROTOCOL_QUERYUSERFORBID_RE</link> = 509
+, <link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a7dc373f32225213c332a001337f0bbfe">PROTOCOL_KICKOUTUSER</link> = 10
+, <link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a4a5a5515e26457147b073462d3a787ba">PROTOCOL_ACCOUNTINGRESPONSE</link> = 504
+, <?linebreak?><link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a30ccb292fc5d30e75aad9c4d9f9f6f81">PROTOCOL_AUTHDVERSION</link> = 8010
+, <link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120af18da1f919b1e49b538a2424c193383e">PROTOCOL_AU2GAME</link> = 8038
+, <link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120af723dc0b543c77ec443239fd582d839f">PROTOCOL_DISCOUNTANNOUNCE</link> = 8064
+, <link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a1874bd3c9beda0a8b8d3517724451786">PROTOCOL_KEYEXCHANGE</link> = 2
+, <?linebreak?><link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120af85c6ac569098dd915838a34d08c9960">PROTOCOL_STATUSANNOUNCE</link> = 6
+, <link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120ae35f3640f872e71587971247ffbd7488">PROTOCOL_ACCOUNTINGREQUEST</link> = 503
+, <link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a599ad5acad4f68afeadfe7d588fea1f5">PROTOCOL_ANNOUNCEZONEID</link> = 505
+, <link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120ae59ac57ebb94871c4e16245aa7a0bcdd">PROTOCOL_QUERYUSERPRIVILEGE</link> = 506
+, <?linebreak?><link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a2bcf580dc1a734aacb7facf3d279e04e">PROTOCOL_QUERYUSERFORBID</link> = 508
+, <link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120aac05f4d5668c837f8664e19f296fd559">PROTOCOL_GMKICKOUTUSER</link> = 354
+, <link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120abc8b657b97434cd305f562839ca56892">PROTOCOL_GMFORBIDSELLPOINT</link> = 378
+, <link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a3ac9f12cd46c83ba7ee03e5aedbfb712">PROTOCOL_GMSHUTUP</link> = 356
+, <?linebreak?><link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a49cbd795aa4a48503de1ba31a98f8f6a">PROTOCOL_TRANSBUYPOINT</link> = 616
+, <link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120ae3b85f0cb27e48eec336b7ee5089fa93">PROTOCOL_GETPLAYERIDBYNAME_RE</link> = 119
+, <link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a0fb2d242f624dedab11e37c4a9d8a21e">PROTOCOL_SYSSENDMAIL_RE</link> = 4215
+, <link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120aae1af06579b664be54b41c673e4d0931">PROTOCOL_SYSSENDMAIL3_RE</link> = 8069
+, <?linebreak?><link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a6e17d7796f5600aa11e82511e11b9da0">PROTOCOL_VERIFYMASTER</link> = 519
+, <link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a83fcd8b3b5201ae0cc0391b8f5ddaede">PROTOCOL_VERIFYMASTER_RE</link> = 520
+, <link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a4b80cb97c3af7ecd545ed3252a585d08">PROTOCOL_ADDCASH</link> = 515
+, <link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a2b5c831b15711ce5e7f6bf8ccabbea0c">PROTOCOL_ADDCASH_RE</link> = 516
+, <?linebreak?><link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a83432a1787f4afdd6f75b8d6f08c3341">PROTOCOL_MATRIXFAILURE</link> = 553
+, <link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a4474160ab02fd98c0a0173d3a98eb97e">PROTOCOL_BILLINGREQUEST</link> = 9001
+, <link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a3389327f6e78989bc3ec722c34660453">PROTOCOL_BILLINGBALANCE</link> = 9000
+, <link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a35d2250d12e3cb8366db68a1b40ce404">PROTOCOL_BILLINGBALANCESA</link> = 8048
+, <?linebreak?><link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120aeb0d1087f33af4f76f991567f7c5eca9">PROTOCOL_BILLINGCONFIRM</link> = 8052
+, <link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a9c8893d3d61ad10b65ded139951e44b9">PROTOCOL_BILLINGCANCEL</link> = 8054
+, <link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120ad88ea451e7b0381bd17edfd34b5eee4a">PROTOCOL_ACFORBIDCHEATER</link> = 8008
+, <link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a4c07bdeb2ff5691aeb76071e6e5f71f5">PROTOCOL_GAME2AU</link> = 8039
+, <?linebreak?><link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a877a4afcce27d6a331a6e2f39ad763b6">PROTOCOL_SSOGETTICKETREQ</link> = 8016
+ }</para>
+
+<para>Типы протоколов для сетевой коммуникации. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>GNET::Protocol::Manager::Session::State <link linkend="_namespace_g_n_e_t_1a425204ed513819b3b931a12f8837f8e4">state_GAuthServer</link> (_state_GAuthServer, sizeof(_state_GAuthServer)/sizeof(GNET::Protocol::Type), 86400)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect><title>RPC-заглушки с аргументами и результатами</title>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>Protocol::Manager::Session::State <link linkend="_namespace_g_n_e_t_1a8db527ca0cb7dc440322bdb8481c2d13">state_GAuthServer</link></para>
+
+<para>Состояние сессии для <link linkend="_class_g_n_e_t_1_1_g_auth_server">GAuthServer</link>. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect><title>Протоколы без аргументов/результатов</title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Основное пространство имен для сетевых компонентов системы. </para>
+
+<para>Основное пространство имен для сетевых протоколов и компонентов</para>
+
+<para>Условная компиляция для платформы Windows.</para>
+
+<para>Основное пространство имён протокола <link linkend="_namespace_g_n_e_t">GNET</link>.</para>
+
+<para>&lt; Заголовочный файл протокола для других ОС</para>
+
+<para>&lt; Включение определения SSO-пользователя</para>
+
+<para>Основное пространство имен сетевой подсистемы</para>
+
+<para>Содержит все классы и компоненты, связанные с сетевым взаимодействием, протоколами и обработкой сообщений.</para>
+
+<para>&lt; Заголовок для функций связывания (не-Windows платформы)</para>
+
+<para>Основное пространство имен для сетевых протоколов и RPC-компонентов.</para>
+
+<para>Содержит статические экземпляры классов протоколов для инициализации системы.</para>
+
+<para>&lt; Базовые определения RPC &lt; Идентификаторы вызовов Состояния сессий</para>
+
+<para>&lt; Базовые определения RPC &lt; Идентификаторы вызовов Состояния протоколов </para>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_namespace_g_n_e_t_1a1338a6988f7a1190e5734c97666013a2"/><section>
+    <title>CallID</title>
+<indexterm><primary>CallID</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>CallID</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_namespace_g_n_e_t_1a1338a6988f7a1190e5734c97666013a2">GNET::CallID</link></computeroutput></para><para>
+
+<para>Идентификаторы удаленных вызовов процедур (RPC). </para>
+</para>
+
+<para>Уникальные числовые коды для идентификации RPC-запросов в сетевом взаимодействии. </para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>RPC_GQUERYPASSWD</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>RPC_GQUERYPASSWD</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a1338a6988f7a1190e5734c97666013a2aa4c822a0ac6cc042286570fc63ac47b4"/>RPC_GQUERYPASSWD</entry><entry>
+<para>Запрос проверки пароля (устаревшая версия). </para>
+</entry></row><row><entry><indexterm><primary>RPC_USERLOGIN</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>RPC_USERLOGIN</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a1338a6988f7a1190e5734c97666013a2a531d3b248d11a4ac12280117f696b9ab"/>RPC_USERLOGIN</entry><entry>
+<para>Авторизация пользователя (базовая версия). </para>
+</entry></row><row><entry><indexterm><primary>RPC_USERLOGIN2</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>RPC_USERLOGIN2</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a1338a6988f7a1190e5734c97666013a2a1fc81e9d15ff71235cf582edffacf905"/>RPC_USERLOGIN2</entry><entry>
+<para>Авторизация пользователя (обновленная версия). </para>
+</entry></row><row><entry><indexterm><primary>RPC_USERLOGOUT</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>RPC_USERLOGOUT</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a1338a6988f7a1190e5734c97666013a2afaa4083eb20ffb16a1c1210a8b3365aa"/>RPC_USERLOGOUT</entry><entry>
+<para>Выход пользователя из системы. </para>
+</entry></row><row><entry><indexterm><primary>RPC_CASHSERIAL</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>RPC_CASHSERIAL</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a1338a6988f7a1190e5734c97666013a2aa1afbe42cd1fa7864c68c706a0c94590"/>RPC_CASHSERIAL</entry><entry>
+<para>Проверка серийного номера платежа. </para>
+</entry></row><row><entry><indexterm><primary>RPC_GETADDCASHSN</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>RPC_GETADDCASHSN</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a1338a6988f7a1190e5734c97666013a2afa9fbff6937f8790d97711334f0379a1"/>RPC_GETADDCASHSN</entry><entry>
+<para>Запрос серийного номера для пополнения баланса. </para>
+</entry></row><row><entry><indexterm><primary>RPC_MATRIXPASSWD</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>RPC_MATRIXPASSWD</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a1338a6988f7a1190e5734c97666013a2a90d298195ca3076c5fb473314e6b518f"/>RPC_MATRIXPASSWD</entry><entry>
+<para>Проверка пароля Matrix (версия 1). </para>
+</entry></row><row><entry><indexterm><primary>RPC_MATRIXPASSWD2</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>RPC_MATRIXPASSWD2</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a1338a6988f7a1190e5734c97666013a2a3720d36cc791f779aeb205604ac4bc21"/>RPC_MATRIXPASSWD2</entry><entry>
+<para>Проверка пароля Matrix (версия 2). </para>
+</entry></row><row><entry><indexterm><primary>RPC_MATRIXTOKEN</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>RPC_MATRIXTOKEN</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a1338a6988f7a1190e5734c97666013a2a27c5348716f502757d9d5e1544248291"/>RPC_MATRIXTOKEN</entry><entry>
+<para>Проверка токена Matrix. </para>
+</entry></row><row><entry><indexterm><primary>RPC_GETUSERCOUPON</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>RPC_GETUSERCOUPON</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a1338a6988f7a1190e5734c97666013a2aa65a8c30ce2f1a46514cf66e970f85eb"/>RPC_GETUSERCOUPON</entry><entry>
+<para>Запрос информации о купонах пользователя. </para>
+</entry></row><row><entry><indexterm><primary>RPC_COUPONEXCHANGE</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>RPC_COUPONEXCHANGE</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a1338a6988f7a1190e5734c97666013a2a4ad2e3cd63b3fea51f3c2cf96c1faaaf"/>RPC_COUPONEXCHANGE</entry><entry>
+<para>Обмен купона на бонусы. </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_callid_8hxx_source_1l00023">23</link> of file <link linkend="_callid_8hxx_source">callid.hxx</link>.</para>
+</section>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120"/><section>
+    <title>ProtocolType</title>
+<indexterm><primary>ProtocolType</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>ProtocolType</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120">GNET::ProtocolType</link></computeroutput></para><para>
+
+<para>Типы протоколов для сетевой коммуникации. </para>
+</para>
+
+<para>Уникальные идентификаторы протоколов, используемых в системе. </para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>PROTOCOL_QUERYUSERPRIVILEGE_RE</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_QUERYUSERPRIVILEGE_RE</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120ad775146f0b4980b91f85a1ad89d2464c"/>PROTOCOL_QUERYUSERPRIVILEGE_RE</entry><entry>
+<para>Ответ на запрос привилегий пользователя. </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_QUERYUSERFORBID_RE</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_QUERYUSERFORBID_RE</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a0961670e6c10e7c96400a8375e5430b3"/>PROTOCOL_QUERYUSERFORBID_RE</entry><entry>
+<para>Ответ на запрос блокировки пользователя. </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_KICKOUTUSER</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_KICKOUTUSER</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a7dc373f32225213c332a001337f0bbfe"/>PROTOCOL_KICKOUTUSER</entry><entry>
+<para>Принудительное отключение пользователя. </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_ACCOUNTINGRESPONSE</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_ACCOUNTINGRESPONSE</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a4a5a5515e26457147b073462d3a787ba"/>PROTOCOL_ACCOUNTINGRESPONSE</entry><entry>
+<para>Ответ биллинг-системы. </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_AUTHDVERSION</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_AUTHDVERSION</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a30ccb292fc5d30e75aad9c4d9f9f6f81"/>PROTOCOL_AUTHDVERSION</entry><entry>
+<para>Проверка версии аутентификации. </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_AU2GAME</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_AU2GAME</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120af18da1f919b1e49b538a2424c193383e"/>PROTOCOL_AU2GAME</entry><entry>
+<para>Протокол взаимодействия AU-&gt;Game. </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_DISCOUNTANNOUNCE</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_DISCOUNTANNOUNCE</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120af723dc0b543c77ec443239fd582d839f"/>PROTOCOL_DISCOUNTANNOUNCE</entry><entry>
+<para>Анонс скидочных акций. </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_KEYEXCHANGE</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_KEYEXCHANGE</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a1874bd3c9beda0a8b8d3517724451786"/>PROTOCOL_KEYEXCHANGE</entry><entry>
+<para>Обмен криптографическими ключами. </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_STATUSANNOUNCE</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_STATUSANNOUNCE</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120af85c6ac569098dd915838a34d08c9960"/>PROTOCOL_STATUSANNOUNCE</entry><entry>
+<para>Анонс статуса сервиса. </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_ACCOUNTINGREQUEST</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_ACCOUNTINGREQUEST</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120ae35f3640f872e71587971247ffbd7488"/>PROTOCOL_ACCOUNTINGREQUEST</entry><entry>
+<para>Запрос биллинг-данных. </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_ANNOUNCEZONEID</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_ANNOUNCEZONEID</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a599ad5acad4f68afeadfe7d588fea1f5"/>PROTOCOL_ANNOUNCEZONEID</entry><entry>
+<para>Анонс идентификатора зоны. </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_QUERYUSERPRIVILEGE</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_QUERYUSERPRIVILEGE</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120ae59ac57ebb94871c4e16245aa7a0bcdd"/>PROTOCOL_QUERYUSERPRIVILEGE</entry><entry>
+<para>Запрос привилегий пользователя. </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_QUERYUSERFORBID</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_QUERYUSERFORBID</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a2bcf580dc1a734aacb7facf3d279e04e"/>PROTOCOL_QUERYUSERFORBID</entry><entry>
+<para>Запрос статуса блокировки. </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_GMKICKOUTUSER</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_GMKICKOUTUSER</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120aac05f4d5668c837f8664e19f296fd559"/>PROTOCOL_GMKICKOUTUSER</entry><entry>
+<para>Отключение пользователя GM-ом. </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_GMFORBIDSELLPOINT</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_GMFORBIDSELLPOINT</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120abc8b657b97434cd305f562839ca56892"/>PROTOCOL_GMFORBIDSELLPOINT</entry><entry>
+<para>Блокировка продажи очков. </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_GMSHUTUP</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_GMSHUTUP</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a3ac9f12cd46c83ba7ee03e5aedbfb712"/>PROTOCOL_GMSHUTUP</entry><entry>
+<para>Ограничение чата (мут). </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_TRANSBUYPOINT</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_TRANSBUYPOINT</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a49cbd795aa4a48503de1ba31a98f8f6a"/>PROTOCOL_TRANSBUYPOINT</entry><entry>
+<para>Транзакция покупки игровых очков. </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_GETPLAYERIDBYNAME_RE</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_GETPLAYERIDBYNAME_RE</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120ae3b85f0cb27e48eec336b7ee5089fa93"/>PROTOCOL_GETPLAYERIDBYNAME_RE</entry><entry>
+<para>Ответ с ID игрока по имени. </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_SYSSENDMAIL_RE</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_SYSSENDMAIL_RE</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a0fb2d242f624dedab11e37c4a9d8a21e"/>PROTOCOL_SYSSENDMAIL_RE</entry><entry>
+<para>Ответ на отправку системного письма. </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_SYSSENDMAIL3_RE</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_SYSSENDMAIL3_RE</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120aae1af06579b664be54b41c673e4d0931"/>PROTOCOL_SYSSENDMAIL3_RE</entry><entry>
+<para>Ответ на отправку письма (v3). </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_VERIFYMASTER</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_VERIFYMASTER</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a6e17d7796f5600aa11e82511e11b9da0"/>PROTOCOL_VERIFYMASTER</entry><entry>
+<para>Верификация мастера-аккаунта. </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_VERIFYMASTER_RE</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_VERIFYMASTER_RE</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a83fcd8b3b5201ae0cc0391b8f5ddaede"/>PROTOCOL_VERIFYMASTER_RE</entry><entry>
+<para>Ответ на верификацию мастера. </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_ADDCASH</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_ADDCASH</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a4b80cb97c3af7ecd545ed3252a585d08"/>PROTOCOL_ADDCASH</entry><entry>
+<para>Пополнение баланса. </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_ADDCASH_RE</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_ADDCASH_RE</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a2b5c831b15711ce5e7f6bf8ccabbea0c"/>PROTOCOL_ADDCASH_RE</entry><entry>
+<para>Ответ на пополнение баланса. </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_MATRIXFAILURE</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_MATRIXFAILURE</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a83432a1787f4afdd6f75b8d6f08c3341"/>PROTOCOL_MATRIXFAILURE</entry><entry>
+<para>Ошибка аутентификации Matrix. </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_BILLINGREQUEST</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_BILLINGREQUEST</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a4474160ab02fd98c0a0173d3a98eb97e"/>PROTOCOL_BILLINGREQUEST</entry><entry>
+<para>Запрос к биллинг-системе. </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_BILLINGBALANCE</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_BILLINGBALANCE</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a3389327f6e78989bc3ec722c34660453"/>PROTOCOL_BILLINGBALANCE</entry><entry>
+<para>Проверка баланса. </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_BILLINGBALANCESA</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_BILLINGBALANCESA</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a35d2250d12e3cb8366db68a1b40ce404"/>PROTOCOL_BILLINGBALANCESA</entry><entry>
+<para>Проверка баланса (спец. версия). </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_BILLINGCONFIRM</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_BILLINGCONFIRM</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120aeb0d1087f33af4f76f991567f7c5eca9"/>PROTOCOL_BILLINGCONFIRM</entry><entry>
+<para>Подтверждение платежа. </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_BILLINGCANCEL</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_BILLINGCANCEL</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a9c8893d3d61ad10b65ded139951e44b9"/>PROTOCOL_BILLINGCANCEL</entry><entry>
+<para>Отмена платежа. </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_ACFORBIDCHEATER</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_ACFORBIDCHEATER</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120ad88ea451e7b0381bd17edfd34b5eee4a"/>PROTOCOL_ACFORBIDCHEATER</entry><entry>
+<para>Блокировка читеров. </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_GAME2AU</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_GAME2AU</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a4c07bdeb2ff5691aeb76071e6e5f71f5"/>PROTOCOL_GAME2AU</entry><entry>
+<para>Протокол взаимодействия Game-&gt;AU. </para>
+</entry></row><row><entry><indexterm><primary>PROTOCOL_SSOGETTICKETREQ</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>PROTOCOL_SSOGETTICKETREQ</secondary></indexterm>
+<anchor xml:id="_namespace_g_n_e_t_1a75746b621815c32fc819144109e4d120a877a4afcce27d6a331a6e2f39ad763b6"/>PROTOCOL_SSOGETTICKETREQ</entry><entry>
+<para>Запрос SSO-тикета. </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_callid_8hxx_source_1l00044">44</link> of file <link linkend="_callid_8hxx_source">callid.hxx</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespace_g_n_e_t_1a425204ed513819b3b931a12f8837f8e4"/><section>
+    <title>state_GAuthServer()</title>
+<indexterm><primary>state_GAuthServer</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>state_GAuthServer</secondary></indexterm>
+<para><computeroutput>GNET::Protocol::Manager::Session::State GNET::state_GAuthServer (_state_GAuthServer , sizeof(_state_GAuthServer)/sizeof(GNET::Protocol::Type) , 86400 )</computeroutput></para></section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_namespace_g_n_e_t_1a8db527ca0cb7dc440322bdb8481c2d13"/><section>
+    <title>state_GAuthServer</title>
+<indexterm><primary>state_GAuthServer</primary><secondary>GNET</secondary></indexterm>
+<indexterm><primary>GNET</primary><secondary>state_GAuthServer</secondary></indexterm>
+<para><computeroutput>Protocol::Manager::Session::State GNET::state_GAuthServer<computeroutput>[extern]</computeroutput></computeroutput></para><para>
+
+<para>Состояние сессии для <link linkend="_class_g_n_e_t_1_1_g_auth_server">GAuthServer</link>. </para>
+</para>
+
+<para>Глобальное состояние сессии для сервера аутентификации</para>
+
+<para>Инициализируется с параметрами: 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>_state_GAuthServer</entry><entry>
+<para>- массив поддерживаемых протоколов </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>sizeof(_state_GAuthServer)/sizeof(Protocol::Type)</entry><entry>
+<para>- динамический расчет размера массива </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>86400</entry><entry>
+<para>- таймаут сессии в секундах (24 часа) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <warning><title>Warning</title>
+
+<para>Размер массива рассчитывается автоматически - при изменении состава протоколов не требуется ручная корректировка размерности</para>
+</warning>
+Данное состояние используется менеджером протокола для управления:<itemizedlist>
+<listitem>
+<para>Жизненным циклом сессии</para>
+</listitem><listitem>
+<para>Обработкой входящих/исходящих пакетов</para>
+</listitem><listitem>
+<para>Таймаутами соединения</para>
+</listitem></itemizedlist>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Состояние объявлено как extern, что означает его фактическая реализация находится в отдельном файле реализации (.cpp)</para>
+</note>
+<warning><title>Warning</title>
+
+<para>Не следует напрямую модифицировать это состояние - работа с ним должна осуществляться через API менеджера протокола </para>
+</warning>
+</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,70 @@
+\doxysection{GNET\+::Query\+User\+Privilege Class Reference}
+\hypertarget{class_g_n_e_t_1_1_query_user_privilege}{}\label{class_g_n_e_t_1_1_query_user_privilege}\index{GNET::QueryUserPrivilege@{GNET::QueryUserPrivilege}}
+
+
+Протокол для запроса и обработки привилегий пользователя  
+
+
+
+
+{\ttfamily \#include $<$queryuserprivilege.\+hpp$>$}
+
+Inheritance diagram for GNET\+::Query\+User\+Privilege\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_n_e_t_1_1_query_user_privilege}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_query_user_privilege_a9571b9d65b613b5d264da5df13d866f6}{Process}} (Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)
+\begin{DoxyCompactList}\small\item\em Обрабатывает запрос привилегий пользователя \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Протокол для запроса и обработки привилегий пользователя 
+
+Наследует GNET\+::\+Protocol и реализует логику проверки прав пользователя через запросы к базе данных с последующей отправкой результата клиенту 
+
+Definition at line \mbox{\hyperlink{queryuserprivilege_8hpp_source_l00030}{30}} of file \mbox{\hyperlink{queryuserprivilege_8hpp_source}{queryuserprivilege.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_n_e_t_1_1_query_user_privilege_a9571b9d65b613b5d264da5df13d866f6}\index{GNET::QueryUserPrivilege@{GNET::QueryUserPrivilege}!Process@{Process}}
+\index{Process@{Process}!GNET::QueryUserPrivilege@{GNET::QueryUserPrivilege}}
+\doxysubsubsection{\texorpdfstring{Process()}{Process()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_query_user_privilege_a9571b9d65b613b5d264da5df13d866f6} 
+void GNET\+::\+Query\+User\+Privilege\+::\+Process (\begin{DoxyParamCaption}\item[{Manager \texorpdfstring{$\ast$}{*}}]{manager}{, }\item[{Manager\+::\+Session\+::\+ID}]{sid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Обрабатывает запрос привилегий пользователя 
+
+Выполняет следующие действия\+:
+\begin{DoxyEnumerate}
+\item Получает экземпляр My\+SQL клиента
+\item Выполняет запрос к базе данных для получения прав пользователя
+\item Формирует и отправляет ответный пакет с результатами
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em manager} & Указатель на менеджер протоколов \\
+\hline
+\mbox{\texttt{ in}}  & {\em sid} & Идентификатор сессии для отправки ответа\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Максимальное количество возвращаемых привилегий -\/ 256 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{queryuserprivilege_8hpp_source_l00047}{47}} of file \mbox{\hyperlink{queryuserprivilege_8hpp_source}{queryuserprivilege.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{queryuserprivilege_8hpp}{queryuserprivilege.\+hpp}}\end{DoxyCompactItemize}

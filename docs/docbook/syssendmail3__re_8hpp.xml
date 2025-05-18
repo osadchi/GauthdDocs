@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_syssendmail3__re_8hpp" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/syssendmail3_re.hpp File Reference</title>
+<indexterm><primary>D:/pwsrc2.0/docs/gauthd/syssendmail3_re.hpp</primary></indexterm>
+<para>
+
+<para>Заголовочный файл класса протокола SysSendMail3_Re для системы <link linkend="_namespace_g_n_e_t">GNET</link>. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;rpcdefs.h&quot;<?linebreak?>#include &quot;callid.hxx&quot;<?linebreak?>#include &quot;state.hxx&quot;<?linebreak?>#include &quot;syssendmail3_re&quot;<?linebreak?></programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_sys_send_mail3___re">GNET::SysSendMail3_Re</link></para>
+
+<para>Класс протокола для обработки ответов на отправку системной почты (версия 3) </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_g_n_e_t">GNET</link></para>
+
+<para>Основное пространство имен для сетевых компонентов системы. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Заголовочный файл класса протокола SysSendMail3_Re для системы <link linkend="_namespace_g_n_e_t">GNET</link>. </para>
+
+<para>Содержит объявление класса и методов для обработки ответов на отправку системной почты. </para>
+<para>
+Definition in file <link linkend="_syssendmail3__re_8hpp_source">syssendmail3_re.hpp</link>.</para>
+</section>
+</section>

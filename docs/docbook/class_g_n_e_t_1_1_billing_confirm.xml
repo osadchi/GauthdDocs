@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_n_e_t_1_1_billing_confirm" xml:lang="en-US">
+<title>GNET::BillingConfirm Class Reference</title>
+<indexterm><primary>GNET::BillingConfirm</primary></indexterm>
+<para>
+
+<para>Класс протокола для обработки подтверждений биллинговых операций. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;billingconfirm.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for GNET::BillingConfirm:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_billing_confirm.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_billing_confirm_1a190736b7e8d638a16b10bc869c6e6065">Process</link> (Manager *manager, Manager::Session::ID sid)</para>
+
+<para>&lt; Включение сгенерированных полей протокола </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Класс протокола для обработки подтверждений биллинговых операций. </para>
+
+
+
+<para>Наследуется от базового класса Protocol. Содержит автоматически сгенерированные поля (через #include &quot;billingconfirm&quot;). Реализует обработку сообщения в методе <link linkend="_class_g_n_e_t_1_1_billing_confirm_1a190736b7e8d638a16b10bc869c6e6065">Process()</link>. </para>
+<para>
+Definition at line <link linkend="_billingconfirm_8hpp_source_1l00026">26</link> of file <link linkend="_billingconfirm_8hpp_source">billingconfirm.hpp</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_g_n_e_t_1_1_billing_confirm_1a190736b7e8d638a16b10bc869c6e6065"/><section>
+    <title>Process()</title>
+<indexterm><primary>Process</primary><secondary>GNET::BillingConfirm</secondary></indexterm>
+<indexterm><primary>GNET::BillingConfirm</primary><secondary>Process</secondary></indexterm>
+<para><computeroutput>void GNET::BillingConfirm::Process (Manager * manager, Manager::Session::ID sid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>&lt; Включение сгенерированных полей протокола </para>
+</para>
+
+<para>Обработчик подтверждения биллинга.</para>
+
+<para>Метод вызывается менеджером для обработки подтверждения биллинговой транзакции. В текущей реализации отсутствует функциональность (заглушка).</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>manager</entry><entry>
+<para>Указатель на объект менеджера, управляющего обработкой. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>sid</entry><entry>
+<para>Идентификатор сессии, связанной с подтверждением. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_billingconfirm_8hpp_source_1l00040">40</link> of file <link linkend="_billingconfirm_8hpp_source">billingconfirm.hpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_billingconfirm_8hpp">billingconfirm.hpp</link></section>
+</section>

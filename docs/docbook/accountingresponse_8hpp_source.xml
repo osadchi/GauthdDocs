@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_accountingresponse_8hpp_source" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/accountingresponse.hpp</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_accountingresponse_8hpp_source_1l00001"/>00001 
+<anchor xml:id="_accountingresponse_8hpp_source_1l00011"/>00011 
+<anchor xml:id="_accountingresponse_8hpp_source_1l00012"/>00012 <emphasis role="preprocessor">&#32;#ifndef&#32;__GNET_ACCOUNTINGRESPONSE_HPP</emphasis>
+<anchor xml:id="_accountingresponse_8hpp_source_1l00013"/>00013 <emphasis role="preprocessor">&#32;#define&#32;__GNET_ACCOUNTINGRESPONSE_HPP</emphasis>
+<anchor xml:id="_accountingresponse_8hpp_source_1l00014"/>00014 &#32;
+<anchor xml:id="_accountingresponse_8hpp_source_1l00015"/>00015 <emphasis role="preprocessor">&#32;#include&#32;&quot;rpcdefs.h&quot;</emphasis>
+<anchor xml:id="_accountingresponse_8hpp_source_1l00016"/>00016 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_callid_8hxx">callid.hxx</link>&quot;</emphasis>
+<anchor xml:id="_accountingresponse_8hpp_source_1l00017"/>00017 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_state_8hxx">state.hxx</link>&quot;</emphasis>
+<anchor xml:id="_accountingresponse_8hpp_source_1l00018"/>00018 &#32;
+<anchor xml:id="_accountingresponse_8hpp_source_1l00019"/>00019 &#32;<emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_g_n_e_t">GNET</link>
+<anchor xml:id="_accountingresponse_8hpp_source_1l00020"/>00020 &#32;{
+<anchor xml:id="_accountingresponse_8hpp_source_1l00021"/>00021 &#32;
+<anchor xml:id="_accountingresponse_8hpp_source_1l00030"/><link linkend="_class_g_n_e_t_1_1_accounting_response">00030</link> &#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_g_n_e_t_1_1_accounting_response">AccountingResponse</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;GNET::Protocol
+<anchor xml:id="_accountingresponse_8hpp_source_1l00031"/>00031 &#32;{
+<anchor xml:id="_accountingresponse_8hpp_source_1l00032"/>00032 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;#include&#32;&quot;accountingresponse&quot;</emphasis>&#32;
+<anchor xml:id="_accountingresponse_8hpp_source_1l00033"/>00033 &#32;
+<anchor xml:id="_accountingresponse_8hpp_source_1l00034"/>00034 &#32;<emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_accountingresponse_8hpp_source_1l00043"/><link linkend="_class_g_n_e_t_1_1_accounting_response_1a58529a5d6f2697a88f5c3211571d705b">00043</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_accounting_response_1a58529a5d6f2697a88f5c3211571d705b">Process</link>(Manager&#32;*manager,&#32;Manager::Session::ID&#32;sid)
+<anchor xml:id="_accountingresponse_8hpp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_accountingresponse_8hpp_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;TODO:&#32;Реализовать&#32;обработку&#32;ответа</emphasis>
+<anchor xml:id="_accountingresponse_8hpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_accountingresponse_8hpp_source_1l00047"/>00047 &#32;};
+<anchor xml:id="_accountingresponse_8hpp_source_1l00048"/>00048 &#32;
+<anchor xml:id="_accountingresponse_8hpp_source_1l00049"/>00049 &#32;}&#32;<emphasis role="comment">//&#32;namespace&#32;GNET</emphasis>
+<anchor xml:id="_accountingresponse_8hpp_source_1l00050"/>00050 &#32;
+<anchor xml:id="_accountingresponse_8hpp_source_1l00051"/>00051 <emphasis role="preprocessor">&#32;#endif&#32;</emphasis><emphasis role="comment">//&#32;__GNET_ACCOUNTINGRESPONSE_HPP</emphasis>
+</programlisting></section>

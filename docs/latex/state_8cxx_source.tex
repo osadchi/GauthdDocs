@@ -1,0 +1,68 @@
+\doxysection{D\+:/pwsrc2.0/docs/gauthd/state.cxx}
+\hypertarget{state_8cxx_source}{}\label{state_8cxx_source}\mbox{\hyperlink{state_8cxx}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00011}00011\ \textcolor{preprocessor}{\ \#include\ "{}\mbox{\hyperlink{callid_8hxx}{callid.hxx}}"{}}}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00013}00013\ \textcolor{preprocessor}{\ \#ifdef\ WIN32}}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00014}00014\ \textcolor{preprocessor}{\ \#include\ <winsock2.h>}}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00015}00015\ \textcolor{preprocessor}{\ \#include\ "{}gnproto.h"{}}}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00016}00016\ \textcolor{preprocessor}{\ \#include\ "{}gncompress.h"{}}}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00017}00017\ \textcolor{preprocessor}{\ \#else}}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00018}00018\ \textcolor{preprocessor}{\ \#include\ "{}protocol.h"{}}}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00019}00019\ \textcolor{preprocessor}{\ \#include\ "{}binder.h"{}}}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00020}00020\ \textcolor{preprocessor}{\ \#endif}}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00021}00021\ \ }
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00022}00022\ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_g_n_e_t}{GNET}}\ }
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00023}00023\ \ \{}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00033}00033\ \ \ \ \ \ \textcolor{keyword}{static}\ GNET::Protocol::Type\ \_state\_GAuthServer[]\ =\ }
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00034}00034\ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a1874bd3c9beda0a8b8d3517724451786}{PROTOCOL\_KEYEXCHANGE}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120af85c6ac569098dd915838a34d08c9960}{PROTOCOL\_STATUSANNOUNCE}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120ae35f3640f872e71587971247ffbd7488}{PROTOCOL\_ACCOUNTINGREQUEST}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a599ad5acad4f68afeadfe7d588fea1f5}{PROTOCOL\_ANNOUNCEZONEID}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120ae59ac57ebb94871c4e16245aa7a0bcdd}{PROTOCOL\_QUERYUSERPRIVILEGE}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a2bcf580dc1a734aacb7facf3d279e04e}{PROTOCOL\_QUERYUSERFORBID}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120aac05f4d5668c837f8664e19f296fd559}{PROTOCOL\_GMKICKOUTUSER}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120abc8b657b97434cd305f562839ca56892}{PROTOCOL\_GMFORBIDSELLPOINT}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a3ac9f12cd46c83ba7ee03e5aedbfb712}{PROTOCOL\_GMSHUTUP}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a49cbd795aa4a48503de1ba31a98f8f6a}{PROTOCOL\_TRANSBUYPOINT}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120ae3b85f0cb27e48eec336b7ee5089fa93}{PROTOCOL\_GETPLAYERIDBYNAME\_RE}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a0fb2d242f624dedab11e37c4a9d8a21e}{PROTOCOL\_SYSSENDMAIL\_RE}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120aae1af06579b664be54b41c673e4d0931}{PROTOCOL\_SYSSENDMAIL3\_RE}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a6e17d7796f5600aa11e82511e11b9da0}{PROTOCOL\_VERIFYMASTER}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a83fcd8b3b5201ae0cc0391b8f5ddaede}{PROTOCOL\_VERIFYMASTER\_RE}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2aa4c822a0ac6cc042286570fc63ac47b4}{RPC\_GQUERYPASSWD}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2a531d3b248d11a4ac12280117f696b9ab}{RPC\_USERLOGIN}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2a1fc81e9d15ff71235cf582edffacf905}{RPC\_USERLOGIN2}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2afaa4083eb20ffb16a1c1210a8b3365aa}{RPC\_USERLOGOUT}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2aa1afbe42cd1fa7864c68c706a0c94590}{RPC\_CASHSERIAL}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2afa9fbff6937f8790d97711334f0379a1}{RPC\_GETADDCASHSN}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a4b80cb97c3af7ecd545ed3252a585d08}{PROTOCOL\_ADDCASH}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a2b5c831b15711ce5e7f6bf8ccabbea0c}{PROTOCOL\_ADDCASH\_RE}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2a90d298195ca3076c5fb473314e6b518f}{RPC\_MATRIXPASSWD}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2a3720d36cc791f779aeb205604ac4bc21}{RPC\_MATRIXPASSWD2}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2a27c5348716f502757d9d5e1544248291}{RPC\_MATRIXTOKEN}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a83432a1787f4afdd6f75b8d6f08c3341}{PROTOCOL\_MATRIXFAILURE}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a4474160ab02fd98c0a0173d3a98eb97e}{PROTOCOL\_BILLINGREQUEST}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a3389327f6e78989bc3ec722c34660453}{PROTOCOL\_BILLINGBALANCE}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a35d2250d12e3cb8366db68a1b40ce404}{PROTOCOL\_BILLINGBALANCESA}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120aeb0d1087f33af4f76f991567f7c5eca9}{PROTOCOL\_BILLINGCONFIRM}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a9c8893d3d61ad10b65ded139951e44b9}{PROTOCOL\_BILLINGCANCEL}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120ad88ea451e7b0381bd17edfd34b5eee4a}{PROTOCOL\_ACFORBIDCHEATER}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2aa65a8c30ce2f1a46514cf66e970f85eb}{RPC\_GETUSERCOUPON}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2a4ad2e3cd63b3fea51f3c2cf96c1faaaf}{RPC\_COUPONEXCHANGE}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a4c07bdeb2ff5691aeb76071e6e5f71f5}{PROTOCOL\_GAME2AU}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a877a4afcce27d6a331a6e2f39ad763b6}{PROTOCOL\_SSOGETTICKETREQ}},}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00072}00072\ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00073}00073\ \ }
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00084}\mbox{\hyperlink{namespace_g_n_e_t_a425204ed513819b3b931a12f8837f8e4}{00084}}\ \ \ \ \ \ GNET::Protocol::Manager::Session::State\ \mbox{\hyperlink{namespace_g_n_e_t_a8db527ca0cb7dc440322bdb8481c2d13}{state\_GAuthServer}}(}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \_state\_GAuthServer,}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{sizeof}(\_state\_GAuthServer)/\textcolor{keyword}{sizeof}(GNET::Protocol::Type),\ }
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00087}00087\ \ \ \ \ \ \ \ \ \ 86400}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00088}00088\ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00089}00089\ \ }
+\DoxyCodeLine{\Hypertarget{state_8cxx_source_l00090}00090\ \ \};\ \textcolor{comment}{//\ namespace\ GNET}}
+
+\end{DoxyCode}

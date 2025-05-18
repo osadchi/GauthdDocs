@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_n_e_t_1_1_add_cash" xml:lang="en-US">
+<title>GNET::AddCash Class Reference</title>
+<indexterm><primary>GNET::AddCash</primary></indexterm>
+<para>
+
+<para>Класс протокола для обработки запросов на добавление средств. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;addcash.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for GNET::AddCash:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_add_cash.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_add_cash_1ad20cf7684a67d064a559e96a79ae5675">Process</link> (Manager *manager, Manager::Session::ID sid)</para>
+
+<para>&lt; Включение автоматически сгенерированных полей протокола </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Класс протокола для обработки запросов на добавление средств. </para>
+
+
+
+<para>Наследуется от GNET::Protocol. Содержит автоматически генерируемую часть (через #include &quot;addcash&quot;), которая включает поля протокола (например, идентификатор пользователя, сумму и т.д.). </para>
+<para>
+Definition at line <link linkend="_addcash_8hpp_source_1l00023">23</link> of file <link linkend="_addcash_8hpp_source">addcash.hpp</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_g_n_e_t_1_1_add_cash_1ad20cf7684a67d064a559e96a79ae5675"/><section>
+    <title>Process()</title>
+<indexterm><primary>Process</primary><secondary>GNET::AddCash</secondary></indexterm>
+<indexterm><primary>GNET::AddCash</primary><secondary>Process</secondary></indexterm>
+<para><computeroutput>void GNET::AddCash::Process (Manager * manager, Manager::Session::ID sid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>&lt; Включение автоматически сгенерированных полей протокола </para>
+</para>
+
+<para>Обработчик получения протокола.</para>
+
+<para>Вызывается менеджером при получении протокола. Текущая реализация является заглушкой.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>manager</entry><entry>
+<para>Указатель на менеджер, управляющий обработкой. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>sid</entry><entry>
+<para>Идентификатор сессии, связанной с запросом. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <para><link linkend="_todo_1_todo000004">Todo</link> 
+<para>Реализовать логику обработки запроса (проверки, начисление средств и т.д.). </para>
+</para></para>
+<para>
+Definition at line <link linkend="_addcash_8hpp_source_1l00037">37</link> of file <link linkend="_addcash_8hpp_source">addcash.hpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_addcash_8hpp">addcash.hpp</link></section>
+</section>

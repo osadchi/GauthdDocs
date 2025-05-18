@@ -1,0 +1,75 @@
+\doxysection{D\+:/pwsrc2.0/docs/gauthd/gauthd.cpp File Reference}
+\hypertarget{gauthd_8cpp}{}\label{gauthd_8cpp}\index{D:/pwsrc2.0/docs/gauthd/gauthd.cpp@{D:/pwsrc2.0/docs/gauthd/gauthd.cpp}}
+{\ttfamily \#include "{}gauthserver.\+hpp"{}}\newline
+{\ttfamily \#include "{}gmysqlclient.\+hpp"{}}\newline
+{\ttfamily \#include "{}conf.\+h"{}}\newline
+{\ttfamily \#include "{}log.\+h"{}}\newline
+{\ttfamily \#include "{}thread.\+h"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{gauthd_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Главная функция программы. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{gauthd_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\index{gauthd.cpp@{gauthd.cpp}!main@{main}}
+\index{main@{main}!gauthd.cpp@{gauthd.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{gauthd_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Главная функция программы. 
+
+Инициализирует конфигурацию, сервер аутентификации, My\+SQL-\/клиент и запускает пул потоков.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em argc} & Количество аргументов командной строки. \\
+\hline
+\mbox{\texttt{ in}}  & {\em argv} & Аргументы командной строки\+:
+\begin{DoxyItemize}
+\item argv\mbox{[}0\mbox{]} Имя исполняемого файла.
+\item argv\mbox{[}1\mbox{]} Путь к файлу конфигурации (обязательный параметр).
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 при успешном завершении, -\/1 при ошибке.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Программа завершится с ошибкой, если\+:
+\begin{DoxyItemize}
+\item Не указан файл конфигурации
+\item Нет доступа к файлу конфигурации
+\end{DoxyItemize}
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_g_n_e_t_1_1_g_auth_server}{GAuth\+Server} 
+
+\doxylink{class_g_mysql_client}{GMysql\+Client} 
+
+Conf 
+
+Thread\+::\+Pool
+\end{DoxySeeAlso}
+\begin{DoxyParagraph}{Пример использования\+:}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./gauthd\ /path/to/config.cfg}
+
+\end{DoxyCode}
+ 
+\end{DoxyParagraph}
+\texorpdfstring{$<$}{<} Проверка таймеров каждые 10 мс
+
+\texorpdfstring{$<$}{<} Задача для обработки ввода/вывода
+
+\texorpdfstring{$<$}{<} Старт пула потоков
+
+Definition at line \mbox{\hyperlink{gauthd_8cpp_source_l00042}{42}} of file \mbox{\hyperlink{gauthd_8cpp_source}{gauthd.\+cpp}}.
+

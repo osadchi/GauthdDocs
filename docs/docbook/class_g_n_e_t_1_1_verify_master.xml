@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_n_e_t_1_1_verify_master" xml:lang="en-US">
+<title>GNET::VerifyMaster Class Reference</title>
+<indexterm><primary>GNET::VerifyMaster</primary></indexterm>
+<para>
+<computeroutput>#include &lt;verifymaster.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for GNET::VerifyMaster:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_verify_master.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_verifymaster_8hpp_source_1l00013">13</link> of file <link linkend="_verifymaster_8hpp_source">verifymaster.hpp</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_verifymaster_8hpp">verifymaster.hpp</link></section>
+</section>

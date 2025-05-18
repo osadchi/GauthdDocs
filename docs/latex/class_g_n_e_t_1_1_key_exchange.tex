@@ -1,0 +1,90 @@
+\doxysection{GNET\+::Key\+Exchange Class Reference}
+\hypertarget{class_g_n_e_t_1_1_key_exchange}{}\label{class_g_n_e_t_1_1_key_exchange}\index{GNET::KeyExchange@{GNET::KeyExchange}}
+
+
+Протокол обмена криптографическими ключами  
+
+
+
+
+{\ttfamily \#include $<$keyexchange.\+hpp$>$}
+
+Inheritance diagram for GNET\+::Key\+Exchange\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_n_e_t_1_1_key_exchange}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_key_exchange_a59d9dff58cb00261d155d622d24af391}{Process}} (Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)
+\begin{DoxyCompactList}\small\item\em Внутренние данные протокола \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Протокол обмена криптографическими ключами 
+
+@inherits Protocol
+
+Реализует механизм безопасного обмена ключами между клиентом и сервером. Содержит данные, специфичные для реализации протокола, включая криптографические параметры и временные метки.
+
+\begin{DoxyWarning}{Warning}
+Этот протокол должен использоваться только в защищенных каналах связи 
+\end{DoxyWarning}
+
+
+Definition at line \mbox{\hyperlink{keyexchange_8hpp_source_l00045}{45}} of file \mbox{\hyperlink{keyexchange_8hpp_source}{keyexchange.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_n_e_t_1_1_key_exchange_a59d9dff58cb00261d155d622d24af391}\index{GNET::KeyExchange@{GNET::KeyExchange}!Process@{Process}}
+\index{Process@{Process}!GNET::KeyExchange@{GNET::KeyExchange}}
+\doxysubsubsection{\texorpdfstring{Process()}{Process()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_key_exchange_a59d9dff58cb00261d155d622d24af391} 
+void GNET\+::\+Key\+Exchange\+::\+Process (\begin{DoxyParamCaption}\item[{Manager \texorpdfstring{$\ast$}{*}}]{manager}{, }\item[{Manager\+::\+Session\+::\+ID}]{sid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Внутренние данные протокола 
+
+Данный include содержит специфичные для реализации поля протокола, объявленные через макросы системы \doxylink{namespace_g_n_e_t}{GNET}.
+
+\begin{DoxySeeAlso}{See also}
+RPC\+\_\+\+DEFS
+\end{DoxySeeAlso}
+Обработчик входящего сообщения
+
+
+\begin{DoxyParams}{Parameters}
+{\em manager} & Указатель на менеджер сессий \\
+\hline
+{\em sid} & Идентификатор сессии\\
+\hline
+\end{DoxyParams}
+Вызывается при получении сообщения \doxylink{class_g_n_e_t_1_1_key_exchange}{Key\+Exchange}. Обрабатывает\+:
+\begin{DoxyItemize}
+\item Проверку целостности данных
+\end{DoxyItemize}
+
+Генерацию сессионных ключей
+\begin{DoxyItemize}
+\item Обновление состояния безопасности сессии
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000019}{Todo}}]Реализовать обработку обмена ключами 
+
+Добавить проверку временных меток 
+
+Реализовать обработку ошибок \end{DoxyRefDesc}
+
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{keyexchange_8hpp_source_l00073}{73}} of file \mbox{\hyperlink{keyexchange_8hpp_source}{keyexchange.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{keyexchange_8hpp}{keyexchange.\+hpp}}\end{DoxyCompactItemize}

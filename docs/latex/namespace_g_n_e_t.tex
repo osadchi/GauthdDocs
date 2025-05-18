@@ -1,0 +1,452 @@
+\doxysection{GNET Namespace Reference}
+\hypertarget{namespace_g_n_e_t}{}\label{namespace_g_n_e_t}\index{GNET@{GNET}}
+
+
+Основное пространство имен для сетевых компонентов системы.  
+
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_accounting_request}{Accounting\+Request}}
+\begin{DoxyCompactList}\small\item\em Класс для обработки учётных запросов (например, старт/стоп сессии, учёт трафика). \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_accounting_response}{Accounting\+Response}}
+\begin{DoxyCompactList}\small\item\em Класс для обработки ответов от сервиса учётных записей. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_a_c_forbid_cheater}{ACForbid\+Cheater}}
+\begin{DoxyCompactList}\small\item\em Протокол для обработки запросов блокировки нечестных игроков \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_add_cash}{Add\+Cash}}
+\begin{DoxyCompactList}\small\item\em Класс протокола для обработки запросов на добавление средств. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_add_cash___re}{Add\+Cash\+\_\+\+Re}}
+\begin{DoxyCompactList}\small\item\em Класс протокола для обработки ответов на операции пополнения игровой валюты. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_announce_zoneid}{Announce\+Zoneid}}
+\begin{DoxyCompactList}\small\item\em Класс протокола для обработки уведомлений о идентификаторе зоны. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_announce_zoneid2}{Announce\+Zoneid2}}
+\begin{DoxyCompactList}\small\item\em Класс протокола для обработки объявлений идентификаторов игровых зон \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_announce_zoneid3}{Announce\+Zoneid3}}
+\begin{DoxyCompactList}\small\item\em Протокол для обработки информации о зональных идентификаторах \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_a_u2_game}{AU2\+Game}}
+\begin{DoxyCompactList}\small\item\em Класс протокола для передачи данных между сервером аутентификации и игровым сервером. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_authd_version}{Authd\+Version}}
+\begin{DoxyCompactList}\small\item\em Класс протокола для обработки версии аутентификационного демона. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_billing_balance}{Billing\+Balance}}
+\begin{DoxyCompactList}\small\item\em Класс протокола для работы с балансом биллинговой системы \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_billing_balance_s_a}{Billing\+Balance\+SA}}
+\begin{DoxyCompactList}\small\item\em Протокол для запроса/получения информации о балансе в биллинговой системе \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_billing_cancel}{Billing\+Cancel}}
+\begin{DoxyCompactList}\small\item\em Протокол для обработки запросов отмены биллинговых транзакций @inherits Protocol. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_billing_confirm}{Billing\+Confirm}}
+\begin{DoxyCompactList}\small\item\em Класс протокола для обработки подтверждений биллинговых операций. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_billing_request}{Billing\+Request}}
+\begin{DoxyCompactList}\small\item\em Класс для обработки биллинг-\/запросов в системе. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_check_timer}{Check\+Timer}}
+\begin{DoxyCompactList}\small\item\em Periodic task manager for financial and security checks. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_discount_announce}{Discount\+Announce}}
+\begin{DoxyCompactList}\small\item\em Протокол для оповещения о скидках и специальных предложениях \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_fee}{Fee}}
+\begin{DoxyCompactList}\small\item\em Класс для управления тарифами и платежами \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_game2_a_u}{Game2\+AU}}
+\begin{DoxyCompactList}\small\item\em Протокол для взаимодействия между игровым сервером и сервером аутентификации/учётных записей (Auth/\+AU Server) \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server}{GAuth\+Server}}
+\begin{DoxyCompactList}\small\item\em Main authentication server class handling sessions and user validation. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_get_player_i_d_by_name___re}{Get\+Player\+IDBy\+Name\+\_\+\+Re}}
+\begin{DoxyCompactList}\small\item\em Класс протокола для ответов на запрос получения ID игрока по имени @inherits Protocol. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_g_m_forbid_sell_point}{GMForbid\+Sell\+Point}}
+\begin{DoxyCompactList}\small\item\em Класс протокола для управления запретами точек продаж. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_g_m_kickout_user}{GMKickout\+User}}
+\begin{DoxyCompactList}\small\item\em Протокол для принудительного отключения пользователя Game Master\textquotesingle{}ом (GM) \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_g_m_shutup}{GMShutup}}
+\begin{DoxyCompactList}\small\item\em Протокол блокировки чата пользователя \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_key_exchange}{Key\+Exchange}}
+\begin{DoxyCompactList}\small\item\em Протокол обмена криптографическими ключами \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_kickout_user}{Kickout\+User}}
+\begin{DoxyCompactList}\small\item\em Протокол для принудительного отключения пользователя от сервера \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_matrix_failure}{Matrix\+Failure}}
+\begin{DoxyCompactList}\small\item\em Класс протокола для обработки ошибок матрицы \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_query_user_forbid}{Query\+User\+Forbid}}
+\begin{DoxyCompactList}\small\item\em Протокол для запроса информации о блокировке пользователя \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_query_user_forbid___re}{Query\+User\+Forbid\+\_\+\+Re}}
+\begin{DoxyCompactList}\small\item\em Класс протокола ответа на запрос статуса блокировки пользователя \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_query_user_privilege}{Query\+User\+Privilege}}
+\begin{DoxyCompactList}\small\item\em Протокол для запроса и обработки привилегий пользователя \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_query_user_privilege___re}{Query\+User\+Privilege\+\_\+\+Re}}
+\begin{DoxyCompactList}\small\item\em Класс-\/ответ для запроса информации о привилегиях пользователя \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_s_s_o_get_ticket_req}{SSOGet\+Ticket\+Req}}
+\begin{DoxyCompactList}\small\item\em Класс протокола для запроса SSO-\/билета аутентификации \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_status_announce}{Status\+Announce}}
+\begin{DoxyCompactList}\small\item\em Протокол обработки статусных уведомлений \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_sys_send_mail3___re}{Sys\+Send\+Mail3\+\_\+\+Re}}
+\begin{DoxyCompactList}\small\item\em Класс протокола для обработки ответов на отправку системной почты (версия 3) \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_sys_send_mail___re}{Sys\+Send\+Mail\+\_\+\+Re}}
+\begin{DoxyCompactList}\small\item\em Класс протокола для обработки ответов на отправку системных писем @inherits Protocol. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_trans_buy_point}{Trans\+Buy\+Point}}
+\begin{DoxyCompactList}\small\item\em Класс протокола для обработки транзакций покупки баллов @inherits Protocol. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_g_n_e_t_1_1_user_info}{User\+Info}}
+\begin{DoxyCompactList}\small\item\em Структура для хранения информации о пользователе. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_verify_master}{Verify\+Master}}
+\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_verify_master___re}{Verify\+Master\+\_\+\+Re}}
+\begin{DoxyCompactList}\small\item\em Класс протокола для обработки ответов верификации мастер-\/сервера \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2}{Call\+ID}} \{ \newline
+\mbox{\hyperlink{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2aa4c822a0ac6cc042286570fc63ac47b4}{RPC\+\_\+\+GQUERYPASSWD}} = 502
+, \mbox{\hyperlink{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2a531d3b248d11a4ac12280117f696b9ab}{RPC\+\_\+\+USERLOGIN}} = 15
+, \mbox{\hyperlink{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2a1fc81e9d15ff71235cf582edffacf905}{RPC\+\_\+\+USERLOGIN2}} = 8067
+, \mbox{\hyperlink{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2afaa4083eb20ffb16a1c1210a8b3365aa}{RPC\+\_\+\+USERLOGOUT}} = 33
+, \newline
+\mbox{\hyperlink{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2aa1afbe42cd1fa7864c68c706a0c94590}{RPC\+\_\+\+CASHSERIAL}} = 8009
+, \mbox{\hyperlink{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2afa9fbff6937f8790d97711334f0379a1}{RPC\+\_\+\+GETADDCASHSN}} = 514
+, \mbox{\hyperlink{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2a90d298195ca3076c5fb473314e6b518f}{RPC\+\_\+\+MATRIXPASSWD}} = 550
+, \mbox{\hyperlink{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2a3720d36cc791f779aeb205604ac4bc21}{RPC\+\_\+\+MATRIXPASSWD2}} = 8066
+, \newline
+\mbox{\hyperlink{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2a27c5348716f502757d9d5e1544248291}{RPC\+\_\+\+MATRIXTOKEN}} = 8070
+, \mbox{\hyperlink{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2aa65a8c30ce2f1a46514cf66e970f85eb}{RPC\+\_\+\+GETUSERCOUPON}} = 8062
+, \mbox{\hyperlink{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2a4ad2e3cd63b3fea51f3c2cf96c1faaaf}{RPC\+\_\+\+COUPONEXCHANGE}} = 8063
+ \}
+\begin{DoxyCompactList}\small\item\em Идентификаторы удаленных вызовов процедур (RPC). \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120}{Protocol\+Type}} \{ \newline
+\mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120ad775146f0b4980b91f85a1ad89d2464c}{PROTOCOL\+\_\+\+QUERYUSERPRIVILEGE\+\_\+\+RE}} = 507
+, \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a0961670e6c10e7c96400a8375e5430b3}{PROTOCOL\+\_\+\+QUERYUSERFORBID\+\_\+\+RE}} = 509
+, \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a7dc373f32225213c332a001337f0bbfe}{PROTOCOL\+\_\+\+KICKOUTUSER}} = 10
+, \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a4a5a5515e26457147b073462d3a787ba}{PROTOCOL\+\_\+\+ACCOUNTINGRESPONSE}} = 504
+, \newline
+\mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a30ccb292fc5d30e75aad9c4d9f9f6f81}{PROTOCOL\+\_\+\+AUTHDVERSION}} = 8010
+, \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120af18da1f919b1e49b538a2424c193383e}{PROTOCOL\+\_\+\+AU2\+GAME}} = 8038
+, \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120af723dc0b543c77ec443239fd582d839f}{PROTOCOL\+\_\+\+DISCOUNTANNOUNCE}} = 8064
+, \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a1874bd3c9beda0a8b8d3517724451786}{PROTOCOL\+\_\+\+KEYEXCHANGE}} = 2
+, \newline
+\mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120af85c6ac569098dd915838a34d08c9960}{PROTOCOL\+\_\+\+STATUSANNOUNCE}} = 6
+, \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120ae35f3640f872e71587971247ffbd7488}{PROTOCOL\+\_\+\+ACCOUNTINGREQUEST}} = 503
+, \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a599ad5acad4f68afeadfe7d588fea1f5}{PROTOCOL\+\_\+\+ANNOUNCEZONEID}} = 505
+, \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120ae59ac57ebb94871c4e16245aa7a0bcdd}{PROTOCOL\+\_\+\+QUERYUSERPRIVILEGE}} = 506
+, \newline
+\mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a2bcf580dc1a734aacb7facf3d279e04e}{PROTOCOL\+\_\+\+QUERYUSERFORBID}} = 508
+, \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120aac05f4d5668c837f8664e19f296fd559}{PROTOCOL\+\_\+\+GMKICKOUTUSER}} = 354
+, \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120abc8b657b97434cd305f562839ca56892}{PROTOCOL\+\_\+\+GMFORBIDSELLPOINT}} = 378
+, \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a3ac9f12cd46c83ba7ee03e5aedbfb712}{PROTOCOL\+\_\+\+GMSHUTUP}} = 356
+, \newline
+\mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a49cbd795aa4a48503de1ba31a98f8f6a}{PROTOCOL\+\_\+\+TRANSBUYPOINT}} = 616
+, \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120ae3b85f0cb27e48eec336b7ee5089fa93}{PROTOCOL\+\_\+\+GETPLAYERIDBYNAME\+\_\+\+RE}} = 119
+, \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a0fb2d242f624dedab11e37c4a9d8a21e}{PROTOCOL\+\_\+\+SYSSENDMAIL\+\_\+\+RE}} = 4215
+, \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120aae1af06579b664be54b41c673e4d0931}{PROTOCOL\+\_\+\+SYSSENDMAIL3\+\_\+\+RE}} = 8069
+, \newline
+\mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a6e17d7796f5600aa11e82511e11b9da0}{PROTOCOL\+\_\+\+VERIFYMASTER}} = 519
+, \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a83fcd8b3b5201ae0cc0391b8f5ddaede}{PROTOCOL\+\_\+\+VERIFYMASTER\+\_\+\+RE}} = 520
+, \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a4b80cb97c3af7ecd545ed3252a585d08}{PROTOCOL\+\_\+\+ADDCASH}} = 515
+, \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a2b5c831b15711ce5e7f6bf8ccabbea0c}{PROTOCOL\+\_\+\+ADDCASH\+\_\+\+RE}} = 516
+, \newline
+\mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a83432a1787f4afdd6f75b8d6f08c3341}{PROTOCOL\+\_\+\+MATRIXFAILURE}} = 553
+, \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a4474160ab02fd98c0a0173d3a98eb97e}{PROTOCOL\+\_\+\+BILLINGREQUEST}} = 9001
+, \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a3389327f6e78989bc3ec722c34660453}{PROTOCOL\+\_\+\+BILLINGBALANCE}} = 9000
+, \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a35d2250d12e3cb8366db68a1b40ce404}{PROTOCOL\+\_\+\+BILLINGBALANCESA}} = 8048
+, \newline
+\mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120aeb0d1087f33af4f76f991567f7c5eca9}{PROTOCOL\+\_\+\+BILLINGCONFIRM}} = 8052
+, \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a9c8893d3d61ad10b65ded139951e44b9}{PROTOCOL\+\_\+\+BILLINGCANCEL}} = 8054
+, \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120ad88ea451e7b0381bd17edfd34b5eee4a}{PROTOCOL\+\_\+\+ACFORBIDCHEATER}} = 8008
+, \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a4c07bdeb2ff5691aeb76071e6e5f71f5}{PROTOCOL\+\_\+\+GAME2\+AU}} = 8039
+, \newline
+\mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a877a4afcce27d6a331a6e2f39ad763b6}{PROTOCOL\+\_\+\+SSOGETTICKETREQ}} = 8016
+ \}
+\begin{DoxyCompactList}\small\item\em Типы протоколов для сетевой коммуникации. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+GNET\+::\+Protocol\+::\+Manager\+::\+Session\+::\+State \mbox{\hyperlink{namespace_g_n_e_t_a425204ed513819b3b931a12f8837f8e4}{state\+\_\+\+GAuth\+Server}} (\+\_\+state\+\_\+\+GAuth\+Server, sizeof(\+\_\+state\+\_\+\+GAuth\+Server)/sizeof(GNET\+::\+Protocol\+::\+Type), 86400)
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ RPC-\/заглушки с аргументами и результатами}\par
+\end{Indent}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Protocol\+::\+Manager\+::\+Session\+::\+State \mbox{\hyperlink{namespace_g_n_e_t_a8db527ca0cb7dc440322bdb8481c2d13}{state\+\_\+\+GAuth\+Server}}
+\begin{DoxyCompactList}\small\item\em Состояние сессии для \doxylink{class_g_n_e_t_1_1_g_auth_server}{GAuth\+Server}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Протоколы без аргументов/результатов}\par
+\end{Indent}
+
+
+\doxysubsection{Detailed Description}
+Основное пространство имен для сетевых компонентов системы. 
+
+Основное пространство имен для сетевых протоколов и компонентов
+
+Условная компиляция для платформы Windows.
+
+Основное пространство имён протокола \doxylink{namespace_g_n_e_t}{GNET}.
+
+\texorpdfstring{$<$}{<} Заголовочный файл протокола для других ОС
+
+\texorpdfstring{$<$}{<} Включение определения SSO-\/пользователя
+
+Основное пространство имен сетевой подсистемы
+
+Содержит все классы и компоненты, связанные с сетевым взаимодействием, протоколами и обработкой сообщений.
+
+\texorpdfstring{$<$}{<} Заголовок для функций связывания (не-\/\+Windows платформы)
+
+Основное пространство имен для сетевых протоколов и RPC-\/компонентов.
+
+Содержит статические экземпляры классов протоколов для инициализации системы.
+
+\texorpdfstring{$<$}{<} Базовые определения RPC \texorpdfstring{$<$}{<} Идентификаторы вызовов Состояния сессий
+
+\texorpdfstring{$<$}{<} Базовые определения RPC \texorpdfstring{$<$}{<} Идентификаторы вызовов Состояния протоколов 
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2}\index{GNET@{GNET}!CallID@{CallID}}
+\index{CallID@{CallID}!GNET@{GNET}}
+\doxysubsubsection{\texorpdfstring{CallID}{CallID}}
+{\footnotesize\ttfamily \label{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2} 
+enum \mbox{\hyperlink{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2}{GNET\+::\+Call\+ID}}}
+
+
+
+Идентификаторы удаленных вызовов процедур (RPC). 
+
+Уникальные числовые коды для идентификации RPC-\/запросов в сетевом взаимодействии. \begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RPC\_GQUERYPASSWD@{RPC\_GQUERYPASSWD}!GNET@{GNET}}\index{GNET@{GNET}!RPC\_GQUERYPASSWD@{RPC\_GQUERYPASSWD}}}\Hypertarget{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2aa4c822a0ac6cc042286570fc63ac47b4}\label{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2aa4c822a0ac6cc042286570fc63ac47b4} 
+RPC\+\_\+\+GQUERYPASSWD&Запрос проверки пароля (устаревшая версия). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RPC\_USERLOGIN@{RPC\_USERLOGIN}!GNET@{GNET}}\index{GNET@{GNET}!RPC\_USERLOGIN@{RPC\_USERLOGIN}}}\Hypertarget{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2a531d3b248d11a4ac12280117f696b9ab}\label{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2a531d3b248d11a4ac12280117f696b9ab} 
+RPC\+\_\+\+USERLOGIN&Авторизация пользователя (базовая версия). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RPC\_USERLOGIN2@{RPC\_USERLOGIN2}!GNET@{GNET}}\index{GNET@{GNET}!RPC\_USERLOGIN2@{RPC\_USERLOGIN2}}}\Hypertarget{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2a1fc81e9d15ff71235cf582edffacf905}\label{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2a1fc81e9d15ff71235cf582edffacf905} 
+RPC\+\_\+\+USERLOGIN2&Авторизация пользователя (обновленная версия). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RPC\_USERLOGOUT@{RPC\_USERLOGOUT}!GNET@{GNET}}\index{GNET@{GNET}!RPC\_USERLOGOUT@{RPC\_USERLOGOUT}}}\Hypertarget{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2afaa4083eb20ffb16a1c1210a8b3365aa}\label{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2afaa4083eb20ffb16a1c1210a8b3365aa} 
+RPC\+\_\+\+USERLOGOUT&Выход пользователя из системы. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RPC\_CASHSERIAL@{RPC\_CASHSERIAL}!GNET@{GNET}}\index{GNET@{GNET}!RPC\_CASHSERIAL@{RPC\_CASHSERIAL}}}\Hypertarget{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2aa1afbe42cd1fa7864c68c706a0c94590}\label{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2aa1afbe42cd1fa7864c68c706a0c94590} 
+RPC\+\_\+\+CASHSERIAL&Проверка серийного номера платежа. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RPC\_GETADDCASHSN@{RPC\_GETADDCASHSN}!GNET@{GNET}}\index{GNET@{GNET}!RPC\_GETADDCASHSN@{RPC\_GETADDCASHSN}}}\Hypertarget{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2afa9fbff6937f8790d97711334f0379a1}\label{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2afa9fbff6937f8790d97711334f0379a1} 
+RPC\+\_\+\+GETADDCASHSN&Запрос серийного номера для пополнения баланса. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RPC\_MATRIXPASSWD@{RPC\_MATRIXPASSWD}!GNET@{GNET}}\index{GNET@{GNET}!RPC\_MATRIXPASSWD@{RPC\_MATRIXPASSWD}}}\Hypertarget{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2a90d298195ca3076c5fb473314e6b518f}\label{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2a90d298195ca3076c5fb473314e6b518f} 
+RPC\+\_\+\+MATRIXPASSWD&Проверка пароля Matrix (версия 1). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RPC\_MATRIXPASSWD2@{RPC\_MATRIXPASSWD2}!GNET@{GNET}}\index{GNET@{GNET}!RPC\_MATRIXPASSWD2@{RPC\_MATRIXPASSWD2}}}\Hypertarget{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2a3720d36cc791f779aeb205604ac4bc21}\label{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2a3720d36cc791f779aeb205604ac4bc21} 
+RPC\+\_\+\+MATRIXPASSWD2&Проверка пароля Matrix (версия 2). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RPC\_MATRIXTOKEN@{RPC\_MATRIXTOKEN}!GNET@{GNET}}\index{GNET@{GNET}!RPC\_MATRIXTOKEN@{RPC\_MATRIXTOKEN}}}\Hypertarget{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2a27c5348716f502757d9d5e1544248291}\label{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2a27c5348716f502757d9d5e1544248291} 
+RPC\+\_\+\+MATRIXTOKEN&Проверка токена Matrix. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RPC\_GETUSERCOUPON@{RPC\_GETUSERCOUPON}!GNET@{GNET}}\index{GNET@{GNET}!RPC\_GETUSERCOUPON@{RPC\_GETUSERCOUPON}}}\Hypertarget{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2aa65a8c30ce2f1a46514cf66e970f85eb}\label{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2aa65a8c30ce2f1a46514cf66e970f85eb} 
+RPC\+\_\+\+GETUSERCOUPON&Запрос информации о купонах пользователя. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RPC\_COUPONEXCHANGE@{RPC\_COUPONEXCHANGE}!GNET@{GNET}}\index{GNET@{GNET}!RPC\_COUPONEXCHANGE@{RPC\_COUPONEXCHANGE}}}\Hypertarget{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2a4ad2e3cd63b3fea51f3c2cf96c1faaaf}\label{namespace_g_n_e_t_a1338a6988f7a1190e5734c97666013a2a4ad2e3cd63b3fea51f3c2cf96c1faaaf} 
+RPC\+\_\+\+COUPONEXCHANGE&Обмен купона на бонусы. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{callid_8hxx_source_l00023}{23}} of file \mbox{\hyperlink{callid_8hxx_source}{callid.\+hxx}}.
+
+\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120}\index{GNET@{GNET}!ProtocolType@{ProtocolType}}
+\index{ProtocolType@{ProtocolType}!GNET@{GNET}}
+\doxysubsubsection{\texorpdfstring{ProtocolType}{ProtocolType}}
+{\footnotesize\ttfamily \label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120} 
+enum \mbox{\hyperlink{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120}{GNET\+::\+Protocol\+Type}}}
+
+
+
+Типы протоколов для сетевой коммуникации. 
+
+Уникальные идентификаторы протоколов, используемых в системе. \begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_QUERYUSERPRIVILEGE\_RE@{PROTOCOL\_QUERYUSERPRIVILEGE\_RE}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_QUERYUSERPRIVILEGE\_RE@{PROTOCOL\_QUERYUSERPRIVILEGE\_RE}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120ad775146f0b4980b91f85a1ad89d2464c}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120ad775146f0b4980b91f85a1ad89d2464c} 
+PROTOCOL\+\_\+\+QUERYUSERPRIVILEGE\+\_\+\+RE&Ответ на запрос привилегий пользователя. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_QUERYUSERFORBID\_RE@{PROTOCOL\_QUERYUSERFORBID\_RE}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_QUERYUSERFORBID\_RE@{PROTOCOL\_QUERYUSERFORBID\_RE}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a0961670e6c10e7c96400a8375e5430b3}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a0961670e6c10e7c96400a8375e5430b3} 
+PROTOCOL\+\_\+\+QUERYUSERFORBID\+\_\+\+RE&Ответ на запрос блокировки пользователя. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_KICKOUTUSER@{PROTOCOL\_KICKOUTUSER}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_KICKOUTUSER@{PROTOCOL\_KICKOUTUSER}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a7dc373f32225213c332a001337f0bbfe}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a7dc373f32225213c332a001337f0bbfe} 
+PROTOCOL\+\_\+\+KICKOUTUSER&Принудительное отключение пользователя. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_ACCOUNTINGRESPONSE@{PROTOCOL\_ACCOUNTINGRESPONSE}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_ACCOUNTINGRESPONSE@{PROTOCOL\_ACCOUNTINGRESPONSE}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a4a5a5515e26457147b073462d3a787ba}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a4a5a5515e26457147b073462d3a787ba} 
+PROTOCOL\+\_\+\+ACCOUNTINGRESPONSE&Ответ биллинг-\/системы. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_AUTHDVERSION@{PROTOCOL\_AUTHDVERSION}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_AUTHDVERSION@{PROTOCOL\_AUTHDVERSION}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a30ccb292fc5d30e75aad9c4d9f9f6f81}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a30ccb292fc5d30e75aad9c4d9f9f6f81} 
+PROTOCOL\+\_\+\+AUTHDVERSION&Проверка версии аутентификации. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_AU2GAME@{PROTOCOL\_AU2GAME}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_AU2GAME@{PROTOCOL\_AU2GAME}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120af18da1f919b1e49b538a2424c193383e}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120af18da1f919b1e49b538a2424c193383e} 
+PROTOCOL\+\_\+\+AU2\+GAME&Протокол взаимодействия AU-\/\texorpdfstring{$>$}{>}Game. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_DISCOUNTANNOUNCE@{PROTOCOL\_DISCOUNTANNOUNCE}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_DISCOUNTANNOUNCE@{PROTOCOL\_DISCOUNTANNOUNCE}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120af723dc0b543c77ec443239fd582d839f}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120af723dc0b543c77ec443239fd582d839f} 
+PROTOCOL\+\_\+\+DISCOUNTANNOUNCE&Анонс скидочных акций. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_KEYEXCHANGE@{PROTOCOL\_KEYEXCHANGE}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_KEYEXCHANGE@{PROTOCOL\_KEYEXCHANGE}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a1874bd3c9beda0a8b8d3517724451786}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a1874bd3c9beda0a8b8d3517724451786} 
+PROTOCOL\+\_\+\+KEYEXCHANGE&Обмен криптографическими ключами. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_STATUSANNOUNCE@{PROTOCOL\_STATUSANNOUNCE}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_STATUSANNOUNCE@{PROTOCOL\_STATUSANNOUNCE}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120af85c6ac569098dd915838a34d08c9960}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120af85c6ac569098dd915838a34d08c9960} 
+PROTOCOL\+\_\+\+STATUSANNOUNCE&Анонс статуса сервиса. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_ACCOUNTINGREQUEST@{PROTOCOL\_ACCOUNTINGREQUEST}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_ACCOUNTINGREQUEST@{PROTOCOL\_ACCOUNTINGREQUEST}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120ae35f3640f872e71587971247ffbd7488}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120ae35f3640f872e71587971247ffbd7488} 
+PROTOCOL\+\_\+\+ACCOUNTINGREQUEST&Запрос биллинг-\/данных. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_ANNOUNCEZONEID@{PROTOCOL\_ANNOUNCEZONEID}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_ANNOUNCEZONEID@{PROTOCOL\_ANNOUNCEZONEID}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a599ad5acad4f68afeadfe7d588fea1f5}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a599ad5acad4f68afeadfe7d588fea1f5} 
+PROTOCOL\+\_\+\+ANNOUNCEZONEID&Анонс идентификатора зоны. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_QUERYUSERPRIVILEGE@{PROTOCOL\_QUERYUSERPRIVILEGE}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_QUERYUSERPRIVILEGE@{PROTOCOL\_QUERYUSERPRIVILEGE}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120ae59ac57ebb94871c4e16245aa7a0bcdd}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120ae59ac57ebb94871c4e16245aa7a0bcdd} 
+PROTOCOL\+\_\+\+QUERYUSERPRIVILEGE&Запрос привилегий пользователя. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_QUERYUSERFORBID@{PROTOCOL\_QUERYUSERFORBID}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_QUERYUSERFORBID@{PROTOCOL\_QUERYUSERFORBID}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a2bcf580dc1a734aacb7facf3d279e04e}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a2bcf580dc1a734aacb7facf3d279e04e} 
+PROTOCOL\+\_\+\+QUERYUSERFORBID&Запрос статуса блокировки. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_GMKICKOUTUSER@{PROTOCOL\_GMKICKOUTUSER}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_GMKICKOUTUSER@{PROTOCOL\_GMKICKOUTUSER}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120aac05f4d5668c837f8664e19f296fd559}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120aac05f4d5668c837f8664e19f296fd559} 
+PROTOCOL\+\_\+\+GMKICKOUTUSER&Отключение пользователя GM-\/ом. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_GMFORBIDSELLPOINT@{PROTOCOL\_GMFORBIDSELLPOINT}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_GMFORBIDSELLPOINT@{PROTOCOL\_GMFORBIDSELLPOINT}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120abc8b657b97434cd305f562839ca56892}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120abc8b657b97434cd305f562839ca56892} 
+PROTOCOL\+\_\+\+GMFORBIDSELLPOINT&Блокировка продажи очков. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_GMSHUTUP@{PROTOCOL\_GMSHUTUP}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_GMSHUTUP@{PROTOCOL\_GMSHUTUP}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a3ac9f12cd46c83ba7ee03e5aedbfb712}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a3ac9f12cd46c83ba7ee03e5aedbfb712} 
+PROTOCOL\+\_\+\+GMSHUTUP&Ограничение чата (мут). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_TRANSBUYPOINT@{PROTOCOL\_TRANSBUYPOINT}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_TRANSBUYPOINT@{PROTOCOL\_TRANSBUYPOINT}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a49cbd795aa4a48503de1ba31a98f8f6a}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a49cbd795aa4a48503de1ba31a98f8f6a} 
+PROTOCOL\+\_\+\+TRANSBUYPOINT&Транзакция покупки игровых очков. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_GETPLAYERIDBYNAME\_RE@{PROTOCOL\_GETPLAYERIDBYNAME\_RE}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_GETPLAYERIDBYNAME\_RE@{PROTOCOL\_GETPLAYERIDBYNAME\_RE}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120ae3b85f0cb27e48eec336b7ee5089fa93}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120ae3b85f0cb27e48eec336b7ee5089fa93} 
+PROTOCOL\+\_\+\+GETPLAYERIDBYNAME\+\_\+\+RE&Ответ с ID игрока по имени. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_SYSSENDMAIL\_RE@{PROTOCOL\_SYSSENDMAIL\_RE}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_SYSSENDMAIL\_RE@{PROTOCOL\_SYSSENDMAIL\_RE}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a0fb2d242f624dedab11e37c4a9d8a21e}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a0fb2d242f624dedab11e37c4a9d8a21e} 
+PROTOCOL\+\_\+\+SYSSENDMAIL\+\_\+\+RE&Ответ на отправку системного письма. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_SYSSENDMAIL3\_RE@{PROTOCOL\_SYSSENDMAIL3\_RE}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_SYSSENDMAIL3\_RE@{PROTOCOL\_SYSSENDMAIL3\_RE}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120aae1af06579b664be54b41c673e4d0931}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120aae1af06579b664be54b41c673e4d0931} 
+PROTOCOL\+\_\+\+SYSSENDMAIL3\+\_\+\+RE&Ответ на отправку письма (v3). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_VERIFYMASTER@{PROTOCOL\_VERIFYMASTER}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_VERIFYMASTER@{PROTOCOL\_VERIFYMASTER}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a6e17d7796f5600aa11e82511e11b9da0}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a6e17d7796f5600aa11e82511e11b9da0} 
+PROTOCOL\+\_\+\+VERIFYMASTER&Верификация мастера-\/аккаунта. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_VERIFYMASTER\_RE@{PROTOCOL\_VERIFYMASTER\_RE}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_VERIFYMASTER\_RE@{PROTOCOL\_VERIFYMASTER\_RE}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a83fcd8b3b5201ae0cc0391b8f5ddaede}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a83fcd8b3b5201ae0cc0391b8f5ddaede} 
+PROTOCOL\+\_\+\+VERIFYMASTER\+\_\+\+RE&Ответ на верификацию мастера. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_ADDCASH@{PROTOCOL\_ADDCASH}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_ADDCASH@{PROTOCOL\_ADDCASH}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a4b80cb97c3af7ecd545ed3252a585d08}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a4b80cb97c3af7ecd545ed3252a585d08} 
+PROTOCOL\+\_\+\+ADDCASH&Пополнение баланса. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_ADDCASH\_RE@{PROTOCOL\_ADDCASH\_RE}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_ADDCASH\_RE@{PROTOCOL\_ADDCASH\_RE}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a2b5c831b15711ce5e7f6bf8ccabbea0c}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a2b5c831b15711ce5e7f6bf8ccabbea0c} 
+PROTOCOL\+\_\+\+ADDCASH\+\_\+\+RE&Ответ на пополнение баланса. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_MATRIXFAILURE@{PROTOCOL\_MATRIXFAILURE}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_MATRIXFAILURE@{PROTOCOL\_MATRIXFAILURE}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a83432a1787f4afdd6f75b8d6f08c3341}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a83432a1787f4afdd6f75b8d6f08c3341} 
+PROTOCOL\+\_\+\+MATRIXFAILURE&Ошибка аутентификации Matrix. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_BILLINGREQUEST@{PROTOCOL\_BILLINGREQUEST}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_BILLINGREQUEST@{PROTOCOL\_BILLINGREQUEST}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a4474160ab02fd98c0a0173d3a98eb97e}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a4474160ab02fd98c0a0173d3a98eb97e} 
+PROTOCOL\+\_\+\+BILLINGREQUEST&Запрос к биллинг-\/системе. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_BILLINGBALANCE@{PROTOCOL\_BILLINGBALANCE}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_BILLINGBALANCE@{PROTOCOL\_BILLINGBALANCE}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a3389327f6e78989bc3ec722c34660453}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a3389327f6e78989bc3ec722c34660453} 
+PROTOCOL\+\_\+\+BILLINGBALANCE&Проверка баланса. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_BILLINGBALANCESA@{PROTOCOL\_BILLINGBALANCESA}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_BILLINGBALANCESA@{PROTOCOL\_BILLINGBALANCESA}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a35d2250d12e3cb8366db68a1b40ce404}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a35d2250d12e3cb8366db68a1b40ce404} 
+PROTOCOL\+\_\+\+BILLINGBALANCESA&Проверка баланса (спец. версия). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_BILLINGCONFIRM@{PROTOCOL\_BILLINGCONFIRM}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_BILLINGCONFIRM@{PROTOCOL\_BILLINGCONFIRM}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120aeb0d1087f33af4f76f991567f7c5eca9}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120aeb0d1087f33af4f76f991567f7c5eca9} 
+PROTOCOL\+\_\+\+BILLINGCONFIRM&Подтверждение платежа. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_BILLINGCANCEL@{PROTOCOL\_BILLINGCANCEL}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_BILLINGCANCEL@{PROTOCOL\_BILLINGCANCEL}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a9c8893d3d61ad10b65ded139951e44b9}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a9c8893d3d61ad10b65ded139951e44b9} 
+PROTOCOL\+\_\+\+BILLINGCANCEL&Отмена платежа. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_ACFORBIDCHEATER@{PROTOCOL\_ACFORBIDCHEATER}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_ACFORBIDCHEATER@{PROTOCOL\_ACFORBIDCHEATER}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120ad88ea451e7b0381bd17edfd34b5eee4a}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120ad88ea451e7b0381bd17edfd34b5eee4a} 
+PROTOCOL\+\_\+\+ACFORBIDCHEATER&Блокировка читеров. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_GAME2AU@{PROTOCOL\_GAME2AU}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_GAME2AU@{PROTOCOL\_GAME2AU}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a4c07bdeb2ff5691aeb76071e6e5f71f5}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a4c07bdeb2ff5691aeb76071e6e5f71f5} 
+PROTOCOL\+\_\+\+GAME2\+AU&Протокол взаимодействия Game-\/\texorpdfstring{$>$}{>}AU. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROTOCOL\_SSOGETTICKETREQ@{PROTOCOL\_SSOGETTICKETREQ}!GNET@{GNET}}\index{GNET@{GNET}!PROTOCOL\_SSOGETTICKETREQ@{PROTOCOL\_SSOGETTICKETREQ}}}\Hypertarget{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a877a4afcce27d6a331a6e2f39ad763b6}\label{namespace_g_n_e_t_a75746b621815c32fc819144109e4d120a877a4afcce27d6a331a6e2f39ad763b6} 
+PROTOCOL\+\_\+\+SSOGETTICKETREQ&Запрос SSO-\/тикета. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{callid_8hxx_source_l00044}{44}} of file \mbox{\hyperlink{callid_8hxx_source}{callid.\+hxx}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_g_n_e_t_a425204ed513819b3b931a12f8837f8e4}\index{GNET@{GNET}!state\_GAuthServer@{state\_GAuthServer}}
+\index{state\_GAuthServer@{state\_GAuthServer}!GNET@{GNET}}
+\doxysubsubsection{\texorpdfstring{state\_GAuthServer()}{state\_GAuthServer()}}
+{\footnotesize\ttfamily \label{namespace_g_n_e_t_a425204ed513819b3b931a12f8837f8e4} 
+GNET\+::\+Protocol\+::\+Manager\+::\+Session\+::\+State GNET\+::state\+\_\+\+GAuth\+Server (\begin{DoxyParamCaption}\item[{\+\_\+state\+\_\+\+GAuth\+Server}]{}{, }\item[{sizeof(\+\_\+state\+\_\+\+GAuth\+Server)/sizeof(GNET\+::\+Protocol\+::\+Type)}]{}{, }\item[{86400}]{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespace_g_n_e_t_a8db527ca0cb7dc440322bdb8481c2d13}\index{GNET@{GNET}!state\_GAuthServer@{state\_GAuthServer}}
+\index{state\_GAuthServer@{state\_GAuthServer}!GNET@{GNET}}
+\doxysubsubsection{\texorpdfstring{state\_GAuthServer}{state\_GAuthServer}}
+{\footnotesize\ttfamily \label{namespace_g_n_e_t_a8db527ca0cb7dc440322bdb8481c2d13} 
+Protocol\+::\+Manager\+::\+Session\+::\+State GNET\+::state\+\_\+\+GAuth\+Server\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Состояние сессии для \doxylink{class_g_n_e_t_1_1_g_auth_server}{GAuth\+Server}. 
+
+Глобальное состояние сессии для сервера аутентификации
+
+Инициализируется с параметрами\+: 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \+\_\+state\+\_\+\+GAuth\+Server} & -\/ массив поддерживаемых протоколов \\
+\hline
+\mbox{\texttt{ in}}  & {\em sizeof(\+\_\+state\+\_\+\+GAuth\+Server)/sizeof(\+Protocol\+::\+Type)} & -\/ динамический расчет размера массива \\
+\hline
+\mbox{\texttt{ in}}  & {\em 86400} & -\/ таймаут сессии в секундах (24 часа) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Размер массива рассчитывается автоматически -\/ при изменении состава протоколов не требуется ручная корректировка размерности
+\end{DoxyWarning}
+Данное состояние используется менеджером протокола для управления\+:
+\begin{DoxyItemize}
+\item Жизненным циклом сессии
+\item Обработкой входящих/исходящих пакетов
+\item Таймаутами соединения
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+Состояние объявлено как extern, что означает его фактическая реализация находится в отдельном файле реализации (.cpp)
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+Не следует напрямую модифицировать это состояние -\/ работа с ним должна осуществляться через API менеджера протокола 
+\end{DoxyWarning}

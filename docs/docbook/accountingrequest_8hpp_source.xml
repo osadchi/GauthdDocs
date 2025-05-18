@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_accountingrequest_8hpp_source" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/accountingrequest.hpp</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_accountingrequest_8hpp_source_1l00001"/>00001 
+<anchor xml:id="_accountingrequest_8hpp_source_1l00005"/>00005 
+<anchor xml:id="_accountingrequest_8hpp_source_1l00006"/>00006 <emphasis role="preprocessor">&#32;#ifndef&#32;__GNET_ACCOUNTINGREQUEST_HPP</emphasis>
+<anchor xml:id="_accountingrequest_8hpp_source_1l00007"/>00007 <emphasis role="preprocessor">&#32;#define&#32;__GNET_ACCOUNTINGREQUEST_HPP</emphasis>
+<anchor xml:id="_accountingrequest_8hpp_source_1l00008"/>00008 &#32;
+<anchor xml:id="_accountingrequest_8hpp_source_1l00009"/>00009 <emphasis role="preprocessor">&#32;#include&#32;&quot;rpcdefs.h&quot;</emphasis>
+<anchor xml:id="_accountingrequest_8hpp_source_1l00010"/>00010 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_callid_8hxx">callid.hxx</link>&quot;</emphasis>
+<anchor xml:id="_accountingrequest_8hpp_source_1l00011"/>00011 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_state_8hxx">state.hxx</link>&quot;</emphasis>
+<anchor xml:id="_accountingrequest_8hpp_source_1l00012"/>00012 <emphasis role="preprocessor">&#32;#include&#32;&quot;accntparam&quot;</emphasis>
+<anchor xml:id="_accountingrequest_8hpp_source_1l00013"/>00013 <emphasis role="preprocessor">&#32;#include&#32;&quot;security.h&quot;</emphasis>
+<anchor xml:id="_accountingrequest_8hpp_source_1l00014"/>00014 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_kickoutuser_8hpp">kickoutuser.hpp</link>&quot;</emphasis>
+<anchor xml:id="_accountingrequest_8hpp_source_1l00015"/>00015 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_accountingresponse_8hpp">accountingresponse.hpp</link>&quot;</emphasis>
+<anchor xml:id="_accountingrequest_8hpp_source_1l00016"/>00016 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_gauthserver_8hpp">gauthserver.hpp</link>&quot;</emphasis>
+<anchor xml:id="_accountingrequest_8hpp_source_1l00017"/>00017 &#32;
+<anchor xml:id="_accountingrequest_8hpp_source_1l00018"/><link linkend="_namespace_g_n_e_t">00018</link> &#32;<emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_g_n_e_t">GNET</link>
+<anchor xml:id="_accountingrequest_8hpp_source_1l00019"/>00019 &#32;{
+<anchor xml:id="_accountingrequest_8hpp_source_1l00020"/>00020 &#32;
+<anchor xml:id="_accountingrequest_8hpp_source_1l00027"/><link linkend="_class_g_n_e_t_1_1_accounting_request">00027</link> &#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_g_n_e_t_1_1_accounting_request">AccountingRequest</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;GNET::Protocol
+<anchor xml:id="_accountingrequest_8hpp_source_1l00028"/>00028 &#32;{
+<anchor xml:id="_accountingrequest_8hpp_source_1l00029"/>00029 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;#include&#32;&quot;accountingrequest&quot;</emphasis>&#32;
+<anchor xml:id="_accountingrequest_8hpp_source_1l00030"/>00030 &#32;
+<anchor xml:id="_accountingrequest_8hpp_source_1l00031"/>00031 &#32;<emphasis role="keyword">private</emphasis>:
+<anchor xml:id="_accountingrequest_8hpp_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;need_response;&#32;
+<anchor xml:id="_accountingrequest_8hpp_source_1l00033"/>00033 &#32;
+<anchor xml:id="_accountingrequest_8hpp_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;VerifyAuth()
+<anchor xml:id="_accountingrequest_8hpp_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_accountingrequest_8hpp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(MD5Hash(MD5HASH).Digest(OctetsStream()&lt;&lt;stamp&lt;&lt;userid&lt;&lt;(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>)attributes.size()&lt;&lt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a2fb6223e8492fcbc74f9b21ee12f25e7">GAuthServer::GetInstance</link>()-&gt;shared_key)&#32;==&#32;authenticator;
+<anchor xml:id="_accountingrequest_8hpp_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_accountingrequest_8hpp_source_1l00043"/>00043 &#32;
+<anchor xml:id="_accountingrequest_8hpp_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;SendResponse(Manager::Session::ID&#32;sid)
+<anchor xml:id="_accountingrequest_8hpp_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_accountingrequest_8hpp_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;OctetsStream&#32;buf;
+<anchor xml:id="_accountingrequest_8hpp_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;buf&lt;&lt;stamp&lt;&lt;userid&lt;&lt;authenticator&lt;&lt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a2fb6223e8492fcbc74f9b21ee12f25e7">GAuthServer::GetInstance</link>()-&gt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a891812f02afb38b8d2cc9d37081e0c5a">shared_key</link>;
+<anchor xml:id="_accountingrequest_8hpp_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a2fb6223e8492fcbc74f9b21ee12f25e7">GAuthServer::GetInstance</link>()-&gt;Send(sid,<link linkend="_class_g_n_e_t_1_1_accounting_response">AccountingResponse</link>(stamp,userid,MD5Hash(MD5HASH).Digest(buf));
+<anchor xml:id="_accountingrequest_8hpp_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_accountingrequest_8hpp_source_1l00056"/>00056 &#32;
+<anchor xml:id="_accountingrequest_8hpp_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;&#32;Write2DB()
+<anchor xml:id="_accountingrequest_8hpp_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_accountingrequest_8hpp_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;1;
+<anchor xml:id="_accountingrequest_8hpp_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_accountingrequest_8hpp_source_1l00066"/>00066 &#32;
+<anchor xml:id="_accountingrequest_8hpp_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;GenerateFee(AccntParam&amp;&#32;attribute)
+<anchor xml:id="_accountingrequest_8hpp_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_accountingrequest_8hpp_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server">GAuthServer</link>*&#32;aum=<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a2fb6223e8492fcbc74f9b21ee12f25e7">GAuthServer::GetInstance</link>();
+<anchor xml:id="_accountingrequest_8hpp_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Thread::Mutex::Scoped&#32;(aum-&gt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a306c4188d47c0c0d4c653aafe420f706">locker_accntmap</link>);
+<anchor xml:id="_accountingrequest_8hpp_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;need_response=<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_accountingrequest_8hpp_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(attribute.type)
+<anchor xml:id="_accountingrequest_8hpp_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_accountingrequest_8hpp_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;_ACCOUNT_START:
+<anchor xml:id="_accountingrequest_8hpp_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;aum-&gt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a7b474e4ba736b037e63f71e551724666">accntmap</link>[userid]=attribute.value;
+<anchor xml:id="_accountingrequest_8hpp_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;need_response=<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_accountingrequest_8hpp_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DEBUG_PRINT(<emphasis role="stringliteral">&quot;\tgauthd::start&#32;accounting&#32;user&#32;%d,time=%d.\n&quot;</emphasis>,userid,attribute.value);
+<anchor xml:id="_accountingrequest_8hpp_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_accountingrequest_8hpp_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;_ACCOUNT_STOP:
+<anchor xml:id="_accountingrequest_8hpp_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(aum-&gt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a7b474e4ba736b037e63f71e551724666">accntmap</link>.find(userid)!=aum-&gt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a7b474e4ba736b037e63f71e551724666">accntmap</link>.end())
+<anchor xml:id="_accountingrequest_8hpp_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_accountingrequest_8hpp_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;elapse=attribute.value&#32;-&#32;aum-&gt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a7b474e4ba736b037e63f71e551724666">accntmap</link>[userid];
+<anchor xml:id="_accountingrequest_8hpp_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DEBUG_PRINT(<emphasis role="stringliteral">&quot;\tgauthd::stop&#32;accounting&#32;user&#32;%d.&#32;He&#32;plays&#32;%d&#32;hours&#32;%d&#32;min&#32;%d&#32;second\n&quot;</emphasis>,userid,elapse&#32;/&#32;3600,(elapse&#32;%&#32;3600)&#32;/&#32;60,elapse&#32;%&#32;60);
+<anchor xml:id="_accountingrequest_8hpp_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;aum-&gt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a7b474e4ba736b037e63f71e551724666">accntmap</link>.erase(userid);
+<anchor xml:id="_accountingrequest_8hpp_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_accountingrequest_8hpp_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;need_response=<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_accountingrequest_8hpp_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_accountingrequest_8hpp_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;_ACCOUNT_ELAPSE_TIME:
+<anchor xml:id="_accountingrequest_8hpp_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(aum-&gt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a7b474e4ba736b037e63f71e551724666">accntmap</link>.find(userid)!=aum-&gt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a7b474e4ba736b037e63f71e551724666">accntmap</link>.end())
+<anchor xml:id="_accountingrequest_8hpp_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_accountingrequest_8hpp_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;elapse=attribute.value&#32;-&#32;aum-&gt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a7b474e4ba736b037e63f71e551724666">accntmap</link>[userid];
+<anchor xml:id="_accountingrequest_8hpp_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DEBUG_PRINT(<emphasis role="stringliteral">&quot;\tgauthd::continue&#32;accounting&#32;user&#32;%d.&#32;He&#32;plays&#32;%d&#32;hours&#32;%d&#32;min&#32;%d&#32;second\n&quot;</emphasis>,userid,elapse&#32;/&#32;3600,(elapse&#32;%&#32;3600)&#32;/&#32;60,elapse&#32;%&#32;60);
+<anchor xml:id="_accountingrequest_8hpp_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_accountingrequest_8hpp_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_accountingrequest_8hpp_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_accountingrequest_8hpp_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DEBUG_PRINT(<emphasis role="stringliteral">&quot;\tgauthd::warning::&#32;_ACCOUNT_ELAPSE_TIME&#32;cannot&#32;find&#32;start.&#32;Fee&#32;leaks.\n&quot;</emphasis>);
+<anchor xml:id="_accountingrequest_8hpp_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;aum-&gt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a7b474e4ba736b037e63f71e551724666">accntmap</link>[userid]=attribute.value;
+<anchor xml:id="_accountingrequest_8hpp_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_accountingrequest_8hpp_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_accountingrequest_8hpp_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;_ACCOUNT_IN_OCTETS:
+<anchor xml:id="_accountingrequest_8hpp_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_accountingrequest_8hpp_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;_ACCOUNT_OUT_OCTETS:
+<anchor xml:id="_accountingrequest_8hpp_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_accountingrequest_8hpp_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;_ACCOUNT_IN_PACKETS:
+<anchor xml:id="_accountingrequest_8hpp_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_accountingrequest_8hpp_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;_ACCOUNT_OUT_PACKETS:
+<anchor xml:id="_accountingrequest_8hpp_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_accountingrequest_8hpp_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_accountingrequest_8hpp_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_accountingrequest_8hpp_source_1l00119"/>00119 &#32;
+<anchor xml:id="_accountingrequest_8hpp_source_1l00120"/>00120 &#32;<emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_accountingrequest_8hpp_source_1l00131"/><link linkend="_class_g_n_e_t_1_1_accounting_request_1aa11c0d3bdfe8aecec33fab6e918126cc">00131</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_accounting_request_1aa11c0d3bdfe8aecec33fab6e918126cc">Process</link>(Manager&#32;*manager,&#32;Manager::Session::ID&#32;sid)
+<anchor xml:id="_accountingrequest_8hpp_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_accountingrequest_8hpp_source_1l00133"/>00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!VerifyAuth())&#32;<emphasis role="keywordflow">return</emphasis>;&#32;&#32;<emphasis role="comment">//&#32;Тихий&#32;сброс&#32;при&#32;неверной&#32;аутентификации</emphasis>
+<anchor xml:id="_accountingrequest_8hpp_source_1l00134"/>00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i=0;i&lt;attributes.size();GenerateFee(attributes[i]),i++);
+<anchor xml:id="_accountingrequest_8hpp_source_1l00135"/>00135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(need_response&#32;&amp;&amp;&#32;Write2DB())&#32;SendResponse(sid);
+<anchor xml:id="_accountingrequest_8hpp_source_1l00136"/>00136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a2fb6223e8492fcbc74f9b21ee12f25e7">GAuthServer::GetInstance</link>()-&gt;ValidUser(sid,userid))
+<anchor xml:id="_accountingrequest_8hpp_source_1l00137"/>00137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a2fb6223e8492fcbc74f9b21ee12f25e7">GAuthServer::GetInstance</link>()-&gt;Send(sid,<link linkend="_class_g_n_e_t_1_1_kickout_user">KickoutUser</link>(userid,_SID_INVALID));
+<anchor xml:id="_accountingrequest_8hpp_source_1l00138"/>00138 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_accountingrequest_8hpp_source_1l00139"/>00139 &#32;};
+<anchor xml:id="_accountingrequest_8hpp_source_1l00140"/>00140 &#32;
+<anchor xml:id="_accountingrequest_8hpp_source_1l00141"/>00141 &#32;};
+<anchor xml:id="_accountingrequest_8hpp_source_1l00142"/>00142 &#32;
+<anchor xml:id="_accountingrequest_8hpp_source_1l00143"/>00143 <emphasis role="preprocessor">&#32;#endif</emphasis>
+</programlisting></section>

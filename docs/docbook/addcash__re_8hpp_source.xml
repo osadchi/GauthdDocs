@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_addcash__re_8hpp_source" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/addcash_re.hpp</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_addcash__re_8hpp_source_1l00001"/>00001 
+<anchor xml:id="_addcash__re_8hpp_source_1l00008"/>00008 
+<anchor xml:id="_addcash__re_8hpp_source_1l00009"/>00009 <emphasis role="preprocessor">&#32;#ifndef&#32;__GNET_ADDCASH_RE_HPP</emphasis>
+<anchor xml:id="_addcash__re_8hpp_source_1l00010"/>00010 <emphasis role="preprocessor">&#32;#define&#32;__GNET_ADDCASH_RE_HPP</emphasis>
+<anchor xml:id="_addcash__re_8hpp_source_1l00011"/>00011 &#32;
+<anchor xml:id="_addcash__re_8hpp_source_1l00012"/>00012 <emphasis role="preprocessor">&#32;#include&#32;&quot;rpcdefs.h&quot;</emphasis>
+<anchor xml:id="_addcash__re_8hpp_source_1l00013"/>00013 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_callid_8hxx">callid.hxx</link>&quot;</emphasis>
+<anchor xml:id="_addcash__re_8hpp_source_1l00014"/>00014 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_state_8hxx">state.hxx</link>&quot;</emphasis>
+<anchor xml:id="_addcash__re_8hpp_source_1l00015"/>00015 &#32;
+<anchor xml:id="_addcash__re_8hpp_source_1l00016"/>00016 &#32;<emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_g_n_e_t">GNET</link>
+<anchor xml:id="_addcash__re_8hpp_source_1l00017"/>00017 &#32;{
+<anchor xml:id="_addcash__re_8hpp_source_1l00018"/>00018 &#32;
+<anchor xml:id="_addcash__re_8hpp_source_1l00026"/><link linkend="_class_g_n_e_t_1_1_add_cash___re">00026</link> &#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_g_n_e_t_1_1_add_cash___re">AddCash_Re</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;GNET::Protocol
+<anchor xml:id="_addcash__re_8hpp_source_1l00027"/>00027 &#32;{
+<anchor xml:id="_addcash__re_8hpp_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Включаем&#32;автоматически&#32;сгенерированные&#32;поля&#32;(userid,&#32;retcode,&#32;zoneid,&#32;sn&#32;и&#32;др.)</emphasis>
+<anchor xml:id="_addcash__re_8hpp_source_1l00029"/>00029 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;#include&#32;&quot;addcash_re&quot;</emphasis>
+<anchor xml:id="_addcash__re_8hpp_source_1l00030"/>00030 &#32;
+<anchor xml:id="_addcash__re_8hpp_source_1l00031"/>00031 &#32;<emphasis role="keyword">private</emphasis>:
+<anchor xml:id="_addcash__re_8hpp_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;SendFailCash()
+<anchor xml:id="_addcash__re_8hpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_addcash__re_8hpp_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;AddCash_Re::SendFailCash:&#32;userid&#32;=&#32;%d&#32;\n&quot;</emphasis>,&#32;userid);
+<anchor xml:id="_addcash__re_8hpp_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_mysql_client">GMysqlClient</link>&#32;*db&#32;=&#32;<link linkend="_class_g_mysql_client_1a87a90c9a2b827da79f451728f4109850">GMysqlClient::GetInstance</link>();
+<anchor xml:id="_addcash__re_8hpp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;idx&#32;=&#32;db-&gt;<link linkend="_class_g_mysql_client_1ad4ac431eba947493223affceccff7990">GetCashUser</link>(userid);
+<anchor xml:id="_addcash__re_8hpp_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;db-&gt;<link linkend="_class_g_mysql_client_1a01a8870566416cb8446699c93cd1557b">DelCashUser</link>(idx);
+<anchor xml:id="_addcash__re_8hpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_addcash__re_8hpp_source_1l00044"/>00044 &#32;
+<anchor xml:id="_addcash__re_8hpp_source_1l00045"/>00045 &#32;<emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_addcash__re_8hpp_source_1l00054"/><link linkend="_class_g_n_e_t_1_1_add_cash___re_1a4ed01ac8071caf53c9a4031c12cbda6e">00054</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_add_cash___re_1a4ed01ac8071caf53c9a4031c12cbda6e">Process</link>(Manager&#32;*manager,&#32;Manager::Session::ID&#32;sid)
+<anchor xml:id="_addcash__re_8hpp_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_addcash__re_8hpp_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(retcode&#32;!=&#32;0)&#32;{&#32;
+<anchor xml:id="_addcash__re_8hpp_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SendFailCash();&#32;
+<anchor xml:id="_addcash__re_8hpp_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;&#32;
+<anchor xml:id="_addcash__re_8hpp_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_addcash__re_8hpp_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_addcash__re_8hpp_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_mysql_client">GMysqlClient</link>&#32;*db&#32;=&#32;<link linkend="_class_g_mysql_client_1a87a90c9a2b827da79f451728f4109850">GMysqlClient::GetInstance</link>();
+<anchor xml:id="_addcash__re_8hpp_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;idx&#32;=&#32;db-&gt;<link linkend="_class_g_mysql_client_1ad4ac431eba947493223affceccff7990">GetCashUser</link>(userid);
+<anchor xml:id="_addcash__re_8hpp_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;cash&#32;=&#32;db-&gt;<link linkend="_class_g_mysql_client_1aca8d88358cbbd6033e81272381cb0911">GetCashCash</link>(idx);
+<anchor xml:id="_addcash__re_8hpp_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;point&#32;=&#32;db-&gt;<link linkend="_class_g_mysql_client_1a872aead647ae16442ef1ded0cfab4710">GetCashPoint</link>(idx);
+<anchor xml:id="_addcash__re_8hpp_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;creatime&#32;=&#32;db-&gt;<link linkend="_class_g_mysql_client_1afa65eb70f3df9ead6d515aa084f3f415">GetCashCreaTime</link>(idx);
+<anchor xml:id="_addcash__re_8hpp_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_addcash__re_8hpp_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;db-&gt;<link linkend="_class_g_mysql_client_1a0cba2ae6714706fa26b2b39f91c34665">AddCashLog</link>(userid,&#32;zoneid,&#32;sn,&#32;db-&gt;<link linkend="_class_g_mysql_client_1a623a50fa9c2dbe90519ac099bfa492f0">GetAid</link>(),&#32;point,&#32;cash,&#32;1,&#32;creatime);
+<anchor xml:id="_addcash__re_8hpp_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;db-&gt;<link linkend="_class_g_mysql_client_1a0260ea3e3b3ba9b0e289a7b97bc4fd67">DelUseCashNow</link>(1,&#32;userid,&#32;sn);
+<anchor xml:id="_addcash__re_8hpp_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;db-&gt;<link linkend="_class_g_mysql_client_1a01a8870566416cb8446699c93cd1557b">DelCashUser</link>(idx);
+<anchor xml:id="_addcash__re_8hpp_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_addcash__re_8hpp_source_1l00071"/>00071 &#32;};
+<anchor xml:id="_addcash__re_8hpp_source_1l00072"/>00072 &#32;
+<anchor xml:id="_addcash__re_8hpp_source_1l00073"/>00073 &#32;};
+<anchor xml:id="_addcash__re_8hpp_source_1l00074"/>00074 &#32;
+<anchor xml:id="_addcash__re_8hpp_source_1l00075"/>00075 <emphasis role="preprocessor">&#32;#endif</emphasis>
+</programlisting></section>

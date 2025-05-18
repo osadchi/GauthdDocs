@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_todo" xml:lang="en-US">
+<title>Todo List</title>
+<indexterm><primary>Todo List</primary></indexterm>
+
+<para><variablelist>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_accounting_response_1a58529a5d6f2697a88f5c3211571d705b">GNET::AccountingResponse::Process</link>  (Manager *manager, Manager::Session::ID sid)</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000002"/>Реализовать логику обработки (например, обновление состояния учётной записи).  </para>
+</listitem>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_add_cash_1ad20cf7684a67d064a559e96a79ae5675">GNET::AddCash::Process</link>  (Manager *manager, Manager::Session::ID sid)</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000004"/>Реализовать логику обработки запроса (проверки, начисление средств и т.д.).  </para>
+</listitem>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_a_u2_game_1a1a973d7ce830a0141f60f202a5c0809f">GNET::AU2Game::Process</link>  (Manager *manager, Manager::Session::ID sid)</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000006"/>Реализовать обработку данных (например, валидацию токена, обновление статуса пользователя и т.п.).  </para>
+</listitem>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_authd_version_1a005c37c0e0449e61837bd0a80d3c5f83">GNET::AuthdVersion::Process</link>  (Manager *manager, Manager::Session::ID sid)</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000007"/>Реализовать логику обработки версии аутентификационного демона.  </para>
+</listitem>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_billing_balance_s_a_1a6ffab641422705d824ce73926786e682">GNET::BillingBalanceSA::Process</link>  (Manager *manager, Manager::Session::ID sid)</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000009"/>Реализовать обработку запроса баланса:<itemizedlist>
+<listitem>
+<para>Аутентификация пользователя</para>
+</listitem><listitem>
+<para>Запрос в базу данных/внешний сервис</para>
+</listitem><listitem>
+<para>Формирование ответа </para>
+</listitem></itemizedlist>
+</para>
+</listitem>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_billing_request_1afc7983c052f595d356f4b9ae460cab1b">GNET::BillingRequest::Process</link>  (Manager *manager, Manager::Session::ID sid)</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000011"/>).</para>
+
+<para><anchor xml:id="_todo_1_todo000012"/>Реализовать логику обработки запроса.  </para>
+</listitem>
+<varlistentry><term>Class <link linkend="_class_g_n_e_t_1_1_discount_announce">GNET::DiscountAnnounce</link>  </term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000013"/>Реализовать обработку протокола в методе Process()  </para>
+</listitem>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_game2_a_u_1a778ef1862d9abe838530c75c45882fb7">GNET::Game2AU::Process</link>  (Manager *manager, Manager::Session::ID sid)</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000014"/>Требуется реализация логики обработки сообщения  </para>
+</listitem>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_key_exchange_1a59d9dff58cb00261d155d622d24af391">GNET::KeyExchange::Process</link>  (Manager *manager, Manager::Session::ID sid)</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000019"/>Реализовать обработку обмена ключами </para>
+
+<para></para>
+
+<para>Добавить проверку временных меток </para>
+
+<para></para>
+
+<para>Реализовать обработку ошибок  </para>
+</listitem>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_s_s_o_get_ticket_req_1a7d2f631129750466c71a3c53910adad9">GNET::SSOGetTicketReq::Process</link>  (Manager *manager, Manager::Session::ID sid)</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000023"/>Требуется реализация логики обработки запроса </para>
+</listitem>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_status_announce_1ae5a6d07d7f9047b0d0a53cce09ed94b9">GNET::StatusAnnounce::Process</link>  (Manager *manager, Manager::Session::ID sid)</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000024"/>Реализовать обработку ошибок при работе с картой пользователей  </para>
+</listitem>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_sys_send_mail3___re_1ac8efa0a3f269852ac072bef063dbfc81">GNET::SysSendMail3_Re::Process</link>  (Manager *manager, Manager::Session::ID sid)</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000025"/>Требуется реализация логики обработки  </para>
+</listitem>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_sys_send_mail___re_1aee9b57bf0d0707a080303a041e0dab0d">GNET::SysSendMail_Re::Process</link>  (Manager *manager, Manager::Session::ID sid)</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000026"/>Реализовать логику обработки ответа от сервера. Сейчас метод содержит заглушку и требует реализации обработки:<itemizedlist>
+<listitem>
+<para>Анализ кода ответа</para>
+</listitem><listitem>
+<para>Обработка ошибок отправки</para>
+</listitem><listitem>
+<para>Уведомление отправителя о результате</para>
+</listitem><listitem>
+<para>Ведение статистики отправки </para>
+</listitem></itemizedlist>
+</para>
+</listitem>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_trans_buy_point_1aad328b963d528b2d8a695e3793c73529">GNET::TransBuyPoint::Process</link>  (Manager *manager, Manager::Session::ID sid)</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000027"/>Реализовать обработку транзакций, включая проверку данных, выполнение платежа и обновление состояния системы  </para>
+</listitem>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_verify_master___re_1a549010699fc4534896e58ff3aef11b9d">GNET::VerifyMaster_Re::Process</link>  (Manager *manager, Manager::Session::ID sid)</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000028"/>Реализовать обработку ответа верификации </para>
+</listitem>
+</variablelist>
+</para>
+</section>

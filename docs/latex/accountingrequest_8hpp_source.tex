@@ -1,0 +1,104 @@
+\doxysection{D\+:/pwsrc2.0/docs/gauthd/accountingrequest.hpp}
+\hypertarget{accountingrequest_8hpp_source}{}\label{accountingrequest_8hpp_source}\mbox{\hyperlink{accountingrequest_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\ \#ifndef\ \_\_GNET\_ACCOUNTINGREQUEST\_HPP}}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00007}00007\ \textcolor{preprocessor}{\ \#define\ \_\_GNET\_ACCOUNTINGREQUEST\_HPP}}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00008}00008\ \ }
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\ \#include\ "{}rpcdefs.h"{}}}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\ \#include\ "{}\mbox{\hyperlink{callid_8hxx}{callid.hxx}}"{}}}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00011}00011\ \textcolor{preprocessor}{\ \#include\ "{}\mbox{\hyperlink{state_8hxx}{state.hxx}}"{}}}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00012}00012\ \textcolor{preprocessor}{\ \#include\ "{}accntparam"{}}}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00013}00013\ \textcolor{preprocessor}{\ \#include\ "{}security.h"{}}}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00014}00014\ \textcolor{preprocessor}{\ \#include\ "{}\mbox{\hyperlink{kickoutuser_8hpp}{kickoutuser.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00015}00015\ \textcolor{preprocessor}{\ \#include\ "{}\mbox{\hyperlink{accountingresponse_8hpp}{accountingresponse.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00016}00016\ \textcolor{preprocessor}{\ \#include\ "{}\mbox{\hyperlink{gauthserver_8hpp}{gauthserver.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00017}00017\ \ }
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00018}\mbox{\hyperlink{namespace_g_n_e_t}{00018}}\ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_g_n_e_t}{GNET}}}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00019}00019\ \ \{}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00020}00020\ \ }
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00027}\mbox{\hyperlink{class_g_n_e_t_1_1_accounting_request}{00027}}\ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_n_e_t_1_1_accounting_request}{AccountingRequest}}\ :\ \textcolor{keyword}{public}\ GNET::Protocol}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00028}00028\ \ \{}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00029}00029\ \textcolor{preprocessor}{\ \ \ \ \ \#include\ "{}accountingrequest"{}}\ }
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00030}00030\ \ }
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00031}00031\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00032}00032\ \ \ \ \ \ \textcolor{keywordtype}{bool}\ need\_response;\ }
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00033}00033\ \ }
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00039}00039\ \ \ \ \ \ \textcolor{keywordtype}{bool}\ VerifyAuth()}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00040}00040\ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (MD5Hash(MD5HASH).Digest(OctetsStream()<<stamp<<userid<<(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})attributes.size()<<\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a2fb6223e8492fcbc74f9b21ee12f25e7}{GAuthServer::GetInstance}}()-\/>shared\_key)\ ==\ authenticator;}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00042}00042\ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00043}00043\ \ }
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00050}00050\ \ \ \ \ \ \textcolor{keywordtype}{bool}\ SendResponse(Manager::Session::ID\ sid)}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00051}00051\ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \ OctetsStream\ buf;}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \ buf<<stamp<<userid<<authenticator<<\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a2fb6223e8492fcbc74f9b21ee12f25e7}{GAuthServer::GetInstance}}()-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a891812f02afb38b8d2cc9d37081e0c5a}{shared\_key}};}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a2fb6223e8492fcbc74f9b21ee12f25e7}{GAuthServer::GetInstance}}()-\/>Send(sid,\mbox{\hyperlink{class_g_n_e_t_1_1_accounting_response}{AccountingResponse}}(stamp,userid,MD5Hash(MD5HASH).Digest(buf));}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00055}00055\ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00056}00056\ \ }
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00062}00062\ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \ Write2DB()}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00063}00063\ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00065}00065\ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00066}00066\ \ }
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00076}00076\ \ \ \ \ \ \textcolor{keywordtype}{void}\ GenerateFee(AccntParam\&\ attribute)}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00077}00077\ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server}{GAuthServer}}*\ aum=\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a2fb6223e8492fcbc74f9b21ee12f25e7}{GAuthServer::GetInstance}}();}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \ Thread::Mutex::Scoped\ (aum-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a306c4188d47c0c0d4c653aafe420f706}{locker\_accntmap}});}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \ need\_response=\textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (attribute.type)}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \_ACCOUNT\_START:}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ aum-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a7b474e4ba736b037e63f71e551724666}{accntmap}}[userid]=attribute.value;}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ need\_response=\textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DEBUG\_PRINT(\textcolor{stringliteral}{"{}\(\backslash\)tgauthd::start\ accounting\ user\ \%d,time=\%d.\(\backslash\)n"{}},userid,attribute.value);}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \_ACCOUNT\_STOP:}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (aum-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a7b474e4ba736b037e63f71e551724666}{accntmap}}.find(userid)!=aum-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a7b474e4ba736b037e63f71e551724666}{accntmap}}.end())}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ elapse=attribute.value\ -\/\ aum-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a7b474e4ba736b037e63f71e551724666}{accntmap}}[userid];}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DEBUG\_PRINT(\textcolor{stringliteral}{"{}\(\backslash\)tgauthd::stop\ accounting\ user\ \%d.\ He\ plays\ \%d\ hours\ \%d\ min\ \%d\ second\(\backslash\)n"{}},userid,elapse\ /\ 3600,(elapse\ \%\ 3600)\ /\ 60,elapse\ \%\ 60);}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ aum-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a7b474e4ba736b037e63f71e551724666}{accntmap}}.erase(userid);}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ need\_response=\textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \_ACCOUNT\_ELAPSE\_TIME:}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (aum-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a7b474e4ba736b037e63f71e551724666}{accntmap}}.find(userid)!=aum-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a7b474e4ba736b037e63f71e551724666}{accntmap}}.end())}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ elapse=attribute.value\ -\/\ aum-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a7b474e4ba736b037e63f71e551724666}{accntmap}}[userid];}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DEBUG\_PRINT(\textcolor{stringliteral}{"{}\(\backslash\)tgauthd::continue\ accounting\ user\ \%d.\ He\ plays\ \%d\ hours\ \%d\ min\ \%d\ second\(\backslash\)n"{}},userid,elapse\ /\ 3600,(elapse\ \%\ 3600)\ /\ 60,elapse\ \%\ 60);}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DEBUG\_PRINT(\textcolor{stringliteral}{"{}\(\backslash\)tgauthd::warning::\ \_ACCOUNT\_ELAPSE\_TIME\ cannot\ find\ start.\ Fee\ leaks.\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ aum-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a7b474e4ba736b037e63f71e551724666}{accntmap}}[userid]=attribute.value;}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \_ACCOUNT\_IN\_OCTETS:}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \_ACCOUNT\_OUT\_OCTETS:}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \_ACCOUNT\_IN\_PACKETS:}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \_ACCOUNT\_OUT\_PACKETS:}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00118}00118\ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00119}00119\ \ }
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00120}00120\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00131}\mbox{\hyperlink{class_g_n_e_t_1_1_accounting_request_aa11c0d3bdfe8aecec33fab6e918126cc}{00131}}\ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_e_t_1_1_accounting_request_aa11c0d3bdfe8aecec33fab6e918126cc}{Process}}(Manager\ *manager,\ Manager::Session::ID\ sid)}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00132}00132\ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!VerifyAuth())\ \textcolor{keywordflow}{return};\ \ \textcolor{comment}{//\ Тихий\ сброс\ при\ неверной\ аутентификации}}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i=0;i<attributes.size();GenerateFee(attributes[i]),i++);}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (need\_response\ \&\&\ Write2DB())\ SendResponse(sid);}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a2fb6223e8492fcbc74f9b21ee12f25e7}{GAuthServer::GetInstance}}()-\/>ValidUser(sid,userid))}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a2fb6223e8492fcbc74f9b21ee12f25e7}{GAuthServer::GetInstance}}()-\/>Send(sid,\mbox{\hyperlink{class_g_n_e_t_1_1_kickout_user}{KickoutUser}}(userid,\_SID\_INVALID));}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00138}00138\ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00139}00139\ \ \};}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00140}00140\ \ }
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00141}00141\ \ \};}
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00142}00142\ \ }
+\DoxyCodeLine{\Hypertarget{accountingrequest_8hpp_source_l00143}00143\ \textcolor{preprocessor}{\ \#endif}}
+
+\end{DoxyCode}

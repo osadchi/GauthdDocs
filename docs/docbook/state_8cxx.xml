@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_state_8cxx" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/state.cxx File Reference</title>
+<indexterm><primary>D:/pwsrc2.0/docs/gauthd/state.cxx</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;callid.hxx&quot;<?linebreak?>#include &quot;protocol.h&quot;<?linebreak?>#include &quot;binder.h&quot;<?linebreak?></programlisting><simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_g_n_e_t">GNET</link></para>
+
+<para>Основное пространство имен для сетевых компонентов системы. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>GNET::Protocol::Manager::Session::State <link linkend="_namespace_g_n_e_t_1a425204ed513819b3b931a12f8837f8e4">GNET::state_GAuthServer</link> (_state_GAuthServer, sizeof(_state_GAuthServer)/sizeof(GNET::Protocol::Type), 86400)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

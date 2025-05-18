@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_n_e_t_1_1_status_announce" xml:lang="en-US">
+<title>GNET::StatusAnnounce Class Reference</title>
+<indexterm><primary>GNET::StatusAnnounce</primary></indexterm>
+<para>
+
+<para>Протокол обработки статусных уведомлений </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;statusannounce.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for GNET::StatusAnnounce:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_status_announce.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_status_announce_1ae5a6d07d7f9047b0d0a53cce09ed94b9">Process</link> (Manager *manager, Manager::Session::ID sid)</para>
+
+<para>Обработчик протокола </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Протокол обработки статусных уведомлений </para>
+
+
+
+<para>Класс реализует функциональность обработки уведомлений об изменении статуса пользователей, обеспечивая синхронизацию состояния пользователей между компонентами системы. </para>
+<para>
+Definition at line <link linkend="_statusannounce_8hpp_source_1l00026">26</link> of file <link linkend="_statusannounce_8hpp_source">statusannounce.hpp</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_g_n_e_t_1_1_status_announce_1ae5a6d07d7f9047b0d0a53cce09ed94b9"/><section>
+    <title>Process()</title>
+<indexterm><primary>Process</primary><secondary>GNET::StatusAnnounce</secondary></indexterm>
+<indexterm><primary>GNET::StatusAnnounce</primary><secondary>Process</secondary></indexterm>
+<para><computeroutput>void GNET::StatusAnnounce::Process (Manager * manager, Manager::Session::ID sid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Обработчик протокола </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>manager</entry><entry>
+<para>Менеджер соединений </para>
+</entry>
+                            </row>
+                            <row>
+<entry>sid</entry><entry>
+<para>Идентификатор сессии</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                Метод выполняет следующие действия:<orderedlist>
+<listitem>
+<para>Получает экземпляр <link linkend="_class_g_n_e_t_1_1_g_auth_server">GAuthServer</link></para>
+</listitem><listitem>
+<para>Блокирует доступ к карте пользователей для записи</para>
+</listitem><listitem>
+<para>Осуществляет поиск пользователя по ID</para>
+</listitem><listitem>
+<para>При обнаружении совпадения удаляет запись о пользователе</para>
+</listitem></orderedlist>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Использует блокировку записи для обеспечения потокобезопасности </para>
+</note>
+<para><link linkend="_todo_1_todo000024">Todo</link> 
+<para>Реализовать обработку ошибок при работе с картой пользователей </para>
+</para></para>
+<para>
+Definition at line <link linkend="_statusannounce_8hpp_source_1l00045">45</link> of file <link linkend="_statusannounce_8hpp_source">statusannounce.hpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_statusannounce_8hpp">statusannounce.hpp</link></section>
+</section>

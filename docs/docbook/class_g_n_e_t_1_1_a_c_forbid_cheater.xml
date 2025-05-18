@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_n_e_t_1_1_a_c_forbid_cheater" xml:lang="en-US">
+<title>GNET::ACForbidCheater Class Reference</title>
+<indexterm><primary>GNET::ACForbidCheater</primary></indexterm>
+<para>
+
+<para>Протокол для обработки запросов блокировки нечестных игроков </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;acforbidcheater.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for GNET::ACForbidCheater:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_a_c_forbid_cheater.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+
+<para>Протокол для обработки запросов блокировки нечестных игроков </para>
+
+
+
+<para>Наследуется от базового класса Protocol и содержит логику обработки действий, связанных с блокировкой игроков, использующих читы. </para>
+<para>
+Definition at line <link linkend="_acforbidcheater_8hpp_source_1l00023">23</link> of file <link linkend="_acforbidcheater_8hpp_source">acforbidcheater.hpp</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_acforbidcheater_8hpp">acforbidcheater.hpp</link></section>
+</section>

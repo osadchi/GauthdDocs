@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_statusannounce_8hpp_source" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/statusannounce.hpp</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_statusannounce_8hpp_source_1l00001"/>00001 
+<anchor xml:id="_statusannounce_8hpp_source_1l00006"/>00006 
+<anchor xml:id="_statusannounce_8hpp_source_1l00007"/>00007 <emphasis role="preprocessor">&#32;#ifndef&#32;__GNET_STATUSANNOUNCE_HPP</emphasis>
+<anchor xml:id="_statusannounce_8hpp_source_1l00008"/>00008 <emphasis role="preprocessor">&#32;#define&#32;__GNET_STATUSANNOUNCE_HPP</emphasis>
+<anchor xml:id="_statusannounce_8hpp_source_1l00009"/>00009 &#32;
+<anchor xml:id="_statusannounce_8hpp_source_1l00010"/>00010 <emphasis role="preprocessor">&#32;#include&#32;&quot;rpcdefs.h&quot;</emphasis>
+<anchor xml:id="_statusannounce_8hpp_source_1l00011"/>00011 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_callid_8hxx">callid.hxx</link>&quot;</emphasis>
+<anchor xml:id="_statusannounce_8hpp_source_1l00012"/>00012 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_state_8hxx">state.hxx</link>&quot;</emphasis>
+<anchor xml:id="_statusannounce_8hpp_source_1l00013"/>00013 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_gauthserver_8hpp">gauthserver.hpp</link>&quot;</emphasis>
+<anchor xml:id="_statusannounce_8hpp_source_1l00014"/>00014 &#32;
+<anchor xml:id="_statusannounce_8hpp_source_1l00015"/>00015 &#32;<emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_g_n_e_t">GNET</link>
+<anchor xml:id="_statusannounce_8hpp_source_1l00016"/>00016 &#32;{
+<anchor xml:id="_statusannounce_8hpp_source_1l00017"/>00017 &#32;
+<anchor xml:id="_statusannounce_8hpp_source_1l00026"/><link linkend="_class_g_n_e_t_1_1_status_announce">00026</link> &#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_g_n_e_t_1_1_status_announce">StatusAnnounce</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;GNET::Protocol
+<anchor xml:id="_statusannounce_8hpp_source_1l00027"/>00027 &#32;{
+<anchor xml:id="_statusannounce_8hpp_source_1l00028"/>00028 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;#include&#32;&quot;statusannounce&quot;</emphasis>&#32;&#32;<emphasis role="comment">//&#32;Включение&#32;автоматически&#32;сгенерированных&#32;данных&#32;протокола</emphasis>
+<anchor xml:id="_statusannounce_8hpp_source_1l00029"/>00029 &#32;
+<anchor xml:id="_statusannounce_8hpp_source_1l00030"/>00030 &#32;<emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_statusannounce_8hpp_source_1l00045"/><link linkend="_class_g_n_e_t_1_1_status_announce_1ae5a6d07d7f9047b0d0a53cce09ed94b9">00045</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_status_announce_1ae5a6d07d7f9047b0d0a53cce09ed94b9">Process</link>(Manager&#32;*manager,&#32;Manager::Session::ID&#32;sid)
+<anchor xml:id="_statusannounce_8hpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_statusannounce_8hpp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server">GAuthServer</link>*&#32;ausm&#32;=&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a2fb6223e8492fcbc74f9b21ee12f25e7">GAuthServer::GetInstance</link>();
+<anchor xml:id="_statusannounce_8hpp_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_statusannounce_8hpp_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Блокировка&#32;карты&#32;пользователей&#32;для&#32;безопасной&#32;модификации</emphasis>
+<anchor xml:id="_statusannounce_8hpp_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Thread::RWLock::WRScoped&#32;l(ausm-&gt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a03dccad867b02013d61e8dde6785f3af">locker_map</link>);
+<anchor xml:id="_statusannounce_8hpp_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_statusannounce_8hpp_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Поиск&#32;пользователя&#32;в&#32;карте</emphasis>
+<anchor xml:id="_statusannounce_8hpp_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GAuthServer::UserMap::const_iterator&#32;it&#32;=&#32;ausm-&gt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1afcb09daf81ca16050c3e2467cb48c762">usermap</link>.find(userid);
+<anchor xml:id="_statusannounce_8hpp_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_statusannounce_8hpp_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(it&#32;!=&#32;ausm-&gt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1afcb09daf81ca16050c3e2467cb48c762">usermap</link>.end()&#32;&amp;&amp;&#32;(*it).second.sid&#32;==&#32;sid)
+<anchor xml:id="_statusannounce_8hpp_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_statusannounce_8hpp_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Удаление&#32;пользователя&#32;из&#32;карты</emphasis>
+<anchor xml:id="_statusannounce_8hpp_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ausm-&gt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1afcb09daf81ca16050c3e2467cb48c762">usermap</link>.erase(userid);
+<anchor xml:id="_statusannounce_8hpp_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_statusannounce_8hpp_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DEBUG_PRINT(<emphasis role="stringliteral">&quot;gauthd::&#32;user&#32;%d&#32;offline.&#32;online&#32;user&#32;count&#32;is&#32;%d\n&quot;</emphasis>,
+<anchor xml:id="_statusannounce_8hpp_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;userid,&#32;ausm-&gt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1afcb09daf81ca16050c3e2467cb48c762">usermap</link>.size());
+<anchor xml:id="_statusannounce_8hpp_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_statusannounce_8hpp_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_statusannounce_8hpp_source_1l00064"/>00064 &#32;};
+<anchor xml:id="_statusannounce_8hpp_source_1l00065"/>00065 &#32;
+<anchor xml:id="_statusannounce_8hpp_source_1l00066"/>00066 &#32;};&#32;<emphasis role="comment">//&#32;namespace&#32;GNET</emphasis>
+<anchor xml:id="_statusannounce_8hpp_source_1l00067"/>00067 &#32;
+<anchor xml:id="_statusannounce_8hpp_source_1l00068"/>00068 <emphasis role="preprocessor">&#32;#endif&#32;</emphasis><emphasis role="comment">//&#32;__GNET_STATUSANNOUNCE_HPP</emphasis>
+</programlisting></section>

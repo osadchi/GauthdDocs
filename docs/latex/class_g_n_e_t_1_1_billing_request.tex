@@ -1,0 +1,66 @@
+\doxysection{GNET\+::Billing\+Request Class Reference}
+\hypertarget{class_g_n_e_t_1_1_billing_request}{}\label{class_g_n_e_t_1_1_billing_request}\index{GNET::BillingRequest@{GNET::BillingRequest}}
+
+
+Класс для обработки биллинг-\/запросов в системе.  
+
+
+
+
+{\ttfamily \#include $<$billingrequest.\+hpp$>$}
+
+Inheritance diagram for GNET\+::Billing\+Request\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_n_e_t_1_1_billing_request}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_billing_request_afc7983c052f595d356f4b9ae460cab1b}{Process}} (Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)
+\begin{DoxyCompactList}\small\item\em Обрабатывает биллинг-\/запрос. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс для обработки биллинг-\/запросов в системе. 
+
+Наследуется от GNET\+::\+Protocol. Предназначен для управления запросами биллинга, такими как обработка платежей, проверка статуса и т.\+д. Содержит метод Process для обработки данных в контексте менеджера и сессии. 
+
+Definition at line \mbox{\hyperlink{billingrequest_8hpp_source_l00026}{26}} of file \mbox{\hyperlink{billingrequest_8hpp_source}{billingrequest.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_n_e_t_1_1_billing_request_afc7983c052f595d356f4b9ae460cab1b}\index{GNET::BillingRequest@{GNET::BillingRequest}!Process@{Process}}
+\index{Process@{Process}!GNET::BillingRequest@{GNET::BillingRequest}}
+\doxysubsubsection{\texorpdfstring{Process()}{Process()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_billing_request_afc7983c052f595d356f4b9ae460cab1b} 
+void GNET\+::\+Billing\+Request\+::\+Process (\begin{DoxyParamCaption}\item[{Manager \texorpdfstring{$\ast$}{*}}]{manager}{, }\item[{Manager\+::\+Session\+::\+ID}]{sid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Обрабатывает биллинг-\/запрос. 
+
+Метод вызывается для выполнения логики обработки запроса. В текущей реализации требует доработки (см. \begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000011}{Todo}}]).\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em manager} & Указатель на менеджер, управляющий обработкой. \\
+\hline
+{\em sid} & Идентификатор сессии, связанной с запросом. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000012}{Todo}}]Реализовать логику обработки запроса. \end{DoxyRefDesc}
+
+
+Definition at line \mbox{\hyperlink{billingrequest_8hpp_source_l00042}{42}} of file \mbox{\hyperlink{billingrequest_8hpp_source}{billingrequest.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{billingrequest_8hpp}{billingrequest.\+hpp}}\end{DoxyCompactItemize}

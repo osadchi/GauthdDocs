@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_authdversion_8hpp_source" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/authdversion.hpp</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_authdversion_8hpp_source_1l00001"/>00001 
+<anchor xml:id="_authdversion_8hpp_source_1l00008"/>00008 
+<anchor xml:id="_authdversion_8hpp_source_1l00009"/>00009 <emphasis role="preprocessor">&#32;#ifndef&#32;__GNET_AUTHDVERSION_HPP</emphasis>
+<anchor xml:id="_authdversion_8hpp_source_1l00010"/>00010 <emphasis role="preprocessor">&#32;#define&#32;__GNET_AUTHDVERSION_HPP</emphasis>
+<anchor xml:id="_authdversion_8hpp_source_1l00011"/>00011 &#32;
+<anchor xml:id="_authdversion_8hpp_source_1l00012"/>00012 <emphasis role="preprocessor">&#32;#include&#32;&quot;rpcdefs.h&quot;</emphasis>
+<anchor xml:id="_authdversion_8hpp_source_1l00013"/>00013 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_callid_8hxx">callid.hxx</link>&quot;</emphasis>
+<anchor xml:id="_authdversion_8hpp_source_1l00014"/>00014 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_state_8hxx">state.hxx</link>&quot;</emphasis>
+<anchor xml:id="_authdversion_8hpp_source_1l00015"/>00015 &#32;
+<anchor xml:id="_authdversion_8hpp_source_1l00016"/>00016 &#32;<emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_g_n_e_t">GNET</link>
+<anchor xml:id="_authdversion_8hpp_source_1l00017"/>00017 &#32;{
+<anchor xml:id="_authdversion_8hpp_source_1l00018"/>00018 &#32;
+<anchor xml:id="_authdversion_8hpp_source_1l00027"/><link linkend="_class_g_n_e_t_1_1_authd_version">00027</link> &#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_g_n_e_t_1_1_authd_version">AuthdVersion</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;GNET::Protocol
+<anchor xml:id="_authdversion_8hpp_source_1l00028"/>00028 &#32;{
+<anchor xml:id="_authdversion_8hpp_source_1l00029"/>00029 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;#include&#32;&quot;authdversion&quot;</emphasis>&#32;
+<anchor xml:id="_authdversion_8hpp_source_1l00030"/>00030 &#32;
+<anchor xml:id="_authdversion_8hpp_source_1l00031"/>00031 &#32;<emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_authdversion_8hpp_source_1l00040"/><link linkend="_class_g_n_e_t_1_1_authd_version_1a005c37c0e0449e61837bd0a80d3c5f83">00040</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_authd_version_1a005c37c0e0449e61837bd0a80d3c5f83">Process</link>(Manager&#32;*manager,&#32;Manager::Session::ID&#32;sid)
+<anchor xml:id="_authdversion_8hpp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_authdversion_8hpp_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;TODO:&#32;Добавить&#32;реализацию&#32;обработки&#32;версии</emphasis>
+<anchor xml:id="_authdversion_8hpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_authdversion_8hpp_source_1l00044"/>00044 &#32;};
+<anchor xml:id="_authdversion_8hpp_source_1l00045"/>00045 &#32;
+<anchor xml:id="_authdversion_8hpp_source_1l00046"/>00046 &#32;};&#32;<emphasis role="comment">//&#32;namespace&#32;GNET</emphasis>
+<anchor xml:id="_authdversion_8hpp_source_1l00047"/>00047 &#32;
+<anchor xml:id="_authdversion_8hpp_source_1l00048"/>00048 <emphasis role="preprocessor">&#32;#endif&#32;</emphasis><emphasis role="comment">//&#32;__GNET_AUTHDVERSION_HPP</emphasis>
+</programlisting></section>

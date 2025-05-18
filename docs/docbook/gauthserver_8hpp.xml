@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_gauthserver_8hpp" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/gauthserver.hpp File Reference</title>
+<indexterm><primary>D:/pwsrc2.0/docs/gauthd/gauthserver.hpp</primary></indexterm>
+<para>
+
+<para>Заголовочный файл, содержащий определения классов для аутентификации и управления сессиями. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;protocol.h&quot;<?linebreak?></programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_g_n_e_t_1_1_user_info">GNET::UserInfo</link></para>
+
+<para>Структура для хранения информации о пользователе. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_g_auth_server">GNET::GAuthServer</link></para>
+
+<para>Main authentication server class handling sessions and user validation. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_check_timer">GNET::CheckTimer</link></para>
+
+<para>Periodic task manager for financial and security checks. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_g_n_e_t">GNET</link></para>
+
+<para>Основное пространство имен для сетевых компонентов системы. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Заголовочный файл, содержащий определения классов для аутентификации и управления сессиями. </para>
+<para>
+Definition in file <link linkend="_gauthserver_8hpp_source">gauthserver.hpp</link>.</para>
+</section>
+</section>

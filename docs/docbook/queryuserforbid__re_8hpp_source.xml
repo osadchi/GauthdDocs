@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_queryuserforbid__re_8hpp_source" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/queryuserforbid_re.hpp</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_queryuserforbid__re_8hpp_source_1l00001"/>00001 
+<anchor xml:id="_queryuserforbid__re_8hpp_source_1l00008"/>00008 
+<anchor xml:id="_queryuserforbid__re_8hpp_source_1l00009"/>00009 <emphasis role="preprocessor">&#32;#ifndef&#32;__GNET_QUERYUSERFORBID_RE_HPP</emphasis>
+<anchor xml:id="_queryuserforbid__re_8hpp_source_1l00010"/>00010 <emphasis role="preprocessor">&#32;#define&#32;__GNET_QUERYUSERFORBID_RE_HPP</emphasis>
+<anchor xml:id="_queryuserforbid__re_8hpp_source_1l00011"/>00011 &#32;
+<anchor xml:id="_queryuserforbid__re_8hpp_source_1l00012"/>00012 <emphasis role="preprocessor">&#32;#include&#32;&quot;rpcdefs.h&quot;</emphasis>
+<anchor xml:id="_queryuserforbid__re_8hpp_source_1l00013"/>00013 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_callid_8hxx">callid.hxx</link>&quot;</emphasis>
+<anchor xml:id="_queryuserforbid__re_8hpp_source_1l00014"/>00014 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_state_8hxx">state.hxx</link>&quot;</emphasis>
+<anchor xml:id="_queryuserforbid__re_8hpp_source_1l00015"/>00015 &#32;
+<anchor xml:id="_queryuserforbid__re_8hpp_source_1l00016"/>00016 &#32;<emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_g_n_e_t">GNET</link>
+<anchor xml:id="_queryuserforbid__re_8hpp_source_1l00017"/>00017 &#32;{
+<anchor xml:id="_queryuserforbid__re_8hpp_source_1l00018"/>00018 &#32;
+<anchor xml:id="_queryuserforbid__re_8hpp_source_1l00027"/><link linkend="_class_g_n_e_t_1_1_query_user_forbid___re">00027</link> &#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_g_n_e_t_1_1_query_user_forbid___re">QueryUserForbid_Re</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;GNET::Protocol
+<anchor xml:id="_queryuserforbid__re_8hpp_source_1l00028"/>00028 &#32;{
+<anchor xml:id="_queryuserforbid__re_8hpp_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Включение&#32;автоматически&#32;сгенерированных&#32;полей&#32;протокола</emphasis>
+<anchor xml:id="_queryuserforbid__re_8hpp_source_1l00030"/>00030 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;#include&#32;&quot;queryuserforbid_re&quot;</emphasis>
+<anchor xml:id="_queryuserforbid__re_8hpp_source_1l00031"/>00031 &#32;
+<anchor xml:id="_queryuserforbid__re_8hpp_source_1l00032"/>00032 &#32;<emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_queryuserforbid__re_8hpp_source_1l00041"/><link linkend="_class_g_n_e_t_1_1_query_user_forbid___re_1a18986c6cce039cf24ecbd72c4acfcd76">00041</link> &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_query_user_forbid___re_1a18986c6cce039cf24ecbd72c4acfcd76">Process</link>(Manager&#32;*manager,&#32;Manager::Session::ID&#32;sid)
+<anchor xml:id="_queryuserforbid__re_8hpp_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_queryuserforbid__re_8hpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;TODO:&#32;Реализовать&#32;обработку&#32;ответа</emphasis>
+<anchor xml:id="_queryuserforbid__re_8hpp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Пример&#32;возможной&#32;логики:</emphasis>
+<anchor xml:id="_queryuserforbid__re_8hpp_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;-&#32;Анализ&#32;кода&#32;ответа</emphasis>
+<anchor xml:id="_queryuserforbid__re_8hpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;-&#32;Обновление&#32;статуса&#32;пользователя</emphasis>
+<anchor xml:id="_queryuserforbid__re_8hpp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;-&#32;Уведомление&#32;соответствующих&#32;модулей</emphasis>
+<anchor xml:id="_queryuserforbid__re_8hpp_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_queryuserforbid__re_8hpp_source_1l00049"/>00049 &#32;};
+<anchor xml:id="_queryuserforbid__re_8hpp_source_1l00050"/>00050 &#32;
+<anchor xml:id="_queryuserforbid__re_8hpp_source_1l00051"/>00051 &#32;};
+<anchor xml:id="_queryuserforbid__re_8hpp_source_1l00052"/>00052 &#32;
+<anchor xml:id="_queryuserforbid__re_8hpp_source_1l00053"/>00053 <emphasis role="preprocessor">&#32;#endif&#32;</emphasis><emphasis role="comment">//&#32;__GNET_QUERYUSERFORBID_RE_HPP</emphasis>
+</programlisting></section>

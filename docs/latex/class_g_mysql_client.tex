@@ -1,0 +1,1128 @@
+\doxysection{GMysql\+Client Class Reference}
+\hypertarget{class_g_mysql_client}{}\label{class_g_mysql_client}\index{GMysqlClient@{GMysqlClient}}
+
+
+Основной класс для работы с My\+SQL базой данных  
+
+
+
+
+{\ttfamily \#include $<$gmysqlclient.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_g_mysql_client_a129ff21e968ae3c1218dd01ff10f9b09}{Init}} (const char \texorpdfstring{$\ast$}{*}ip, const int port, const char \texorpdfstring{$\ast$}{*}user, const char \texorpdfstring{$\ast$}{*}passwd, const char \texorpdfstring{$\ast$}{*}db, const int h)
+\begin{DoxyCompactList}\small\item\em Инициализация параметров подключения \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_mysql_client_a14143f486913e7d3edff46e7458697cb}{Alex\+Patch}} (const bool lkmod, const bool log, const char \texorpdfstring{$\ast$}{*}shell)
+\begin{DoxyCompactList}\small\item\em Дополнительные настройки \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_g_mysql_client_a4e2c4854287bb8ffdcd12081f46e866a}{Connect}} ()
+\begin{DoxyCompactList}\small\item\em Установить соединение с БД \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_mysql_client_a50dd2028ef5a6c498a7784a014606fb8}{Disconnect}} ()
+\begin{DoxyCompactList}\small\item\em Разорвать соединение с БД \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_g_mysql_client_a50e93bdf74da424077e864ba8bbfe42c}{Is\+Active}} ()
+\begin{DoxyCompactList}\small\item\em Проверить активность соединения \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_g_mysql_client_a623a50fa9c2dbe90519ac099bfa492f0}{Get\+Aid}} ()
+\begin{DoxyCompactList}\small\item\em Получить ID приложения \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_g_mysql_client_acb10864e5152be98cb60ca379e5401bc}{Get\+Zoneid}} ()
+\begin{DoxyCompactList}\small\item\em Получить ID зоны \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_g_mysql_client_a1be593d128e947bbb05fdee22e9c2a89}{Mysql\+Query}} (char \texorpdfstring{$\ast$}{*}ptr, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Выполнить SQL запрос \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_g_mysql_client_a315b9d03daf23fd3ccf9089290e155b7}{Delete\+Error\+Row}} (int status, int uid, char \texorpdfstring{$\ast$}{*}creatime)
+\begin{DoxyCompactList}\small\item\em Удаление ошибочных записей из таблицы usecashnow. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_g_mysql_client_ae74167391b7e749c390203ea4f0ec5e5}{Matrix\+Passwd}} (int \&uid, char \texorpdfstring{$\ast$}{*}login, char \texorpdfstring{$\ast$}{*}passwd, int ipaddr)
+\begin{DoxyCompactList}\small\item\em Проверка учетных данных пользователя. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_g_mysql_client_a35fa8409b064722f23afb762910f1365}{Clear\+Online\+Record}} (char zoneid, char aid)
+\begin{DoxyCompactList}\small\item\em Очистка онлайн-\/записей для указанной зоны и аккаунта \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_g_mysql_client_a7c6a4b72d981e0c88568e453221dd06a}{Online\+Record}} (int uid, char aid, char \&zoneid, int \&zonelocalid, int \&overwrite)
+\begin{DoxyCompactList}\small\item\em Запись информации о входе пользователя в онлайн \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_g_mysql_client_a524bc45740cb01aabdbf2b012407925f}{Onffline\+Record}} (int uid, char aid, char \&zoneid, int \&zonelocalid, int \&overwrite)
+\begin{DoxyCompactList}\small\item\em Запись информации о выходе пользователя из онлайн \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_g_mysql_client_ac581c4885d0cd84f507760d32177b4f3}{User\+Creatime}} (int uid, int \&timestamp)
+\begin{DoxyCompactList}\small\item\em Получение времени создания пользователя в UNIX-\/формате \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_g_mysql_client_a916a21bf80a3b7aaaebaebf1855a429b}{User\+GMPrivilege}} (int uid, char zoneid, bool \&Is\+GM)
+\begin{DoxyCompactList}\small\item\em Получение времени создания пользователя в UNIX-\/формате \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_g_mysql_client_aee26570bd0c44f31da836916cf77ec23}{Query\+GMPrivilege}} (int uid, char zoneid, unsigned char \texorpdfstring{$\ast$}{*}gm\+\_\+auth, int \&count)
+\begin{DoxyCompactList}\small\item\em Получение списка GM-\/привилегий пользователя \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_g_mysql_client_a196ae8753a336df2cfcbea330f1a1e13}{Get\+Use\+Cash\+Now}} (int status, int \&count)
+\begin{DoxyCompactList}\small\item\em Получение записей usecashnow по статусу \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_g_mysql_client_a5ad2854f8238ad2008cf0358adf9325b}{Set\+Use\+Cash\+Now}} (int status, int sn, int userid, char \texorpdfstring{$\ast$}{*}creatime)
+\begin{DoxyCompactList}\small\item\em Обновление статуса записи в usecashnow. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_g_mysql_client_a0260ea3e3b3ba9b0e289a7b97bc4fd67}{Del\+Use\+Cash\+Now}} (int status, int uid, int sn)
+\begin{DoxyCompactList}\small\item\em Удаление записи из usecashnow. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_g_mysql_client_a0cba2ae6714706fa26b2b39f91c34665}{Add\+Cash\+Log}} (int uid, int zoneid, int sn, int aid, int point, int cash, int status, char \texorpdfstring{$\ast$}{*}creatime)
+\begin{DoxyCompactList}\small\item\em Добавление записи в лог операций с наличностью \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_g_mysql_client_a8875011e1658a40cefc82eac737bba58}{Alex\+Add\+Login}} (int uid, int action)
+\begin{DoxyCompactList}\small\item\em Логирование действия входа/выхода (специальный функционал) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_g_mysql_client_a3e52c51fa1af93cb93da4547f877dba6}{Alex\+Shell}} (int uid)
+\begin{DoxyCompactList}\small\item\em Выполнение shell-\/команды при выходе пользователя \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_g_mysql_client_ab7ff1536bda77626eaecf55da93aab92}{Get\+User}} (int userid)
+\begin{DoxyCompactList}\small\item\em Найти пользователя по ID. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_g_mysql_client_af95566b524271d47c9e9baddb7efda4a}{Del\+User}} (int userid)
+\begin{DoxyCompactList}\small\item\em Удалить пользователя из онлайн-\/списка \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_g_mysql_client_abdc4799af3e56eb878e0595b1d54b8fa}{Add\+User}} (int userid, int zoneid, char \texorpdfstring{$\ast$}{*}login, int ipaddr)
+\begin{DoxyCompactList}\small\item\em Добавить пользователя в онлайн-\/список \end{DoxyCompactList}\item 
+ONLINE\+\_\+\+USER \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_g_mysql_client_a197d13b53a9987edf047df74c8d73a2e}{Get\+User\+Data}} (int userid)
+\begin{DoxyCompactList}\small\item\em Получить данные пользователя \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_g_mysql_client_a4379c3f714045e1afd240d3e006ef34e}{Clear\+Cash}} ()
+\item 
+int \mbox{\hyperlink{class_g_mysql_client_a9da8bc562d0fd8440935df068aa50922}{Get\+Cash\+Size}} ()
+\item 
+void \mbox{\hyperlink{class_g_mysql_client_a01a8870566416cb8446699c93cd1557b}{Del\+Cash\+User}} (int idx)
+\item 
+void \mbox{\hyperlink{class_g_mysql_client_ac4379ab9d87013d1578a381558e9cdae}{Add\+Cash\+User}} (int userid, int zoneid, int sn, int point, int cash, char \texorpdfstring{$\ast$}{*}creatime)
+\item 
+int \mbox{\hyperlink{class_g_mysql_client_ad4ac431eba947493223affceccff7990}{Get\+Cash\+User}} (int userid)
+\item 
+void \mbox{\hyperlink{class_g_mysql_client_a56c16b331659609464396e2b1cf85d0f}{Get\+All\+Cash\+User}} (int idx, int \&userid, int \&zoneid)
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_g_mysql_client_afa65eb70f3df9ead6d515aa084f3f415}{Get\+Cash\+Crea\+Time}} (int idx)
+\item 
+int \mbox{\hyperlink{class_g_mysql_client_aca8d88358cbbd6033e81272381cb0911}{Get\+Cash\+Cash}} (int idx)
+\item 
+int \mbox{\hyperlink{class_g_mysql_client_a872aead647ae16442ef1ded0cfab4710}{Get\+Cash\+Point}} (int idx)
+\item 
+void \mbox{\hyperlink{class_g_mysql_client_ac6af30f08fc5c7f21a54fe66848308d1}{Clear\+Antibrut\+User}} ()
+\item 
+int \mbox{\hyperlink{class_g_mysql_client_aae78133acca23894a428d104cd582168}{Size\+Antibrut\+User}} ()
+\item 
+int \mbox{\hyperlink{class_g_mysql_client_a9d2cce01742a63ed739c4c3cbe233296}{Get\+Antibrut\+User}} (int ip)
+\item 
+int \mbox{\hyperlink{class_g_mysql_client_a8867d598bb11fca0045a206ab04c04c9}{Del\+Antibrut\+User}} (int ip)
+\item 
+int \mbox{\hyperlink{class_g_mysql_client_abe6e61839f3cca64f864f4a9078b0ba5}{Add\+Antibrut\+User}} (int ip)
+\item 
+int \mbox{\hyperlink{class_g_mysql_client_a8b60b7430a3413aeae8f36df7bbf7f57}{ATOI}} (const char \texorpdfstring{$\ast$}{*}ptr)
+\item 
+void \mbox{\hyperlink{class_g_mysql_client_af14249f643329398179702dd82f867fc}{Auth0x\+MD5}} (char \texorpdfstring{$\ast$}{*}out, char \texorpdfstring{$\ast$}{*}in)
+\item 
+void \mbox{\hyperlink{class_g_mysql_client_a98b602a010fc50254381bcc3ad35d74b}{Auth\+Base64}} (char \texorpdfstring{$\ast$}{*}passwd, char \texorpdfstring{$\ast$}{*}auth)
+\item 
+bool \mbox{\hyperlink{class_g_mysql_client_a4d62a501b69e922fae0c53fcc6342169}{Auth\+Passwd}} (char \texorpdfstring{$\ast$}{*}passwd, char \texorpdfstring{$\ast$}{*}auth)
+\begin{DoxyCompactList}\small\item\em Преобразование аутентификационных данных \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_g_mysql_client_a477a9db403d718b8ea1fb2f3e8ba2561}{Valid\+Login}} (char \texorpdfstring{$\ast$}{*}login, int size)
+\begin{DoxyCompactList}\small\item\em Проверка валидности логина \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_mysql_client_a2c15bbf59d3fb1b73005ad07a8dba455}{Addr\+To\+Str}} (unsigned int ip, char \texorpdfstring{$\ast$}{*}address)
+\begin{DoxyCompactList}\small\item\em Преобразование IP адреса в строку \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_g_mysql_client}{GMysql\+Client}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_g_mysql_client_a87a90c9a2b827da79f451728f4109850}{Get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Получить экземпляр класса (Singleton) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_g_mysql_client}{GMysql\+Client}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_g_mysql_client_a4d84ec5f99dcdeb604a4c2a7b34e23bf}{instance}} = NULL
+\begin{DoxyCompactList}\small\item\em Единственный экземпляр класса \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Основной класс для работы с My\+SQL базой данных 
+
+\begin{DoxyWarning}{Warning}
+Реализован как Singleton. Использовать через \doxylink{class_g_mysql_client_a87a90c9a2b827da79f451728f4109850}{Get\+Instance()} 
+\end{DoxyWarning}
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8hpp_source_l00026}{26}} of file \mbox{\hyperlink{gmysqlclient_8hpp_source}{gmysqlclient.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_mysql_client_abe6e61839f3cca64f864f4a9078b0ba5}\index{GMysqlClient@{GMysqlClient}!AddAntibrutUser@{AddAntibrutUser}}
+\index{AddAntibrutUser@{AddAntibrutUser}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{AddAntibrutUser()}{AddAntibrutUser()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_abe6e61839f3cca64f864f4a9078b0ba5} 
+int GMysql\+Client\+::\+Add\+Antibrut\+User (\begin{DoxyParamCaption}\item[{int}]{ip}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8hpp_source_l00374}{374}} of file \mbox{\hyperlink{gmysqlclient_8hpp_source}{gmysqlclient.\+hpp}}.
+
+\Hypertarget{class_g_mysql_client_a0cba2ae6714706fa26b2b39f91c34665}\index{GMysqlClient@{GMysqlClient}!AddCashLog@{AddCashLog}}
+\index{AddCashLog@{AddCashLog}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{AddCashLog()}{AddCashLog()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a0cba2ae6714706fa26b2b39f91c34665} 
+bool GMysql\+Client\+::\+Add\+Cash\+Log (\begin{DoxyParamCaption}\item[{int}]{uid}{, }\item[{int}]{zoneid}{, }\item[{int}]{sn}{, }\item[{int}]{aid}{, }\item[{int}]{point}{, }\item[{int}]{cash}{, }\item[{int}]{status}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{creatime}{}\end{DoxyParamCaption})}
+
+
+
+Добавление записи в лог операций с наличностью 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uid} & Идентификатор пользователя \\
+\hline
+\mbox{\texttt{ in}}  & {\em zoneid} & Идентификатор зоны \\
+\hline
+\mbox{\texttt{ in}}  & {\em sn} & Серийный номер операции \\
+\hline
+\mbox{\texttt{ in}}  & {\em aid} & Идентификатор аккаунта \\
+\hline
+\mbox{\texttt{ in}}  & {\em point} & Количество баллов \\
+\hline
+\mbox{\texttt{ in}}  & {\em cash} & Сумма денег \\
+\hline
+\mbox{\texttt{ in}}  & {\em status} & Статус операции \\
+\hline
+\mbox{\texttt{ in}}  & {\em creatime} & Время создания записи \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ запись успешна, false -\/ ошибка выполнения 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Использует REPLACE INTO для обновления существующих записей 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8cpp_source_l00451}{451}} of file \mbox{\hyperlink{gmysqlclient_8cpp_source}{gmysqlclient.\+cpp}}.
+
+\Hypertarget{class_g_mysql_client_ac4379ab9d87013d1578a381558e9cdae}\index{GMysqlClient@{GMysqlClient}!AddCashUser@{AddCashUser}}
+\index{AddCashUser@{AddCashUser}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{AddCashUser()}{AddCashUser()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_ac4379ab9d87013d1578a381558e9cdae} 
+void GMysql\+Client\+::\+Add\+Cash\+User (\begin{DoxyParamCaption}\item[{int}]{userid}{, }\item[{int}]{zoneid}{, }\item[{int}]{sn}{, }\item[{int}]{point}{, }\item[{int}]{cash}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{creatime}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8hpp_source_l00278}{278}} of file \mbox{\hyperlink{gmysqlclient_8hpp_source}{gmysqlclient.\+hpp}}.
+
+\Hypertarget{class_g_mysql_client_a2c15bbf59d3fb1b73005ad07a8dba455}\index{GMysqlClient@{GMysqlClient}!AddrToStr@{AddrToStr}}
+\index{AddrToStr@{AddrToStr}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{AddrToStr()}{AddrToStr()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a2c15bbf59d3fb1b73005ad07a8dba455} 
+void GMysql\+Client\+::\+Addr\+To\+Str (\begin{DoxyParamCaption}\item[{unsigned int}]{ip}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{address}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Преобразование IP адреса в строку 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ip} & Адрес в сетевом порядке байт \\
+\hline
+{\em address} & Буфер для результата (минимум 16 байт) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8hpp_source_l00467}{467}} of file \mbox{\hyperlink{gmysqlclient_8hpp_source}{gmysqlclient.\+hpp}}.
+
+\Hypertarget{class_g_mysql_client_abdc4799af3e56eb878e0595b1d54b8fa}\index{GMysqlClient@{GMysqlClient}!AddUser@{AddUser}}
+\index{AddUser@{AddUser}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{AddUser()}{AddUser()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_abdc4799af3e56eb878e0595b1d54b8fa} 
+int GMysql\+Client\+::\+Add\+User (\begin{DoxyParamCaption}\item[{int}]{userid}{, }\item[{int}]{zoneid}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{login}{, }\item[{int}]{ipaddr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Добавить пользователя в онлайн-\/список 
+
+
+\begin{DoxyParams}{Parameters}
+{\em userid} & ID пользователя \\
+\hline
+{\em zoneid} & ID зоны \\
+\hline
+{\em login} & Логин \\
+\hline
+{\em ipaddr} & IP адрес \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Индекс добавленного пользователя 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8hpp_source_l00229}{229}} of file \mbox{\hyperlink{gmysqlclient_8hpp_source}{gmysqlclient.\+hpp}}.
+
+\Hypertarget{class_g_mysql_client_a8875011e1658a40cefc82eac737bba58}\index{GMysqlClient@{GMysqlClient}!AlexAddLogin@{AlexAddLogin}}
+\index{AlexAddLogin@{AlexAddLogin}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{AlexAddLogin()}{AlexAddLogin()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a8875011e1658a40cefc82eac737bba58} 
+bool GMysql\+Client\+::\+Alex\+Add\+Login (\begin{DoxyParamCaption}\item[{int}]{uid}{, }\item[{int}]{action}{}\end{DoxyParamCaption})}
+
+
+
+Логирование действия входа/выхода (специальный функционал) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uid} & Идентификатор пользователя \\
+\hline
+\mbox{\texttt{ in}}  & {\em action} & Тип действия (1 -\/ вход, 0 -\/ выход) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ запись успешна, false -\/ отключен функционал или ошибка 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Требует активации lkmod и loginlog через Alex\+Patch 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8cpp_source_l00467}{467}} of file \mbox{\hyperlink{gmysqlclient_8cpp_source}{gmysqlclient.\+cpp}}.
+
+\Hypertarget{class_g_mysql_client_a14143f486913e7d3edff46e7458697cb}\index{GMysqlClient@{GMysqlClient}!AlexPatch@{AlexPatch}}
+\index{AlexPatch@{AlexPatch}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{AlexPatch()}{AlexPatch()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a14143f486913e7d3edff46e7458697cb} 
+void GMysql\+Client\+::\+Alex\+Patch (\begin{DoxyParamCaption}\item[{const bool}]{lkmod}{, }\item[{const bool}]{log}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{shell}{}\end{DoxyParamCaption})}
+
+
+
+Дополнительные настройки 
+
+Активация специального режима работы (патч Алекса).
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em lkmod} & Режим блокировки \\
+\hline
+ & {\em log} & Флаг логирования \\
+\hline
+ & {\em shell} & Команда для выполнения при выходе\\
+\hline
+\mbox{\texttt{ in}}  & {\em lkmod} & Флаг активации модификации \\
+\hline
+\mbox{\texttt{ in}}  & {\em log} & Флаг логирования входа \\
+\hline
+\mbox{\texttt{ in}}  & {\em shell} & Шаблон команды для выполнения при выходе \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Команда выполняется через system(), необходима валидация входных данных! 
+\end{DoxyWarning}
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8cpp_source_l00077}{77}} of file \mbox{\hyperlink{gmysqlclient_8cpp_source}{gmysqlclient.\+cpp}}.
+
+\Hypertarget{class_g_mysql_client_a3e52c51fa1af93cb93da4547f877dba6}\index{GMysqlClient@{GMysqlClient}!AlexShell@{AlexShell}}
+\index{AlexShell@{AlexShell}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{AlexShell()}{AlexShell()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a3e52c51fa1af93cb93da4547f877dba6} 
+bool GMysql\+Client\+::\+Alex\+Shell (\begin{DoxyParamCaption}\item[{int}]{uid}{}\end{DoxyParamCaption})}
+
+
+
+Выполнение shell-\/команды при выходе пользователя 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uid} & Идентификатор пользователя \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ команда выполнена, false -\/ функционал отключен 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+Выполняет произвольные команды из logoutshell! Риск SQL-\/инъекций! 
+\end{DoxyWarning}
+\begin{DoxyNote}{Note}
+Формат команды\+: printf-\/шаблон с одним параметром (uid) 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8cpp_source_l00489}{489}} of file \mbox{\hyperlink{gmysqlclient_8cpp_source}{gmysqlclient.\+cpp}}.
+
+\Hypertarget{class_g_mysql_client_a8b60b7430a3413aeae8f36df7bbf7f57}\index{GMysqlClient@{GMysqlClient}!ATOI@{ATOI}}
+\index{ATOI@{ATOI}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{ATOI()}{ATOI()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a8b60b7430a3413aeae8f36df7bbf7f57} 
+int GMysql\+Client\+::\+ATOI (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{ptr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8hpp_source_l00388}{388}} of file \mbox{\hyperlink{gmysqlclient_8hpp_source}{gmysqlclient.\+hpp}}.
+
+\Hypertarget{class_g_mysql_client_af14249f643329398179702dd82f867fc}\index{GMysqlClient@{GMysqlClient}!Auth0xMD5@{Auth0xMD5}}
+\index{Auth0xMD5@{Auth0xMD5}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{Auth0xMD5()}{Auth0xMD5()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_af14249f643329398179702dd82f867fc} 
+void GMysql\+Client\+::\+Auth0x\+MD5 (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{out}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{in}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8hpp_source_l00395}{395}} of file \mbox{\hyperlink{gmysqlclient_8hpp_source}{gmysqlclient.\+hpp}}.
+
+\Hypertarget{class_g_mysql_client_a98b602a010fc50254381bcc3ad35d74b}\index{GMysqlClient@{GMysqlClient}!AuthBase64@{AuthBase64}}
+\index{AuthBase64@{AuthBase64}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{AuthBase64()}{AuthBase64()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a98b602a010fc50254381bcc3ad35d74b} 
+void GMysql\+Client\+::\+Auth\+Base64 (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{passwd}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{auth}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8hpp_source_l00406}{406}} of file \mbox{\hyperlink{gmysqlclient_8hpp_source}{gmysqlclient.\+hpp}}.
+
+\Hypertarget{class_g_mysql_client_a4d62a501b69e922fae0c53fcc6342169}\index{GMysqlClient@{GMysqlClient}!AuthPasswd@{AuthPasswd}}
+\index{AuthPasswd@{AuthPasswd}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{AuthPasswd()}{AuthPasswd()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a4d62a501b69e922fae0c53fcc6342169} 
+bool GMysql\+Client\+::\+Auth\+Passwd (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{passwd}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{auth}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Преобразование аутентификационных данных 
+
+
+\begin{DoxyParams}{Parameters}
+{\em passwd} & Выходной буфер для пароля (16 байт) \\
+\hline
+{\em auth} & Входные аутентификационные данные \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true если преобразование успешно 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Поддерживаемые типы хешей\+: 1 -\/ бинарный формат 2 -\/ 0x\+MD5 (hex строка с префиксом 0x) 3 -\/ base64 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8hpp_source_l00425}{425}} of file \mbox{\hyperlink{gmysqlclient_8hpp_source}{gmysqlclient.\+hpp}}.
+
+\Hypertarget{class_g_mysql_client_ac6af30f08fc5c7f21a54fe66848308d1}\index{GMysqlClient@{GMysqlClient}!ClearAntibrutUser@{ClearAntibrutUser}}
+\index{ClearAntibrutUser@{ClearAntibrutUser}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{ClearAntibrutUser()}{ClearAntibrutUser()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_ac6af30f08fc5c7f21a54fe66848308d1} 
+void GMysql\+Client\+::\+Clear\+Antibrut\+User (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8hpp_source_l00338}{338}} of file \mbox{\hyperlink{gmysqlclient_8hpp_source}{gmysqlclient.\+hpp}}.
+
+\Hypertarget{class_g_mysql_client_a4379c3f714045e1afd240d3e006ef34e}\index{GMysqlClient@{GMysqlClient}!ClearCash@{ClearCash}}
+\index{ClearCash@{ClearCash}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{ClearCash()}{ClearCash()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a4379c3f714045e1afd240d3e006ef34e} 
+int GMysql\+Client\+::\+Clear\+Cash (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8hpp_source_l00252}{252}} of file \mbox{\hyperlink{gmysqlclient_8hpp_source}{gmysqlclient.\+hpp}}.
+
+\Hypertarget{class_g_mysql_client_a35fa8409b064722f23afb762910f1365}\index{GMysqlClient@{GMysqlClient}!ClearOnlineRecord@{ClearOnlineRecord}}
+\index{ClearOnlineRecord@{ClearOnlineRecord}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{ClearOnlineRecord()}{ClearOnlineRecord()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a35fa8409b064722f23afb762910f1365} 
+bool GMysql\+Client\+::\+Clear\+Online\+Record (\begin{DoxyParamCaption}\item[{char}]{zoneid}{, }\item[{char}]{aid}{}\end{DoxyParamCaption})}
+
+
+
+Очистка онлайн-\/записей для указанной зоны и аккаунта 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em zoneid} & Идентификатор зоны \\
+\hline
+\mbox{\texttt{ in}}  & {\em aid} & Идентификатор аккаунта \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ операция успешна, false -\/ ошибка выполнения 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Устанавливает mysql\+\_\+state = 2 перед выполнением операции 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+Требует предварительной установки соединения с БД 
+\end{DoxyWarning}
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8cpp_source_l00197}{197}} of file \mbox{\hyperlink{gmysqlclient_8cpp_source}{gmysqlclient.\+cpp}}.
+
+\Hypertarget{class_g_mysql_client_a4e2c4854287bb8ffdcd12081f46e866a}\index{GMysqlClient@{GMysqlClient}!Connect@{Connect}}
+\index{Connect@{Connect}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{Connect()}{Connect()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a4e2c4854287bb8ffdcd12081f46e866a} 
+bool GMysql\+Client\+::\+Connect (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Установить соединение с БД 
+
+Установка соединения с базой данных.
+
+\begin{DoxyReturn}{Returns}
+true -\/ подключение успешно, false -\/ ошибка подключения 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Выводит сообщение о статусе подключения в консоль. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8cpp_source_l00092}{92}} of file \mbox{\hyperlink{gmysqlclient_8cpp_source}{gmysqlclient.\+cpp}}.
+
+\Hypertarget{class_g_mysql_client_a8867d598bb11fca0045a206ab04c04c9}\index{GMysqlClient@{GMysqlClient}!DelAntibrutUser@{DelAntibrutUser}}
+\index{DelAntibrutUser@{DelAntibrutUser}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{DelAntibrutUser()}{DelAntibrutUser()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a8867d598bb11fca0045a206ab04c04c9} 
+int GMysql\+Client\+::\+Del\+Antibrut\+User (\begin{DoxyParamCaption}\item[{int}]{ip}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8hpp_source_l00364}{364}} of file \mbox{\hyperlink{gmysqlclient_8hpp_source}{gmysqlclient.\+hpp}}.
+
+\Hypertarget{class_g_mysql_client_a01a8870566416cb8446699c93cd1557b}\index{GMysqlClient@{GMysqlClient}!DelCashUser@{DelCashUser}}
+\index{DelCashUser@{DelCashUser}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{DelCashUser()}{DelCashUser()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a01a8870566416cb8446699c93cd1557b} 
+void GMysql\+Client\+::\+Del\+Cash\+User (\begin{DoxyParamCaption}\item[{int}]{idx}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8hpp_source_l00268}{268}} of file \mbox{\hyperlink{gmysqlclient_8hpp_source}{gmysqlclient.\+hpp}}.
+
+\Hypertarget{class_g_mysql_client_a315b9d03daf23fd3ccf9089290e155b7}\index{GMysqlClient@{GMysqlClient}!DeleteErrorRow@{DeleteErrorRow}}
+\index{DeleteErrorRow@{DeleteErrorRow}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{DeleteErrorRow()}{DeleteErrorRow()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a315b9d03daf23fd3ccf9089290e155b7} 
+bool GMysql\+Client\+::\+Delete\+Error\+Row (\begin{DoxyParamCaption}\item[{int}]{status}{, }\item[{int}]{uid}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{creatime}{}\end{DoxyParamCaption})}
+
+
+
+Удаление ошибочных записей из таблицы usecashnow. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em status} & Статус записи для удаления \\
+\hline
+\mbox{\texttt{ in}}  & {\em uid} & Идентификатор пользователя \\
+\hline
+\mbox{\texttt{ in}}  & {\em creatime} & Время создания записи \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ удаление успешно, false -\/ ошибка выполнения 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+Не выполняет проверку формата параметра creatime 
+\end{DoxyWarning}
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8cpp_source_l00362}{362}} of file \mbox{\hyperlink{gmysqlclient_8cpp_source}{gmysqlclient.\+cpp}}.
+
+\Hypertarget{class_g_mysql_client_a0260ea3e3b3ba9b0e289a7b97bc4fd67}\index{GMysqlClient@{GMysqlClient}!DelUseCashNow@{DelUseCashNow}}
+\index{DelUseCashNow@{DelUseCashNow}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{DelUseCashNow()}{DelUseCashNow()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a0260ea3e3b3ba9b0e289a7b97bc4fd67} 
+bool GMysql\+Client\+::\+Del\+Use\+Cash\+Now (\begin{DoxyParamCaption}\item[{int}]{status}{, }\item[{int}]{uid}{, }\item[{int}]{sn}{}\end{DoxyParamCaption})}
+
+
+
+Удаление записи из usecashnow. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em status} & Статус записи \\
+\hline
+\mbox{\texttt{ in}}  & {\em uid} & Идентификатор пользователя \\
+\hline
+\mbox{\texttt{ in}}  & {\em sn} & Серийный номер операции \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ удаление успешно, false -\/ ошибка выполнения 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8cpp_source_l00429}{429}} of file \mbox{\hyperlink{gmysqlclient_8cpp_source}{gmysqlclient.\+cpp}}.
+
+\Hypertarget{class_g_mysql_client_af95566b524271d47c9e9baddb7efda4a}\index{GMysqlClient@{GMysqlClient}!DelUser@{DelUser}}
+\index{DelUser@{DelUser}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{DelUser()}{DelUser()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_af95566b524271d47c9e9baddb7efda4a} 
+int GMysql\+Client\+::\+Del\+User (\begin{DoxyParamCaption}\item[{int}]{userid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Удалить пользователя из онлайн-\/списка 
+
+
+\begin{DoxyParams}{Parameters}
+{\em userid} & ID пользователя \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Индекс удаленного элемента или -\/1 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8hpp_source_l00211}{211}} of file \mbox{\hyperlink{gmysqlclient_8hpp_source}{gmysqlclient.\+hpp}}.
+
+\Hypertarget{class_g_mysql_client_a50dd2028ef5a6c498a7784a014606fb8}\index{GMysqlClient@{GMysqlClient}!Disconnect@{Disconnect}}
+\index{Disconnect@{Disconnect}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{Disconnect()}{Disconnect()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a50dd2028ef5a6c498a7784a014606fb8} 
+void GMysql\+Client\+::\+Disconnect (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Разорвать соединение с БД 
+
+Разрыв соединения с базой данных.
+
+\begin{DoxyNote}{Note}
+Автоматически вызывается при разрушении объекта. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8cpp_source_l00119}{119}} of file \mbox{\hyperlink{gmysqlclient_8cpp_source}{gmysqlclient.\+cpp}}.
+
+\Hypertarget{class_g_mysql_client_a623a50fa9c2dbe90519ac099bfa492f0}\index{GMysqlClient@{GMysqlClient}!GetAid@{GetAid}}
+\index{GetAid@{GetAid}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{GetAid()}{GetAid()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a623a50fa9c2dbe90519ac099bfa492f0} 
+char GMysql\+Client\+::\+Get\+Aid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Получить ID приложения 
+
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8hpp_source_l00164}{164}} of file \mbox{\hyperlink{gmysqlclient_8hpp_source}{gmysqlclient.\+hpp}}.
+
+\Hypertarget{class_g_mysql_client_a56c16b331659609464396e2b1cf85d0f}\index{GMysqlClient@{GMysqlClient}!GetAllCashUser@{GetAllCashUser}}
+\index{GetAllCashUser@{GetAllCashUser}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{GetAllCashUser()}{GetAllCashUser()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a56c16b331659609464396e2b1cf85d0f} 
+void GMysql\+Client\+::\+Get\+All\+Cash\+User (\begin{DoxyParamCaption}\item[{int}]{idx}{, }\item[{int \&}]{userid}{, }\item[{int \&}]{zoneid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8hpp_source_l00296}{296}} of file \mbox{\hyperlink{gmysqlclient_8hpp_source}{gmysqlclient.\+hpp}}.
+
+\Hypertarget{class_g_mysql_client_a9d2cce01742a63ed739c4c3cbe233296}\index{GMysqlClient@{GMysqlClient}!GetAntibrutUser@{GetAntibrutUser}}
+\index{GetAntibrutUser@{GetAntibrutUser}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{GetAntibrutUser()}{GetAntibrutUser()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a9d2cce01742a63ed739c4c3cbe233296} 
+int GMysql\+Client\+::\+Get\+Antibrut\+User (\begin{DoxyParamCaption}\item[{int}]{ip}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8hpp_source_l00354}{354}} of file \mbox{\hyperlink{gmysqlclient_8hpp_source}{gmysqlclient.\+hpp}}.
+
+\Hypertarget{class_g_mysql_client_aca8d88358cbbd6033e81272381cb0911}\index{GMysqlClient@{GMysqlClient}!GetCashCash@{GetCashCash}}
+\index{GetCashCash@{GetCashCash}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{GetCashCash()}{GetCashCash()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_aca8d88358cbbd6033e81272381cb0911} 
+int GMysql\+Client\+::\+Get\+Cash\+Cash (\begin{DoxyParamCaption}\item[{int}]{idx}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8hpp_source_l00317}{317}} of file \mbox{\hyperlink{gmysqlclient_8hpp_source}{gmysqlclient.\+hpp}}.
+
+\Hypertarget{class_g_mysql_client_afa65eb70f3df9ead6d515aa084f3f415}\index{GMysqlClient@{GMysqlClient}!GetCashCreaTime@{GetCashCreaTime}}
+\index{GetCashCreaTime@{GetCashCreaTime}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{GetCashCreaTime()}{GetCashCreaTime()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_afa65eb70f3df9ead6d515aa084f3f415} 
+char \texorpdfstring{$\ast$}{*} GMysql\+Client\+::\+Get\+Cash\+Crea\+Time (\begin{DoxyParamCaption}\item[{int}]{idx}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8hpp_source_l00307}{307}} of file \mbox{\hyperlink{gmysqlclient_8hpp_source}{gmysqlclient.\+hpp}}.
+
+\Hypertarget{class_g_mysql_client_a872aead647ae16442ef1ded0cfab4710}\index{GMysqlClient@{GMysqlClient}!GetCashPoint@{GetCashPoint}}
+\index{GetCashPoint@{GetCashPoint}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{GetCashPoint()}{GetCashPoint()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a872aead647ae16442ef1ded0cfab4710} 
+int GMysql\+Client\+::\+Get\+Cash\+Point (\begin{DoxyParamCaption}\item[{int}]{idx}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8hpp_source_l00327}{327}} of file \mbox{\hyperlink{gmysqlclient_8hpp_source}{gmysqlclient.\+hpp}}.
+
+\Hypertarget{class_g_mysql_client_a9da8bc562d0fd8440935df068aa50922}\index{GMysqlClient@{GMysqlClient}!GetCashSize@{GetCashSize}}
+\index{GetCashSize@{GetCashSize}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{GetCashSize()}{GetCashSize()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a9da8bc562d0fd8440935df068aa50922} 
+int GMysql\+Client\+::\+Get\+Cash\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8hpp_source_l00259}{259}} of file \mbox{\hyperlink{gmysqlclient_8hpp_source}{gmysqlclient.\+hpp}}.
+
+\Hypertarget{class_g_mysql_client_ad4ac431eba947493223affceccff7990}\index{GMysqlClient@{GMysqlClient}!GetCashUser@{GetCashUser}}
+\index{GetCashUser@{GetCashUser}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{GetCashUser()}{GetCashUser()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_ad4ac431eba947493223affceccff7990} 
+int GMysql\+Client\+::\+Get\+Cash\+User (\begin{DoxyParamCaption}\item[{int}]{userid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8hpp_source_l00286}{286}} of file \mbox{\hyperlink{gmysqlclient_8hpp_source}{gmysqlclient.\+hpp}}.
+
+\Hypertarget{class_g_mysql_client_a87a90c9a2b827da79f451728f4109850}\index{GMysqlClient@{GMysqlClient}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a87a90c9a2b827da79f451728f4109850} 
+static \mbox{\hyperlink{class_g_mysql_client}{GMysql\+Client}} \texorpdfstring{$\ast$}{*} GMysql\+Client\+::\+Get\+Instance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Получить экземпляр класса (Singleton) 
+
+\begin{DoxyReturn}{Returns}
+Указатель на единственный экземпляр \doxylink{class_g_mysql_client}{GMysql\+Client} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8hpp_source_l00481}{481}} of file \mbox{\hyperlink{gmysqlclient_8hpp_source}{gmysqlclient.\+hpp}}.
+
+\Hypertarget{class_g_mysql_client_a196ae8753a336df2cfcbea330f1a1e13}\index{GMysqlClient@{GMysqlClient}!GetUseCashNow@{GetUseCashNow}}
+\index{GetUseCashNow@{GetUseCashNow}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{GetUseCashNow()}{GetUseCashNow()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a196ae8753a336df2cfcbea330f1a1e13} 
+bool GMysql\+Client\+::\+Get\+Use\+Cash\+Now (\begin{DoxyParamCaption}\item[{int}]{status}{, }\item[{int \&}]{count}{}\end{DoxyParamCaption})}
+
+
+
+Получение записей usecashnow по статусу 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em status} & Статус для фильтрации \\
+\hline
+\mbox{\texttt{ out}}  & {\em count} & Количество найденных записей \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ запрос выполнен, false -\/ ошибка выполнения 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Очищает кэш перед заполнением новых данных 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8cpp_source_l00378}{378}} of file \mbox{\hyperlink{gmysqlclient_8cpp_source}{gmysqlclient.\+cpp}}.
+
+\Hypertarget{class_g_mysql_client_ab7ff1536bda77626eaecf55da93aab92}\index{GMysqlClient@{GMysqlClient}!GetUser@{GetUser}}
+\index{GetUser@{GetUser}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{GetUser()}{GetUser()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_ab7ff1536bda77626eaecf55da93aab92} 
+int GMysql\+Client\+::\+Get\+User (\begin{DoxyParamCaption}\item[{int}]{userid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Найти пользователя по ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em userid} & ID пользователя \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Индекс в векторе или -\/1 если не найден 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8hpp_source_l00196}{196}} of file \mbox{\hyperlink{gmysqlclient_8hpp_source}{gmysqlclient.\+hpp}}.
+
+\Hypertarget{class_g_mysql_client_a197d13b53a9987edf047df74c8d73a2e}\index{GMysqlClient@{GMysqlClient}!GetUserData@{GetUserData}}
+\index{GetUserData@{GetUserData}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{GetUserData()}{GetUserData()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a197d13b53a9987edf047df74c8d73a2e} 
+ONLINE\+\_\+\+USER \texorpdfstring{$\ast$}{*} GMysql\+Client\+::\+Get\+User\+Data (\begin{DoxyParamCaption}\item[{int}]{userid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Получить данные пользователя 
+
+
+\begin{DoxyParams}{Parameters}
+{\em userid} & ID пользователя \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Указатель на структуру ONLINE\+\_\+\+USER или NULL 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8hpp_source_l00243}{243}} of file \mbox{\hyperlink{gmysqlclient_8hpp_source}{gmysqlclient.\+hpp}}.
+
+\Hypertarget{class_g_mysql_client_acb10864e5152be98cb60ca379e5401bc}\index{GMysqlClient@{GMysqlClient}!GetZoneid@{GetZoneid}}
+\index{GetZoneid@{GetZoneid}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{GetZoneid()}{GetZoneid()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_acb10864e5152be98cb60ca379e5401bc} 
+char GMysql\+Client\+::\+Get\+Zoneid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Получить ID зоны 
+
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8hpp_source_l00165}{165}} of file \mbox{\hyperlink{gmysqlclient_8hpp_source}{gmysqlclient.\+hpp}}.
+
+\Hypertarget{class_g_mysql_client_a129ff21e968ae3c1218dd01ff10f9b09}\index{GMysqlClient@{GMysqlClient}!Init@{Init}}
+\index{Init@{Init}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a129ff21e968ae3c1218dd01ff10f9b09} 
+void GMysql\+Client\+::\+Init (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{ip}{, }\item[{const int}]{port}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{user}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{passwd}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{db}{, }\item[{const int}]{h}{}\end{DoxyParamCaption})}
+
+
+
+Инициализация параметров подключения 
+
+Инициализация параметров подключения к базе данных.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em ip} & IP адрес сервера БД \\
+\hline
+ & {\em port} & Порт сервера БД \\
+\hline
+ & {\em user} & Имя пользователя \\
+\hline
+ & {\em passwd} & Пароль \\
+\hline
+ & {\em db} & Имя базы данных \\
+\hline
+ & {\em h} & Тип хеширования (1-\/binary, 2-\/0x\+MD5, 3-\/base64)\\
+\hline
+\mbox{\texttt{ in}}  & {\em ip} & IP-\/адрес сервера My\+SQL (макс. 19 символов) \\
+\hline
+\mbox{\texttt{ in}}  & {\em port} & Порт сервера My\+SQL \\
+\hline
+\mbox{\texttt{ in}}  & {\em user} & Имя пользователя БД (макс. 127 символов) \\
+\hline
+\mbox{\texttt{ in}}  & {\em passwd} & Пароль пользователя БД (макс. 127 символов) \\
+\hline
+\mbox{\texttt{ in}}  & {\em db} & Название базы данных (макс. 127 символов) \\
+\hline
+\mbox{\texttt{ in}}  & {\em h} & Хэш-\/идентификатор (дополнительный параметр) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Инициализирует мьютексы и резервирует память для контейнеров. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{gmysqlclient_8cpp_source}{gmysqlclient.\+cpp}}.
+
+\Hypertarget{class_g_mysql_client_a50e93bdf74da424077e864ba8bbfe42c}\index{GMysqlClient@{GMysqlClient}!IsActive@{IsActive}}
+\index{IsActive@{IsActive}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{IsActive()}{IsActive()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a50e93bdf74da424077e864ba8bbfe42c} 
+bool GMysql\+Client\+::\+Is\+Active (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Проверить активность соединения 
+
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8hpp_source_l00163}{163}} of file \mbox{\hyperlink{gmysqlclient_8hpp_source}{gmysqlclient.\+hpp}}.
+
+\Hypertarget{class_g_mysql_client_ae74167391b7e749c390203ea4f0ec5e5}\index{GMysqlClient@{GMysqlClient}!MatrixPasswd@{MatrixPasswd}}
+\index{MatrixPasswd@{MatrixPasswd}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{MatrixPasswd()}{MatrixPasswd()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_ae74167391b7e749c390203ea4f0ec5e5} 
+bool GMysql\+Client\+::\+Matrix\+Passwd (\begin{DoxyParamCaption}\item[{int \&}]{uid}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{login}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{passwd}{, }\item[{int}]{ipaddr}{}\end{DoxyParamCaption})}
+
+
+
+Проверка учетных данных пользователя. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em uid} & Идентификатор пользователя (при успешной проверке) \\
+\hline
+\mbox{\texttt{ in}}  & {\em login} & Логин пользователя \\
+\hline
+\mbox{\texttt{ in}}  & {\em passwd} & Пароль пользователя (открытый текст) \\
+\hline
+\mbox{\texttt{ in}}  & {\em ipaddr} & IP-\/адрес клиента (сетевой порядок) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ аутентификация успешна, false -\/ ошибка
+\end{DoxyReturn}
+Использует хранимую процедуру acquireuserpasswd. 
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8cpp_source_l00163}{163}} of file \mbox{\hyperlink{gmysqlclient_8cpp_source}{gmysqlclient.\+cpp}}.
+
+\Hypertarget{class_g_mysql_client_a1be593d128e947bbb05fdee22e9c2a89}\index{GMysqlClient@{GMysqlClient}!MysqlQuery@{MysqlQuery}}
+\index{MysqlQuery@{MysqlQuery}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{MysqlQuery()}{MysqlQuery()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a1be593d128e947bbb05fdee22e9c2a89} 
+bool GMysql\+Client\+::\+Mysql\+Query (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{ptr}{, }\item[{size\+\_\+t}]{len}{}\end{DoxyParamCaption})}
+
+
+
+Выполнить SQL запрос 
+
+Выполнение SQL-\/запроса.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & Текст запроса \\
+\hline
+{\em len} & Длина запроса \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true если запрос выполнен успешно
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ptr} & Указатель на буфер с запросом \\
+\hline
+\mbox{\texttt{ in}}  & {\em len} & Длина запроса (макс. 1024 байта) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ запрос выполнен успешно, false -\/ ошибка выполнения 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+Не использовать для запросов длиной более 1024 байт! 
+\end{DoxyWarning}
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8cpp_source_l00136}{136}} of file \mbox{\hyperlink{gmysqlclient_8cpp_source}{gmysqlclient.\+cpp}}.
+
+\Hypertarget{class_g_mysql_client_a524bc45740cb01aabdbf2b012407925f}\index{GMysqlClient@{GMysqlClient}!OnfflineRecord@{OnfflineRecord}}
+\index{OnfflineRecord@{OnfflineRecord}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{OnfflineRecord()}{OnfflineRecord()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a524bc45740cb01aabdbf2b012407925f} 
+bool GMysql\+Client\+::\+Onffline\+Record (\begin{DoxyParamCaption}\item[{int}]{uid}{, }\item[{char}]{aid}{, }\item[{char \&}]{zoneid}{, }\item[{int \&}]{zonelocalid}{, }\item[{int \&}]{overwrite}{}\end{DoxyParamCaption})}
+
+
+
+Запись информации о выходе пользователя из онлайн 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uid} & Идентификатор пользователя \\
+\hline
+\mbox{\texttt{ in}}  & {\em aid} & Идентификатор аккаунта \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em zoneid} & Идентификатор зоны (входное и выходное значение) \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em zonelocalid} & Локальный ID в зоне (входное и выходное значение) \\
+\hline
+\mbox{\texttt{ out}}  & {\em overwrite} & Флаг перезаписи (0 -\/ нет перезаписи, 1 -\/ перезапись) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ операция успешна, false -\/ ошибка выполнения 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Автоматически удаляет пользователя из внутреннего хранилища 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+Блокирует мьютекс на время работы с результатами запроса 
+\end{DoxyWarning}
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8cpp_source_l00254}{254}} of file \mbox{\hyperlink{gmysqlclient_8cpp_source}{gmysqlclient.\+cpp}}.
+
+\Hypertarget{class_g_mysql_client_a7c6a4b72d981e0c88568e453221dd06a}\index{GMysqlClient@{GMysqlClient}!OnlineRecord@{OnlineRecord}}
+\index{OnlineRecord@{OnlineRecord}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{OnlineRecord()}{OnlineRecord()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a7c6a4b72d981e0c88568e453221dd06a} 
+bool GMysql\+Client\+::\+Online\+Record (\begin{DoxyParamCaption}\item[{int}]{uid}{, }\item[{char}]{aid}{, }\item[{char \&}]{zoneid}{, }\item[{int \&}]{zonelocalid}{, }\item[{int \&}]{overwrite}{}\end{DoxyParamCaption})}
+
+
+
+Запись информации о входе пользователя в онлайн 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uid} & Идентификатор пользователя \\
+\hline
+\mbox{\texttt{ in}}  & {\em aid} & Идентификатор аккаунта \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em zoneid} & Идентификатор зоны (входное и выходное значение) \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em zonelocalid} & Локальный ID в зоне (входное и выходное значение) \\
+\hline
+\mbox{\texttt{ out}}  & {\em overwrite} & Флаг перезаписи (0 -\/ нет перезаписи, 1 -\/ перезапись) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ операция успешна, false -\/ ошибка выполнения
+\end{DoxyReturn}
+Использует хранимые процедуры и временные переменные My\+SQL \begin{DoxyWarning}{Warning}
+Требует обработки результатов через mysql\+\_\+store\+\_\+result 
+\end{DoxyWarning}
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8cpp_source_l00219}{219}} of file \mbox{\hyperlink{gmysqlclient_8cpp_source}{gmysqlclient.\+cpp}}.
+
+\Hypertarget{class_g_mysql_client_aee26570bd0c44f31da836916cf77ec23}\index{GMysqlClient@{GMysqlClient}!QueryGMPrivilege@{QueryGMPrivilege}}
+\index{QueryGMPrivilege@{QueryGMPrivilege}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{QueryGMPrivilege()}{QueryGMPrivilege()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_aee26570bd0c44f31da836916cf77ec23} 
+bool GMysql\+Client\+::\+Query\+GMPrivilege (\begin{DoxyParamCaption}\item[{int}]{uid}{, }\item[{char}]{zoneid}{, }\item[{unsigned char \texorpdfstring{$\ast$}{*}}]{gm\+\_\+auth}{, }\item[{int \&}]{count}{}\end{DoxyParamCaption})}
+
+
+
+Получение списка GM-\/привилегий пользователя 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uid} & Идентификатор пользователя \\
+\hline
+\mbox{\texttt{ in}}  & {\em zoneid} & Идентификатор зоны \\
+\hline
+\mbox{\texttt{ out}}  & {\em gm\+\_\+auth} & Массив для хранения привилегий \\
+\hline
+\mbox{\texttt{ out}}  & {\em count} & Количество найденных привилегий \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ запрос выполнен, false -\/ ошибка выполнения 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+Не контролирует размер выходного массива gm\+\_\+auth 
+\end{DoxyWarning}
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8cpp_source_l00336}{336}} of file \mbox{\hyperlink{gmysqlclient_8cpp_source}{gmysqlclient.\+cpp}}.
+
+\Hypertarget{class_g_mysql_client_a5ad2854f8238ad2008cf0358adf9325b}\index{GMysqlClient@{GMysqlClient}!SetUseCashNow@{SetUseCashNow}}
+\index{SetUseCashNow@{SetUseCashNow}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{SetUseCashNow()}{SetUseCashNow()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a5ad2854f8238ad2008cf0358adf9325b} 
+bool GMysql\+Client\+::\+Set\+Use\+Cash\+Now (\begin{DoxyParamCaption}\item[{int}]{status}{, }\item[{int}]{sn}{, }\item[{int}]{uid}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{creatime}{}\end{DoxyParamCaption})}
+
+
+
+Обновление статуса записи в usecashnow. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em status} & Новый статус записи \\
+\hline
+\mbox{\texttt{ in}}  & {\em sn} & Серийный номер операции \\
+\hline
+\mbox{\texttt{ in}}  & {\em uid} & Идентификатор пользователя \\
+\hline
+\mbox{\texttt{ in}}  & {\em creatime} & Время создания записи \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ обновление успешно, false -\/ ошибка выполнения 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Выполняет проверку существования записи перед обновлением 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8cpp_source_l00405}{405}} of file \mbox{\hyperlink{gmysqlclient_8cpp_source}{gmysqlclient.\+cpp}}.
+
+\Hypertarget{class_g_mysql_client_aae78133acca23894a428d104cd582168}\index{GMysqlClient@{GMysqlClient}!SizeAntibrutUser@{SizeAntibrutUser}}
+\index{SizeAntibrutUser@{SizeAntibrutUser}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{SizeAntibrutUser()}{SizeAntibrutUser()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_aae78133acca23894a428d104cd582168} 
+int GMysql\+Client\+::\+Size\+Antibrut\+User (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8hpp_source_l00345}{345}} of file \mbox{\hyperlink{gmysqlclient_8hpp_source}{gmysqlclient.\+hpp}}.
+
+\Hypertarget{class_g_mysql_client_ac581c4885d0cd84f507760d32177b4f3}\index{GMysqlClient@{GMysqlClient}!UserCreatime@{UserCreatime}}
+\index{UserCreatime@{UserCreatime}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{UserCreatime()}{UserCreatime()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_ac581c4885d0cd84f507760d32177b4f3} 
+bool GMysql\+Client\+::\+User\+Creatime (\begin{DoxyParamCaption}\item[{int}]{uid}{, }\item[{int \&}]{timestamp}{}\end{DoxyParamCaption})}
+
+
+
+Получение времени создания пользователя в UNIX-\/формате 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uid} & Идентификатор пользователя \\
+\hline
+\mbox{\texttt{ out}}  & {\em timestamp} & Время создания пользователя \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ данные получены, false -\/ ошибка запроса 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Использует функцию My\+SQL UNIX\+\_\+\+TIMESTAMP() 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8cpp_source_l00286}{286}} of file \mbox{\hyperlink{gmysqlclient_8cpp_source}{gmysqlclient.\+cpp}}.
+
+\Hypertarget{class_g_mysql_client_a916a21bf80a3b7aaaebaebf1855a429b}\index{GMysqlClient@{GMysqlClient}!UserGMPrivilege@{UserGMPrivilege}}
+\index{UserGMPrivilege@{UserGMPrivilege}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{UserGMPrivilege()}{UserGMPrivilege()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a916a21bf80a3b7aaaebaebf1855a429b} 
+bool GMysql\+Client\+::\+User\+GMPrivilege (\begin{DoxyParamCaption}\item[{int}]{uid}{, }\item[{char}]{zoneid}{, }\item[{bool \&}]{Is\+GM}{}\end{DoxyParamCaption})}
+
+
+
+Получение времени создания пользователя в UNIX-\/формате 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uid} & Идентификатор пользователя \\
+\hline
+\mbox{\texttt{ out}}  & {\em timestamp} & Время создания пользователя \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ данные получены, false -\/ ошибка запроса 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Использует функцию My\+SQL UNIX\+\_\+\+TIMESTAMP() 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8cpp_source_l00311}{311}} of file \mbox{\hyperlink{gmysqlclient_8cpp_source}{gmysqlclient.\+cpp}}.
+
+\Hypertarget{class_g_mysql_client_a477a9db403d718b8ea1fb2f3e8ba2561}\index{GMysqlClient@{GMysqlClient}!ValidLogin@{ValidLogin}}
+\index{ValidLogin@{ValidLogin}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{ValidLogin()}{ValidLogin()}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a477a9db403d718b8ea1fb2f3e8ba2561} 
+bool GMysql\+Client\+::\+Valid\+Login (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{login}{, }\item[{int}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Проверка валидности логина 
+
+
+\begin{DoxyParams}{Parameters}
+{\em login} & Логин для проверки \\
+\hline
+{\em size} & Длина логина \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true если логин содержит только буквы и цифры 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8hpp_source_l00450}{450}} of file \mbox{\hyperlink{gmysqlclient_8hpp_source}{gmysqlclient.\+hpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_g_mysql_client_a4d84ec5f99dcdeb604a4c2a7b34e23bf}\index{GMysqlClient@{GMysqlClient}!instance@{instance}}
+\index{instance@{instance}!GMysqlClient@{GMysqlClient}}
+\doxysubsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily \label{class_g_mysql_client_a4d84ec5f99dcdeb604a4c2a7b34e23bf} 
+\mbox{\hyperlink{class_g_mysql_client}{GMysql\+Client}} \texorpdfstring{$\ast$}{*} GMysql\+Client\+::instance = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Единственный экземпляр класса 
+
+Статический указатель на единственный экземпляр класса (Singleton) 
+
+Definition at line \mbox{\hyperlink{gmysqlclient_8hpp_source_l00487}{487}} of file \mbox{\hyperlink{gmysqlclient_8hpp_source}{gmysqlclient.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{gmysqlclient_8hpp}{gmysqlclient.\+hpp}}\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{gmysqlclient_8cpp}{gmysqlclient.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_n_e_t_1_1_announce_zoneid3" xml:lang="en-US">
+<title>GNET::AnnounceZoneid3 Class Reference</title>
+<indexterm><primary>GNET::AnnounceZoneid3</primary></indexterm>
+<para>
+
+<para>Протокол для обработки информации о зональных идентификаторах </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;announcezoneid3.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for GNET::AnnounceZoneid3:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_announce_zoneid3.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+
+<para>Протокол для обработки информации о зональных идентификаторах </para>
+
+
+
+<para>Класс реализует логику обновления зональной карты и очистки связанных записей в БД. Наследуется от базового класса GNET::Protocol. </para>
+<para>
+Definition at line <link linkend="_announcezoneid3_8hpp_source_1l00024">24</link> of file <link linkend="_announcezoneid3_8hpp_source">announcezoneid3.hpp</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_announcezoneid3_8hpp">announcezoneid3.hpp</link></section>
+</section>

@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_n_e_t_1_1_check_timer" xml:lang="en-US">
+<title>GNET::CheckTimer Class Reference</title>
+<indexterm><primary>GNET::CheckTimer</primary></indexterm>
+<para>
+
+<para>Periodic task manager for financial and security checks. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;gauthserver.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for GNET::CheckTimer:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_check_timer.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_g_n_e_t_1_1_check_timer_1a7a691f18f249d9bc5b50470edfaa21e6">CheckTimer</link> (int _time, int _proir=1)</para>
+
+<para>Конструктор. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_check_timer_1afb7c8e11b1f82f73a44f2b6db53427e2">Run</link> ()</para>
+
+<para>Основной метод таймера. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Periodic task manager for financial and security checks. </para>
+
+
+
+<para>Таймер для периодических проверок (очистка данных, анти-брут). </para>
+<para>
+Definition at line <link linkend="_gauthserver_8hpp_source_1l00156">156</link> of file <link linkend="_gauthserver_8hpp_source">gauthserver.hpp</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_g_n_e_t_1_1_check_timer_1a7a691f18f249d9bc5b50470edfaa21e6"/><section>
+    <title>CheckTimer()</title>
+<indexterm><primary>CheckTimer</primary><secondary>GNET::CheckTimer</secondary></indexterm>
+<indexterm><primary>GNET::CheckTimer</primary><secondary>CheckTimer</secondary></indexterm>
+<para><computeroutput>GNET::CheckTimer::CheckTimer (int _time, int _proir = <computeroutput>1</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Конструктор. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_time</entry><entry>
+<para>Интервал срабатывания таймера. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_proir</entry><entry>
+<para>Приоритет потока (по умолчанию 1). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_gauthserver_8hpp_source_1l00167">167</link> of file <link linkend="_gauthserver_8hpp_source">gauthserver.hpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_g_n_e_t_1_1_check_timer_1afb7c8e11b1f82f73a44f2b6db53427e2"/><section>
+    <title>Run()</title>
+<indexterm><primary>Run</primary><secondary>GNET::CheckTimer</secondary></indexterm>
+<indexterm><primary>GNET::CheckTimer</primary><secondary>Run</secondary></indexterm>
+<para><computeroutput>void GNET::CheckTimer::Run ( )</computeroutput></para><para>
+
+<para>Основной метод таймера. </para>
+</para>
+
+<para>Main timer execution method.</para>
+
+<para>Sequence:<orderedlist>
+<listitem>
+<para>Clear brute-force records</para>
+</listitem><listitem>
+<para>Process cash transactions</para>
+</listitem><listitem>
+<para>Reschedule task using HouseKeeper </para>
+</listitem></orderedlist>
+</para>
+<para>
+Definition at line <link linkend="_gauthserver_8cpp_source_1l00150">150</link> of file <link linkend="_gauthserver_8cpp_source">gauthserver.cpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_gauthserver_8hpp">gauthserver.hpp</link>D:/pwsrc2.0/docs/gauthd/<link linkend="_gauthserver_8cpp">gauthserver.cpp</link></section>
+</section>

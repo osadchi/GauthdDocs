@@ -1,0 +1,87 @@
+\doxysection{GNET\+::Check\+Timer Class Reference}
+\hypertarget{class_g_n_e_t_1_1_check_timer}{}\label{class_g_n_e_t_1_1_check_timer}\index{GNET::CheckTimer@{GNET::CheckTimer}}
+
+
+Periodic task manager for financial and security checks.  
+
+
+
+
+{\ttfamily \#include $<$gauthserver.\+hpp$>$}
+
+Inheritance diagram for GNET\+::Check\+Timer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_n_e_t_1_1_check_timer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_n_e_t_1_1_check_timer_a7a691f18f249d9bc5b50470edfaa21e6}{Check\+Timer}} (int \+\_\+time, int \+\_\+proir=1)
+\begin{DoxyCompactList}\small\item\em Конструктор. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_check_timer_afb7c8e11b1f82f73a44f2b6db53427e2}{Run}} ()
+\begin{DoxyCompactList}\small\item\em Основной метод таймера. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Periodic task manager for financial and security checks. 
+
+Таймер для периодических проверок (очистка данных, анти-\/брут). 
+
+Definition at line \mbox{\hyperlink{gauthserver_8hpp_source_l00156}{156}} of file \mbox{\hyperlink{gauthserver_8hpp_source}{gauthserver.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_g_n_e_t_1_1_check_timer_a7a691f18f249d9bc5b50470edfaa21e6}\index{GNET::CheckTimer@{GNET::CheckTimer}!CheckTimer@{CheckTimer}}
+\index{CheckTimer@{CheckTimer}!GNET::CheckTimer@{GNET::CheckTimer}}
+\doxysubsubsection{\texorpdfstring{CheckTimer()}{CheckTimer()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_check_timer_a7a691f18f249d9bc5b50470edfaa21e6} 
+GNET\+::\+Check\+Timer\+::\+Check\+Timer (\begin{DoxyParamCaption}\item[{int}]{\+\_\+time}{, }\item[{int}]{\+\_\+proir}{ = {\ttfamily 1}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+time} & Интервал срабатывания таймера. \\
+\hline
+{\em \+\_\+proir} & Приоритет потока (по умолчанию 1). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{gauthserver_8hpp_source_l00167}{167}} of file \mbox{\hyperlink{gauthserver_8hpp_source}{gauthserver.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_n_e_t_1_1_check_timer_afb7c8e11b1f82f73a44f2b6db53427e2}\index{GNET::CheckTimer@{GNET::CheckTimer}!Run@{Run}}
+\index{Run@{Run}!GNET::CheckTimer@{GNET::CheckTimer}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_check_timer_afb7c8e11b1f82f73a44f2b6db53427e2} 
+void GNET\+::\+Check\+Timer\+::\+Run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Основной метод таймера. 
+
+Main timer execution method.
+
+Sequence\+:
+\begin{DoxyEnumerate}
+\item Clear brute-\/force records
+\item Process cash transactions
+\item Reschedule task using House\+Keeper 
+\end{DoxyEnumerate}
+
+Definition at line \mbox{\hyperlink{gauthserver_8cpp_source_l00150}{150}} of file \mbox{\hyperlink{gauthserver_8cpp_source}{gauthserver.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{gauthserver_8hpp}{gauthserver.\+hpp}}\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{gauthserver_8cpp}{gauthserver.\+cpp}}\end{DoxyCompactItemize}

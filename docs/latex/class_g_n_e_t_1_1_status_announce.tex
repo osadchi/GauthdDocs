@@ -1,0 +1,73 @@
+\doxysection{GNET\+::Status\+Announce Class Reference}
+\hypertarget{class_g_n_e_t_1_1_status_announce}{}\label{class_g_n_e_t_1_1_status_announce}\index{GNET::StatusAnnounce@{GNET::StatusAnnounce}}
+
+
+Протокол обработки статусных уведомлений  
+
+
+
+
+{\ttfamily \#include $<$statusannounce.\+hpp$>$}
+
+Inheritance diagram for GNET\+::Status\+Announce\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_n_e_t_1_1_status_announce}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_status_announce_ae5a6d07d7f9047b0d0a53cce09ed94b9}{Process}} (Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)
+\begin{DoxyCompactList}\small\item\em Обработчик протокола \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Протокол обработки статусных уведомлений 
+
+Класс реализует функциональность обработки уведомлений об изменении статуса пользователей, обеспечивая синхронизацию состояния пользователей между компонентами системы. 
+
+Definition at line \mbox{\hyperlink{statusannounce_8hpp_source_l00026}{26}} of file \mbox{\hyperlink{statusannounce_8hpp_source}{statusannounce.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_n_e_t_1_1_status_announce_ae5a6d07d7f9047b0d0a53cce09ed94b9}\index{GNET::StatusAnnounce@{GNET::StatusAnnounce}!Process@{Process}}
+\index{Process@{Process}!GNET::StatusAnnounce@{GNET::StatusAnnounce}}
+\doxysubsubsection{\texorpdfstring{Process()}{Process()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_status_announce_ae5a6d07d7f9047b0d0a53cce09ed94b9} 
+void GNET\+::\+Status\+Announce\+::\+Process (\begin{DoxyParamCaption}\item[{Manager \texorpdfstring{$\ast$}{*}}]{manager}{, }\item[{Manager\+::\+Session\+::\+ID}]{sid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Обработчик протокола 
+
+
+\begin{DoxyParams}{Parameters}
+{\em manager} & Менеджер соединений \\
+\hline
+{\em sid} & Идентификатор сессии\\
+\hline
+\end{DoxyParams}
+Метод выполняет следующие действия\+:
+\begin{DoxyEnumerate}
+\item Получает экземпляр \doxylink{class_g_n_e_t_1_1_g_auth_server}{GAuth\+Server}
+\item Блокирует доступ к карте пользователей для записи
+\item Осуществляет поиск пользователя по ID
+\item При обнаружении совпадения удаляет запись о пользователе
+\end{DoxyEnumerate}
+
+\begin{DoxyNote}{Note}
+Использует блокировку записи для обеспечения потокобезопасности 
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000024}{Todo}}]Реализовать обработку ошибок при работе с картой пользователей \end{DoxyRefDesc}
+
+
+Definition at line \mbox{\hyperlink{statusannounce_8hpp_source_l00045}{45}} of file \mbox{\hyperlink{statusannounce_8hpp_source}{statusannounce.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{statusannounce_8hpp}{statusannounce.\+hpp}}\end{DoxyCompactItemize}

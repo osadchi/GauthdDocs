@@ -1,0 +1,66 @@
+\doxysection{GNET\+::Game2\+AU Class Reference}
+\hypertarget{class_g_n_e_t_1_1_game2_a_u}{}\label{class_g_n_e_t_1_1_game2_a_u}\index{GNET::Game2AU@{GNET::Game2AU}}
+
+
+Протокол для взаимодействия между игровым сервером и сервером аутентификации/учётных записей (Auth/\+AU Server)  
+
+
+
+
+{\ttfamily \#include $<$game2au.\+hpp$>$}
+
+Inheritance diagram for GNET\+::Game2\+AU\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_n_e_t_1_1_game2_a_u}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_game2_a_u_a778ef1862d9abe838530c75c45882fb7}{Process}} (Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)
+\begin{DoxyCompactList}\small\item\em \texorpdfstring{$<$}{<} Внутренние данные и структуры протокола \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Протокол для взаимодействия между игровым сервером и сервером аутентификации/учётных записей (Auth/\+AU Server) 
+
+Наследует базовый класс Protocol и содержит обработчик для входящих сообщений. Реализация протокола должна быть завершена в методе \doxylink{class_g_n_e_t_1_1_game2_a_u_a778ef1862d9abe838530c75c45882fb7}{Process()}. 
+\begin{DoxyCodeInclude}{0}
+
+\end{DoxyCodeInclude}
+ (Внутренние данные протокола) 
+
+Definition at line \mbox{\hyperlink{game2au_8hpp_source_l00024}{24}} of file \mbox{\hyperlink{game2au_8hpp_source}{game2au.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_n_e_t_1_1_game2_a_u_a778ef1862d9abe838530c75c45882fb7}\index{GNET::Game2AU@{GNET::Game2AU}!Process@{Process}}
+\index{Process@{Process}!GNET::Game2AU@{GNET::Game2AU}}
+\doxysubsubsection{\texorpdfstring{Process()}{Process()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_game2_a_u_a778ef1862d9abe838530c75c45882fb7} 
+void GNET\+::\+Game2\+AU\+::\+Process (\begin{DoxyParamCaption}\item[{Manager \texorpdfstring{$\ast$}{*}}]{manager}{, }\item[{Manager\+::\+Session\+::\+ID}]{sid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\texorpdfstring{$<$}{<} Внутренние данные и структуры протокола 
+
+Обработчик входящих сообщений протокола 
+\begin{DoxyParams}{Parameters}
+{\em manager} & Указатель на менеджер протоколов \\
+\hline
+{\em sid} & Идентификатор сессии, связанной с запросом\\
+\hline
+\end{DoxyParams}
+Реализация обработки сообщения должна быть добавлена здесь \begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000014}{Todo}}]Требуется реализация логики обработки сообщения \end{DoxyRefDesc}
+
+
+Definition at line \mbox{\hyperlink{game2au_8hpp_source_l00036}{36}} of file \mbox{\hyperlink{game2au_8hpp_source}{game2au.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{game2au_8hpp}{game2au.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_gauthd_8cpp_source" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/gauthd.cpp</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_gauthd_8cpp_source_1l00001"/>00001 
+<anchor xml:id="_gauthd_8cpp_source_1l00006"/>00006 
+<anchor xml:id="_gauthd_8cpp_source_1l00007"/>00007 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_gauthserver_8hpp">gauthserver.hpp</link>&quot;</emphasis>
+<anchor xml:id="_gauthd_8cpp_source_1l00008"/>00008 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_gmysqlclient_8hpp">gmysqlclient.hpp</link>&quot;</emphasis>
+<anchor xml:id="_gauthd_8cpp_source_1l00009"/>00009 <emphasis role="preprocessor">&#32;#include&#32;&quot;conf.h&quot;</emphasis>
+<anchor xml:id="_gauthd_8cpp_source_1l00010"/>00010 <emphasis role="preprocessor">&#32;#include&#32;&quot;log.h&quot;</emphasis>
+<anchor xml:id="_gauthd_8cpp_source_1l00011"/>00011 <emphasis role="preprocessor">&#32;#include&#32;&quot;thread.h&quot;</emphasis>
+<anchor xml:id="_gauthd_8cpp_source_1l00012"/>00012 <emphasis role="preprocessor">&#32;#include&#32;&lt;iostream&gt;</emphasis>
+<anchor xml:id="_gauthd_8cpp_source_1l00013"/>00013 <emphasis role="preprocessor">&#32;#include&#32;&lt;unistd.h&gt;</emphasis>
+<anchor xml:id="_gauthd_8cpp_source_1l00014"/>00014 &#32;
+<anchor xml:id="_gauthd_8cpp_source_1l00015"/>00015 &#32;<emphasis role="keyword">using&#32;namespace&#32;</emphasis><link linkend="_namespace_g_n_e_t">GNET</link>;
+<anchor xml:id="_gauthd_8cpp_source_1l00016"/>00016 &#32;
+<anchor xml:id="_gauthd_8cpp_source_1l00042"/><link linkend="_gauthd_8cpp_1a0ddf1224851353fc92bfbff6f499fa97">00042</link> &#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_gauthd_8cpp_1a0ddf1224851353fc92bfbff6f499fa97">main</link>(<emphasis role="keywordtype">int</emphasis>&#32;argc,&#32;<emphasis role="keywordtype">char</emphasis>&#32;*argv[])
+<anchor xml:id="_gauthd_8cpp_source_1l00043"/>00043 &#32;{
+<anchor xml:id="_gauthd_8cpp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Проверка&#32;аргументов&#32;командной&#32;строки</emphasis>
+<anchor xml:id="_gauthd_8cpp_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(argc&#32;!=&#32;2&#32;||&#32;access(argv[1],&#32;R_OK)&#32;==&#32;-1)
+<anchor xml:id="_gauthd_8cpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gauthd_8cpp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Usage:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;argv[0]&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;configurefile&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="_gauthd_8cpp_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;exit(-1);
+<anchor xml:id="_gauthd_8cpp_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gauthd_8cpp_source_1l00050"/>00050 &#32;
+<anchor xml:id="_gauthd_8cpp_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Инициализация&#32;конфигурации&#32;и&#32;логгера</emphasis>
+<anchor xml:id="_gauthd_8cpp_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;Conf&#32;*conf&#32;=&#32;Conf::GetInstance(argv[1]);
+<anchor xml:id="_gauthd_8cpp_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;Log::setprogname(<emphasis role="stringliteral">&quot;gauthd&quot;</emphasis>);
+<anchor xml:id="_gauthd_8cpp_source_1l00054"/>00054 &#32;
+<anchor xml:id="_gauthd_8cpp_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Настройка&#32;GAuthServer</emphasis>
+<anchor xml:id="_gauthd_8cpp_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gauthd_8cpp_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server">GAuthServer</link>&#32;*manager&#32;=&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a2fb6223e8492fcbc74f9b21ee12f25e7">GAuthServer::GetInstance</link>();
+<anchor xml:id="_gauthd_8cpp_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;manager-&gt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a5604b75c37f4e864a4f73e1a4a8a5a81">SetAccumulate</link>(atoi(conf-&gt;find(manager-&gt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a93f073dbf9375aa226afb267d88a92c4">Identification</link>(),&#32;<emphasis role="stringliteral">&quot;accumulate&quot;</emphasis>).c_str()));
+<anchor xml:id="_gauthd_8cpp_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gauthd_8cpp_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;value&#32;=&#32;conf-&gt;find(manager-&gt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a93f073dbf9375aa226afb267d88a92c4">Identification</link>(),&#32;<emphasis role="stringliteral">&quot;shared_key&quot;</emphasis>);
+<anchor xml:id="_gauthd_8cpp_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;manager-&gt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a891812f02afb38b8d2cc9d37081e0c5a">shared_key</link>&#32;=&#32;Octets(value.c_str(),&#32;value.size());
+<anchor xml:id="_gauthd_8cpp_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gauthd_8cpp_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Protocol::Server(manager);
+<anchor xml:id="_gauthd_8cpp_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gauthd_8cpp_source_1l00065"/>00065 &#32;
+<anchor xml:id="_gauthd_8cpp_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Настройка&#32;GMysqlClient</emphasis>
+<anchor xml:id="_gauthd_8cpp_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gauthd_8cpp_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_mysql_client">GMysqlClient</link>&#32;*manager&#32;=&#32;<link linkend="_class_g_mysql_client_1a87a90c9a2b827da79f451728f4109850">GMysqlClient::GetInstance</link>();&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gauthd_8cpp_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*location&#32;=&#32;<emphasis role="stringliteral">&quot;GMysqlClient&quot;</emphasis>;
+<anchor xml:id="_gauthd_8cpp_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gauthd_8cpp_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;manager-&gt;<link linkend="_class_g_mysql_client_1a129ff21e968ae3c1218dd01ff10f9b09">Init</link>(
+<anchor xml:id="_gauthd_8cpp_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;conf-&gt;find(location,&#32;<emphasis role="stringliteral">&quot;address&quot;</emphasis>).c_str(),
+<anchor xml:id="_gauthd_8cpp_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;atoi(conf-&gt;find(location,&#32;<emphasis role="stringliteral">&quot;port&quot;</emphasis>).c_str()),
+<anchor xml:id="_gauthd_8cpp_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;conf-&gt;find(location,&#32;<emphasis role="stringliteral">&quot;user&quot;</emphasis>).c_str(),
+<anchor xml:id="_gauthd_8cpp_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;conf-&gt;find(location,&#32;<emphasis role="stringliteral">&quot;passwd&quot;</emphasis>).c_str(),
+<anchor xml:id="_gauthd_8cpp_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;conf-&gt;find(location,&#32;<emphasis role="stringliteral">&quot;name&quot;</emphasis>).c_str(),
+<anchor xml:id="_gauthd_8cpp_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;atoi(conf-&gt;find(location,&#32;<emphasis role="stringliteral">&quot;hash&quot;</emphasis>).c_str())
+<anchor xml:id="_gauthd_8cpp_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;);
+<anchor xml:id="_gauthd_8cpp_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;manager-&gt;<link linkend="_class_g_mysql_client_1a4e2c4854287bb8ffdcd12081f46e866a">Connect</link>();
+<anchor xml:id="_gauthd_8cpp_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_gauthd_8cpp_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Применение&#32;патча&#32;AlexPatch</emphasis>
+<anchor xml:id="_gauthd_8cpp_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*alex&#32;=&#32;<emphasis role="stringliteral">&quot;AlexPatch&quot;</emphasis>;
+<anchor xml:id="_gauthd_8cpp_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;manager-&gt;<link linkend="_class_g_mysql_client_1a14143f486913e7d3edff46e7458697cb">AlexPatch</link>(
+<anchor xml:id="_gauthd_8cpp_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;atoi(conf-&gt;find(alex,&#32;<emphasis role="stringliteral">&quot;lkmod&quot;</emphasis>).c_str()),
+<anchor xml:id="_gauthd_8cpp_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;atoi(conf-&gt;find(alex,&#32;<emphasis role="stringliteral">&quot;loginlog&quot;</emphasis>).c_str()),
+<anchor xml:id="_gauthd_8cpp_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;conf-&gt;find(alex,&#32;<emphasis role="stringliteral">&quot;logoutshell&quot;</emphasis>).c_str()
+<anchor xml:id="_gauthd_8cpp_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;);
+<anchor xml:id="_gauthd_8cpp_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gauthd_8cpp_source_1l00089"/>00089 &#32;
+<anchor xml:id="_gauthd_8cpp_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Запуск&#32;задач</emphasis>
+<anchor xml:id="_gauthd_8cpp_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;Thread::Pool::AddTask(<emphasis role="keyword">new</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_check_timer">CheckTimer</link>(10));&#32;
+<anchor xml:id="_gauthd_8cpp_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;Thread::Pool::AddTask(PollIO::Task::GetInstance());&#32;
+<anchor xml:id="_gauthd_8cpp_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;Thread::Pool::Run();&#32;
+<anchor xml:id="_gauthd_8cpp_source_1l00094"/>00094 &#32;
+<anchor xml:id="_gauthd_8cpp_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
+<anchor xml:id="_gauthd_8cpp_source_1l00096"/>00096 &#32;}
+</programlisting></section>
