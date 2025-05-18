@@ -1,0 +1,8 @@
+<map id="D:/pwsrc2.0/docs/gauthd/kickoutuser.hpp" name="D:/pwsrc2.0/docs/gauthd/kickoutuser.hpp">
+<area shape="rect" id="Node000001" title="Заголовочный файл класса протокола для принудительного отключения пользователя" alt="" coords="65,5,233,48"/>
+<area shape="rect" id="Node000002" href="$accountingrequest_8hpp.html" title="Заголовочный файл класса AccountingRequest для обработки учётных запросов в системе GNET." alt="" coords="5,96,173,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,62,105,97,101,94,124,59"/>
+<area shape="rect" id="Node000003" href="$stubs_8cxx.html" title=" " alt="" coords="65,187,233,229"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="173,60,188,95,191,117,188,139,178,165,165,188,161,185,173,163,182,138,186,117,182,97,168,62"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="114,150,137,185,133,188,109,153"/>
+</map>

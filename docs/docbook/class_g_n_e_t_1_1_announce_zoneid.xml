@@ -10,10 +10,20 @@
 <para>
 <computeroutput>#include &lt;announcezoneid.hpp&gt;</computeroutput>
 </para>
-<para>Inheritance diagram for GNET::AnnounceZoneid:    <informalfigure>
+Inheritance diagram for GNET::AnnounceZoneid:<para>
+    <informalfigure>
         <mediaobject>
             <imageobject>
-                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_announce_zoneid.png"></imagedata>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_announce_zoneid__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for GNET::AnnounceZoneid:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_announce_zoneid__coll__graph.png"></imagedata>
             </imageobject>
         </mediaobject>
     </informalfigure>
@@ -100,6 +110,15 @@ Parameters</title>
 </para>
 <para>
 Definition at line <link linkend="_announcezoneid_8hpp_source_1l00045">45</link> of file <link linkend="_announcezoneid_8hpp_source">announcezoneid.hpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_announce_zoneid_af13174f610fa4dc7525ab104c856ac91_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

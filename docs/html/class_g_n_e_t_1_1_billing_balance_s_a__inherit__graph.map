@@ -1,0 +1,5 @@
+<map id="GNET::BillingBalanceSA" name="GNET::BillingBalanceSA">
+<area shape="rect" id="Node000001" title="Протокол для запроса/получения информации о балансе в биллинговой системе" alt="" coords="5,80,171,107"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="31,5,145,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,48,91,80,85,80,85,48"/>
+</map>

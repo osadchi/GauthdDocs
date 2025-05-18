@@ -7,7 +7,16 @@
 <para>Заголовочный файл, содержащий объявление класса <link linkend="_class_g_n_e_t_1_1_announce_zoneid2">AnnounceZoneid2</link> для работы с протоколом объявления идентификаторов зон. </para>
  
 </para>
-<programlisting linenumbering="unnumbered">#include &quot;rpcdefs.h&quot;<?linebreak?>#include &quot;callid.hxx&quot;<?linebreak?>#include &quot;state.hxx&quot;<?linebreak?>#include &quot;gmysqlclient.hpp&quot;<?linebreak?>#include &quot;gauthserver.hpp&quot;<?linebreak?>#include &quot;announcezoneid2&quot;<?linebreak?></programlisting><simplesect>
+<programlisting linenumbering="unnumbered">#include &quot;rpcdefs.h&quot;<?linebreak?>#include &quot;callid.hxx&quot;<?linebreak?>#include &quot;state.hxx&quot;<?linebreak?>#include &quot;gmysqlclient.hpp&quot;<?linebreak?>#include &quot;gauthserver.hpp&quot;<?linebreak?>#include &quot;announcezoneid2&quot;<?linebreak?></programlisting>Include dependency graph for announcezoneid2.hpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="announcezoneid2_8hpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
     <title>Classes    </title>
         <itemizedlist>
             <listitem><para>class <link linkend="_class_g_n_e_t_1_1_announce_zoneid2">GNET::AnnounceZoneid2</link></para>

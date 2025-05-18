@@ -10,10 +10,20 @@
 <para>
 <computeroutput>#include &lt;discountannounce.hpp&gt;</computeroutput>
 </para>
-<para>Inheritance diagram for GNET::DiscountAnnounce:    <informalfigure>
+Inheritance diagram for GNET::DiscountAnnounce:<para>
+    <informalfigure>
         <mediaobject>
             <imageobject>
-                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_discount_announce.png"></imagedata>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_discount_announce__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for GNET::DiscountAnnounce:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_discount_announce__coll__graph.png"></imagedata>
             </imageobject>
         </mediaobject>
     </informalfigure>

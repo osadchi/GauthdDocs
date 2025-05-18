@@ -2,7 +2,16 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_state_8cxx" xml:lang="en-US">
 <title>D:/pwsrc2.0/docs/gauthd/state.cxx File Reference</title>
 <indexterm><primary>D:/pwsrc2.0/docs/gauthd/state.cxx</primary></indexterm>
-<programlisting linenumbering="unnumbered">#include &quot;callid.hxx&quot;<?linebreak?>#include &quot;protocol.h&quot;<?linebreak?>#include &quot;binder.h&quot;<?linebreak?></programlisting><simplesect>
+<programlisting linenumbering="unnumbered">#include &quot;callid.hxx&quot;<?linebreak?>#include &quot;protocol.h&quot;<?linebreak?>#include &quot;binder.h&quot;<?linebreak?></programlisting>Include dependency graph for state.cxx:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="state_8cxx__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
     <title>Namespaces    </title>
         <itemizedlist>
             <listitem><para>namespace <link linkend="_namespace_g_n_e_t">GNET</link></para>

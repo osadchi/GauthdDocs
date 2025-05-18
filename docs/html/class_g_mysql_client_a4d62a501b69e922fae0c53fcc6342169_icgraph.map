@@ -1,0 +1,5 @@
+<map id="GMysqlClient::AuthPasswd" name="GMysqlClient::AuthPasswd">
+<area shape="rect" id="Node000001" title="Преобразование аутентификационных данных" alt="" coords="245,5,427,32"/>
+<area shape="rect" id="Node000002" href="$class_g_mysql_client.html#ae74167391b7e749c390203ea4f0ec5e5" title="Проверка учетных данных пользователя." alt="" coords="5,5,197,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="229,21,197,21,197,16,229,16"/>
+</map>

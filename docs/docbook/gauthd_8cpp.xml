@@ -2,7 +2,16 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_gauthd_8cpp" xml:lang="en-US">
 <title>D:/pwsrc2.0/docs/gauthd/gauthd.cpp File Reference</title>
 <indexterm><primary>D:/pwsrc2.0/docs/gauthd/gauthd.cpp</primary></indexterm>
-<programlisting linenumbering="unnumbered">#include &quot;gauthserver.hpp&quot;<?linebreak?>#include &quot;gmysqlclient.hpp&quot;<?linebreak?>#include &quot;conf.h&quot;<?linebreak?>#include &quot;log.h&quot;<?linebreak?>#include &quot;thread.h&quot;<?linebreak?>#include &lt;iostream&gt;<?linebreak?>#include &lt;unistd.h&gt;<?linebreak?></programlisting><simplesect>
+<programlisting linenumbering="unnumbered">#include &quot;gauthserver.hpp&quot;<?linebreak?>#include &quot;gmysqlclient.hpp&quot;<?linebreak?>#include &quot;conf.h&quot;<?linebreak?>#include &quot;log.h&quot;<?linebreak?>#include &quot;thread.h&quot;<?linebreak?>#include &lt;iostream&gt;<?linebreak?>#include &lt;unistd.h&gt;<?linebreak?></programlisting>Include dependency graph for gauthd.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="gauthd_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
     <title>Functions    </title>
         <itemizedlist>
             <listitem><para>int <link linkend="_gauthd_8cpp_1a0ddf1224851353fc92bfbff6f499fa97">main</link> (int argc, char *argv[])</para>
@@ -94,6 +103,15 @@ Parameters</title>
 <para>&lt; Старт пула потоков</para>
 <para>
 Definition at line <link linkend="_gauthd_8cpp_source_1l00042">42</link> of file <link linkend="_gauthd_8cpp_source">gauthd.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="gauthd_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 </section>
 </section>

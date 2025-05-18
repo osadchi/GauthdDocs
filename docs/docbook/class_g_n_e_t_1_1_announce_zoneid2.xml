@@ -10,10 +10,20 @@
 <para>
 <computeroutput>#include &lt;announcezoneid2.hpp&gt;</computeroutput>
 </para>
-<para>Inheritance diagram for GNET::AnnounceZoneid2:    <informalfigure>
+Inheritance diagram for GNET::AnnounceZoneid2:<para>
+    <informalfigure>
         <mediaobject>
             <imageobject>
-                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_announce_zoneid2.png"></imagedata>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_announce_zoneid2__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for GNET::AnnounceZoneid2:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_announce_zoneid2__coll__graph.png"></imagedata>
             </imageobject>
         </mediaobject>
     </informalfigure>

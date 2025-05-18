@@ -1,0 +1,9 @@
+<map id="GMysqlClient::DelUser" name="GMysqlClient::DelUser">
+<area shape="rect" id="Node000001" title="Удалить пользователя из онлайн&#45;списка" alt="" coords="487,31,643,57"/>
+<area shape="rect" id="Node000002" href="$class_g_mysql_client.html#abdc4799af3e56eb878e0595b1d54b8fa" title="Добавить пользователя в онлайн&#45;список" alt="" coords="262,5,422,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="471,36,421,30,422,25,472,31"/>
+<area shape="rect" id="Node000004" href="$class_g_mysql_client.html#a524bc45740cb01aabdbf2b012407925f" title="Запись информации о выходе пользователя из онлайн" alt="" coords="245,56,439,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="472,57,440,61,439,56,471,52"/>
+<area shape="rect" id="Node000003" href="$class_g_mysql_client.html#ae74167391b7e749c390203ea4f0ec5e5" title="Проверка учетных данных пользователя." alt="" coords="5,5,197,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="247,21,197,21,197,16,247,16"/>
+</map>

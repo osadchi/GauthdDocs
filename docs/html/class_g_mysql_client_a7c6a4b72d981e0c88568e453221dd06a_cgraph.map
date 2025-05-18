@@ -1,0 +1,7 @@
+<map id="GMysqlClient::OnlineRecord" name="GMysqlClient::OnlineRecord">
+<area shape="rect" id="Node000001" title="Запись информации о входе пользователя в онлайн" alt="" coords="5,31,193,57"/>
+<area shape="rect" id="Node000002" href="$class_g_mysql_client.html#a8b60b7430a3413aeae8f36df7bbf7f57" title=" " alt="" coords="261,5,399,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,31,245,25,245,31,193,36"/>
+<area shape="rect" id="Node000003" href="$class_g_mysql_client.html#a1be593d128e947bbb05fdee22e9c2a89" title="Выполнить SQL запрос" alt="" coords="241,56,419,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="193,52,226,55,225,61,193,57"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="GMysqlClient::ClearOnlineRecord" name="GMysqlClient::ClearOnlineRecord">
+<area shape="rect" id="Node000001" title="Очистка онлайн&#45;записей для указанной зоны и аккаунта" alt="" coords="216,5,392,48"/>
+<area shape="rect" id="Node000002" href="$class_g_n_e_t_1_1_announce_zoneid.html#af13174f610fa4dc7525ab104c856ac91" title="&lt; Включение автоматически сгенерированных данных протокола" alt="" coords="5,5,168,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,29,168,29,168,24,200,24"/>
+</map>

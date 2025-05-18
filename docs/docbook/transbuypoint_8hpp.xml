@@ -7,7 +7,25 @@
 <para>Заголовочный файл класса TransBuyPoint для обработки транзакций покупки баллов </para>
  
 </para>
-<programlisting linenumbering="unnumbered">#include &quot;rpcdefs.h&quot;<?linebreak?>#include &quot;callid.hxx&quot;<?linebreak?>#include &quot;state.hxx&quot;<?linebreak?>#include &quot;transid&quot;<?linebreak?>#include &quot;sellid&quot;<?linebreak?>#include &quot;transbuypoint&quot;<?linebreak?></programlisting><simplesect>
+<programlisting linenumbering="unnumbered">#include &quot;rpcdefs.h&quot;<?linebreak?>#include &quot;callid.hxx&quot;<?linebreak?>#include &quot;state.hxx&quot;<?linebreak?>#include &quot;transid&quot;<?linebreak?>#include &quot;sellid&quot;<?linebreak?>#include &quot;transbuypoint&quot;<?linebreak?></programlisting>Include dependency graph for transbuypoint.hpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="transbuypoint_8hpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="transbuypoint_8hpp__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
     <title>Classes    </title>
         <itemizedlist>
             <listitem><para>class <link linkend="_class_g_n_e_t_1_1_trans_buy_point">GNET::TransBuyPoint</link></para>

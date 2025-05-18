@@ -10,10 +10,20 @@
 <para>
 <computeroutput>#include &lt;kickoutuser.hpp&gt;</computeroutput>
 </para>
-<para>Inheritance diagram for GNET::KickoutUser:    <informalfigure>
+Inheritance diagram for GNET::KickoutUser:<para>
+    <informalfigure>
         <mediaobject>
             <imageobject>
-                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_kickout_user.png"></imagedata>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_kickout_user__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for GNET::KickoutUser:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_kickout_user__coll__graph.png"></imagedata>
             </imageobject>
         </mediaobject>
     </informalfigure>

@@ -10,10 +10,20 @@
 <para>
 <computeroutput>#include &lt;gmshutup.hpp&gt;</computeroutput>
 </para>
-<para>Inheritance diagram for GNET::GMShutup:    <informalfigure>
+Inheritance diagram for GNET::GMShutup:<para>
+    <informalfigure>
         <mediaobject>
             <imageobject>
-                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_g_m_shutup.png"></imagedata>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_g_m_shutup__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for GNET::GMShutup:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_g_m_shutup__coll__graph.png"></imagedata>
             </imageobject>
         </mediaobject>
     </informalfigure>

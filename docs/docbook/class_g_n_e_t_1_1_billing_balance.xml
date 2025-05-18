@@ -10,10 +10,20 @@
 <para>
 <computeroutput>#include &lt;billingbalance.hpp&gt;</computeroutput>
 </para>
-<para>Inheritance diagram for GNET::BillingBalance:    <informalfigure>
+Inheritance diagram for GNET::BillingBalance:<para>
+    <informalfigure>
         <mediaobject>
             <imageobject>
-                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_billing_balance.png"></imagedata>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_billing_balance__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for GNET::BillingBalance:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_billing_balance__coll__graph.png"></imagedata>
             </imageobject>
         </mediaobject>
     </informalfigure>

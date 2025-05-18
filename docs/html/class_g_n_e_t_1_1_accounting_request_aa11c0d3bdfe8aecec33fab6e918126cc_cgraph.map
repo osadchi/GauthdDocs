@@ -1,0 +1,7 @@
+<map id="GNET::AccountingRequest::Process" name="GNET::AccountingRequest::Process">
+<area shape="rect" id="Node000001" title="Основной метод обработки запроса." alt="" coords="5,5,185,48"/>
+<area shape="rect" id="Node000002" href="$class_g_n_e_t_1_1_g_auth_server.html#a2fb6223e8492fcbc74f9b21ee12f25e7" title="Получить экземпляр синглтона." alt="" coords="233,5,381,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,24,217,24,217,29,185,29"/>
+<area shape="rect" id="Node000003" href="$class_g_n_e_t_1_1_g_auth_server.html#a807dbbef9b25bce26260a6cbbd4edd01" title="Конструктор по умолчанию." alt="" coords="429,5,577,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="381,24,413,24,413,29,381,29"/>
+</map>

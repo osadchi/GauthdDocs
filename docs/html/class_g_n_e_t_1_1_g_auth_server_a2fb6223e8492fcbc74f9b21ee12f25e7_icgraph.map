@@ -1,0 +1,11 @@
+<map id="GNET::GAuthServer::GetInstance" name="GNET::GAuthServer::GetInstance">
+<area shape="rect" id="Node000001" title="Получить экземпляр синглтона." alt="" coords="233,89,381,132"/>
+<area shape="rect" id="Node000002" href="$gauthd_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Главная функция программы." alt="" coords="70,5,120,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="257,84,184,46,119,26,121,21,186,42,259,79"/>
+<area shape="rect" id="Node000003" href="$class_g_n_e_t_1_1_accounting_request.html#aa11c0d3bdfe8aecec33fab6e918126cc" title="Основной метод обработки запроса." alt="" coords="5,56,185,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="217,99,185,94,186,89,218,94"/>
+<area shape="rect" id="Node000004" href="$class_g_n_e_t_1_1_announce_zoneid.html#af13174f610fa4dc7525ab104c856ac91" title="&lt; Включение автоматически сгенерированных данных протокола" alt="" coords="14,123,176,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="218,127,177,134,176,129,217,122"/>
+<area shape="rect" id="Node000005" href="$class_g_n_e_t_1_1_status_announce.html#ae5a6d07d7f9047b0d0a53cce09ed94b9" title="Обработчик протокола" alt="" coords="14,189,176,232"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="258,142,186,180,159,191,157,186,184,175,255,138"/>
+</map>

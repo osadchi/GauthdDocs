@@ -1,0 +1,31 @@
+<map id="D:/pwsrc2.0/docs/gauthd/gauthd.cpp" name="D:/pwsrc2.0/docs/gauthd/gauthd.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="449,5,616,48"/>
+<area shape="rect" id="Node000002" href="$gauthserver_8hpp.html" title="Заголовочный файл, содержащий определения классов для аутентификации и управления сессиями." alt="" coords="79,96,194,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="449,48,209,96,208,91,448,42"/>
+<area shape="rect" id="Node000004" href="$gmysqlclient_8hpp.html" title="MySQL клиент для работы с базой данных игрового сервера" alt="" coords="309,96,428,123"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="491,51,409,91,407,86,489,46"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="634,171,703,197"/>
+<area shape="poly" id="edge13_Node000001_Node000007" title=" " alt="" coords="515,50,502,67,492,85,489,104,495,121,510,130,541,142,620,167,618,172,539,147,507,135,490,124,484,104,487,84,498,64,510,47"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="504,96,561,123"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="535,49,535,80,530,80,530,49"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="585,96,634,123"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="554,47,589,83,585,86,550,50"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="658,96,730,123"/>
+<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="575,46,656,86,654,91,573,51"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="754,96,821,123"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="599,46,739,90,738,95,597,51"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,171,84,197"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="122,125,74,163,70,159,119,121"/>
+<area shape="poly" id="edge6_Node000004_Node000003" title=" " alt="" coords="310,126,100,172,99,167,309,121"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="107,171,214,197"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="333,126,212,168,210,163,331,121"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="237,171,294,197"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="352,125,298,163,295,159,349,121"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="424,121,620,167,619,173,422,126"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="318,171,419,197"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="371,123,371,155,366,155,366,123"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="442,171,511,197"/>
+<area shape="poly" id="edge9_Node000004_Node000009" title=" " alt="" coords="389,121,446,159,443,164,386,125"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="535,171,610,197"/>
+<area shape="poly" id="edge10_Node000004_Node000010" title=" " alt="" coords="405,121,523,162,521,167,403,126"/>
+</map>

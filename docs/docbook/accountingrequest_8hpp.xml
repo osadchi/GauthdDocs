@@ -7,7 +7,25 @@
 <para>Заголовочный файл класса AccountingRequest для обработки учётных запросов в системе <link linkend="_namespace_g_n_e_t">GNET</link>. </para>
  
 </para>
-<programlisting linenumbering="unnumbered">#include &quot;rpcdefs.h&quot;<?linebreak?>#include &quot;callid.hxx&quot;<?linebreak?>#include &quot;state.hxx&quot;<?linebreak?>#include &quot;accntparam&quot;<?linebreak?>#include &quot;security.h&quot;<?linebreak?>#include &quot;kickoutuser.hpp&quot;<?linebreak?>#include &quot;accountingresponse.hpp&quot;<?linebreak?>#include &quot;gauthserver.hpp&quot;<?linebreak?>#include &quot;accountingrequest&quot;<?linebreak?></programlisting><simplesect>
+<programlisting linenumbering="unnumbered">#include &quot;rpcdefs.h&quot;<?linebreak?>#include &quot;callid.hxx&quot;<?linebreak?>#include &quot;state.hxx&quot;<?linebreak?>#include &quot;accntparam&quot;<?linebreak?>#include &quot;security.h&quot;<?linebreak?>#include &quot;kickoutuser.hpp&quot;<?linebreak?>#include &quot;accountingresponse.hpp&quot;<?linebreak?>#include &quot;gauthserver.hpp&quot;<?linebreak?>#include &quot;accountingrequest&quot;<?linebreak?></programlisting>Include dependency graph for accountingrequest.hpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="accountingrequest_8hpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="accountingrequest_8hpp__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
     <title>Classes    </title>
         <itemizedlist>
             <listitem><para>class <link linkend="_class_g_n_e_t_1_1_accounting_request">GNET::AccountingRequest</link></para>

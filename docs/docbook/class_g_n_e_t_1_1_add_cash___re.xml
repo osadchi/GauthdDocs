@@ -10,10 +10,20 @@
 <para>
 <computeroutput>#include &lt;addcash_re.hpp&gt;</computeroutput>
 </para>
-<para>Inheritance diagram for GNET::AddCash_Re:    <informalfigure>
+Inheritance diagram for GNET::AddCash_Re:<para>
+    <informalfigure>
         <mediaobject>
             <imageobject>
-                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_add_cash___re.png"></imagedata>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_add_cash___re__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for GNET::AddCash_Re:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_add_cash___re__coll__graph.png"></imagedata>
             </imageobject>
         </mediaobject>
     </informalfigure>
@@ -83,6 +93,15 @@ Parameters</title>
 </para>
 <para>
 Definition at line <link linkend="_addcash__re_8hpp_source_1l00054">54</link> of file <link linkend="_addcash__re_8hpp_source">addcash_re.hpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_add_cash___re_a4ed01ac8071caf53c9a4031c12cbda6e_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

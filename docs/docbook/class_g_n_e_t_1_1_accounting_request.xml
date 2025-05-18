@@ -10,10 +10,20 @@
 <para>
 <computeroutput>#include &lt;accountingrequest.hpp&gt;</computeroutput>
 </para>
-<para>Inheritance diagram for GNET::AccountingRequest:    <informalfigure>
+Inheritance diagram for GNET::AccountingRequest:<para>
+    <informalfigure>
         <mediaobject>
             <imageobject>
-                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_accounting_request.png"></imagedata>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_accounting_request__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for GNET::AccountingRequest:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_accounting_request__coll__graph.png"></imagedata>
             </imageobject>
         </mediaobject>
     </informalfigure>
@@ -91,6 +101,15 @@ Parameters</title>
 </para>
 <para>
 Definition at line <link linkend="_accountingrequest_8hpp_source_1l00131">131</link> of file <link linkend="_accountingrequest_8hpp_source">accountingrequest.hpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_accounting_request_aa11c0d3bdfe8aecec33fab6e918126cc_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

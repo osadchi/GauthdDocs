@@ -7,7 +7,16 @@
 <para>Implementation of the <link linkend="_class_g_n_e_t_1_1_g_auth_server">GAuthServer</link> and related classes for authentication and periodic checks. </para>
  
 </para>
-<programlisting linenumbering="unnumbered">#include &quot;gmysqlclient.hpp&quot;<?linebreak?>#include &quot;getaddcashsn.hrp&quot;<?linebreak?>#include &quot;addcash.hpp&quot;<?linebreak?>#include &quot;gauthserver.hpp&quot;<?linebreak?>#include &quot;state.hxx&quot;<?linebreak?></programlisting><simplesect>
+<programlisting linenumbering="unnumbered">#include &quot;gmysqlclient.hpp&quot;<?linebreak?>#include &quot;getaddcashsn.hrp&quot;<?linebreak?>#include &quot;addcash.hpp&quot;<?linebreak?>#include &quot;gauthserver.hpp&quot;<?linebreak?>#include &quot;state.hxx&quot;<?linebreak?></programlisting>Include dependency graph for gauthserver.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="gauthserver_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
     <title>Namespaces    </title>
         <itemizedlist>
             <listitem><para>namespace <link linkend="_namespace_g_n_e_t">GNET</link></para>

@@ -10,10 +10,20 @@
 <para>
 <computeroutput>#include &lt;statusannounce.hpp&gt;</computeroutput>
 </para>
-<para>Inheritance diagram for GNET::StatusAnnounce:    <informalfigure>
+Inheritance diagram for GNET::StatusAnnounce:<para>
+    <informalfigure>
         <mediaobject>
             <imageobject>
-                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_status_announce.png"></imagedata>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_status_announce__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for GNET::StatusAnnounce:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_status_announce__coll__graph.png"></imagedata>
             </imageobject>
         </mediaobject>
     </informalfigure>
@@ -95,6 +105,15 @@ Parameters</title>
 </para></para>
 <para>
 Definition at line <link linkend="_statusannounce_8hpp_source_1l00045">45</link> of file <link linkend="_statusannounce_8hpp_source">statusannounce.hpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_status_announce_ae5a6d07d7f9047b0d0a53cce09ed94b9_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

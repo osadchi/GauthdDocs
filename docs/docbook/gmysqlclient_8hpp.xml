@@ -7,7 +7,25 @@
 <para>MySQL клиент для работы с базой данных игрового сервера </para>
  
 </para>
-<programlisting linenumbering="unnumbered">#include &lt;mysql/mysql.h&gt;<?linebreak?>#include &lt;vector&gt;<?linebreak?>#include &quot;protocol.h&quot;<?linebreak?>#include &quot;thread.h&quot;<?linebreak?>#include &quot;timersender.h&quot;<?linebreak?>#include &quot;octets.h&quot;<?linebreak?>#include &quot;base64.h&quot;<?linebreak?></programlisting><simplesect>
+<programlisting linenumbering="unnumbered">#include &lt;mysql/mysql.h&gt;<?linebreak?>#include &lt;vector&gt;<?linebreak?>#include &quot;protocol.h&quot;<?linebreak?>#include &quot;thread.h&quot;<?linebreak?>#include &quot;timersender.h&quot;<?linebreak?>#include &quot;octets.h&quot;<?linebreak?>#include &quot;base64.h&quot;<?linebreak?></programlisting>Include dependency graph for gmysqlclient.hpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="gmysqlclient_8hpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="gmysqlclient_8hpp__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
     <title>Classes    </title>
         <itemizedlist>
             <listitem><para>class <link linkend="_class_g_mysql_client">GMysqlClient</link></para>

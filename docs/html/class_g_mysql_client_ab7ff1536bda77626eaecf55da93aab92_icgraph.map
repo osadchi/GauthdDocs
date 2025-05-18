@@ -1,0 +1,16 @@
+<map id="GMysqlClient::GetUser" name="GMysqlClient::GetUser">
+<area shape="rect" id="Node000001" title="Найти пользователя по ID." alt="" coords="720,56,878,83"/>
+<area shape="rect" id="Node000002" href="$class_g_mysql_client.html#abdc4799af3e56eb878e0595b1d54b8fa" title="Добавить пользователя в онлайн&#45;список" alt="" coords="262,5,422,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="722,55,672,47,540,33,422,25,422,19,541,27,673,41,722,50"/>
+<area shape="rect" id="Node000004" href="$class_g_mysql_client.html#af95566b524271d47c9e9baddb7efda4a" title="Удалить пользователя из онлайн&#45;списка" alt="" coords="502,56,658,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="705,72,658,72,658,67,705,67"/>
+<area shape="rect" id="Node000006" href="$class_g_mysql_client.html#a197d13b53a9987edf047df74c8d73a2e" title="Получить данные пользователя" alt="" coords="487,107,672,133"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="724,89,641,109,640,103,723,84"/>
+<area shape="rect" id="Node000003" href="$class_g_mysql_client.html#ae74167391b7e749c390203ea4f0ec5e5" title="Проверка учетных данных пользователя." alt="" coords="5,5,197,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="247,21,197,21,197,16,247,16"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="498,55,407,35,408,30,499,50"/>
+<area shape="rect" id="Node000005" href="$class_g_mysql_client.html#a524bc45740cb01aabdbf2b012407925f" title="Запись информации о выходе пользователя из онлайн" alt="" coords="245,56,439,83"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="486,72,439,72,439,67,486,67"/>
+<area shape="rect" id="Node000007" href="$class_g_mysql_client.html#a8875011e1658a40cefc82eac737bba58" title="Логирование действия входа/выхода (специальный функционал)" alt="" coords="248,107,436,133"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="471,123,437,123,437,117,471,117"/>
+</map>

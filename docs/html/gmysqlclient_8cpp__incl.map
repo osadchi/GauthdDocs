@@ -1,0 +1,24 @@
+<map id="D:/pwsrc2.0/docs/gauthd/gmysqlclient.cpp" name="D:/pwsrc2.0/docs/gauthd/gmysqlclient.cpp">
+<area shape="rect" id="Node000001" title="Реализация класса GMysqlClient для работы с MySQL базой данных." alt="" coords="225,5,392,48"/>
+<area shape="rect" id="Node000002" href="$gmysqlclient_8hpp.html" title="MySQL клиент для работы с базой данных игрового сервера" alt="" coords="249,96,368,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="311,49,311,80,306,80,306,49"/>
+<area shape="rect" id="Node000010" href="$state_8hxx.html" title=" " alt="" coords="100,96,176,123"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="266,51,180,91,177,87,263,46"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="392,96,478,123"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="343,46,404,85,401,90,340,51"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="107,171,214,197"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="284,126,201,166,199,161,282,121"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="237,171,294,197"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="303,125,283,159,279,156,299,122"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,171,84,197"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="263,126,99,171,97,165,262,121"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="318,171,387,197"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="318,122,339,156,335,159,314,125"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="410,171,511,197"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="336,121,421,161,419,166,334,126"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="534,171,603,197"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="355,121,520,166,518,172,353,126"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="627,171,702,197"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="369,119,613,167,612,173,368,124"/>
+<area shape="poly" id="edge10_Node000010_Node000005" title=" " alt="" coords="123,125,74,163,71,159,120,121"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="GMysqlClient::GetUserData" name="GMysqlClient::GetUserData">
+<area shape="rect" id="Node000001" title="Получить данные пользователя" alt="" coords="5,5,191,32"/>
+<area shape="rect" id="Node000002" href="$class_g_mysql_client.html#ab7ff1536bda77626eaecf55da93aab92" title="Найти пользователя по ID." alt="" coords="239,5,396,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,16,223,16,223,21,191,21"/>
+</map>

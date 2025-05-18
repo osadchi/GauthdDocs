@@ -1,0 +1,5 @@
+<map id="GNET::BillingCancel" name="GNET::BillingCancel">
+<area shape="rect" id="Node000001" title="Протокол для обработки запросов отмены биллинговых транзакций @inherits Protocol." alt="" coords="5,80,147,107"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="19,5,133,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,48,79,80,73,80,73,48"/>
+</map>

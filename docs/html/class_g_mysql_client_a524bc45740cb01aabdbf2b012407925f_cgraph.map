@@ -1,0 +1,11 @@
+<map id="GMysqlClient::OnfflineRecord" name="GMysqlClient::OnfflineRecord">
+<area shape="rect" id="Node000001" title="Запись информации о выходе пользователя из онлайн" alt="" coords="5,56,200,83"/>
+<area shape="rect" id="Node000002" href="$class_g_mysql_client.html#a8b60b7430a3413aeae8f36df7bbf7f57" title=" " alt="" coords="268,5,406,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,53,256,33,258,38,168,58"/>
+<area shape="rect" id="Node000003" href="$class_g_mysql_client.html#af95566b524271d47c9e9baddb7efda4a" title="Удалить пользователя из онлайн&#45;списка" alt="" coords="259,56,415,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="200,67,243,67,243,72,200,72"/>
+<area shape="rect" id="Node000005" href="$class_g_mysql_client.html#a1be593d128e947bbb05fdee22e9c2a89" title="Выполнить SQL запрос" alt="" coords="248,107,426,133"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="168,81,258,100,256,105,167,86"/>
+<area shape="rect" id="Node000004" href="$class_g_mysql_client.html#ab7ff1536bda77626eaecf55da93aab92" title="Найти пользователя по ID." alt="" coords="474,56,631,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="415,67,458,67,458,72,415,72"/>
+</map>

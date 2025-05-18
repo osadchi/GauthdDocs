@@ -10,10 +10,20 @@
 <para>
 <computeroutput>#include &lt;acforbidcheater.hpp&gt;</computeroutput>
 </para>
-<para>Inheritance diagram for GNET::ACForbidCheater:    <informalfigure>
+Inheritance diagram for GNET::ACForbidCheater:<para>
+    <informalfigure>
         <mediaobject>
             <imageobject>
-                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_a_c_forbid_cheater.png"></imagedata>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_a_c_forbid_cheater__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for GNET::ACForbidCheater:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_a_c_forbid_cheater__coll__graph.png"></imagedata>
             </imageobject>
         </mediaobject>
     </informalfigure>

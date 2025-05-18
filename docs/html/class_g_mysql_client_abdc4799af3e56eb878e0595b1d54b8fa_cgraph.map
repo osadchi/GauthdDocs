@@ -1,0 +1,8 @@
+<map id="GMysqlClient::AddUser" name="GMysqlClient::AddUser">
+<area shape="rect" id="Node000001" title="Добавить пользователя в онлайн&#45;список" alt="" coords="5,31,165,57"/>
+<area shape="rect" id="Node000002" href="$class_g_mysql_client.html#af95566b524271d47c9e9baddb7efda4a" title="Удалить пользователя из онлайн&#45;списка" alt="" coords="213,5,369,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,32,197,28,197,33,165,37"/>
+<area shape="rect" id="Node000003" href="$class_g_mysql_client.html#ab7ff1536bda77626eaecf55da93aab92" title="Найти пользователя по ID." alt="" coords="417,31,574,57"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="165,41,401,41,401,47,165,47"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="370,26,402,30,401,35,369,31"/>
+</map>

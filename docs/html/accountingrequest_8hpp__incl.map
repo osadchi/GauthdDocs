@@ -1,0 +1,34 @@
+<map id="D:/pwsrc2.0/docs/gauthd/accountingrequest.hpp" name="D:/pwsrc2.0/docs/gauthd/accountingrequest.hpp">
+<area shape="rect" id="Node000001" title="Заголовочный файл класса AccountingRequest для обработки учётных запросов в системе GNET." alt="" coords="425,5,592,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="167,171,242,197"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="425,33,336,38,242,50,160,69,129,82,109,98,104,106,104,115,113,132,133,148,159,161,156,166,130,152,109,135,98,116,99,105,105,94,127,78,158,64,241,44,336,33,424,27"/>
+<area shape="rect" id="Node000003" href="$callid_8hxx.html" title=" " alt="" coords="273,171,350,197"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="427,51,385,70,348,98,329,126,319,157,314,155,325,124,344,94,382,66,424,46"/>
+<area shape="rect" id="Node000004" href="$state_8hxx.html" title=" " alt="" coords="374,171,449,197"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="509,49,502,85,486,124,468,146,447,163,444,159,464,142,481,121,497,84,504,48"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="597,96,687,123"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="544,46,610,85,607,90,542,51"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="711,96,789,123"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="572,46,699,88,697,93,570,51"/>
+<area shape="rect" id="Node000008" href="$kickoutuser_8hpp.html" title="Заголовочный файл класса протокола для принудительного отключения пользователя" alt="" coords="357,96,471,123"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="486,51,442,88,439,84,483,47"/>
+<area shape="rect" id="Node000010" href="$accountingresponse_8hpp.html" title="Заголовочный файл, содержащий объявление класса AccountingResponse для обработки ответов учётных запи..." alt="" coords="120,96,282,123"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="430,51,264,94,263,89,429,46"/>
+<area shape="rect" id="Node000012" href="$gauthserver_8hpp.html" title="Заголовочный файл, содержащий определения классов для аутентификации и управления сессиями." alt="" coords="585,171,699,197"/>
+<area shape="poly" id="edge17_Node000001_Node000012" title=" " alt="" coords="527,47,588,121,621,157,617,161,584,124,523,50"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="813,96,940,123"/>
+<area shape="poly" id="edge19_Node000001_Node000013" title=" " alt="" coords="593,44,805,90,803,95,592,49"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="487,245,565,272"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="433,196,494,234,492,239,430,200"/>
+<area shape="poly" id="edge8_Node000008_Node000002" title=" " alt="" coords="378,126,257,168,255,163,377,121"/>
+<area shape="poly" id="edge9_Node000008_Node000003" title=" " alt="" coords="398,125,343,163,340,159,395,121"/>
+<area shape="poly" id="edge10_Node000008_Node000004" title=" " alt="" coords="416,123,415,155,410,155,411,123"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="472,171,561,197"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="433,121,488,159,485,163,430,125"/>
+<area shape="poly" id="edge13_Node000010_Node000002" title=" " alt="" coords="204,123,206,155,200,155,199,123"/>
+<area shape="poly" id="edge14_Node000010_Node000003" title=" " alt="" coords="221,121,281,160,278,164,218,125"/>
+<area shape="poly" id="edge15_Node000010_Node000004" title=" " alt="" coords="238,121,361,163,359,168,236,126"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="5,171,143,197"/>
+<area shape="poly" id="edge16_Node000010_Node000011" title=" " alt="" coords="180,126,111,165,108,160,177,121"/>
+<area shape="poly" id="edge18_Node000012_Node000005" title=" " alt="" coords="623,200,561,239,558,234,620,196"/>
+</map>

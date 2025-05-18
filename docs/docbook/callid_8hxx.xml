@@ -2,6 +2,15 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_callid_8hxx" xml:lang="en-US">
 <title>D:/pwsrc2.0/docs/gauthd/callid.hxx File Reference</title>
 <indexterm><primary>D:/pwsrc2.0/docs/gauthd/callid.hxx</primary></indexterm>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="callid_8hxx__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 <simplesect>
     <title>Namespaces    </title>
         <itemizedlist>

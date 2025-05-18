@@ -1,0 +1,15 @@
+<map id="D:/pwsrc2.0/docs/gauthd/ssogetticketreq.hpp" name="D:/pwsrc2.0/docs/gauthd/ssogetticketreq.hpp">
+<area shape="rect" id="Node000001" title="Заголовочный файл для класса SSOGetTicketReq, реализующего протокол запроса SSO&#45;билета" alt="" coords="159,5,327,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,96,81,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,51,90,92,88,87,191,46"/>
+<area shape="rect" id="Node000003" href="$callid_8hxx.html" title=" " alt="" coords="105,96,181,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="219,51,172,88,169,84,216,47"/>
+<area shape="rect" id="Node000004" href="$state_8hxx.html" title=" " alt="" coords="205,96,281,123"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="246,49,246,80,240,80,240,49"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="305,96,373,123"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="269,47,314,84,310,88,266,51"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="397,96,508,123"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="298,46,406,88,405,93,296,51"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="204,171,282,197"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="246,123,246,155,240,155,240,123"/>
+</map>

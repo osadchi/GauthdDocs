@@ -1,0 +1,13 @@
+<map id="GNET::QueryUserPrivilege::Process" name="GNET::QueryUserPrivilege::Process">
+<area shape="rect" id="Node000001" title="Обрабатывает запрос привилегий пользователя" alt="" coords="5,48,184,91"/>
+<area shape="rect" id="Node000002" href="$class_g_mysql_client.html#a87a90c9a2b827da79f451728f4109850" title="Получить экземпляр класса (Singleton)" alt="" coords="249,5,428,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,48,256,33,257,38,185,53"/>
+<area shape="rect" id="Node000003" href="$class_g_mysql_client.html#acb10864e5152be98cb60ca379e5401bc" title="Получить ID зоны" alt="" coords="255,56,423,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="184,67,239,67,239,72,184,72"/>
+<area shape="rect" id="Node000004" href="$class_g_mysql_client.html#aee26570bd0c44f31da836916cf77ec23" title="Получение списка GM&#45;привилегий пользователя" alt="" coords="232,107,446,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="185,85,257,100,256,106,184,90"/>
+<area shape="rect" id="Node000005" href="$class_g_mysql_client.html#a8b60b7430a3413aeae8f36df7bbf7f57" title=" " alt="" coords="514,81,652,108"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="446,106,498,101,499,106,447,112"/>
+<area shape="rect" id="Node000006" href="$class_g_mysql_client.html#a1be593d128e947bbb05fdee22e9c2a89" title="Выполнить SQL запрос" alt="" coords="494,132,672,159"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="447,128,479,132,478,137,446,134"/>
+</map>

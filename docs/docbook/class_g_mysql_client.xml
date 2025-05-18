@@ -10,6 +10,15 @@
 <para>
 <computeroutput>#include &lt;gmysqlclient.hpp&gt;</computeroutput>
 </para>
+Collaboration diagram for GMysqlClient:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 <simplesect>
     <title>Public Member Functions    </title>
         <itemizedlist>
@@ -206,6 +215,15 @@ Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00026">26</link> o
 <indexterm><primary>GMysqlClient</primary><secondary>AddAntibrutUser</secondary></indexterm>
 <para><computeroutput>int GMysqlClient::AddAntibrutUser (int ip)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
 Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00374">374</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_abe6e61839f3cca64f864f4a9078b0ba5_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1a0cba2ae6714706fa26b2b39f91c34665"/><section>
     <title>AddCashLog()</title>
@@ -283,6 +301,24 @@ Parameters</title>
 </para>
 <para>
 Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00451">451</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a0cba2ae6714706fa26b2b39f91c34665_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a0cba2ae6714706fa26b2b39f91c34665_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1ac4379ab9d87013d1578a381558e9cdae"/><section>
     <title>AddCashUser()</title>
@@ -290,6 +326,15 @@ Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00451">451</link> 
 <indexterm><primary>GMysqlClient</primary><secondary>AddCashUser</secondary></indexterm>
 <para><computeroutput>void GMysqlClient::AddCashUser (int userid, int zoneid, int sn, int point, int cash, char * creatime)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
 Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00278">278</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_ac4379ab9d87013d1578a381558e9cdae_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1a2c15bbf59d3fb1b73005ad07a8dba455"/><section>
     <title>AddrToStr()</title>
@@ -328,6 +373,15 @@ Parameters</title>
                 </para>
 <para>
 Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00467">467</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a2c15bbf59d3fb1b73005ad07a8dba455_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1abdc4799af3e56eb878e0595b1d54b8fa"/><section>
     <title>AddUser()</title>
@@ -380,6 +434,24 @@ Parameters</title>
 </para>
 <para>
 Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00229">229</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_abdc4799af3e56eb878e0595b1d54b8fa_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_abdc4799af3e56eb878e0595b1d54b8fa_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1a8875011e1658a40cefc82eac737bba58"/><section>
     <title>AlexAddLogin()</title>
@@ -427,6 +499,15 @@ Parameters</title>
 </para>
 <para>
 Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00467">467</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a8875011e1658a40cefc82eac737bba58_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1a14143f486913e7d3edff46e7458697cb"/><section>
     <title>AlexPatch()</title>
@@ -492,6 +573,15 @@ Parameters</title>
 </para>
 <para>
 Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00077">77</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a14143f486913e7d3edff46e7458697cb_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1a3e52c51fa1af93cb93da4547f877dba6"/><section>
     <title>AlexShell()</title>
@@ -545,6 +635,15 @@ Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00489">489</link> 
 <indexterm><primary>GMysqlClient</primary><secondary>ATOI</secondary></indexterm>
 <para><computeroutput>int GMysqlClient::ATOI (const char * ptr)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
 Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00388">388</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a8b60b7430a3413aeae8f36df7bbf7f57_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1af14249f643329398179702dd82f867fc"/><section>
     <title>Auth0xMD5()</title>
@@ -552,6 +651,15 @@ Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00388">388</link> 
 <indexterm><primary>GMysqlClient</primary><secondary>Auth0xMD5</secondary></indexterm>
 <para><computeroutput>void GMysqlClient::Auth0xMD5 (char * out, char * in)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
 Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00395">395</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_af14249f643329398179702dd82f867fc_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1a98b602a010fc50254381bcc3ad35d74b"/><section>
     <title>AuthBase64()</title>
@@ -559,6 +667,15 @@ Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00395">395</link> 
 <indexterm><primary>GMysqlClient</primary><secondary>AuthBase64</secondary></indexterm>
 <para><computeroutput>void GMysqlClient::AuthBase64 (char * passwd, char * auth)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
 Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00406">406</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a98b602a010fc50254381bcc3ad35d74b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1a4d62a501b69e922fae0c53fcc6342169"/><section>
     <title>AuthPasswd()</title>
@@ -605,6 +722,24 @@ Parameters</title>
 </para>
 <para>
 Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00425">425</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a4d62a501b69e922fae0c53fcc6342169_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a4d62a501b69e922fae0c53fcc6342169_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1ac6af30f08fc5c7f21a54fe66848308d1"/><section>
     <title>ClearAntibrutUser()</title>
@@ -619,6 +754,15 @@ Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00338">338</link> 
 <indexterm><primary>GMysqlClient</primary><secondary>ClearCash</secondary></indexterm>
 <para><computeroutput>int GMysqlClient::ClearCash ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
 Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00252">252</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a4379c3f714045e1afd240d3e006ef34e_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1a35fa8409b064722f23afb762910f1365"/><section>
     <title>ClearOnlineRecord()</title>
@@ -670,6 +814,24 @@ Parameters</title>
 </para>
 <para>
 Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00197">197</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a35fa8409b064722f23afb762910f1365_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a35fa8409b064722f23afb762910f1365_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1a4e2c4854287bb8ffdcd12081f46e866a"/><section>
     <title>Connect()</title>
@@ -693,6 +855,15 @@ Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00197">197</link> 
 </para>
 <para>
 Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00092">92</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a4e2c4854287bb8ffdcd12081f46e866a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1a8867d598bb11fca0045a206ab04c04c9"/><section>
     <title>DelAntibrutUser()</title>
@@ -700,6 +871,15 @@ Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00092">92</link> o
 <indexterm><primary>GMysqlClient</primary><secondary>DelAntibrutUser</secondary></indexterm>
 <para><computeroutput>int GMysqlClient::DelAntibrutUser (int ip)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
 Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00364">364</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a8867d598bb11fca0045a206ab04c04c9_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1a01a8870566416cb8446699c93cd1557b"/><section>
     <title>DelCashUser()</title>
@@ -707,6 +887,15 @@ Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00364">364</link> 
 <indexterm><primary>GMysqlClient</primary><secondary>DelCashUser</secondary></indexterm>
 <para><computeroutput>void GMysqlClient::DelCashUser (int idx)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
 Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00268">268</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a01a8870566416cb8446699c93cd1557b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1a315b9d03daf23fd3ccf9089290e155b7"/><section>
     <title>DeleteErrorRow()</title>
@@ -759,6 +948,15 @@ Parameters</title>
 </para>
 <para>
 Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00362">362</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a315b9d03daf23fd3ccf9089290e155b7_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1a0260ea3e3b3ba9b0e289a7b97bc4fd67"/><section>
     <title>DelUseCashNow()</title>
@@ -807,6 +1005,24 @@ Parameters</title>
 </para>
 <para>
 Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00429">429</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a0260ea3e3b3ba9b0e289a7b97bc4fd67_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a0260ea3e3b3ba9b0e289a7b97bc4fd67_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1af95566b524271d47c9e9baddb7efda4a"/><section>
     <title>DelUser()</title>
@@ -844,6 +1060,24 @@ Parameters</title>
 </para>
 <para>
 Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00211">211</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_af95566b524271d47c9e9baddb7efda4a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_af95566b524271d47c9e9baddb7efda4a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1a50dd2028ef5a6c498a7784a014606fb8"/><section>
     <title>Disconnect()</title>
@@ -874,6 +1108,15 @@ Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00119">119</link> 
 </para>
 <para>
 Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00164">164</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a623a50fa9c2dbe90519ac099bfa492f0_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1a56c16b331659609464396e2b1cf85d0f"/><section>
     <title>GetAllCashUser()</title>
@@ -888,6 +1131,15 @@ Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00296">296</link> 
 <indexterm><primary>GMysqlClient</primary><secondary>GetAntibrutUser</secondary></indexterm>
 <para><computeroutput>int GMysqlClient::GetAntibrutUser (int ip)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
 Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00354">354</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a9d2cce01742a63ed739c4c3cbe233296_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1aca8d88358cbbd6033e81272381cb0911"/><section>
     <title>GetCashCash()</title>
@@ -895,6 +1147,15 @@ Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00354">354</link> 
 <indexterm><primary>GMysqlClient</primary><secondary>GetCashCash</secondary></indexterm>
 <para><computeroutput>int GMysqlClient::GetCashCash (int idx)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
 Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00317">317</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_aca8d88358cbbd6033e81272381cb0911_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1afa65eb70f3df9ead6d515aa084f3f415"/><section>
     <title>GetCashCreaTime()</title>
@@ -902,6 +1163,15 @@ Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00317">317</link> 
 <indexterm><primary>GMysqlClient</primary><secondary>GetCashCreaTime</secondary></indexterm>
 <para><computeroutput>char * GMysqlClient::GetCashCreaTime (int idx)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
 Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00307">307</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_afa65eb70f3df9ead6d515aa084f3f415_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1a872aead647ae16442ef1ded0cfab4710"/><section>
     <title>GetCashPoint()</title>
@@ -909,6 +1179,15 @@ Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00307">307</link> 
 <indexterm><primary>GMysqlClient</primary><secondary>GetCashPoint</secondary></indexterm>
 <para><computeroutput>int GMysqlClient::GetCashPoint (int idx)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
 Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00327">327</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a872aead647ae16442ef1ded0cfab4710_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1a9da8bc562d0fd8440935df068aa50922"/><section>
     <title>GetCashSize()</title>
@@ -923,6 +1202,15 @@ Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00259">259</link> 
 <indexterm><primary>GMysqlClient</primary><secondary>GetCashUser</secondary></indexterm>
 <para><computeroutput>int GMysqlClient::GetCashUser (int userid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
 Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00286">286</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_ad4ac431eba947493223affceccff7990_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1a87a90c9a2b827da79f451728f4109850"/><section>
     <title>GetInstance()</title>
@@ -940,6 +1228,15 @@ Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00286">286</link> 
 </para>
 <para>
 Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00481">481</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a87a90c9a2b827da79f451728f4109850_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1a196ae8753a336df2cfcbea330f1a1e13"/><section>
     <title>GetUseCashNow()</title>
@@ -987,6 +1284,15 @@ Parameters</title>
 </para>
 <para>
 Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00378">378</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a196ae8753a336df2cfcbea330f1a1e13_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1ab7ff1536bda77626eaecf55da93aab92"/><section>
     <title>GetUser()</title>
@@ -1024,6 +1330,15 @@ Parameters</title>
 </para>
 <para>
 Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00196">196</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_ab7ff1536bda77626eaecf55da93aab92_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1a197d13b53a9987edf047df74c8d73a2e"/><section>
     <title>GetUserData()</title>
@@ -1061,6 +1376,24 @@ Parameters</title>
 </para>
 <para>
 Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00243">243</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a197d13b53a9987edf047df74c8d73a2e_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a197d13b53a9987edf047df74c8d73a2e_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1acb10864e5152be98cb60ca379e5401bc"/><section>
     <title>GetZoneid()</title>
@@ -1072,6 +1405,15 @@ Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00243">243</link> 
 </para>
 <para>
 Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00165">165</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_acb10864e5152be98cb60ca379e5401bc_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1a129ff21e968ae3c1218dd01ff10f9b09"/><section>
     <title>Init()</title>
@@ -1167,6 +1509,15 @@ Parameters</title>
 </para>
 <para>
 Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00030">30</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a129ff21e968ae3c1218dd01ff10f9b09_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1a50e93bdf74da424077e864ba8bbfe42c"/><section>
     <title>IsActive()</title>
@@ -1231,6 +1582,15 @@ Parameters</title>
 Использует хранимую процедуру acquireuserpasswd. </para>
 <para>
 Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00163">163</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_ae74167391b7e749c390203ea4f0ec5e5_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1a1be593d128e947bbb05fdee22e9c2a89"/><section>
     <title>MysqlQuery()</title>
@@ -1309,6 +1669,15 @@ Parameters</title>
 </para>
 <para>
 Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00136">136</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a1be593d128e947bbb05fdee22e9c2a89_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1a524bc45740cb01aabdbf2b012407925f"/><section>
     <title>OnfflineRecord()</title>
@@ -1375,6 +1744,15 @@ Parameters</title>
 </para>
 <para>
 Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00254">254</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a524bc45740cb01aabdbf2b012407925f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1a7c6a4b72d981e0c88568e453221dd06a"/><section>
     <title>OnlineRecord()</title>
@@ -1437,6 +1815,15 @@ Parameters</title>
 </para>
 <para>
 Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00219">219</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a7c6a4b72d981e0c88568e453221dd06a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1aee26570bd0c44f31da836916cf77ec23"/><section>
     <title>QueryGMPrivilege()</title>
@@ -1494,6 +1881,24 @@ Parameters</title>
 </para>
 <para>
 Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00336">336</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_aee26570bd0c44f31da836916cf77ec23_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_aee26570bd0c44f31da836916cf77ec23_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1a5ad2854f8238ad2008cf0358adf9325b"/><section>
     <title>SetUseCashNow()</title>
@@ -1551,6 +1956,15 @@ Parameters</title>
 </para>
 <para>
 Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00405">405</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a5ad2854f8238ad2008cf0358adf9325b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1aae78133acca23894a428d104cd582168"/><section>
     <title>SizeAntibrutUser()</title>
@@ -1605,6 +2019,15 @@ Parameters</title>
 </para>
 <para>
 Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00286">286</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_ac581c4885d0cd84f507760d32177b4f3_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1a916a21bf80a3b7aaaebaebf1855a429b"/><section>
     <title>UserGMPrivilege()</title>
@@ -1652,6 +2075,15 @@ Parameters</title>
 </para>
 <para>
 Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00311">311</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a916a21bf80a3b7aaaebaebf1855a429b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1a477a9db403d718b8ea1fb2f3e8ba2561"/><section>
     <title>ValidLogin()</title>

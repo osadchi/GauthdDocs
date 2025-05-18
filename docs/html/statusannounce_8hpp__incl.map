@@ -1,0 +1,16 @@
+<map id="D:/pwsrc2.0/docs/gauthd/statusannounce.hpp" name="D:/pwsrc2.0/docs/gauthd/statusannounce.hpp">
+<area shape="rect" id="Node000001" title="Заголовочный файл класса для обработки статусных уведомлений" alt="" coords="159,5,327,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,96,81,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,51,90,92,88,87,191,46"/>
+<area shape="rect" id="Node000003" href="$callid_8hxx.html" title=" " alt="" coords="105,96,181,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="219,51,172,88,169,84,216,47"/>
+<area shape="rect" id="Node000004" href="$state_8hxx.html" title=" " alt="" coords="205,96,281,123"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="246,49,246,80,240,80,240,49"/>
+<area shape="rect" id="Node000006" href="$gauthserver_8hpp.html" title="Заголовочный файл, содержащий определения классов для аутентификации и управления сессиями." alt="" coords="304,96,419,123"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="275,46,332,85,329,89,272,51"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="442,96,556,123"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="310,46,445,88,443,93,308,51"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="262,171,341,197"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="255,122,284,157,280,160,251,125"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="353,125,324,161,319,157,349,122"/>
+</map>

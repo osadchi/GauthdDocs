@@ -1,0 +1,7 @@
+<map id="GMysqlClient::QueryGMPrivilege" name="GMysqlClient::QueryGMPrivilege">
+<area shape="rect" id="Node000001" title="Получение списка GM&#45;привилегий пользователя" alt="" coords="5,31,220,57"/>
+<area shape="rect" id="Node000002" href="$class_g_mysql_client.html#a8b60b7430a3413aeae8f36df7bbf7f57" title=" " alt="" coords="288,5,426,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="220,30,272,25,272,30,220,36"/>
+<area shape="rect" id="Node000003" href="$class_g_mysql_client.html#a1be593d128e947bbb05fdee22e9c2a89" title="Выполнить SQL запрос" alt="" coords="268,56,446,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="220,52,252,56,252,61,220,58"/>
+</map>

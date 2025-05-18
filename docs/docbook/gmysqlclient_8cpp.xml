@@ -7,7 +7,16 @@
 <para>Реализация класса <link linkend="_class_g_mysql_client">GMysqlClient</link> для работы с MySQL базой данных. </para>
  
 </para>
-<programlisting linenumbering="unnumbered">#include &quot;gmysqlclient.hpp&quot;<?linebreak?>#include &quot;state.hxx&quot;<?linebreak?>#include &quot;timertask.h&quot;<?linebreak?></programlisting><section>
+<programlisting linenumbering="unnumbered">#include &quot;gmysqlclient.hpp&quot;<?linebreak?>#include &quot;state.hxx&quot;<?linebreak?>#include &quot;timertask.h&quot;<?linebreak?></programlisting>Include dependency graph for gmysqlclient.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="gmysqlclient_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
 <title>Detailed Description</title>
 
 <para>Реализация класса <link linkend="_class_g_mysql_client">GMysqlClient</link> для работы с MySQL базой данных. </para>

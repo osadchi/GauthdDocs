@@ -1,0 +1,20 @@
+<map id="GMysqlClient::MatrixPasswd" name="GMysqlClient::MatrixPasswd">
+<area shape="rect" id="Node000001" title="Проверка учетных данных пользователя." alt="" coords="5,107,197,133"/>
+<area shape="rect" id="Node000002" href="$class_g_mysql_client.html#abdc4799af3e56eb878e0595b1d54b8fa" title="Добавить пользователя в онлайн&#45;список" alt="" coords="256,31,416,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,104,244,67,268,59,269,65,245,72,140,109"/>
+<area shape="rect" id="Node000005" href="$class_g_mysql_client.html#a8b60b7430a3413aeae8f36df7bbf7f57" title=" " alt="" coords="267,81,405,108"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="197,107,251,101,252,106,197,112"/>
+<area shape="rect" id="Node000006" href="$class_g_mysql_client.html#a4d62a501b69e922fae0c53fcc6342169" title="Преобразование аутентификационных данных" alt="" coords="245,132,427,159"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="197,128,229,131,229,136,197,133"/>
+<area shape="rect" id="Node000009" href="$class_g_mysql_client.html#a1be593d128e947bbb05fdee22e9c2a89" title="Выполнить SQL запрос" alt="" coords="247,183,425,209"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="140,131,245,168,269,175,268,181,244,173,138,136"/>
+<area shape="rect" id="Node000003" href="$class_g_mysql_client.html#af95566b524271d47c9e9baddb7efda4a" title="Удалить пользователя из онлайн&#45;списка" alt="" coords="486,5,643,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="415,33,471,26,471,32,416,38"/>
+<area shape="rect" id="Node000004" href="$class_g_mysql_client.html#ab7ff1536bda77626eaecf55da93aab92" title="Найти пользователя по ID." alt="" coords="702,31,860,57"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="416,41,687,41,687,47,416,47"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="643,25,687,30,687,36,643,30"/>
+<area shape="rect" id="Node000007" href="$class_g_mysql_client.html#af14249f643329398179702dd82f867fc" title=" " alt="" coords="476,132,653,159"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="427,143,460,143,460,148,427,148"/>
+<area shape="rect" id="Node000008" href="$class_g_mysql_client.html#a98b602a010fc50254381bcc3ad35d74b" title=" " alt="" coords="475,183,654,209"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="400,157,487,176,486,181,399,162"/>
+</map>
