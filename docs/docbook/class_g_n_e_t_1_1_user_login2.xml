@@ -96,7 +96,7 @@ Parameters</title>
 
 <para>true если запрос успешно обработан, false в случае ошибки</para>
 </formalpara>
-<para><link linkend="_todo_1_todo000042">Todo</link> 
+<para><link linkend="_todo_1_todo000039">Todo</link> 
 <para>Реализовать обработку запроса через GAuthClient </para>
 </para><note><title>Note</title>
 
@@ -119,7 +119,7 @@ Definition at line <link linkend="_userlogin2_8hpp_source_1l00045">45</link> of 
 
 <para>Реализация требуется на стороне клиента</para>
 </note>
-<para><link linkend="_todo_1_todo000044">Todo</link> 
+<para><link linkend="_todo_1_todo000041">Todo</link> 
 <para>Реализовать обработку таймаутов для клиентской части </para>
 </para></para>
 <para>
@@ -164,7 +164,7 @@ Parameters</title>
                     </table>
                     </para>
                 </formalpara>
-                <para><link linkend="_todo_1_todo000043">Todo</link> 
+                <para><link linkend="_todo_1_todo000040">Todo</link> 
 <para>Реализовать обработку результатов авторизации </para>
 </para></para>
 <para>

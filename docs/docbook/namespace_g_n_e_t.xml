@@ -70,17 +70,9 @@
 
 <para>Класс для обработки биллинг-запросов в системе. </para>
 </listitem>
-            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_cash_serial">CashSerial</link></para>
-
-<para>Прокси-класс для обработки RPC-запросов денежных серий </para>
-</listitem>
             <listitem><para>class <link linkend="_class_g_n_e_t_1_1_check_timer">CheckTimer</link></para>
 
 <para>Periodic task manager for financial and security checks. </para>
-</listitem>
-            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_coupon_exchange">CouponExchange</link></para>
-
-<para>Класс для обработки RPC-запросов обмена купонов между клиентом и сервером. @inherits Rpc. </para>
 </listitem>
             <listitem><para>class <link linkend="_class_g_n_e_t_1_1_discount_announce">DiscountAnnounce</link></para>
 
@@ -97,10 +89,6 @@
             <listitem><para>class <link linkend="_class_g_n_e_t_1_1_g_auth_server">GAuthServer</link></para>
 
 <para>Main authentication server class handling sessions and user validation. </para>
-</listitem>
-            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_get_add_cash_s_n">GetAddCashSN</link></para>
-
-<para>RPC-класс для обработки запросов генерации серийных номеров пополнения </para>
 </listitem>
             <listitem><para>class <link linkend="_class_g_n_e_t_1_1_get_player_i_d_by_name___re">GetPlayerIDByName_Re</link></para>
 

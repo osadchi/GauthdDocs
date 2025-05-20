@@ -2019,15 +2019,6 @@ Here is the call graph for this function:<para>
         </mediaobject>
     </informalfigure>
 </para>
-Here is the caller graph for this function:<para>
-    <informalfigure>
-        <mediaobject>
-            <imageobject>
-                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a5ad2854f8238ad2008cf0358adf9325b_icgraph.png"></imagedata>
-            </imageobject>
-        </mediaobject>
-    </informalfigure>
-</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1aae78133acca23894a428d104cd582168"/><section>
     <title>SizeAntibrutUser()</title>

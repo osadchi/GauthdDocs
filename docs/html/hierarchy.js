@@ -43,15 +43,12 @@ var hierarchy =
       [ "GNET::VerifyMaster_Re", "class_g_n_e_t_1_1_verify_master___re.html", null ]
     ] ],
     [ "ProxyRpc", null, [
-      [ "GNET::CashSerial", "class_g_n_e_t_1_1_cash_serial.html", null ],
-      [ "GNET::GetAddCashSN", "class_g_n_e_t_1_1_get_add_cash_s_n.html", null ],
       [ "GNET::MatrixPasswd", "class_g_n_e_t_1_1_matrix_passwd.html", null ],
       [ "GNET::MatrixPasswd2", "class_g_n_e_t_1_1_matrix_passwd2.html", null ],
       [ "GNET::MatrixToken", "class_g_n_e_t_1_1_matrix_token.html", null ],
       [ "GNET::UserLogin2", "class_g_n_e_t_1_1_user_login2.html", null ]
     ] ],
     [ "Rpc", null, [
-      [ "GNET::CouponExchange", "class_g_n_e_t_1_1_coupon_exchange.html", null ],
       [ "GNET::GQueryPasswd", "class_g_n_e_t_1_1_g_query_passwd.html", null ],
       [ "GNET::GetUserCoupon", "class_g_n_e_t_1_1_get_user_coupon.html", null ],
       [ "GNET::UserLogin", "class_g_n_e_t_1_1_user_login.html", null ],

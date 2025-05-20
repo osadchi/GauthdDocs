@@ -107,7 +107,7 @@ Parameters</title>
 
 <para>В текущей реализации не выполняет действий </para>
 </warning>
-<para><link linkend="_todo_1_todo000045">Todo</link> 
+<para><link linkend="_todo_1_todo000042">Todo</link> 
 <para>Реализовать клиентскую часть логики </para>
 </para></para>
 <para>
@@ -126,7 +126,7 @@ Definition at line <link linkend="_userlogout_8hpp_source_1l00087">87</link> of 
 
 <para>В текущей реализации не выполняет действий </para>
 </note>
-<para><link linkend="_todo_1_todo000046">Todo</link> 
+<para><link linkend="_todo_1_todo000043">Todo</link> 
 <para>Реализовать обработку таймаутов для клиентской части </para>
 </para></para>
 <para>

@@ -31,12 +31,8 @@ Here are the classes, structs, unions and interfaces with brief descriptions:<li
 <para>Класс протокола для обработки подтверждений биллинговых операций </para>
 <link linkend="_class_g_n_e_t_1_1_billing_request">GNET::BillingRequest</link>
 <para>Класс для обработки биллинг-запросов в системе </para>
-<link linkend="_class_g_n_e_t_1_1_cash_serial">GNET::CashSerial</link>
-<para>Прокси-класс для обработки RPC-запросов денежных серий </para>
 <link linkend="_class_g_n_e_t_1_1_check_timer">GNET::CheckTimer</link>
 <para>Periodic task manager for financial and security checks </para>
-<link linkend="_class_g_n_e_t_1_1_coupon_exchange">GNET::CouponExchange</link>
-<para>Класс для обработки RPC-запросов обмена купонов между клиентом и сервером. @inherits Rpc </para>
 <link linkend="_class_g_n_e_t_1_1_discount_announce">GNET::DiscountAnnounce</link>
 <para>Протокол для оповещения о скидках и специальных предложениях </para>
 <link linkend="_class_g_n_e_t_1_1_fee">GNET::Fee</link>
@@ -45,8 +41,6 @@ Here are the classes, structs, unions and interfaces with brief descriptions:<li
 <para>Протокол для взаимодействия между игровым сервером и сервером аутентификации/учётных записей (Auth/AU Server) </para>
 <link linkend="_class_g_n_e_t_1_1_g_auth_server">GNET::GAuthServer</link>
 <para>Main authentication server class handling sessions and user validation </para>
-<link linkend="_class_g_n_e_t_1_1_get_add_cash_s_n">GNET::GetAddCashSN</link>
-<para>RPC-класс для обработки запросов генерации серийных номеров пополнения </para>
 <link linkend="_class_g_n_e_t_1_1_get_player_i_d_by_name___re">GNET::GetPlayerIDByName_Re</link>
 <para>Класс протокола для ответов на запрос получения ID игрока по имени @inherits Protocol </para>
 <link linkend="_class_g_n_e_t_1_1_get_user_coupon">GNET::GetUserCoupon</link>

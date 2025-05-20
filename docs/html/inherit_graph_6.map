@@ -1,13 +1,11 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" title=" " alt="" coords="5,107,51,133"/>
-<area shape="rect" id="Node000001" href="$class_g_n_e_t_1_1_coupon_exchange.html" title="Класс для обработки RPC&#45;запросов обмена купонов между клиентом и сервером. @inherits Rpc." alt="" coords="99,5,267,32"/>
-<area shape="poly" id="edge43_Node000000_Node000001" title=" " alt="" coords="45,92,68,66,97,42,121,30,123,35,100,46,72,70,49,96"/>
-<area shape="rect" id="Node000002" href="$class_g_n_e_t_1_1_g_query_passwd.html" title="Класс для обработки RPC&#45;запросов проверки паролей" alt="" coords="104,56,262,83"/>
-<area shape="poly" id="edge44_Node000000_Node000002" title=" " alt="" coords="64,104,98,92,134,81,135,86,100,97,66,109"/>
-<area shape="rect" id="Node000003" href="$class_g_n_e_t_1_1_get_user_coupon.html" title="RPC&#45;класс для обработки запросов/ответов о купонах пользователя" alt="" coords="103,107,262,133"/>
-<area shape="poly" id="edge45_Node000000_Node000003" title=" " alt="" coords="66,117,103,117,103,123,66,123"/>
-<area shape="rect" id="Node000004" href="$class_g_n_e_t_1_1_user_login.html" title="Класс для обработки процедуры входа пользователя &#45;сервис аутентификации" alt="" coords="121,157,245,184"/>
-<area shape="poly" id="edge46_Node000000_Node000004" title=" " alt="" coords="66,131,100,143,135,154,134,159,98,148,64,136"/>
-<area shape="rect" id="Node000005" href="$class_g_n_e_t_1_1_user_logout.html" title="RPC&#45;класс для обработки запросов выхода пользователя" alt="" coords="117,208,249,235"/>
-<area shape="poly" id="edge47_Node000000_Node000005" title=" " alt="" coords="49,144,72,170,100,194,123,205,121,210,97,198,68,174,45,148"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,81,51,108"/>
+<area shape="rect" id="Node000001" href="$class_g_n_e_t_1_1_g_query_passwd.html" title="Класс для обработки RPC&#45;запросов проверки паролей" alt="" coords="100,5,257,32"/>
+<area shape="poly" id="edge41_Node000000_Node000001" title=" " alt="" coords="55,69,97,42,125,30,127,35,100,46,58,74"/>
+<area shape="rect" id="Node000002" href="$class_g_n_e_t_1_1_get_user_coupon.html" title="RPC&#45;класс для обработки запросов/ответов о купонах пользователя" alt="" coords="99,56,258,83"/>
+<area shape="poly" id="edge42_Node000000_Node000002" title=" " alt="" coords="66,86,98,80,99,85,67,91"/>
+<area shape="rect" id="Node000003" href="$class_g_n_e_t_1_1_user_login.html" title="Класс для обработки процедуры входа пользователя &#45;сервис аутентификации" alt="" coords="116,107,240,133"/>
+<area shape="poly" id="edge43_Node000000_Node000003" title=" " alt="" coords="67,98,116,107,115,112,66,104"/>
+<area shape="rect" id="Node000004" href="$class_g_n_e_t_1_1_user_logout.html" title="RPC&#45;класс для обработки запросов выхода пользователя" alt="" coords="112,157,244,184"/>
+<area shape="poly" id="edge44_Node000000_Node000004" title=" " alt="" coords="58,115,100,143,127,154,125,159,97,148,55,120"/>
 </map>

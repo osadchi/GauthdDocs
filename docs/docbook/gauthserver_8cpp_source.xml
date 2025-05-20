@@ -4,7 +4,7 @@
 Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_gauthserver_8cpp_source_1l00001"/>00001 
 <anchor xml:id="_gauthserver_8cpp_source_1l00006"/>00006 
 <anchor xml:id="_gauthserver_8cpp_source_1l00007"/>00007 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_gmysqlclient_8hpp">gmysqlclient.hpp</link>&quot;</emphasis>
-<anchor xml:id="_gauthserver_8cpp_source_1l00008"/>00008 <emphasis role="preprocessor">&#32;#include&#32;&quot;getaddcashsn.hrp&quot;</emphasis>
+<anchor xml:id="_gauthserver_8cpp_source_1l00008"/>00008 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_getaddcashsn_8hrp">getaddcashsn.hrp</link>&quot;</emphasis>
 <anchor xml:id="_gauthserver_8cpp_source_1l00009"/>00009 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_addcash_8hpp">addcash.hpp</link>&quot;</emphasis>
 <anchor xml:id="_gauthserver_8cpp_source_1l00010"/>00010 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_gauthserver_8hpp">gauthserver.hpp</link>&quot;</emphasis>
 <anchor xml:id="_gauthserver_8cpp_source_1l00011"/>00011 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_state_8hxx">state.hxx</link>&quot;</emphasis>
@@ -74,7 +74,7 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="_gauthserver_8cpp_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(userid&#32;&gt;&#32;0)
 <anchor xml:id="_gauthserver_8cpp_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
 <anchor xml:id="_gauthserver_8cpp_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Create&#32;and&#32;process&#32;cash&#32;request</emphasis>
-<anchor xml:id="_gauthserver_8cpp_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_n_e_t_1_1_get_add_cash_s_n">GetAddCashSN</link>&#32;CashSN&#32;=&#32;<link linkend="_class_g_n_e_t_1_1_get_add_cash_s_n">GetAddCashSN</link>(514,&#32;NULL,&#32;NULL);
+<anchor xml:id="_gauthserver_8cpp_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GetAddCashSN&#32;CashSN&#32;=&#32;GetAddCashSN(514,&#32;NULL,&#32;NULL);
 <anchor xml:id="_gauthserver_8cpp_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GetAddCashSNArg&#32;arg;
 <anchor xml:id="_gauthserver_8cpp_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;arg.userid&#32;=&#32;userid;
 <anchor xml:id="_gauthserver_8cpp_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;arg.zoneid&#32;=&#32;zoneid;

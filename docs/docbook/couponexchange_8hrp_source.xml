@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_couponexchange_8hrp_source" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/couponexchange.hrp</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_couponexchange_8hrp_source_1l00001"/>00001 /**
+<anchor xml:id="_couponexchange_8hrp_source_1l00002"/>00002 &#32;*&#32;@file&#32;&#32;&#32;&#32;CouponExchange.hpp
+<anchor xml:id="_couponexchange_8hrp_source_1l00003"/>00003 &#32;*&#32;@brief&#32;&#32;&#32;Заголовочный&#32;файл&#32;класса&#32;CouponExchange&#32;для&#32;обработки&#32;RPC-запросов&#32;обмена&#32;купонов.
+<anchor xml:id="_couponexchange_8hrp_source_1l00004"/>00004 &#32;*&#32;@author&#32;&#32;Ваше&#32;Имя
+<anchor xml:id="_couponexchange_8hrp_source_1l00005"/>00005 &#32;*&#32;@date&#32;&#32;&#32;&#32;Дата&#32;создания
+<anchor xml:id="_couponexchange_8hrp_source_1l00006"/>00006 &#32;*&#32;@version&#32;1.0
+<anchor xml:id="_couponexchange_8hrp_source_1l00007"/>00007 &#32;*/
+<anchor xml:id="_couponexchange_8hrp_source_1l00008"/>00008 
+<anchor xml:id="_couponexchange_8hrp_source_1l00009"/>00009 #ifndef&#32;__GNET_COUPONEXCHANGE_HPP
+<anchor xml:id="_couponexchange_8hrp_source_1l00010"/>00010 #define&#32;__GNET_COUPONEXCHANGE_HPP
+<anchor xml:id="_couponexchange_8hrp_source_1l00011"/>00011 
+<anchor xml:id="_couponexchange_8hrp_source_1l00012"/>00012 #include&#32;&quot;rpcdefs.h&quot;
+<anchor xml:id="_couponexchange_8hrp_source_1l00013"/>00013 #include&#32;&quot;callid.hxx&quot;
+<anchor xml:id="_couponexchange_8hrp_source_1l00014"/>00014 #include&#32;&quot;state.hxx&quot;
+<anchor xml:id="_couponexchange_8hrp_source_1l00015"/>00015 
+<anchor xml:id="_couponexchange_8hrp_source_1l00016"/>00016 #include&#32;&quot;couponexchangearg&quot;
+<anchor xml:id="_couponexchange_8hrp_source_1l00017"/>00017 #include&#32;&quot;couponexchangeres&quot;
+<anchor xml:id="_couponexchange_8hrp_source_1l00018"/>00018 
+<anchor xml:id="_couponexchange_8hrp_source_1l00019"/>00019 namespace&#32;GNET
+<anchor xml:id="_couponexchange_8hrp_source_1l00020"/>00020 {
+<anchor xml:id="_couponexchange_8hrp_source_1l00021"/>00021 
+<anchor xml:id="_couponexchange_8hrp_source_1l00022"/>00022 /**
+<anchor xml:id="_couponexchange_8hrp_source_1l00023"/>00023 &#32;*&#32;@class&#32;&#32;CouponExchange
+<anchor xml:id="_couponexchange_8hrp_source_1l00024"/>00024 &#32;*&#32;@brief&#32;&#32;Класс&#32;для&#32;обработки&#32;RPC-запросов&#32;обмена&#32;купонов&#32;между&#32;клиентом&#32;и&#32;сервером.
+<anchor xml:id="_couponexchange_8hrp_source_1l00025"/>00025 &#32;*&#32;@inherits&#32;Rpc
+<anchor xml:id="_couponexchange_8hrp_source_1l00026"/>00026 &#32;*&#32;
+<anchor xml:id="_couponexchange_8hrp_source_1l00027"/>00027 &#32;*&#32;Данный&#32;класс&#32;предоставляет&#32;методы&#32;для&#32;обработки&#32;запросов&#32;на&#32;сервере&#32;и&#32;клиенте,&#32;
+<anchor xml:id="_couponexchange_8hrp_source_1l00028"/>00028 &#32;*&#32;а&#32;также&#32;обработки&#32;таймаутов&#32;при&#32;ожидании&#32;ответа.
+<anchor xml:id="_couponexchange_8hrp_source_1l00029"/>00029 &#32;*/
+<anchor xml:id="_couponexchange_8hrp_source_1l00030"/>00030 class&#32;CouponExchange&#32;:&#32;public&#32;Rpc
+<anchor xml:id="_couponexchange_8hrp_source_1l00031"/>00031 {
+<anchor xml:id="_couponexchange_8hrp_source_1l00032"/>00032 #define&#32;RPC_BASECLASS&#32;Rpc
+<anchor xml:id="_couponexchange_8hrp_source_1l00033"/>00033 &#32;&#32;&#32;&#32;#include&#32;&quot;couponexchange&quot;&#32;//&#32;Включение&#32;автоматически&#32;сгенерированного&#32;RPC-кода
+<anchor xml:id="_couponexchange_8hrp_source_1l00034"/>00034 #undef&#32;RPC_BASECLASS
+<anchor xml:id="_couponexchange_8hrp_source_1l00035"/>00035 
+<anchor xml:id="_couponexchange_8hrp_source_1l00036"/>00036 public:
+<anchor xml:id="_couponexchange_8hrp_source_1l00037"/>00037 &#32;&#32;&#32;&#32;/**
+<anchor xml:id="_couponexchange_8hrp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Обработка&#32;RPC-запроса&#32;на&#32;стороне&#32;сервера.
+<anchor xml:id="_couponexchange_8hrp_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;*&#32;@param[in]&#32;&#32;argument&#32;Указатель&#32;на&#32;данные&#32;аргументов&#32;RPC&#32;(тип&#32;CouponExchangeArg).
+<anchor xml:id="_couponexchange_8hrp_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;*&#32;@param[out]&#32;result&#32;&#32;&#32;Указатель&#32;на&#32;данные&#32;результата&#32;RPC&#32;(тип&#32;CouponExchangeRes).
+<anchor xml:id="_couponexchange_8hrp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;*&#32;@param[in]&#32;&#32;manager&#32;&#32;Указатель&#32;на&#32;менеджер&#32;сессий.
+<anchor xml:id="_couponexchange_8hrp_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;*&#32;@param[in]&#32;&#32;sid&#32;&#32;&#32;&#32;&#32;&#32;Идентификатор&#32;сессии.
+<anchor xml:id="_couponexchange_8hrp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;*&#32;@note&#32;Для&#32;использования&#32;необходимо&#32;раскомментировать&#32;преобразование&#32;типов&#32;и&#32;реализовать&#32;логику.
+<anchor xml:id="_couponexchange_8hrp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;*/
+<anchor xml:id="_couponexchange_8hrp_source_1l00045"/>00045 &#32;&#32;&#32;&#32;void&#32;Server(Rpc::Data&#32;*argument,&#32;Rpc::Data&#32;*result,&#32;Manager&#32;*manager,&#32;Manager::Session::ID&#32;sid)
+<anchor xml:id="_couponexchange_8hrp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_couponexchange_8hrp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//&#32;CouponExchangeArg&#32;*arg&#32;=&#32;static_cast&lt;CouponExchangeArg*&gt;(argument);
+<anchor xml:id="_couponexchange_8hrp_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//&#32;CouponExchangeRes&#32;*res&#32;=&#32;static_cast&lt;CouponExchangeRes*&gt;(result);
+<anchor xml:id="_couponexchange_8hrp_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//&#32;Реализация&#32;логики&#32;обработки&#32;на&#32;сервере
+<anchor xml:id="_couponexchange_8hrp_source_1l00050"/>00050 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_couponexchange_8hrp_source_1l00051"/>00051 
+<anchor xml:id="_couponexchange_8hrp_source_1l00052"/>00052 &#32;&#32;&#32;&#32;/**
+<anchor xml:id="_couponexchange_8hrp_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Обработка&#32;RPC-запроса&#32;на&#32;стороне&#32;клиента.
+<anchor xml:id="_couponexchange_8hrp_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;*&#32;@param[in]&#32;&#32;argument&#32;Указатель&#32;на&#32;данные&#32;аргументов&#32;RPC&#32;(тип&#32;CouponExchangeArg).
+<anchor xml:id="_couponexchange_8hrp_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;*&#32;@param[out]&#32;result&#32;&#32;&#32;Указатель&#32;на&#32;данные&#32;результата&#32;RPC&#32;(тип&#32;CouponExchangeRes).
+<anchor xml:id="_couponexchange_8hrp_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;*&#32;@param[in]&#32;&#32;manager&#32;&#32;Указатель&#32;на&#32;менеджер&#32;сессий.
+<anchor xml:id="_couponexchange_8hrp_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;*&#32;@param[in]&#32;&#32;sid&#32;&#32;&#32;&#32;&#32;&#32;Идентификатор&#32;сессии.
+<anchor xml:id="_couponexchange_8hrp_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;*&#32;@todo&#32;Требуется&#32;реализация&#32;клиентской&#32;части&#32;обработки.
+<anchor xml:id="_couponexchange_8hrp_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;*/
+<anchor xml:id="_couponexchange_8hrp_source_1l00060"/>00060 &#32;&#32;&#32;&#32;void&#32;Client(Rpc::Data&#32;*argument,&#32;Rpc::Data&#32;*result,&#32;Manager&#32;*manager,&#32;Manager::Session::ID&#32;sid)
+<anchor xml:id="_couponexchange_8hrp_source_1l00061"/>00061 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_couponexchange_8hrp_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//&#32;CouponExchangeArg&#32;*arg&#32;=&#32;static_cast&lt;CouponExchangeArg*&gt;(argument);
+<anchor xml:id="_couponexchange_8hrp_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//&#32;CouponExchangeRes&#32;*res&#32;=&#32;static_cast&lt;CouponExchangeRes*&gt;(result);
+<anchor xml:id="_couponexchange_8hrp_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//&#32;TODO:&#32;Реализация&#32;логики&#32;обработки&#32;на&#32;клиенте
+<anchor xml:id="_couponexchange_8hrp_source_1l00065"/>00065 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_couponexchange_8hrp_source_1l00066"/>00066 
+<anchor xml:id="_couponexchange_8hrp_source_1l00067"/>00067 &#32;&#32;&#32;&#32;/**
+<anchor xml:id="_couponexchange_8hrp_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Метод&#32;обработки&#32;таймаута&#32;RPC-запроса.
+<anchor xml:id="_couponexchange_8hrp_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;*&#32;@note&#32;Вызывается&#32;только&#32;на&#32;клиентской&#32;стороне&#32;при&#32;истечении&#32;времени&#32;ожидания&#32;ответа.
+<anchor xml:id="_couponexchange_8hrp_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;*&#32;@todo&#32;Требуется&#32;реализация&#32;обработки&#32;таймаута.
+<anchor xml:id="_couponexchange_8hrp_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;*/
+<anchor xml:id="_couponexchange_8hrp_source_1l00072"/>00072 &#32;&#32;&#32;&#32;void&#32;OnTimeout()
+<anchor xml:id="_couponexchange_8hrp_source_1l00073"/>00073 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_couponexchange_8hrp_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//&#32;TODO:&#32;Реализация&#32;обработки&#32;таймаута&#32;(клиентская&#32;часть)
+<anchor xml:id="_couponexchange_8hrp_source_1l00075"/>00075 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_couponexchange_8hrp_source_1l00076"/>00076 };
+<anchor xml:id="_couponexchange_8hrp_source_1l00077"/>00077 
+<anchor xml:id="_couponexchange_8hrp_source_1l00078"/>00078 };&#32;//&#32;namespace&#32;GNET
+<anchor xml:id="_couponexchange_8hrp_source_1l00079"/>00079 #endif&#32;//&#32;__GNET_COUPONEXCHANGE_HPP
+</programlisting></section>

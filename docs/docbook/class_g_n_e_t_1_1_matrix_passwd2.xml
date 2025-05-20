@@ -104,7 +104,7 @@ Parameters</title>
 
 <para>true - запрос успешно доставлен, false - ошибка доставки</para>
 </formalpara>
-<para><link linkend="_todo_1_todo000030">Todo</link> 
+<para><link linkend="_todo_1_todo000027">Todo</link> 
 <para>Требуется реализация логики отправки протокола аутентификации </para>
 </para></para>
 <para>
@@ -123,7 +123,7 @@ Definition at line <link linkend="_matrixpasswd2_8hpp_source_1l00048">48</link> 
 
 <para>Реализация требуется только на клиентской стороне</para>
 </warning>
-<para><link linkend="_todo_1_todo000032">Todo</link> 
+<para><link linkend="_todo_1_todo000029">Todo</link> 
 <para>Реализовать логику обработки таймаута </para>
 </para></para>
 <para>
@@ -168,7 +168,7 @@ Parameters</title>
                     </table>
                     </para>
                 </formalpara>
-                <para><link linkend="_todo_1_todo000031">Todo</link> 
+                <para><link linkend="_todo_1_todo000028">Todo</link> 
 <para>Требуется реализация обработки результатов </para>
 </para></para>
 <para>

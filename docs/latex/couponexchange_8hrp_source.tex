@@ -1,0 +1,84 @@
+\doxysection{D\+:/pwsrc2.0/docs/gauthd/couponexchange.hrp}
+\hypertarget{couponexchange_8hrp_source}{}\label{couponexchange_8hrp_source}\mbox{\hyperlink{couponexchange_8hrp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00001}00001\ /**}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00002}00002\ \ *\ @file\ \ \ \ CouponExchange.hpp}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00003}00003\ \ *\ @brief\ \ \ Заголовочный\ файл\ класса\ CouponExchange\ для\ обработки\ RPC-\/запросов\ обмена\ купонов.}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00004}00004\ \ *\ @author\ \ Ваше\ Имя}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00005}00005\ \ *\ @date\ \ \ \ Дата\ создания}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00006}00006\ \ *\ @version\ 1.0}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00007}00007\ \ */}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00009}00009\ \#ifndef\ \_\_GNET\_COUPONEXCHANGE\_HPP}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00010}00010\ \#define\ \_\_GNET\_COUPONEXCHANGE\_HPP}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00012}00012\ \#include\ "{}rpcdefs.h"{}}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00013}00013\ \#include\ "{}callid.hxx"{}}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00014}00014\ \#include\ "{}state.hxx"{}}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00016}00016\ \#include\ "{}couponexchangearg"{}}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00017}00017\ \#include\ "{}couponexchangeres"{}}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00019}00019\ namespace\ GNET}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00020}00020\ \{}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00022}00022\ /**}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00023}00023\ \ *\ @class\ \ CouponExchange}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00024}00024\ \ *\ @brief\ \ Класс\ для\ обработки\ RPC-\/запросов\ обмена\ купонов\ между\ клиентом\ и\ сервером.}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00025}00025\ \ *\ @inherits\ Rpc}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00026}00026\ \ *\ }
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00027}00027\ \ *\ Данный\ класс\ предоставляет\ методы\ для\ обработки\ запросов\ на\ сервере\ и\ клиенте,\ }
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00028}00028\ \ *\ а\ также\ обработки\ таймаутов\ при\ ожидании\ ответа.}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00029}00029\ \ */}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00030}00030\ class\ CouponExchange\ :\ public\ Rpc}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00031}00031\ \{}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00032}00032\ \#define\ RPC\_BASECLASS\ Rpc}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00033}00033\ \ \ \ \ \#include\ "{}couponexchange"{}\ //\ Включение\ автоматически\ сгенерированного\ RPC-\/кода}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00034}00034\ \#undef\ RPC\_BASECLASS}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00036}00036\ public:}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00037}00037\ \ \ \ \ /**}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00038}00038\ \ \ \ \ \ *\ @brief\ Обработка\ RPC-\/запроса\ на\ стороне\ сервера.}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00039}00039\ \ \ \ \ \ *\ @param[in]\ \ argument\ Указатель\ на\ данные\ аргументов\ RPC\ (тип\ CouponExchangeArg).}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00040}00040\ \ \ \ \ \ *\ @param[out]\ result\ \ \ Указатель\ на\ данные\ результата\ RPC\ (тип\ CouponExchangeRes).}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00041}00041\ \ \ \ \ \ *\ @param[in]\ \ manager\ \ Указатель\ на\ менеджер\ сессий.}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00042}00042\ \ \ \ \ \ *\ @param[in]\ \ sid\ \ \ \ \ \ Идентификатор\ сессии.}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00043}00043\ \ \ \ \ \ *\ @note\ Для\ использования\ необходимо\ раскомментировать\ преобразование\ типов\ и\ реализовать\ логику.}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00044}00044\ \ \ \ \ \ */}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00045}00045\ \ \ \ \ void\ Server(Rpc::Data\ *argument,\ Rpc::Data\ *result,\ Manager\ *manager,\ Manager::Session::ID\ sid)}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00046}00046\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00047}00047\ \ \ \ \ \ \ \ \ //\ CouponExchangeArg\ *arg\ =\ static\_cast<CouponExchangeArg*>(argument);}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00048}00048\ \ \ \ \ \ \ \ \ //\ CouponExchangeRes\ *res\ =\ static\_cast<CouponExchangeRes*>(result);}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00049}00049\ \ \ \ \ \ \ \ \ //\ Реализация\ логики\ обработки\ на\ сервере}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00050}00050\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00052}00052\ \ \ \ \ /**}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00053}00053\ \ \ \ \ \ *\ @brief\ Обработка\ RPC-\/запроса\ на\ стороне\ клиента.}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00054}00054\ \ \ \ \ \ *\ @param[in]\ \ argument\ Указатель\ на\ данные\ аргументов\ RPC\ (тип\ CouponExchangeArg).}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00055}00055\ \ \ \ \ \ *\ @param[out]\ result\ \ \ Указатель\ на\ данные\ результата\ RPC\ (тип\ CouponExchangeRes).}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00056}00056\ \ \ \ \ \ *\ @param[in]\ \ manager\ \ Указатель\ на\ менеджер\ сессий.}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00057}00057\ \ \ \ \ \ *\ @param[in]\ \ sid\ \ \ \ \ \ Идентификатор\ сессии.}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00058}00058\ \ \ \ \ \ *\ @todo\ Требуется\ реализация\ клиентской\ части\ обработки.}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00059}00059\ \ \ \ \ \ */}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00060}00060\ \ \ \ \ void\ Client(Rpc::Data\ *argument,\ Rpc::Data\ *result,\ Manager\ *manager,\ Manager::Session::ID\ sid)}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00061}00061\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00062}00062\ \ \ \ \ \ \ \ \ //\ CouponExchangeArg\ *arg\ =\ static\_cast<CouponExchangeArg*>(argument);}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00063}00063\ \ \ \ \ \ \ \ \ //\ CouponExchangeRes\ *res\ =\ static\_cast<CouponExchangeRes*>(result);}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00064}00064\ \ \ \ \ \ \ \ \ //\ TODO:\ Реализация\ логики\ обработки\ на\ клиенте}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00065}00065\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00067}00067\ \ \ \ \ /**}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00068}00068\ \ \ \ \ \ *\ @brief\ Метод\ обработки\ таймаута\ RPC-\/запроса.}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00069}00069\ \ \ \ \ \ *\ @note\ Вызывается\ только\ на\ клиентской\ стороне\ при\ истечении\ времени\ ожидания\ ответа.}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00070}00070\ \ \ \ \ \ *\ @todo\ Требуется\ реализация\ обработки\ таймаута.}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00071}00071\ \ \ \ \ \ */}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00072}00072\ \ \ \ \ void\ OnTimeout()}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00073}00073\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00074}00074\ \ \ \ \ \ \ \ \ //\ TODO:\ Реализация\ обработки\ таймаута\ (клиентская\ часть)}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00075}00075\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00076}00076\ \};}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00078}00078\ \};\ //\ namespace\ GNET}
+\DoxyCodeLine{\Hypertarget{couponexchange_8hrp_source_l00079}00079\ \#endif\ //\ \_\_GNET\_COUPONEXCHANGE\_HPP}
+
+\end{DoxyCode}

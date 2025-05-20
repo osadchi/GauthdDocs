@@ -96,7 +96,7 @@ Parameters</title>
 
 <para>bool Результат обработки запроса</para>
 </formalpara>
-<para><link linkend="_todo_1_todo000033">Todo</link> 
+<para><link linkend="_todo_1_todo000030">Todo</link> 
 <para>Требуется реализация логики отправки протокола через GAuthClient </para>
 </para><note><title>Note</title>
 
@@ -166,7 +166,7 @@ Parameters</title>
                     </table>
                     </para>
                 </formalpara>
-                <para><link linkend="_todo_1_todo000034">Todo</link> 
+                <para><link linkend="_todo_1_todo000031">Todo</link> 
 <para>Требуется реализация обработки результатов </para>
 </para></para>
 <para>

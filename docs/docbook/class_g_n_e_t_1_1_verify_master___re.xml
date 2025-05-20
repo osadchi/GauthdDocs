@@ -86,7 +86,7 @@ Parameters</title>
                 </formalpara>
                 Вызывается автоматически при получении пакета. Реализует логику обработки ответа верификации мастер-сервера. Текущая реализация требует доработки.</para>
 
-<para><para><link linkend="_todo_1_todo000047">Todo</link> 
+<para><para><link linkend="_todo_1_todo000044">Todo</link> 
 <para>Реализовать обработку ответа верификации </para>
 </para></para>
 <para>

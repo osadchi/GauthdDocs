@@ -32,14 +32,11 @@
     <xi:include href="class_g_n_e_t_1_1_billing_cancel.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_g_n_e_t_1_1_billing_confirm.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_g_n_e_t_1_1_billing_request.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_g_n_e_t_1_1_cash_serial.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_g_n_e_t_1_1_check_timer.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_g_n_e_t_1_1_coupon_exchange.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_g_n_e_t_1_1_discount_announce.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_g_n_e_t_1_1_fee.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_g_n_e_t_1_1_game2_a_u.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_g_n_e_t_1_1_g_auth_server.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="class_g_n_e_t_1_1_get_add_cash_s_n.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_g_n_e_t_1_1_get_player_i_d_by_name___re.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_g_n_e_t_1_1_get_user_coupon.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="class_g_n_e_t_1_1_g_m_forbid_sell_point.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
@@ -103,10 +100,10 @@
     <xi:include href="billingrequest_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="callid_8hxx.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="callid_8hxx_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="cashserial_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="cashserial_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="couponexchange_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="couponexchange_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="cashserial_8hrp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="cashserial_8hrp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="couponexchange_8hrp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="couponexchange_8hrp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="discountannounce_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="discountannounce_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="fee_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
@@ -119,8 +116,8 @@
     <xi:include href="gauthserver_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="gauthserver_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="gauthserver_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="getaddcashsn_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="getaddcashsn_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="getaddcashsn_8hrp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="getaddcashsn_8hrp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="getplayeridbyname__re_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="getplayeridbyname__re_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="getusercoupon_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>

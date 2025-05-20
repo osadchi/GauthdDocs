@@ -1,29 +1,25 @@
 <map id="D:/pwsrc2.0/docs/gauthd/gauthserver.hpp" name="D:/pwsrc2.0/docs/gauthd/gauthserver.hpp">
-<area shape="rect" id="Node000001" title="Заголовочный файл, содержащий определения классов для аутентификации и управления сессиями." alt="" coords="965,5,1133,48"/>
+<area shape="rect" id="Node000001" title="Заголовочный файл, содержащий определения классов для аутентификации и управления сессиями." alt="" coords="773,5,941,48"/>
 <area shape="rect" id="Node000002" href="$accountingrequest_8hpp.html" title="Заголовочный файл класса AccountingRequest для обработки учётных запросов в системе GNET." alt="" coords="5,96,173,139"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="950,34,611,54,398,73,185,99,174,100,173,95,185,93,398,68,610,49,950,29"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="758,37,498,60,342,77,185,99,174,101,173,95,185,93,341,72,498,55,757,32"/>
 <area shape="rect" id="Node000004" href="$announcezoneid_8hpp.html" title="Заголовочный файл, содержащий объявление класса AnnounceZoneid для обработки протокола объявления иде..." alt="" coords="197,96,365,139"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="950,37,690,60,534,77,377,99,366,101,365,95,377,93,533,72,690,55,949,32"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="758,43,581,67,377,99,366,101,365,96,377,93,580,61,758,37"/>
 <area shape="rect" id="Node000005" href="$announcezoneid2_8hpp.html" title="Заголовочный файл, содержащий объявление класса AnnounceZoneid2 для работы с протоколом объявления ид..." alt="" coords="389,96,557,139"/>
-<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="950,43,773,67,569,99,558,101,557,96,569,93,772,61,950,37"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="759,53,558,99,556,94,758,48"/>
 <area shape="rect" id="Node000006" href="$announcezoneid3_8hpp.html" title="Заголовочный файл класса AnnounceZoneid3 для работы с зональными идентификаторами" alt="" coords="581,96,749,139"/>
-<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="951,53,750,99,748,94,950,48"/>
-<area shape="rect" id="Node000007" href="$cashserial_8hpp.html" title="Заголовочный файл класса CashSerial для обработки RPC&#45;операций с денежными сериями" alt="" coords="773,96,941,139"/>
-<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="991,57,903,98,901,93,989,53"/>
-<area shape="rect" id="Node000008" href="$gauthd_8cpp.html" title=" " alt="" coords="965,96,1133,139"/>
-<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="1052,64,1052,96,1046,96,1046,64"/>
-<area shape="rect" id="Node000009" href="$gauthserver_8cpp.html" title="Implementation of the GAuthServer and related classes for authentication and periodic checks." alt="" coords="1157,96,1325,139"/>
-<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="1109,53,1197,93,1195,98,1107,57"/>
-<area shape="rect" id="Node000010" href="$getaddcashsn_8hpp.html" title="Заголовочный файл для обработки запросов генерации серийных номеров пополнения баланса" alt="" coords="1349,96,1517,139"/>
-<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="1148,48,1350,94,1348,99,1147,53"/>
-<area shape="rect" id="Node000011" href="$matrixpasswd_8hpp.html" title="Обработчик RPC&#45;запросов для аутентификации с матричным паролем" alt="" coords="1541,96,1709,139"/>
-<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="1148,37,1326,61,1529,93,1541,96,1540,101,1529,99,1325,67,1148,43"/>
-<area shape="rect" id="Node000012" href="$statusannounce_8hpp.html" title="Заголовочный файл класса для обработки статусных уведомлений" alt="" coords="1733,96,1901,139"/>
-<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="1149,32,1408,55,1565,72,1721,93,1733,95,1732,101,1721,99,1564,77,1408,60,1148,37"/>
-<area shape="rect" id="Node000013" href="$userlogin_8hpp.html" title="Обработчик аутентификации пользователей в системе" alt="" coords="1925,96,2093,139"/>
-<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="1148,29,1488,49,1700,68,1913,93,1925,95,1924,100,1913,99,1700,73,1487,54,1148,34"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="799,57,711,98,709,93,797,53"/>
+<area shape="rect" id="Node000007" href="$gauthd_8cpp.html" title=" " alt="" coords="773,96,941,139"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="860,64,860,96,854,96,854,64"/>
+<area shape="rect" id="Node000008" href="$gauthserver_8cpp.html" title="Implementation of the GAuthServer and related classes for authentication and periodic checks." alt="" coords="965,96,1133,139"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="917,53,1005,93,1003,98,915,57"/>
+<area shape="rect" id="Node000009" href="$matrixpasswd_8hpp.html" title="Обработчик RPC&#45;запросов для аутентификации с матричным паролем" alt="" coords="1157,96,1325,139"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="956,48,1158,94,1156,99,955,53"/>
+<area shape="rect" id="Node000010" href="$statusannounce_8hpp.html" title="Заголовочный файл класса для обработки статусных уведомлений" alt="" coords="1349,96,1517,139"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="956,37,1134,61,1337,93,1349,96,1348,101,1337,99,1133,67,956,43"/>
+<area shape="rect" id="Node000011" href="$userlogin_8hpp.html" title="Обработчик аутентификации пользователей в системе" alt="" coords="1541,96,1709,139"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="957,32,1216,55,1373,72,1529,93,1541,95,1540,101,1529,99,1372,77,1216,60,956,37"/>
 <area shape="rect" id="Node000003" href="$stubs_8cxx.html" title=" " alt="" coords="197,187,365,229"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="149,143,237,184,235,189,147,148"/>
 <area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="284,154,284,186,278,186,278,154"/>
-<area shape="poly" id="edge13_Node000012_Node000003" title=" " alt="" coords="1718,142,1519,163,1318,180,929,200,596,209,365,210,365,205,596,203,929,195,1318,174,1519,158,1718,136"/>
+<area shape="poly" id="edge11_Node000010_Node000003" title=" " alt="" coords="1334,142,1053,172,778,192,540,203,365,208,365,203,540,198,778,186,1052,167,1334,136"/>
 </map>

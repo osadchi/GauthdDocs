@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title="Implementation of the GAuthServer and related classes for authentication and periodic checks." alt="" coords="819,5,986,48"/>
 <area shape="rect" id="Node000002" href="$gmysqlclient_8hpp.html" title="MySQL клиент для работы с базой данных игрового сервера" alt="" coords="298,96,417,123"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="819,43,433,100,432,94,818,38"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="707,96,831,123"/>
+<area shape="rect" id="Node000010" href="$getaddcashsn_8hrp.html" title=" " alt="" coords="707,96,831,123"/>
 <area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="870,51,804,90,802,85,867,46"/>
 <area shape="rect" id="Node000011" href="$addcash_8hpp.html" title="Заголовочный файл, содержащий объявление класса AddCash для обработки протокола добавления средств." alt="" coords="855,96,950,123"/>
 <area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="905,49,905,80,900,80,900,49"/>

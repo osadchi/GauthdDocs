@@ -102,7 +102,7 @@ Parameters</title>
                     </table>
                     </para>
                 </formalpara>
-                <para><link linkend="_todo_1_todo000020">Todo</link> 
+                <para><link linkend="_todo_1_todo000017">Todo</link> 
 <para>Реализовать клиентскую логику обработки ответа. </para>
 </para></para>
 <para>
@@ -117,7 +117,7 @@ Definition at line <link linkend="_getusercoupon_8hpp_source_1l00062">62</link> 
 <para>Обработка таймаута RPC-запроса (клиентская сторона) </para>
 </para>
 
-<para><para><link linkend="_todo_1_todo000021">Todo</link> 
+<para><para><link linkend="_todo_1_todo000018">Todo</link> 
 <para>Реализовать реакцию на таймаут (например, повторный запрос или уведомление). </para>
 </para></para>
 <para>
@@ -167,7 +167,7 @@ Parameters</title>
                     </table>
                     </para>
                 </formalpara>
-                <para><link linkend="_todo_1_todo000019">Todo</link> 
+                <para><link linkend="_todo_1_todo000016">Todo</link> 
 <para>Реализовать логику преобразования аргументов и формирования ответа. Сейчас аргументы и результаты закомментированы. </para>
 </para></para>
 <para>

@@ -1,0 +1,110 @@
+\doxysection{D\+:/pwsrc2.0/docs/gauthd/cashserial.hrp}
+\hypertarget{cashserial_8hrp_source}{}\label{cashserial_8hrp_source}\mbox{\hyperlink{cashserial_8hrp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00001}00001\ /**}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00002}00002\ \ *\ @file\ CashSerial.hpp}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00003}00003\ \ *\ @brief\ Заголовочный\ файл\ класса\ CashSerial\ для\ обработки\ RPC-\/операций\ с\ денежными\ сериями}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00004}00004\ \ *\ @author\ Ваше\ имя\ или\ команда}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00005}00005\ \ *\ @date\ Дата\ последнего\ изменения}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00006}00006\ \ *\ @version\ 1.0}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00007}00007\ \ *\ @license\ Ваша\ лицензия\ (если\ есть)}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00008}00008\ \ *\ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00009}00009\ \ *\ @details\ Класс\ реализует\ прокси-\/механизм\ для\ работы\ с\ денежными\ сериями\ через\ систему\ аутентификации.}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00010}00010\ \ *\ Является\ частью\ модуля\ GNET.\ Использует\ сериализацию\ аргументов\ и\ результатов\ операций.}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00011}00011\ \ */}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00013}00013\ \#ifndef\ \_\_GNET\_CASHSERIAL\_HPP}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00014}00014\ \#define\ \_\_GNET\_CASHSERIAL\_HPP}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00016}00016\ \#include\ "{}rpcdefs.h"{}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00017}00017\ \#include\ "{}callid.hxx"{}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00018}00018\ \#include\ "{}state.hxx"{}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00019}00019\ \#include\ "{}cashserialarg"{}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00020}00020\ \#include\ "{}cashserialres"{}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00021}00021\ \#include\ "{}gauthserver.hpp"{}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00023}00023\ namespace\ GNET}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00024}00024\ \{}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00026}00026\ /**}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00027}00027\ \ *\ @class\ CashSerial}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00028}00028\ \ *\ @brief\ Прокси-\/класс\ для\ обработки\ RPC-\/запросов\ денежных\ серий}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00029}00029\ \ *\ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00030}00030\ \ *\ @inherits\ ProxyRpc}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00031}00031\ \ *\ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00032}00032\ \ *\ @note\ Автоматически\ генерирует\ базовый\ RPC-\/функционал\ через\ макрос\ RPC\_BASECLASS.}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00033}00033\ \ *\ Для\ работы\ требует\ подключения\ реализации\ cashserial\ (сгенерированной\ RPC-\/системой)}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00034}00034\ \ */}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00035}00035\ class\ CashSerial\ :\ public\ ProxyRpc}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00036}00036\ \{}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00037}00037\ \#define\ RPC\_BASECLASS\ ProxyRpc\ \ ///<\ Базовый\ класс\ для\ RPC-\/генерации}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00038}00038\ \ \ \ \ \#include\ "{}cashserial"{}\ \ \ \ \ \ \ ///<\ Включение\ сгенерированного\ RPC-\/кода}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00039}00039\ \#undef\ RPC\_BASECLASS}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00041}00041\ public:}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00042}00042\ \ \ \ \ /**}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00043}00043\ \ \ \ \ \ *\ @brief\ Отправка\ запроса\ на\ сервер\ аутентификации}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00044}00044\ \ \ \ \ \ *\ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00045}00045\ \ \ \ \ \ *\ @param\ proxy\_sid\ Идентификатор\ прокси-\/сессии}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00046}00046\ \ \ \ \ \ *\ @param\ osArg\ Поток\ с\ сериализованными\ аргументами\ типа\ CashSerialArg}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00047}00047\ \ \ \ \ \ *\ @return\ true\ -\/\ запрос\ успешно\ отправлен,}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00048}00048\ \ \ \ \ \ *\ @return\ false\ -\/\ ошибка\ отправки,\ результат\ установлен\ в\ ERR\_DELIVER\_SEND}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00049}00049\ \ \ \ \ \ *\ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00050}00050\ \ \ \ \ \ *\ @todo\ Реализовать\ десериализацию\ аргументов\ (раскомментировать\ код)}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00051}00051\ \ \ \ \ \ *\ @note\ При\ ошибке\ автоматически\ отправляет\ результат\ спонсору}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00052}00052\ \ \ \ \ \ */}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00053}00053\ \ \ \ \ bool\ Delivery(Manager::Session::ID\ proxy\_sid,\ const\ OctetsStream\&\ osArg)}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00054}00054\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00055}00055\ \ \ \ \ \ \ \ \ //\ TODO:\ Uncomment\ and\ implement}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00056}00056\ \ \ \ \ \ \ \ \ //\ CashSerialArg\ arg;}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00057}00057\ \ \ \ \ \ \ \ \ //\ osArg\ >>\ arg;}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00058}00058\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00059}00059\ \ \ \ \ \ \ \ \ if\ (GAuthServer::GetInstance()-\/>Send(proxy\_sid,\ *this))}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00060}00060\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ return\ true;}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00062}00062\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00063}00063\ \ \ \ \ \ \ \ \ else}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00064}00064\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ SetResult(CashSerialRes(ERR\_DELIVER\_SEND));}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ SendToSponsor();}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ return\ false;}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00068}00068\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00069}00069\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00071}00071\ \ \ \ \ /**}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00072}00072\ \ \ \ \ \ *\ @brief\ Постобработка\ полученного\ ответа}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00073}00073\ \ \ \ \ \ *\ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00074}00074\ \ \ \ \ \ *\ @param\ proxy\_sid\ Идентификатор\ прокси-\/сессии}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00075}00075\ \ \ \ \ \ *\ @param\ osArg\ Поток\ с\ исходными\ аргументами\ запроса}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00076}00076\ \ \ \ \ \ *\ @param\ osRes\ Поток\ с\ полученными\ результатами}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00077}00077\ \ \ \ \ \ *\ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00078}00078\ \ \ \ \ \ *\ @note\ После\ модификации\ результатов\ необходимо\ вызвать\ SetResult()}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00079}00079\ \ \ \ \ \ *\ @warning\ Не\ забудьте\ раскомментировать\ код\ обработки\ аргументов}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00080}00080\ \ \ \ \ \ */}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00081}00081\ \ \ \ \ void\ PostProcess(Manager::Session::ID\ proxy\_sid,\ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ const\ OctetsStream\&\ osArg,\ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ const\ OctetsStream\&\ osRes)}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00084}00084\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00085}00085\ \ \ \ \ \ \ \ \ //\ TODO:\ Uncomment\ and\ implement}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00086}00086\ \ \ \ \ \ \ \ \ //\ CashSerialArg\ arg;}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00087}00087\ \ \ \ \ \ \ \ \ //\ osArg\ >>\ arg;}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00088}00088\ \ \ \ \ \ \ \ \ //\ CashSerialRes\ res;}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00089}00089\ \ \ \ \ \ \ \ \ //\ osRes\ >>\ res;}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00090}00090\ \ \ \ \ \ \ \ \ //\ SetResult(\&res);}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00091}00091\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00093}00093\ \ \ \ \ /**}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00094}00094\ \ \ \ \ \ *\ @brief\ Обработчик\ таймаута\ запроса}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00095}00095\ \ \ \ \ \ *\ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00096}00096\ \ \ \ \ \ *\ @warning\ Реализация\ требуется\ только\ на\ клиентской\ стороне}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00097}00097\ \ \ \ \ \ */}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00098}00098\ \ \ \ \ void\ OnTimeout()}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00099}00099\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00100}00100\ \ \ \ \ \ \ \ \ //\ TODO:\ Client-\/side\ implementation}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00101}00101\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00102}00102\ \};}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00104}00104\ \};\ //\ namespace\ GNET}
+\DoxyCodeLine{\Hypertarget{cashserial_8hrp_source_l00105}00105\ \#endif}
+
+\end{DoxyCode}

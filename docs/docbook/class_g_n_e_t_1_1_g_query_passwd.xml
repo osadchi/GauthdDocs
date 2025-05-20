@@ -103,7 +103,7 @@ Parameters</title>
                     </table>
                     </para>
                 </formalpara>
-                <para><link linkend="_todo_1_todo000025">Todo</link> 
+                <para><link linkend="_todo_1_todo000022">Todo</link> 
 <para>Реализовать клиентскую обработку </para>
 </para></para>
 <para>
@@ -122,7 +122,7 @@ Definition at line <link linkend="_gquerypasswd_8hpp_source_1l00090">90</link> o
 
 <para>В текущей реализации не используется </para>
 </note>
-<para><link linkend="_todo_1_todo000026">Todo</link> 
+<para><link linkend="_todo_1_todo000023">Todo</link> 
 <para>Реализовать обработку таймаутов для клиента </para>
 </para></para>
 <para>

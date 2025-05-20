@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_getaddcashsn_8hrp_source" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/getaddcashsn.hrp</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_getaddcashsn_8hrp_source_1l00001"/>00001 /**
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00002"/>00002 &#32;*&#32;@file&#32;GetAddCashSN.hpp
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00003"/>00003 &#32;*&#32;@brief&#32;Заголовочный&#32;файл&#32;для&#32;обработки&#32;запросов&#32;генерации&#32;серийных&#32;номеров&#32;пополнения&#32;баланса
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00004"/>00004 &#32;*/
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00005"/>00005 
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00006"/>00006 #ifndef&#32;__GNET_GETADDCASHSN_HPP
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00007"/>00007 #define&#32;__GNET_GETADDCASHSN_HPP
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00008"/>00008 
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00009"/>00009 #include&#32;&quot;rpcdefs.h&quot;
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00010"/>00010 #include&#32;&quot;callid.hxx&quot;
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00011"/>00011 #include&#32;&quot;state.hxx&quot;
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00012"/>00012 #include&#32;&quot;getaddcashsnarg&quot;
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00013"/>00013 #include&#32;&quot;getaddcashsnres&quot;
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00014"/>00014 #include&#32;&quot;gmysqlclient.hpp&quot;
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00015"/>00015 #include&#32;&quot;gauthserver.hpp&quot;
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00016"/>00016 #include&#32;&quot;addcash.hpp&quot;
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00017"/>00017 
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00018"/>00018 namespace&#32;GNET
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00019"/>00019 {
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00020"/>00020 
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00021"/>00021 /**
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00022"/>00022 &#32;*&#32;@class&#32;GetAddCashSN
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00023"/>00023 &#32;*&#32;@brief&#32;RPC-класс&#32;для&#32;обработки&#32;запросов&#32;генерации&#32;серийных&#32;номеров&#32;пополнения
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00024"/>00024 &#32;*&#32;
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00025"/>00025 &#32;*&#32;Наследует&#32;функциональность&#32;ProxyRpc&#32;и&#32;взаимодействует&#32;с&#32;базой&#32;данных&#32;через&#32;GMysqlClient,
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00026"/>00026 &#32;*&#32;а&#32;также&#32;отправляет&#32;ответы&#32;через&#32;GAuthServer.
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00027"/>00027 &#32;*/
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00028"/>00028 class&#32;GetAddCashSN&#32;:&#32;public&#32;ProxyRpc
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00029"/>00029 {
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00030"/>00030 #define&#32;RPC_BASECLASS&#32;ProxyRpc
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00031"/>00031 &#32;&#32;&#32;&#32;#include&#32;&quot;getaddcashsn&quot;&#32;///&lt;&#32;Включение&#32;сгенерированного&#32;RPC-кода
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00032"/>00032 #undef&#32;RPC_BASECLASS
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00033"/>00033 
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00034"/>00034 private:
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00035"/>00035 &#32;&#32;&#32;&#32;/**
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Отправляет&#32;информацию&#32;о&#32;неудачной&#32;операции&#32;в&#32;БД
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;userid&#32;Идентификатор&#32;пользователя
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;status&#32;Статус&#32;ошибки&#32;(0&#32;-&#32;ошибка&#32;доставки,&#32;1&#32;-&#32;ошибка&#32;обработки)
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;*&#32;@note&#32;Удаляет&#32;соответствующую&#32;запись&#32;из&#32;таблицы&#32;ошибок
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;*/
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;void&#32;SendFailCash(int&#32;userid,&#32;int&#32;status)
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00042"/>00042 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(&quot;GetAddCashSN::SendFailCash:&#32;userid&#32;=&#32;%d&#32;\n&quot;,&#32;userid);
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GMysqlClient&#32;*db&#32;=&#32;GMysqlClient::GetInstance();
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;int&#32;idx&#32;=&#32;db-&gt;GetCashUser(userid);
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;char&#32;*&#32;creatime&#32;=&#32;db-&gt;GetCashCreaTime(idx);
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;db-&gt;DeleteErrorRow(status,&#32;userid,&#32;creatime);
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;db-&gt;DelCashUser(idx);
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00049"/>00049 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00050"/>00050 
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00051"/>00051 public:
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00052"/>00052 &#32;&#32;&#32;&#32;/**
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Обрабатывает&#32;доставку&#32;RPC-запроса
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;proxy_sid&#32;Идентификатор&#32;сессии&#32;прокси
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;osArg&#32;Входные&#32;данные&#32;в&#32;виде&#32;OctetsStream
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;*&#32;@return&#32;true&#32;если&#32;запрос&#32;успешно&#32;отправлен,&#32;false&#32;в&#32;случае&#32;ошибки
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;*&#32;@note&#32;При&#32;ошибке&#32;отправляет&#32;спонсору&#32;результат&#32;ERR_DELIVER_SEND
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;*/
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00059"/>00059 &#32;&#32;&#32;&#32;bool&#32;Delivery(Manager::Session::ID&#32;proxy_sid,&#32;const&#32;OctetsStream&amp;&#32;osArg)
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00060"/>00060 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if(&#32;GAuthServer::GetInstance()-&gt;Send(proxy_sid,&#32;*this&#32;)&#32;)
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;return&#32;true;
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GetAddCashSNArg&#32;arg;
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;osArg&#32;&gt;&gt;&#32;arg;
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetResult(GetAddCashSNRes(ERR_DELIVER_SEND));
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SendToSponsor();
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SendFailCash(arg.userid,&#32;0);
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;return&#32;false;
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00070"/>00070 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00071"/>00071 
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00072"/>00072 &#32;&#32;&#32;&#32;/**
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Постобработка&#32;результатов&#32;RPC-запроса
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;proxy_sid&#32;Идентификатор&#32;сессии&#32;прокси
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;osArg&#32;Входные&#32;аргументы
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;*&#32;@param&#32;osRes&#32;Результаты&#32;выполнения
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;*&#32;@note&#32;Обновляет&#32;статус&#32;операции&#32;в&#32;БД,&#32;инициирует&#32;пополнение&#32;баланса&#32;при&#32;успехе
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;*/
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00079"/>00079 &#32;&#32;&#32;&#32;void&#32;PostProcess(Manager::Session::ID&#32;proxy_sid,&#32;const&#32;OctetsStream&amp;&#32;osArg,&#32;const&#32;OctetsStream&amp;&#32;osRes)
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00080"/>00080 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GetAddCashSNArg&#32;arg;
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;osArg&#32;&gt;&gt;&#32;arg;
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GetAddCashSNRes&#32;res;
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;osRes&#32;&gt;&gt;&#32;res;
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GMysqlClient&#32;*db&#32;=&#32;GMysqlClient::GetInstance();
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if(res.retcode&#32;!=&#32;0)&#32;{&#32;
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SendFailCash(res.userid,&#32;1);&#32;
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;return;&#32;
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;int&#32;idx&#32;=&#32;db-&gt;GetCashUser(res.userid);
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;int&#32;cash&#32;=&#32;db-&gt;GetCashCash(idx);
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;char&#32;*&#32;creatime&#32;=&#32;db-&gt;GetCashCreaTime(idx);
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if(!creatime&#32;||&#32;!cash)&#32;{&#32;
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SendFailCash(res.userid,&#32;1);&#32;
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;return;&#32;
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;int&#32;result&#32;=&#32;db-&gt;SetUseCashNow(1,&#32;res.sn,&#32;res.userid,&#32;creatime);
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if(&#32;result&#32;)
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;AddCash&#32;Cash&#32;=&#32;AddCash(res.userid,&#32;res.zoneid,&#32;res.sn,&#32;cash&#32;);
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GAuthServer::GetInstance()-&gt;Send(proxy_sid,&#32;&amp;Cash);
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetResult(&#32;&amp;res&#32;);
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00109"/>00109 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00110"/>00110 
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00111"/>00111 &#32;&#32;&#32;&#32;/**
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;*&#32;@brief&#32;Обработчик&#32;таймаута&#32;запроса
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;*&#32;@note&#32;В&#32;текущей&#32;реализации&#32;не&#32;выполняет&#32;действий&#32;(закомментирован)
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;*/
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00115"/>00115 &#32;&#32;&#32;&#32;void&#32;OnTimeout(&#32;)
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00116"/>00116 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//SendFailCash();
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00118"/>00118 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00119"/>00119 };
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00120"/>00120 
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00121"/>00121 };
+<anchor xml:id="_getaddcashsn_8hrp_source_1l00122"/>00122 #endif
+</programlisting></section>
