@@ -1,0 +1,5 @@
+<map id="GMysqlClient::SetUseCashNow" name="GMysqlClient::SetUseCashNow">
+<area shape="rect" id="Node000001" title="Обновление статуса записи в usecashnow." alt="" coords="213,13,423,40"/>
+<area shape="rect" id="Node000002" href="$class_g_n_e_t_1_1_get_add_cash_s_n.html#a7876cc264b8756e9e120b7385581cf46" title="Постобработка результатов RPC&#45;запроса" alt="" coords="5,5,165,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,29,165,29,165,24,197,24"/>
+</map>

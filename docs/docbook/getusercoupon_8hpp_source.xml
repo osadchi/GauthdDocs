@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_getusercoupon_8hpp_source" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/getusercoupon.hpp</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_getusercoupon_8hpp_source_1l00001"/>00001 
+<anchor xml:id="_getusercoupon_8hpp_source_1l00010"/>00010 
+<anchor xml:id="_getusercoupon_8hpp_source_1l00011"/>00011 <emphasis role="preprocessor">#ifndef&#32;__GNET_GETUSERCOUPON_HPP</emphasis>
+<anchor xml:id="_getusercoupon_8hpp_source_1l00012"/>00012 <emphasis role="preprocessor">#define&#32;__GNET_GETUSERCOUPON_HPP</emphasis>
+<anchor xml:id="_getusercoupon_8hpp_source_1l00013"/>00013 
+<anchor xml:id="_getusercoupon_8hpp_source_1l00014"/>00014 <emphasis role="preprocessor">#include&#32;&quot;rpcdefs.h&quot;</emphasis>
+<anchor xml:id="_getusercoupon_8hpp_source_1l00015"/>00015 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_callid_8hxx">callid.hxx</link>&quot;</emphasis>
+<anchor xml:id="_getusercoupon_8hpp_source_1l00016"/>00016 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_state_8hxx">state.hxx</link>&quot;</emphasis>
+<anchor xml:id="_getusercoupon_8hpp_source_1l00017"/>00017 <emphasis role="preprocessor">#include&#32;&quot;getusercouponarg&quot;</emphasis>
+<anchor xml:id="_getusercoupon_8hpp_source_1l00018"/>00018 <emphasis role="preprocessor">#include&#32;&quot;getusercouponres&quot;</emphasis>
+<anchor xml:id="_getusercoupon_8hpp_source_1l00019"/>00019 
+<anchor xml:id="_getusercoupon_8hpp_source_1l00020"/>00020 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_g_n_e_t">GNET</link>
+<anchor xml:id="_getusercoupon_8hpp_source_1l00021"/>00021 {
+<anchor xml:id="_getusercoupon_8hpp_source_1l00022"/>00022 
+<anchor xml:id="_getusercoupon_8hpp_source_1l00030"/><link linkend="_class_g_n_e_t_1_1_get_user_coupon">00030</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_g_n_e_t_1_1_get_user_coupon">GetUserCoupon</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;Rpc
+<anchor xml:id="_getusercoupon_8hpp_source_1l00031"/>00031 {
+<anchor xml:id="_getusercoupon_8hpp_source_1l00032"/><link linkend="_getusercoupon_8hpp_1ad33ee56a94384ada0aa3cf9315e88591">00032</link> <emphasis role="preprocessor">#define&#32;RPC_BASECLASS&#32;Rpc</emphasis>
+<anchor xml:id="_getusercoupon_8hpp_source_1l00033"/>00033 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#include&#32;&quot;getusercoupon&quot;</emphasis>&#32;&#32;
+<anchor xml:id="_getusercoupon_8hpp_source_1l00034"/>00034 <emphasis role="preprocessor">#undef&#32;RPC_BASECLASS</emphasis>
+<anchor xml:id="_getusercoupon_8hpp_source_1l00035"/>00035 
+<anchor xml:id="_getusercoupon_8hpp_source_1l00036"/>00036 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_getusercoupon_8hpp_source_1l00047"/><link linkend="_class_g_n_e_t_1_1_get_user_coupon_1a6fe67ac1c3e044ed8f94f8299894ed4b">00047</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_get_user_coupon_1a6fe67ac1c3e044ed8f94f8299894ed4b">Server</link>(Rpc::Data&#32;*argument,&#32;Rpc::Data&#32;*result,&#32;Manager&#32;*manager,&#32;Manager::Session::ID&#32;sid)
+<anchor xml:id="_getusercoupon_8hpp_source_1l00048"/>00048 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_getusercoupon_8hpp_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;GetUserCouponArg&#32;*arg&#32;=&#32;(GetUserCouponArg&#32;*)argument;</emphasis>
+<anchor xml:id="_getusercoupon_8hpp_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;GetUserCouponRes&#32;*res&#32;=&#32;(GetUserCouponRes&#32;*)result;</emphasis>
+<anchor xml:id="_getusercoupon_8hpp_source_1l00051"/>00051 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_getusercoupon_8hpp_source_1l00052"/>00052 
+<anchor xml:id="_getusercoupon_8hpp_source_1l00062"/><link linkend="_class_g_n_e_t_1_1_get_user_coupon_1a6425acba2965486d055a994213699122">00062</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_get_user_coupon_1a6425acba2965486d055a994213699122">Client</link>(Rpc::Data&#32;*argument,&#32;Rpc::Data&#32;*result,&#32;Manager&#32;*manager,&#32;Manager::Session::ID&#32;sid)
+<anchor xml:id="_getusercoupon_8hpp_source_1l00063"/>00063 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_getusercoupon_8hpp_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;GetUserCouponArg&#32;*arg&#32;=&#32;(GetUserCouponArg&#32;*)argument;</emphasis>
+<anchor xml:id="_getusercoupon_8hpp_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;GetUserCouponRes&#32;*res&#32;=&#32;(GetUserCouponRes&#32;*)result;</emphasis>
+<anchor xml:id="_getusercoupon_8hpp_source_1l00066"/>00066 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_getusercoupon_8hpp_source_1l00067"/>00067 
+<anchor xml:id="_getusercoupon_8hpp_source_1l00073"/><link linkend="_class_g_n_e_t_1_1_get_user_coupon_1aaf7a0b7d88805c3071a892a7eb45e7d6">00073</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_get_user_coupon_1aaf7a0b7d88805c3071a892a7eb45e7d6">OnTimeout</link>()
+<anchor xml:id="_getusercoupon_8hpp_source_1l00074"/>00074 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_getusercoupon_8hpp_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Клиентская&#32;логика</emphasis>
+<anchor xml:id="_getusercoupon_8hpp_source_1l00076"/>00076 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_getusercoupon_8hpp_source_1l00077"/>00077 };
+<anchor xml:id="_getusercoupon_8hpp_source_1l00078"/>00078 
+<anchor xml:id="_getusercoupon_8hpp_source_1l00079"/>00079 };&#32;<emphasis role="comment">//&#32;namespace&#32;GNET</emphasis>
+<anchor xml:id="_getusercoupon_8hpp_source_1l00080"/>00080 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

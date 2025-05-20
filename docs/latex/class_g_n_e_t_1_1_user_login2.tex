@@ -1,0 +1,130 @@
+\doxysection{GNET\+::User\+Login2 Class Reference}
+\hypertarget{class_g_n_e_t_1_1_user_login2}{}\label{class_g_n_e_t_1_1_user_login2}\index{GNET::UserLogin2@{GNET::UserLogin2}}
+
+
+Класс для обработки RPC-\/запросов авторизации пользователей  
+
+
+
+
+{\ttfamily \#include $<$userlogin2.\+hpp$>$}
+
+
+
+Inheritance diagram for GNET\+::User\+Login2\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=179pt]{class_g_n_e_t_1_1_user_login2__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GNET\+::User\+Login2\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=179pt]{class_g_n_e_t_1_1_user_login2__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_g_n_e_t_1_1_user_login2_a7d61288662e68a7168dbb4d026483086}{Delivery}} (Manager\+::\+Session\+::\+ID proxy\+\_\+sid, const Octets\+Stream \&os\+Arg)
+\begin{DoxyCompactList}\small\item\em Метод для доставки и обработки запроса авторизации \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_user_login2_ac662ac896d30d4f07db6a465fbb20ca3}{Post\+Process}} (Manager\+::\+Session\+::\+ID proxy\+\_\+sid, const Octets\+Stream \&os\+Arg, const Octets\+Stream \&os\+Res)
+\begin{DoxyCompactList}\small\item\em Пост-\/обработка результатов авторизации \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_user_login2_a7d87dc03996960a49065f50388d624ef}{On\+Timeout}} ()
+\begin{DoxyCompactList}\small\item\em Обработчик таймаута запроса \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс для обработки RPC-\/запросов авторизации пользователей 
+
+Наследует функциональность Proxy\+Rpc и реализует обработку запросов входа пользователя, взаимодействие с базой данных и обработку результатов авторизации. 
+
+Definition at line \mbox{\hyperlink{userlogin2_8hpp_source_l00026}{26}} of file \mbox{\hyperlink{userlogin2_8hpp_source}{userlogin2.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_n_e_t_1_1_user_login2_a7d61288662e68a7168dbb4d026483086}\index{GNET::UserLogin2@{GNET::UserLogin2}!Delivery@{Delivery}}
+\index{Delivery@{Delivery}!GNET::UserLogin2@{GNET::UserLogin2}}
+\doxysubsubsection{\texorpdfstring{Delivery()}{Delivery()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_user_login2_a7d61288662e68a7168dbb4d026483086} 
+bool GNET\+::\+User\+Login2\+::\+Delivery (\begin{DoxyParamCaption}\item[{Manager\+::\+Session\+::\+ID}]{proxy\+\_\+sid}{, }\item[{const Octets\+Stream \&}]{os\+Arg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Метод для доставки и обработки запроса авторизации 
+
+
+\begin{DoxyParams}{Parameters}
+{\em proxy\+\_\+sid} & Идентификатор прокси-\/сессии \\
+\hline
+{\em os\+Arg} & Поток данных с аргументами запроса \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true если запрос успешно обработан, false в случае ошибки
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000042}{Todo}}]Реализовать обработку запроса через GAuth\+Client \end{DoxyRefDesc}
+\begin{DoxyNote}{Note}
+Текущая реализация всегда возвращает false 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{userlogin2_8hpp_source_l00045}{45}} of file \mbox{\hyperlink{userlogin2_8hpp_source}{userlogin2.\+hpp}}.
+
+\Hypertarget{class_g_n_e_t_1_1_user_login2_a7d87dc03996960a49065f50388d624ef}\index{GNET::UserLogin2@{GNET::UserLogin2}!OnTimeout@{OnTimeout}}
+\index{OnTimeout@{OnTimeout}!GNET::UserLogin2@{GNET::UserLogin2}}
+\doxysubsubsection{\texorpdfstring{OnTimeout()}{OnTimeout()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_user_login2_a7d87dc03996960a49065f50388d624ef} 
+void GNET\+::\+User\+Login2\+::\+On\+Timeout (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Обработчик таймаута запроса 
+
+\begin{DoxyNote}{Note}
+Реализация требуется на стороне клиента
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000044}{Todo}}]Реализовать обработку таймаутов для клиентской части \end{DoxyRefDesc}
+
+
+Definition at line \mbox{\hyperlink{userlogin2_8hpp_source_l00091}{91}} of file \mbox{\hyperlink{userlogin2_8hpp_source}{userlogin2.\+hpp}}.
+
+\Hypertarget{class_g_n_e_t_1_1_user_login2_ac662ac896d30d4f07db6a465fbb20ca3}\index{GNET::UserLogin2@{GNET::UserLogin2}!PostProcess@{PostProcess}}
+\index{PostProcess@{PostProcess}!GNET::UserLogin2@{GNET::UserLogin2}}
+\doxysubsubsection{\texorpdfstring{PostProcess()}{PostProcess()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_user_login2_ac662ac896d30d4f07db6a465fbb20ca3} 
+void GNET\+::\+User\+Login2\+::\+Post\+Process (\begin{DoxyParamCaption}\item[{Manager\+::\+Session\+::\+ID}]{proxy\+\_\+sid}{, }\item[{const Octets\+Stream \&}]{os\+Arg}{, }\item[{const Octets\+Stream \&}]{os\+Res}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Пост-\/обработка результатов авторизации 
+
+
+\begin{DoxyParams}{Parameters}
+{\em proxy\+\_\+sid} & Идентификатор прокси-\/сессии \\
+\hline
+{\em os\+Arg} & Поток данных с аргументами запроса \\
+\hline
+{\em os\+Res} & Поток данных с результатами обработки\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000043}{Todo}}]Реализовать обработку результатов авторизации \end{DoxyRefDesc}
+
+
+Definition at line \mbox{\hyperlink{userlogin2_8hpp_source_l00073}{73}} of file \mbox{\hyperlink{userlogin2_8hpp_source}{userlogin2.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{userlogin2_8hpp}{userlogin2.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,71 @@
+\doxysection{D\+:/pwsrc2.0/docs/gauthd/userlogout.hpp}
+\hypertarget{userlogout_8hpp_source}{}\label{userlogout_8hpp_source}\mbox{\hyperlink{userlogout_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00007}00007\ \textcolor{preprocessor}{\#ifndef\ \_\_GNET\_USERLOGOUT\_HPP}}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#define\ \_\_GNET\_USERLOGOUT\_HPP}}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}rpcdefs.h"{}}}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{callid_8hxx}{callid.hxx}}"{}}}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{state_8hxx}{state.hxx}}"{}}}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gmysqlclient_8hpp}{gmysqlclient.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}userlogoutarg"{}}}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}userlogoutres"{}}}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00017}00017\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_g_n_e_t}{GNET}}}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00018}00018\ \{}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00027}\mbox{\hyperlink{class_g_n_e_t_1_1_user_logout}{00027}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_n_e_t_1_1_user_logout}{UserLogout}}\ :\ \textcolor{keyword}{public}\ Rpc}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00028}00028\ \{}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00029}\mbox{\hyperlink{userlogout_8hpp_ad33ee56a94384ada0aa3cf9315e88591}{00029}}\ \textcolor{preprocessor}{\#define\ RPC\_BASECLASS\ Rpc\ \ }}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00030}00030\ \textcolor{preprocessor}{\ \ \ \ \#include\ "{}userlogout"{}}\ \ \ }
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00031}00031\ \textcolor{preprocessor}{\#undef\ RPC\_BASECLASS}}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00033}00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00048}\mbox{\hyperlink{class_g_n_e_t_1_1_user_logout_a1c4f915638d14e969c5586fe58b9685b}{00048}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_e_t_1_1_user_logout_a1c4f915638d14e969c5586fe58b9685b}{Server}}(Rpc::Data\ *argument,\ Rpc::Data\ *result,\ Manager\ *manager,\ Manager::Session::ID\ sid)}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00049}00049\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00050}00050\ \ \ \ \ \ \ \ \ UserLogoutArg\ *arg\ =\ \textcolor{keyword}{static\_cast<}UserLogoutArg*\textcolor{keyword}{>}(argument);}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00051}00051\ \ \ \ \ \ \ \ \ UserLogoutRes\ *res\ =\ \textcolor{keyword}{static\_cast<}UserLogoutRes*\textcolor{keyword}{>}(result);}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00052}00052\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Работа\ с\ базой\ данных}}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_mysql_client}{GMysqlClient}}\ *db\ =\ \mbox{\hyperlink{class_g_mysql_client_a87a90c9a2b827da79f451728f4109850}{GMysqlClient::GetInstance}}();}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ zoneid\ =\ db-\/>\mbox{\hyperlink{class_g_mysql_client_acb10864e5152be98cb60ca379e5401bc}{GetZoneid}}();}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ zonelocalsid\ =\ arg-\/>localsid;}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ overwrite\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00058}00058\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Обновление\ статуса\ пользователя}}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00060}00060\ \ \ \ \ \ \ \ \ db-\/>\mbox{\hyperlink{class_g_mysql_client_a8875011e1658a40cefc82eac737bba58}{AlexAddLogin}}(arg-\/>userid,\ 2);}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00061}00061\ \ \ \ \ \ \ \ \ db-\/>\mbox{\hyperlink{class_g_mysql_client_a524bc45740cb01aabdbf2b012407925f}{OnfflineRecord}}(arg-\/>userid,\ db-\/>\mbox{\hyperlink{class_g_mysql_client_a623a50fa9c2dbe90519ac099bfa492f0}{GetAid}}(),\ zoneid,\ zonelocalsid,\ overwrite);}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00062}00062\ \ \ \ \ \ \ \ \ db-\/>\mbox{\hyperlink{class_g_mysql_client_a3e52c51fa1af93cb93da4547f877dba6}{AlexShell}}(arg-\/>userid);}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00063}00063\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Обработка\ результата\ операции}}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00065}00065\ \ \ \ \ \ \ \ \ res-\/>retcode\ =\ (overwrite\ ==\ 1)\ ?\ 0\ :\ 12;}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00066}00066\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Обновление\ карты\ пользователей\ в\ AuthServer}}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server}{GAuthServer}}*\ ausm\ =\ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a2fb6223e8492fcbc74f9b21ee12f25e7}{GAuthServer::GetInstance}}();}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00069}00069\ \ \ \ \ \ \ \ \ Thread::RWLock::WRScoped\ l(ausm-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a03dccad867b02013d61e8dde6785f3af}{locker\_map}});}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ ausm-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_afcb09daf81ca16050c3e2467cb48c762}{usermap}}.find(arg-\/>userid);}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (it\ !=\ ausm-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_afcb09daf81ca16050c3e2467cb48c762}{usermap}}.end())\ \{}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ ausm-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_afcb09daf81ca16050c3e2467cb48c762}{usermap}}.erase(it);}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00074}00074\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00087}\mbox{\hyperlink{class_g_n_e_t_1_1_user_logout_a3367c6ce9755247ab27fd85957a50ebf}{00087}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_e_t_1_1_user_logout_a3367c6ce9755247ab27fd85957a50ebf}{Client}}(Rpc::Data\ *argument,\ Rpc::Data\ *result,\ Manager\ *manager,\ Manager::Session::ID\ sid)}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00088}00088\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO:\ Реализация\ клиентской\ части}}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ UserLogoutArg\ *arg\ =\ static\_cast<UserLogoutArg*>(argument);}}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ UserLogoutRes\ *res\ =\ static\_cast<UserLogoutRes*>(result);}}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00092}00092\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00100}\mbox{\hyperlink{class_g_n_e_t_1_1_user_logout_ae14b8440e018c0aabe72b1843f292753}{00100}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_e_t_1_1_user_logout_ae14b8440e018c0aabe72b1843f292753}{OnTimeout}}()}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00101}00101\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO:\ Реализация\ обработки\ таймаута}}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00103}00103\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00104}00104\ \};}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00106}00106\ \}\ \textcolor{comment}{//\ namespace\ GNET}}
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{userlogout_8hpp_source_l00108}00108\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_GNET\_USERLOGOUT\_HPP}}
+
+\end{DoxyCode}

@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_n_e_t_1_1_get_add_cash_s_n" xml:lang="en-US">
+<title>GNET::GetAddCashSN Class Reference</title>
+<indexterm><primary>GNET::GetAddCashSN</primary></indexterm>
+<para>
+
+<para>RPC-класс для обработки запросов генерации серийных номеров пополнения </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;getaddcashsn.hpp&gt;</computeroutput>
+</para>
+Inheritance diagram for GNET::GetAddCashSN:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_get_add_cash_s_n__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for GNET::GetAddCashSN:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_get_add_cash_s_n__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_g_n_e_t_1_1_get_add_cash_s_n_1a06926b845f30285181cfa325f2ad5ba7">Delivery</link> (Manager::Session::ID proxy_sid, const OctetsStream &amp;osArg)</para>
+
+<para>Обрабатывает доставку RPC-запроса </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_get_add_cash_s_n_1a7876cc264b8756e9e120b7385581cf46">PostProcess</link> (Manager::Session::ID proxy_sid, const OctetsStream &amp;osArg, const OctetsStream &amp;osRes)</para>
+
+<para>Постобработка результатов RPC-запроса </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_get_add_cash_s_n_1ab4ea4a38d4e7bb2d48c89bac5b299914">OnTimeout</link> ()</para>
+
+<para>Обработчик таймаута запроса </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>RPC-класс для обработки запросов генерации серийных номеров пополнения </para>
+
+
+
+<para>Наследует функциональность ProxyRpc и взаимодействует с базой данных через <link linkend="_class_g_mysql_client">GMysqlClient</link>, а также отправляет ответы через <link linkend="_class_g_n_e_t_1_1_g_auth_server">GAuthServer</link>. </para>
+<para>
+Definition at line <link linkend="_getaddcashsn_8hpp_source_1l00028">28</link> of file <link linkend="_getaddcashsn_8hpp_source">getaddcashsn.hpp</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_g_n_e_t_1_1_get_add_cash_s_n_1a06926b845f30285181cfa325f2ad5ba7"/><section>
+    <title>Delivery()</title>
+<indexterm><primary>Delivery</primary><secondary>GNET::GetAddCashSN</secondary></indexterm>
+<indexterm><primary>GNET::GetAddCashSN</primary><secondary>Delivery</secondary></indexterm>
+<para><computeroutput>bool GNET::GetAddCashSN::Delivery (Manager::Session::ID proxy_sid, const OctetsStream &amp; osArg)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Обрабатывает доставку RPC-запроса </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>proxy_sid</entry><entry>
+<para>Идентификатор сессии прокси </para>
+</entry>
+                            </row>
+                            <row>
+<entry>osArg</entry><entry>
+<para>Входные данные в виде OctetsStream </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true если запрос успешно отправлен, false в случае ошибки </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>При ошибке отправляет спонсору результат ERR_DELIVER_SEND </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_getaddcashsn_8hpp_source_1l00059">59</link> of file <link linkend="_getaddcashsn_8hpp_source">getaddcashsn.hpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_get_add_cash_s_n_a06926b845f30285181cfa325f2ad5ba7_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_get_add_cash_s_n_1ab4ea4a38d4e7bb2d48c89bac5b299914"/><section>
+    <title>OnTimeout()</title>
+<indexterm><primary>OnTimeout</primary><secondary>GNET::GetAddCashSN</secondary></indexterm>
+<indexterm><primary>GNET::GetAddCashSN</primary><secondary>OnTimeout</secondary></indexterm>
+<para><computeroutput>void GNET::GetAddCashSN::OnTimeout ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Обработчик таймаута запроса </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>В текущей реализации не выполняет действий (закомментирован) </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_getaddcashsn_8hpp_source_1l00115">115</link> of file <link linkend="_getaddcashsn_8hpp_source">getaddcashsn.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_get_add_cash_s_n_1a7876cc264b8756e9e120b7385581cf46"/><section>
+    <title>PostProcess()</title>
+<indexterm><primary>PostProcess</primary><secondary>GNET::GetAddCashSN</secondary></indexterm>
+<indexterm><primary>GNET::GetAddCashSN</primary><secondary>PostProcess</secondary></indexterm>
+<para><computeroutput>void GNET::GetAddCashSN::PostProcess (Manager::Session::ID proxy_sid, const OctetsStream &amp; osArg, const OctetsStream &amp; osRes)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Постобработка результатов RPC-запроса </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>proxy_sid</entry><entry>
+<para>Идентификатор сессии прокси </para>
+</entry>
+                            </row>
+                            <row>
+<entry>osArg</entry><entry>
+<para>Входные аргументы </para>
+</entry>
+                            </row>
+                            <row>
+<entry>osRes</entry><entry>
+<para>Результаты выполнения </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>Обновляет статус операции в БД, инициирует пополнение баланса при успехе </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_getaddcashsn_8hpp_source_1l00079">79</link> of file <link linkend="_getaddcashsn_8hpp_source">getaddcashsn.hpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_get_add_cash_s_n_a7876cc264b8756e9e120b7385581cf46_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_getaddcashsn_8hpp">getaddcashsn.hpp</link></section>
+</section>

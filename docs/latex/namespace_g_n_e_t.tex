@@ -38,8 +38,12 @@ class \mbox{\hyperlink{class_g_n_e_t_1_1_billing_confirm}{Billing\+Confirm}}
 \begin{DoxyCompactList}\small\item\em Класс протокола для обработки подтверждений биллинговых операций. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_g_n_e_t_1_1_billing_request}{Billing\+Request}}
 \begin{DoxyCompactList}\small\item\em Класс для обработки биллинг-\/запросов в системе. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_cash_serial}{Cash\+Serial}}
+\begin{DoxyCompactList}\small\item\em Прокси-\/класс для обработки RPC-\/запросов денежных серий \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_g_n_e_t_1_1_check_timer}{Check\+Timer}}
 \begin{DoxyCompactList}\small\item\em Periodic task manager for financial and security checks. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_coupon_exchange}{Coupon\+Exchange}}
+\begin{DoxyCompactList}\small\item\em Класс для обработки RPC-\/запросов обмена купонов между клиентом и сервером. @inherits Rpc. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_g_n_e_t_1_1_discount_announce}{Discount\+Announce}}
 \begin{DoxyCompactList}\small\item\em Протокол для оповещения о скидках и специальных предложениях \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_g_n_e_t_1_1_fee}{Fee}}
@@ -48,20 +52,32 @@ class \mbox{\hyperlink{class_g_n_e_t_1_1_game2_a_u}{Game2\+AU}}
 \begin{DoxyCompactList}\small\item\em Протокол для взаимодействия между игровым сервером и сервером аутентификации/учётных записей (Auth/\+AU Server) \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server}{GAuth\+Server}}
 \begin{DoxyCompactList}\small\item\em Main authentication server class handling sessions and user validation. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_get_add_cash_s_n}{Get\+Add\+Cash\+SN}}
+\begin{DoxyCompactList}\small\item\em RPC-\/класс для обработки запросов генерации серийных номеров пополнения \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_g_n_e_t_1_1_get_player_i_d_by_name___re}{Get\+Player\+IDBy\+Name\+\_\+\+Re}}
 \begin{DoxyCompactList}\small\item\em Класс протокола для ответов на запрос получения ID игрока по имени @inherits Protocol. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_get_user_coupon}{Get\+User\+Coupon}}
+\begin{DoxyCompactList}\small\item\em RPC-\/класс для обработки запросов/ответов о купонах пользователя \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_g_n_e_t_1_1_g_m_forbid_sell_point}{GMForbid\+Sell\+Point}}
 \begin{DoxyCompactList}\small\item\em Класс протокола для управления запретами точек продаж. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_g_n_e_t_1_1_g_m_kickout_user}{GMKickout\+User}}
 \begin{DoxyCompactList}\small\item\em Протокол для принудительного отключения пользователя Game Master\textquotesingle{}ом (GM) \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_g_n_e_t_1_1_g_m_shutup}{GMShutup}}
 \begin{DoxyCompactList}\small\item\em Протокол блокировки чата пользователя \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_g_query_passwd}{GQuery\+Passwd}}
+\begin{DoxyCompactList}\small\item\em Класс для обработки RPC-\/запросов проверки паролей \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_g_n_e_t_1_1_key_exchange}{Key\+Exchange}}
 \begin{DoxyCompactList}\small\item\em Протокол обмена криптографическими ключами \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_g_n_e_t_1_1_kickout_user}{Kickout\+User}}
 \begin{DoxyCompactList}\small\item\em Протокол для принудительного отключения пользователя от сервера \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_g_n_e_t_1_1_matrix_failure}{Matrix\+Failure}}
 \begin{DoxyCompactList}\small\item\em Класс протокола для обработки ошибок матрицы \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_matrix_passwd}{Matrix\+Passwd}}
+\begin{DoxyCompactList}\small\item\em RPC-\/прокси для обработки запросов аутентификации \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_matrix_passwd2}{Matrix\+Passwd2}}
+\begin{DoxyCompactList}\small\item\em Прокси-\/класс для обработки RPC-\/запросов проверки матричного пароля @inherits Proxy\+Rpc. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_matrix_token}{Matrix\+Token}}
+\begin{DoxyCompactList}\small\item\em Класс для обработки RPC-\/запросов матричных токенов \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_g_n_e_t_1_1_query_user_forbid}{Query\+User\+Forbid}}
 \begin{DoxyCompactList}\small\item\em Протокол для запроса информации о блокировке пользователя \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_g_n_e_t_1_1_query_user_forbid___re}{Query\+User\+Forbid\+\_\+\+Re}}
@@ -82,6 +98,12 @@ class \mbox{\hyperlink{class_g_n_e_t_1_1_trans_buy_point}{Trans\+Buy\+Point}}
 \begin{DoxyCompactList}\small\item\em Класс протокола для обработки транзакций покупки баллов @inherits Protocol. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{struct_g_n_e_t_1_1_user_info}{User\+Info}}
 \begin{DoxyCompactList}\small\item\em Структура для хранения информации о пользователе. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_user_login}{User\+Login}}
+\begin{DoxyCompactList}\small\item\em Класс для обработки процедуры входа пользователя -\/сервис аутентификации \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_user_login2}{User\+Login2}}
+\begin{DoxyCompactList}\small\item\em Класс для обработки RPC-\/запросов авторизации пользователей \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_user_logout}{User\+Logout}}
+\begin{DoxyCompactList}\small\item\em RPC-\/класс для обработки запросов выхода пользователя \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_g_n_e_t_1_1_verify_master}{Verify\+Master}}
 \item 
 class \mbox{\hyperlink{class_g_n_e_t_1_1_verify_master___re}{Verify\+Master\+\_\+\+Re}}

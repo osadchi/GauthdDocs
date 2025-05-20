@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_matrixtoken_8hpp_source" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/matrixtoken.hpp</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_matrixtoken_8hpp_source_1l00001"/>00001 
+<anchor xml:id="_matrixtoken_8hpp_source_1l00013"/>00013 
+<anchor xml:id="_matrixtoken_8hpp_source_1l00014"/>00014 <emphasis role="preprocessor">#ifndef&#32;__GNET_MATRIXTOKEN_HPP</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00015"/>00015 <emphasis role="preprocessor">#define&#32;__GNET_MATRIXTOKEN_HPP</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00016"/>00016 
+<anchor xml:id="_matrixtoken_8hpp_source_1l00017"/>00017 <emphasis role="preprocessor">#include&#32;&quot;rpcdefs.h&quot;</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00018"/>00018 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_callid_8hxx">callid.hxx</link>&quot;</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00019"/>00019 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_state_8hxx">state.hxx</link>&quot;</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00020"/>00020 <emphasis role="preprocessor">#include&#32;&quot;matrixtokenarg&quot;</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00021"/>00021 <emphasis role="preprocessor">#include&#32;&quot;matrixtokenres&quot;</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00022"/>00022 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_gmysqlclient_8hpp">gmysqlclient.hpp</link>&quot;</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00023"/>00023 
+<anchor xml:id="_matrixtoken_8hpp_source_1l00024"/>00024 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_g_n_e_t">GNET</link>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00025"/>00025 {
+<anchor xml:id="_matrixtoken_8hpp_source_1l00026"/>00026 
+<anchor xml:id="_matrixtoken_8hpp_source_1l00036"/><link linkend="_class_g_n_e_t_1_1_matrix_token">00036</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_g_n_e_t_1_1_matrix_token">MatrixToken</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;ProxyRpc
+<anchor xml:id="_matrixtoken_8hpp_source_1l00037"/>00037 {
+<anchor xml:id="_matrixtoken_8hpp_source_1l00039"/>00039 <emphasis role="preprocessor">#define&#32;RPC_BASECLASS&#32;ProxyRpc</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00040"/>00040 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#include&#32;&quot;matrixtoken&quot;</emphasis>&#32;&#32;<emphasis role="comment">//&#32;Включение&#32;RPC-специфичных&#32;макросов</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00041"/>00041 <emphasis role="preprocessor">#undef&#32;RPC_BASECLASS</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00043"/>00043 
+<anchor xml:id="_matrixtoken_8hpp_source_1l00044"/>00044 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_matrixtoken_8hpp_source_1l00055"/><link linkend="_class_g_n_e_t_1_1_matrix_token_1afa6e24621cac8593c4e95ed22cc12338">00055</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_matrix_token_1afa6e24621cac8593c4e95ed22cc12338">Delivery</link>(Manager::Session::ID&#32;proxy_sid,&#32;<emphasis role="keyword">const</emphasis>&#32;OctetsStream&amp;&#32;osArg)
+<anchor xml:id="_matrixtoken_8hpp_source_1l00056"/>00056 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_matrixtoken_8hpp_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_matrixtoken_8hpp_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Реализация&#32;заглушки&#32;(TODO)</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00060"/>00060 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;MatrixTokenArg&#32;arg;</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00061"/>00061 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;osArg&#32;&gt;&gt;&#32;arg;</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00062"/>00062 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if(GAuthClient::GetInstance()-&gt;SendProtocol(*this))</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00063"/>00063 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00064"/>00064 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;return&#32;true;</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00065"/>00065 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00066"/>00066 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;else</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00067"/>00067 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00068"/>00068 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetResult(MatrixTokenRes(ERR_DELIVER_SEND));</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00069"/>00069 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SendToSponsor();</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00070"/>00070 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;return&#32;false;</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00071"/>00071 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00072"/>00072 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00073"/>00073 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_matrixtoken_8hpp_source_1l00074"/>00074 
+<anchor xml:id="_matrixtoken_8hpp_source_1l00084"/><link linkend="_class_g_n_e_t_1_1_matrix_token_1a784d6fa1f7f2a7fd6df54da5fb83c885">00084</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_matrix_token_1a784d6fa1f7f2a7fd6df54da5fb83c885">PostProcess</link>(Manager::Session::ID&#32;proxy_sid,
+<anchor xml:id="_matrixtoken_8hpp_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;OctetsStream&amp;&#32;osArg,
+<anchor xml:id="_matrixtoken_8hpp_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;OctetsStream&amp;&#32;osRes)
+<anchor xml:id="_matrixtoken_8hpp_source_1l00087"/>00087 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_matrixtoken_8hpp_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;TODO:&#32;Реализация&#32;постобработки</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00090"/>00090 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;MatrixTokenArg&#32;arg;</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00091"/>00091 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;osArg&#32;&gt;&gt;&#32;arg;</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00092"/>00092 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;MatrixTokenRes&#32;res;</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00093"/>00093 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;osRes&#32;&gt;&gt;&#32;res;</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00094"/>00094 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetResult(&amp;res);</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00095"/>00095 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00096"/>00096 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_matrixtoken_8hpp_source_1l00097"/>00097 
+<anchor xml:id="_matrixtoken_8hpp_source_1l00104"/><link linkend="_class_g_n_e_t_1_1_matrix_token_1a328616521dbc10643cfc652f9a93fd07">00104</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_matrix_token_1a328616521dbc10643cfc652f9a93fd07">OnTimeout</link>()
+<anchor xml:id="_matrixtoken_8hpp_source_1l00105"/>00105 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_matrixtoken_8hpp_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;TODO:&#32;Реализация&#32;для&#32;клиентской&#32;части</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00107"/>00107 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_matrixtoken_8hpp_source_1l00108"/>00108 };
+<anchor xml:id="_matrixtoken_8hpp_source_1l00109"/>00109 
+<anchor xml:id="_matrixtoken_8hpp_source_1l00110"/>00110 };&#32;<emphasis role="comment">//&#32;namespace&#32;GNET</emphasis>
+<anchor xml:id="_matrixtoken_8hpp_source_1l00111"/>00111 
+<anchor xml:id="_matrixtoken_8hpp_source_1l00112"/>00112 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;__GNET_MATRIXTOKEN_HPP</emphasis>
+</programlisting></section>

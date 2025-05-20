@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['onfflinerecord_0',['OnfflineRecord',['../class_g_mysql_client.html#a524bc45740cb01aabdbf2b012407925f',1,'GMysqlClient']]],
-  ['onlinerecord_1',['OnlineRecord',['../class_g_mysql_client.html#a7c6a4b72d981e0c88568e453221dd06a',1,'GMysqlClient']]]
+  ['main_0',['main',['../gauthd_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'gauthd.cpp']]],
+  ['matrixpasswd_1',['MatrixPasswd',['../class_g_mysql_client.html#ae74167391b7e749c390203ea4f0ec5e5',1,'GMysqlClient']]],
+  ['mysqlquery_2',['MysqlQuery',['../class_g_mysql_client.html#a1be593d128e947bbb05fdee22e9c2a89',1,'GMysqlClient']]]
 ];

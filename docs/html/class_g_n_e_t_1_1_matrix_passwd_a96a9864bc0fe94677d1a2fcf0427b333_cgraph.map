@@ -1,0 +1,36 @@
+<map id="GNET::MatrixPasswd::Delivery" name="GNET::MatrixPasswd::Delivery">
+<area shape="rect" id="Node000001" title="Основной метод обработки запроса" alt="" coords="5,149,154,192"/>
+<area shape="rect" id="Node000002" href="$class_g_mysql_client.html#abe6e61839f3cca64f864f4a9078b0ba5" title=" " alt="" coords="202,5,406,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,147,137,94,167,66,200,42,211,36,214,41,203,46,170,70,141,97,98,150"/>
+<area shape="rect" id="Node000004" href="$class_g_mysql_client.html#a87a90c9a2b827da79f451728f4109850" title="Получить экземпляр класса (Singleton)" alt="" coords="214,56,394,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="108,147,151,118,201,92,220,85,221,90,203,97,153,123,111,151"/>
+<area shape="rect" id="Node000005" href="$class_g_mysql_client.html#a50e93bdf74da424077e864ba8bbfe42c" title="Проверить активность соединения" alt="" coords="226,107,382,133"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="153,151,226,135,227,140,155,157"/>
+<area shape="rect" id="Node000006" href="$class_g_mysql_client.html#ae74167391b7e749c390203ea4f0ec5e5" title="Проверка учетных данных пользователя." alt="" coords="208,157,400,184"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="154,168,192,168,192,173,154,173"/>
+<area shape="rect" id="Node000015" href="$class_g_n_e_t_1_1_matrix_passwd.html#a0f80330092cea479275f52d0aed196e2" title="Блокировка IP при множественных неудачных попытках" alt="" coords="230,208,378,251"/>
+<area shape="poly" id="edge15_Node000001_Node000015" title=" " alt="" coords="155,187,215,203,214,209,153,193"/>
+<area shape="rect" id="Node000016" href="$class_g_n_e_t_1_1_matrix_passwd.html#af45af4a5f03943d956586f3bf91b74c3" title="Отправка уведомления о неудачной аутентификации" alt="" coords="230,275,378,317"/>
+<area shape="poly" id="edge16_Node000001_Node000016" title=" " alt="" coords="106,191,150,226,203,260,216,267,214,272,200,265,147,230,103,195"/>
+<area shape="rect" id="Node000017" href="$class_g_mysql_client.html#a477a9db403d718b8ea1fb2f3e8ba2561" title="Проверка валидности логина" alt="" coords="220,341,388,368"/>
+<area shape="poly" id="edge17_Node000001_Node000017" title=" " alt="" coords="93,191,135,259,166,296,203,327,212,332,209,337,200,332,162,300,131,262,89,194"/>
+<area shape="rect" id="Node000003" href="$class_g_mysql_client.html#a9d2cce01742a63ed739c4c3cbe233296" title=" " alt="" coords="454,5,656,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="406,16,438,16,438,21,406,21"/>
+<area shape="rect" id="Node000007" href="$class_g_mysql_client.html#abdc4799af3e56eb878e0595b1d54b8fa" title="Добавить пользователя в онлайн&#45;список" alt="" coords="476,81,635,108"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="370,154,405,143,429,130,453,118,474,110,476,115,455,122,431,135,407,148,371,159"/>
+<area shape="rect" id="Node000010" href="$class_g_mysql_client.html#a8b60b7430a3413aeae8f36df7bbf7f57" title=" " alt="" coords="486,132,624,159"/>
+<area shape="poly" id="edge10_Node000006_Node000010" title=" " alt="" coords="400,158,471,151,471,156,400,164"/>
+<area shape="rect" id="Node000011" href="$class_g_mysql_client.html#a4d62a501b69e922fae0c53fcc6342169" title="Преобразование аутентификационных данных" alt="" coords="464,183,646,209"/>
+<area shape="poly" id="edge11_Node000006_Node000011" title=" " alt="" coords="400,178,449,183,448,188,400,183"/>
+<area shape="rect" id="Node000014" href="$class_g_mysql_client.html#a1be593d128e947bbb05fdee22e9c2a89" title="Выполнить SQL запрос" alt="" coords="466,233,644,260"/>
+<area shape="poly" id="edge14_Node000006_Node000014" title=" " alt="" coords="371,182,407,194,431,206,455,219,476,226,474,231,453,224,429,211,405,198,370,187"/>
+<area shape="rect" id="Node000008" href="$class_g_mysql_client.html#af95566b524271d47c9e9baddb7efda4a" title="Удалить пользователя из онлайн&#45;списка" alt="" coords="716,56,872,83"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="635,84,700,77,701,82,635,89"/>
+<area shape="rect" id="Node000009" href="$class_g_mysql_client.html#ab7ff1536bda77626eaecf55da93aab92" title="Найти пользователя по ID." alt="" coords="932,81,1089,108"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="635,92,916,92,916,97,635,97"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="873,76,917,81,916,86,872,81"/>
+<area shape="rect" id="Node000012" href="$class_g_mysql_client.html#af14249f643329398179702dd82f867fc" title=" " alt="" coords="705,183,883,209"/>
+<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="647,193,689,193,689,199,647,199"/>
+<area shape="rect" id="Node000013" href="$class_g_mysql_client.html#a98b602a010fc50254381bcc3ad35d74b" title=" " alt="" coords="704,233,884,260"/>
+<area shape="poly" id="edge13_Node000011_Node000013" title=" " alt="" coords="622,207,714,227,712,232,621,213"/>
+</map>

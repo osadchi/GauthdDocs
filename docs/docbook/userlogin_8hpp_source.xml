@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_userlogin_8hpp_source" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/userlogin.hpp</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_userlogin_8hpp_source_1l00001"/>00001 
+<anchor xml:id="_userlogin_8hpp_source_1l00009"/>00009 
+<anchor xml:id="_userlogin_8hpp_source_1l00010"/>00010 <emphasis role="preprocessor">#ifndef&#32;__GNET_USERLOGIN_HPP</emphasis>
+<anchor xml:id="_userlogin_8hpp_source_1l00011"/>00011 <emphasis role="preprocessor">#define&#32;__GNET_USERLOGIN_HPP</emphasis>
+<anchor xml:id="_userlogin_8hpp_source_1l00012"/>00012 
+<anchor xml:id="_userlogin_8hpp_source_1l00013"/>00013 <emphasis role="preprocessor">#include&#32;&quot;rpcdefs.h&quot;</emphasis>
+<anchor xml:id="_userlogin_8hpp_source_1l00014"/>00014 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_callid_8hxx">callid.hxx</link>&quot;</emphasis>
+<anchor xml:id="_userlogin_8hpp_source_1l00015"/>00015 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_state_8hxx">state.hxx</link>&quot;</emphasis>
+<anchor xml:id="_userlogin_8hpp_source_1l00016"/>00016 
+<anchor xml:id="_userlogin_8hpp_source_1l00017"/>00017 <emphasis role="preprocessor">#include&#32;&quot;userloginarg&quot;</emphasis>
+<anchor xml:id="_userlogin_8hpp_source_1l00018"/>00018 <emphasis role="preprocessor">#include&#32;&quot;userloginres&quot;</emphasis>
+<anchor xml:id="_userlogin_8hpp_source_1l00019"/>00019 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_gmysqlclient_8hpp">gmysqlclient.hpp</link>&quot;</emphasis>
+<anchor xml:id="_userlogin_8hpp_source_1l00020"/>00020 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_gauthserver_8hpp">gauthserver.hpp</link>&quot;</emphasis>
+<anchor xml:id="_userlogin_8hpp_source_1l00021"/>00021 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_kickoutuser_8hpp">kickoutuser.hpp</link>&quot;</emphasis>
+<anchor xml:id="_userlogin_8hpp_source_1l00022"/>00022 
+<anchor xml:id="_userlogin_8hpp_source_1l00023"/>00023 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_g_n_e_t">GNET</link>
+<anchor xml:id="_userlogin_8hpp_source_1l00024"/>00024 {
+<anchor xml:id="_userlogin_8hpp_source_1l00025"/>00025 
+<anchor xml:id="_userlogin_8hpp_source_1l00035"/><link linkend="_class_g_n_e_t_1_1_user_login">00035</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_g_n_e_t_1_1_user_login">UserLogin</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;Rpc
+<anchor xml:id="_userlogin_8hpp_source_1l00036"/>00036 {
+<anchor xml:id="_userlogin_8hpp_source_1l00037"/><link linkend="_userlogin_8hpp_1ad33ee56a94384ada0aa3cf9315e88591">00037</link> <emphasis role="preprocessor">#define&#32;RPC_BASECLASS&#32;Rpc</emphasis>
+<anchor xml:id="_userlogin_8hpp_source_1l00038"/>00038 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#include&#32;&quot;userlogin&quot;</emphasis>&#32;&#32;
+<anchor xml:id="_userlogin_8hpp_source_1l00039"/>00039 <emphasis role="preprocessor">#undef&#32;RPC_BASECLASS</emphasis>
+<anchor xml:id="_userlogin_8hpp_source_1l00040"/>00040 
+<anchor xml:id="_userlogin_8hpp_source_1l00063"/>00063 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;Server(Rpc::Data&#32;*argument,&#32;Rpc::Data&#32;*result,&#32;Manager&#32;*manager,&#32;Manager::Session::ID&#32;sid)
+<anchor xml:id="_userlogin_8hpp_source_1l00064"/>00064 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_userlogin_8hpp_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UserLoginArg&#32;*arg&#32;=&#32;(UserLoginArg&#32;*)argument;
+<anchor xml:id="_userlogin_8hpp_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UserLoginRes&#32;*res&#32;=&#32;(UserLoginRes&#32;*)result;
+<anchor xml:id="_userlogin_8hpp_source_1l00067"/>00067 
+<anchor xml:id="_userlogin_8hpp_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server">GAuthServer</link>*&#32;ausm&#32;=&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a2fb6223e8492fcbc74f9b21ee12f25e7">GAuthServer::GetInstance</link>();
+<anchor xml:id="_userlogin_8hpp_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;zoneid;
+<anchor xml:id="_userlogin_8hpp_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_userlogin_8hpp_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Блокировка&#32;доступа&#32;к&#32;карте&#32;зон</emphasis>
+<anchor xml:id="_userlogin_8hpp_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_userlogin_8hpp_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Thread::Mutex::Scoped&#32;l(ausm-&gt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a6632c6441ea93e9bbe7999301534e593">locker_zonemap</link>);&#32;&#32;&#32;&#32;
+<anchor xml:id="_userlogin_8hpp_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(ausm-&gt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a6f4c1af94c9642a78383d593f4b3fc60">zonemap</link>.find(sid)&#32;==&#32;ausm-&gt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a6f4c1af94c9642a78383d593f4b3fc60">zonemap</link>.end())&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="_userlogin_8hpp_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;zoneid&#32;=&#32;ausm-&gt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a6f4c1af94c9642a78383d593f4b3fc60">zonemap</link>[sid];&#32;&#32;
+<anchor xml:id="_userlogin_8hpp_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_userlogin_8hpp_source_1l00077"/>00077 
+<anchor xml:id="_userlogin_8hpp_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;IsGM&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_userlogin_8hpp_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;creatime&#32;=&#32;0;
+<anchor xml:id="_userlogin_8hpp_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;zid&#32;=&#32;zoneid;
+<anchor xml:id="_userlogin_8hpp_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;zonelocalsid&#32;=&#32;arg-&gt;localsid;
+<anchor xml:id="_userlogin_8hpp_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;overwrite&#32;=&#32;arg-&gt;blkickuser;
+<anchor xml:id="_userlogin_8hpp_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_userlogin_8hpp_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_mysql_client">GMysqlClient</link>&#32;*db&#32;=&#32;<link linkend="_class_g_mysql_client_1a87a90c9a2b827da79f451728f4109850">GMysqlClient::GetInstance</link>();
+<anchor xml:id="_userlogin_8hpp_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Обновление&#32;информации&#32;о&#32;подключении&#32;в&#32;БД</emphasis>
+<anchor xml:id="_userlogin_8hpp_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;db-&gt;<link linkend="_class_g_mysql_client_1a7c6a4b72d981e0c88568e453221dd06a">OnlineRecord</link>(arg-&gt;userid,&#32;db-&gt;<link linkend="_class_g_mysql_client_1a623a50fa9c2dbe90519ac099bfa492f0">GetAid</link>(),&#32;zid,&#32;zonelocalsid,&#32;overwrite);
+<anchor xml:id="_userlogin_8hpp_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;db-&gt;<link linkend="_class_g_mysql_client_1ac581c4885d0cd84f507760d32177b4f3">UserCreatime</link>(arg-&gt;userid,&#32;creatime);
+<anchor xml:id="_userlogin_8hpp_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;db-&gt;<link linkend="_class_g_mysql_client_1a916a21bf80a3b7aaaebaebf1855a429b">UserGMPrivilege</link>(arg-&gt;userid,&#32;zid,&#32;IsGM);
+<anchor xml:id="_userlogin_8hpp_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;db-&gt;<link linkend="_class_g_mysql_client_1a8875011e1658a40cefc82eac737bba58">AlexAddLogin</link>(arg-&gt;userid,&#32;1);
+<anchor xml:id="_userlogin_8hpp_source_1l00090"/>00090 
+<anchor xml:id="_userlogin_8hpp_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Проверка&#32;согласованности&#32;идентификаторов&#32;зоны</emphasis>
+<anchor xml:id="_userlogin_8hpp_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(zid&#32;!=&#32;zoneid&#32;||&#32;zonelocalsid&#32;!=&#32;arg-&gt;localsid)
+<anchor xml:id="_userlogin_8hpp_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_userlogin_8hpp_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;UserLogin::Server&#32;zid&#32;!=&#32;zoneid&#32;||&#32;zonelocalsid&#32;!=&#32;arg-&gt;localsid&#32;\n&quot;</emphasis>);
+<anchor xml:id="_userlogin_8hpp_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_userlogin_8hpp_source_1l00096"/>00096 
+<anchor xml:id="_userlogin_8hpp_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Обработка&#32;конфликта&#32;сессий&#32;с&#32;блокировкой&#32;записи</emphasis>
+<anchor xml:id="_userlogin_8hpp_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Thread::RWLock::WRScoped&#32;l(ausm-&gt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a03dccad867b02013d61e8dde6785f3af">locker_map</link>);
+<anchor xml:id="_userlogin_8hpp_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(ausm-&gt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1afcb09daf81ca16050c3e2467cb48c762">usermap</link>.find(arg-&gt;userid)&#32;!=&#32;ausm-&gt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1afcb09daf81ca16050c3e2467cb48c762">usermap</link>.end())
+<anchor xml:id="_userlogin_8hpp_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_userlogin_8hpp_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(arg-&gt;blkickuser)
+<anchor xml:id="_userlogin_8hpp_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_userlogin_8hpp_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Отправка&#32;команды&#32;отключения&#32;предыдущей&#32;сессии</emphasis>
+<anchor xml:id="_userlogin_8hpp_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ausm-&gt;Send(ausm-&gt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1afcb09daf81ca16050c3e2467cb48c762">usermap</link>[arg-&gt;userid].sid,&#32;
+<anchor xml:id="_userlogin_8hpp_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_n_e_t_1_1_kickout_user">KickoutUser</link>(arg-&gt;userid,&#32;ausm-&gt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1afcb09daf81ca16050c3e2467cb48c762">usermap</link>[arg-&gt;userid].localsid));
+<anchor xml:id="_userlogin_8hpp_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_userlogin_8hpp_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_userlogin_8hpp_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_userlogin_8hpp_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;res-&gt;retcode&#32;=&#32;ERR_MULTILOGIN;
+<anchor xml:id="_userlogin_8hpp_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="_userlogin_8hpp_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_userlogin_8hpp_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_userlogin_8hpp_source_1l00113"/>00113 
+<anchor xml:id="_userlogin_8hpp_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Заполнение&#32;результата</emphasis>
+<anchor xml:id="_userlogin_8hpp_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;res-&gt;retcode&#32;=&#32;ERR_SUCCESS;
+<anchor xml:id="_userlogin_8hpp_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;res-&gt;blIsGM&#32;=&#32;IsGM;
+<anchor xml:id="_userlogin_8hpp_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;res-&gt;func&#32;=&#32;0;
+<anchor xml:id="_userlogin_8hpp_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;res-&gt;funcparm&#32;=&#32;0;
+<anchor xml:id="_userlogin_8hpp_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;res-&gt;remain_playtime&#32;=&#32;creatime;
+<anchor xml:id="_userlogin_8hpp_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;res-&gt;free_time_left&#32;=&#32;0;
+<anchor xml:id="_userlogin_8hpp_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;res-&gt;free_time_end&#32;=&#32;0;
+<anchor xml:id="_userlogin_8hpp_source_1l00122"/>00122 
+<anchor xml:id="_userlogin_8hpp_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Обновление&#32;информации&#32;о&#32;пользователе</emphasis>
+<anchor xml:id="_userlogin_8hpp_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ausm-&gt;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1afcb09daf81ca16050c3e2467cb48c762">usermap</link>[arg-&gt;userid]&#32;=&#32;<link linkend="_struct_g_n_e_t_1_1_user_info">UserInfo</link>(sid,&#32;arg-&gt;localsid,&#32;zoneid);
+<anchor xml:id="_userlogin_8hpp_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_userlogin_8hpp_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DEBUG_PRINT(<emphasis role="stringliteral">&quot;gauthd::userlogin:&#32;user(id=%d,localsid=%d)&#32;login&#32;successfully&#32;from&#32;zone&#32;%d\n&quot;</emphasis>,
+<anchor xml:id="_userlogin_8hpp_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;arg-&gt;userid,&#32;arg-&gt;localsid,&#32;zoneid);
+<anchor xml:id="_userlogin_8hpp_source_1l00128"/>00128 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_userlogin_8hpp_source_1l00129"/>00129 
+<anchor xml:id="_userlogin_8hpp_source_1l00138"/>00138 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;Client(Rpc::Data&#32;*argument,&#32;Rpc::Data&#32;*result,&#32;Manager&#32;*manager,&#32;Manager::Session::ID&#32;sid)
+<anchor xml:id="_userlogin_8hpp_source_1l00139"/>00139 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_userlogin_8hpp_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;TODO:&#32;Реализовать&#32;клиентскую&#32;обработку</emphasis>
+<anchor xml:id="_userlogin_8hpp_source_1l00141"/>00141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;UserLoginArg&#32;*arg&#32;=&#32;(UserLoginArg&#32;*)argument;</emphasis>
+<anchor xml:id="_userlogin_8hpp_source_1l00142"/>00142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;UserLoginRes&#32;*res&#32;=&#32;(UserLoginRes&#32;*)result;</emphasis>
+<anchor xml:id="_userlogin_8hpp_source_1l00143"/>00143 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_userlogin_8hpp_source_1l00144"/>00144 
+<anchor xml:id="_userlogin_8hpp_source_1l00151"/>00151 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnTimeout()
+<anchor xml:id="_userlogin_8hpp_source_1l00152"/>00152 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_userlogin_8hpp_source_1l00153"/>00153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;TODO:&#32;Реализовать&#32;обработку&#32;таймаутов&#32;для&#32;клиента</emphasis>
+<anchor xml:id="_userlogin_8hpp_source_1l00154"/>00154 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_userlogin_8hpp_source_1l00155"/>00155 };
+<anchor xml:id="_userlogin_8hpp_source_1l00156"/>00156 
+<anchor xml:id="_userlogin_8hpp_source_1l00157"/>00157 };
+<anchor xml:id="_userlogin_8hpp_source_1l00158"/>00158 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

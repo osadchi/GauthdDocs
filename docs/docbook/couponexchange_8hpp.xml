@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_couponexchange_8hpp" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/couponexchange.hpp File Reference</title>
+<indexterm><primary>D:/pwsrc2.0/docs/gauthd/couponexchange.hpp</primary></indexterm>
+<para>
+
+<para>Заголовочный файл класса CouponExchange для обработки RPC-запросов обмена купонов. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;rpcdefs.h&quot;<?linebreak?>#include &quot;callid.hxx&quot;<?linebreak?>#include &quot;state.hxx&quot;<?linebreak?>#include &quot;couponexchangearg&quot;<?linebreak?>#include &quot;couponexchangeres&quot;<?linebreak?>#include &quot;couponexchange&quot;<?linebreak?></programlisting>Include dependency graph for couponexchange.hpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="couponexchange_8hpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_coupon_exchange">GNET::CouponExchange</link></para>
+
+<para>Класс для обработки RPC-запросов обмена купонов между клиентом и сервером. @inherits Rpc. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_g_n_e_t">GNET</link></para>
+
+<para>Основное пространство имен для сетевых компонентов системы. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_couponexchange_8hpp_1ad33ee56a94384ada0aa3cf9315e88591">RPC_BASECLASS</link>&#160;&#160;&#160;Rpc</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Заголовочный файл класса CouponExchange для обработки RPC-запросов обмена купонов. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Ваше Имя </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>Дата создания </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>1.0 </para>
+</formalpara>
+</para>
+<para>
+Definition in file <link linkend="_couponexchange_8hpp_source">couponexchange.hpp</link>.</para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_couponexchange_8hpp_1ad33ee56a94384ada0aa3cf9315e88591"/><section>
+    <title>RPC_BASECLASS</title>
+<indexterm><primary>RPC_BASECLASS</primary><secondary>couponexchange.hpp</secondary></indexterm>
+<indexterm><primary>couponexchange.hpp</primary><secondary>RPC_BASECLASS</secondary></indexterm>
+<para><computeroutput>#define RPC_BASECLASS&#160;&#160;&#160;Rpc</computeroutput></para><para>
+Definition at line <link linkend="_couponexchange_8hpp_source_1l00032">32</link> of file <link linkend="_couponexchange_8hpp_source">couponexchange.hpp</link>.</para>
+</section>
+</section>
+</section>

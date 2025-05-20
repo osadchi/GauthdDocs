@@ -1,0 +1,91 @@
+\doxysection{D\+:/pwsrc2.0/docs/gauthd/matrixpasswd.hpp File Reference}
+\hypertarget{matrixpasswd_8hpp}{}\label{matrixpasswd_8hpp}\index{D:/pwsrc2.0/docs/gauthd/matrixpasswd.hpp@{D:/pwsrc2.0/docs/gauthd/matrixpasswd.hpp}}
+
+
+Обработчик RPC-\/запросов для аутентификации с матричным паролем  
+
+
+{\ttfamily \#include "{}rpcdefs.\+h"{}}\newline
+{\ttfamily \#include "{}callid.\+hxx"{}}\newline
+{\ttfamily \#include "{}state.\+hxx"{}}\newline
+{\ttfamily \#include "{}matrixpasswdarg"{}}\newline
+{\ttfamily \#include "{}matrixpasswdres"{}}\newline
+{\ttfamily \#include "{}gmysqlclient.\+hpp"{}}\newline
+{\ttfamily \#include "{}gauthserver.\+hpp"{}}\newline
+{\ttfamily \#include "{}matrixpasswd"{}}\newline
+Include dependency graph for matrixpasswd.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{matrixpasswd_8hpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_n_e_t_1_1_matrix_passwd}{GNET\+::\+Matrix\+Passwd}}
+\begin{DoxyCompactList}\small\item\em RPC-\/прокси для обработки запросов аутентификации \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_g_n_e_t}{GNET}}
+\begin{DoxyCompactList}\small\item\em Основное пространство имен для сетевых компонентов системы. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{matrixpasswd_8hpp_ad33ee56a94384ada0aa3cf9315e88591}{RPC\+\_\+\+BASECLASS}}~Proxy\+Rpc
+\begin{DoxyCompactList}\small\item\em Включение RPC-\/специфичных определений \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{matrixpasswd_8hpp_aeb5f19cf92b439ff40d7572e0b0e2f39}{lib\+\_\+sev\+\_\+dump}} (void \texorpdfstring{$\ast$}{*}Src, size\+\_\+t len, char \texorpdfstring{$\ast$}{*}name)
+\begin{DoxyCompactList}\small\item\em Внешняя функция логирования (определена в другом месте) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Обработчик RPC-\/запросов для аутентификации с матричным паролем 
+
+\begin{DoxyAuthor}{Author}
+Автор системы 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2023-\/01-\/01 @license Лицензия MIT
+\end{DoxyDate}
+Этот модуль отвечает за обработку запросов проверки матричных паролей, взаимодействие с базой данных и защиту от брутфорс-\/атак. 
+
+Definition in file \mbox{\hyperlink{matrixpasswd_8hpp_source}{matrixpasswd.\+hpp}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{matrixpasswd_8hpp_ad33ee56a94384ada0aa3cf9315e88591}\index{matrixpasswd.hpp@{matrixpasswd.hpp}!RPC\_BASECLASS@{RPC\_BASECLASS}}
+\index{RPC\_BASECLASS@{RPC\_BASECLASS}!matrixpasswd.hpp@{matrixpasswd.hpp}}
+\doxysubsubsection{\texorpdfstring{RPC\_BASECLASS}{RPC\_BASECLASS}}
+{\footnotesize\ttfamily \label{matrixpasswd_8hpp_ad33ee56a94384ada0aa3cf9315e88591} 
+\#define RPC\+\_\+\+BASECLASS~Proxy\+Rpc}
+
+
+
+Включение RPC-\/специфичных определений 
+
+Базовый класс для RPC 
+
+Definition at line \mbox{\hyperlink{matrixpasswd_8hpp_source_l00042}{42}} of file \mbox{\hyperlink{matrixpasswd_8hpp_source}{matrixpasswd.\+hpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{matrixpasswd_8hpp_aeb5f19cf92b439ff40d7572e0b0e2f39}\index{matrixpasswd.hpp@{matrixpasswd.hpp}!lib\_sev\_dump@{lib\_sev\_dump}}
+\index{lib\_sev\_dump@{lib\_sev\_dump}!matrixpasswd.hpp@{matrixpasswd.hpp}}
+\doxysubsubsection{\texorpdfstring{lib\_sev\_dump()}{lib\_sev\_dump()}}
+{\footnotesize\ttfamily \label{matrixpasswd_8hpp_aeb5f19cf92b439ff40d7572e0b0e2f39} 
+void lib\+\_\+sev\+\_\+dump (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{Src}{, }\item[{size\+\_\+t}]{len}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Внешняя функция логирования (определена в другом месте) 
+

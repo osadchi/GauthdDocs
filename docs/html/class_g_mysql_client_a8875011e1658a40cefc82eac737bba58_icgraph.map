@@ -1,0 +1,5 @@
+<map id="GMysqlClient::AlexAddLogin" name="GMysqlClient::AlexAddLogin">
+<area shape="rect" id="Node000001" title="Логирование действия входа/выхода (специальный функционал)" alt="" coords="232,5,420,32"/>
+<area shape="rect" id="Node000002" href="$class_g_n_e_t_1_1_user_logout.html#a1c4f915638d14e969c5586fe58b9685b" title="Обработка запроса выхода пользователя на стороне сервера" alt="" coords="5,5,184,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,21,184,21,184,16,216,16"/>
+</map>

@@ -1,0 +1,42 @@
+<map id="D:/pwsrc2.0/docs/gauthd/userlogin.hpp" name="D:/pwsrc2.0/docs/gauthd/userlogin.hpp">
+<area shape="rect" id="Node000001" title="Обработчик аутентификации пользователей в системе" alt="" coords="366,5,533,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,171,81,197"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="366,40,264,61,210,77,158,98,108,129,67,163,64,159,105,125,155,94,208,72,263,56,365,35"/>
+<area shape="rect" id="Node000003" href="$callid_8hxx.html" title=" " alt="" coords="105,171,181,197"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="366,33,320,40,272,52,225,71,183,98,163,126,151,157,146,155,158,123,180,94,223,66,270,47,319,35,365,28"/>
+<area shape="rect" id="Node000004" href="$state_8hxx.html" title=" " alt="" coords="317,171,393,197"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="425,50,402,72,383,97,370,127,362,156,357,154,365,125,378,95,398,68,421,46"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="709,96,801,123"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="529,46,695,89,693,95,528,51"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="825,96,917,123"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="534,41,811,93,810,98,533,46"/>
+<area shape="rect" id="Node000008" href="$gmysqlclient_8hpp.html" title="MySQL клиент для работы с базой данных игрового сервера" alt="" coords="566,96,685,123"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="496,46,585,87,583,92,494,51"/>
+<area shape="rect" id="Node000015" href="$gauthserver_8hpp.html" title="Заголовочный файл, содержащий определения классов для аутентификации и управления сессиями." alt="" coords="392,96,507,123"/>
+<area shape="poly" id="edge15_Node000001_Node000015" title=" " alt="" coords="452,49,452,80,447,80,447,49"/>
+<area shape="rect" id="Node000016" href="$kickoutuser_8hpp.html" title="Заголовочный файл класса протокола для принудительного отключения пользователя" alt="" coords="193,96,306,123"/>
+<area shape="poly" id="edge17_Node000001_Node000016" title=" " alt="" coords="399,51,296,92,294,87,397,46"/>
+<area shape="rect" id="Node000018" title=" " alt="" coords="941,96,1014,123"/>
+<area shape="poly" id="edge22_Node000001_Node000018" title=" " alt="" coords="534,35,711,58,926,93,925,98,710,63,534,40"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="390,245,469,272"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="370,196,408,233,404,237,366,200"/>
+<area shape="poly" id="edge10_Node000008_Node000005" title=" " alt="" coords="686,118,698,120,784,124,896,125,952,128,1004,136,1046,149,1076,169,1082,184,1076,199,1063,207,1044,215,986,227,820,244,634,255,485,259,485,254,634,249,820,239,985,222,1042,210,1061,203,1072,196,1077,184,1072,172,1044,153,1003,141,952,134,896,130,784,129,697,125,685,123"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="467,171,574,197"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="609,125,553,164,550,159,606,121"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="597,171,654,197"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="628,123,628,155,623,155,623,123"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="678,171,746,197"/>
+<area shape="poly" id="edge11_Node000008_Node000011" title=" " alt="" coords="642,121,688,159,684,163,639,125"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="770,171,870,197"/>
+<area shape="poly" id="edge12_Node000008_Node000012" title=" " alt="" coords="661,121,773,162,771,167,659,126"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="894,171,962,197"/>
+<area shape="poly" id="edge13_Node000008_Node000013" title=" " alt="" coords="683,121,880,167,879,172,681,126"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="987,171,1062,197"/>
+<area shape="poly" id="edge14_Node000008_Node000014" title=" " alt="" coords="686,118,972,168,972,173,685,123"/>
+<area shape="poly" id="edge16_Node000015_Node000005" title=" " alt="" coords="451,124,436,230,431,229,445,123"/>
+<area shape="poly" id="edge18_Node000016_Node000002" title=" " alt="" coords="215,126,94,168,92,163,213,121"/>
+<area shape="poly" id="edge19_Node000016_Node000003" title=" " alt="" coords="233,125,176,164,173,159,230,121"/>
+<area shape="poly" id="edge20_Node000016_Node000004" title=" " alt="" coords="270,121,326,159,323,164,267,125"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="206,171,294,197"/>
+<area shape="poly" id="edge21_Node000016_Node000017" title=" " alt="" coords="252,123,252,155,247,155,247,123"/>
+</map>

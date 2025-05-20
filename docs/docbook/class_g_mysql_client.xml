@@ -224,6 +224,15 @@ Here is the call graph for this function:<para>
         </mediaobject>
     </informalfigure>
 </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_abe6e61839f3cca64f864f4a9078b0ba5_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1a0cba2ae6714706fa26b2b39f91c34665"/><section>
     <title>AddCashLog()</title>
@@ -508,6 +517,15 @@ Here is the call graph for this function:<para>
         </mediaobject>
     </informalfigure>
 </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a8875011e1658a40cefc82eac737bba58_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1a14143f486913e7d3edff46e7458697cb"/><section>
     <title>AlexPatch()</title>
@@ -628,6 +646,15 @@ Parameters</title>
 </para>
 <para>
 Definition at line <link linkend="_gmysqlclient_8cpp_source_1l00489">489</link> of file <link linkend="_gmysqlclient_8cpp_source">gmysqlclient.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a3e52c51fa1af93cb93da4547f877dba6_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1a8b60b7430a3413aeae8f36df7bbf7f57"/><section>
     <title>ATOI()</title>
@@ -1529,6 +1556,15 @@ Here is the caller graph for this function:<para>
 </para>
 <para>
 Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00163">163</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a50e93bdf74da424077e864ba8bbfe42c_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1ae74167391b7e749c390203ea4f0ec5e5"/><section>
     <title>MatrixPasswd()</title>
@@ -1587,6 +1623,15 @@ Here is the call graph for this function:<para>
         <mediaobject>
             <imageobject>
                 <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_ae74167391b7e749c390203ea4f0ec5e5_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_ae74167391b7e749c390203ea4f0ec5e5_icgraph.png"></imagedata>
             </imageobject>
         </mediaobject>
     </informalfigure>
@@ -1749,6 +1794,15 @@ Here is the call graph for this function:<para>
         <mediaobject>
             <imageobject>
                 <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a524bc45740cb01aabdbf2b012407925f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a524bc45740cb01aabdbf2b012407925f_icgraph.png"></imagedata>
             </imageobject>
         </mediaobject>
     </informalfigure>
@@ -1965,6 +2019,15 @@ Here is the call graph for this function:<para>
         </mediaobject>
     </informalfigure>
 </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a5ad2854f8238ad2008cf0358adf9325b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_g_mysql_client_1aae78133acca23894a428d104cd582168"/><section>
     <title>SizeAntibrutUser()</title>
@@ -2126,6 +2189,15 @@ Parameters</title>
 </para>
 <para>
 Definition at line <link linkend="_gmysqlclient_8hpp_source_1l00450">450</link> of file <link linkend="_gmysqlclient_8hpp_source">gmysqlclient.hpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_mysql_client_a477a9db403d718b8ea1fb2f3e8ba2561_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 </section>
 <section>

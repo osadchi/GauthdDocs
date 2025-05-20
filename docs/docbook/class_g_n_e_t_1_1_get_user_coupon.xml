@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_n_e_t_1_1_get_user_coupon" xml:lang="en-US">
+<title>GNET::GetUserCoupon Class Reference</title>
+<indexterm><primary>GNET::GetUserCoupon</primary></indexterm>
+<para>
+
+<para>RPC-класс для обработки запросов/ответов о купонах пользователя </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;getusercoupon.hpp&gt;</computeroutput>
+</para>
+Inheritance diagram for GNET::GetUserCoupon:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_get_user_coupon__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for GNET::GetUserCoupon:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_get_user_coupon__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_get_user_coupon_1a6fe67ac1c3e044ed8f94f8299894ed4b">Server</link> (Rpc::Data *argument, Rpc::Data *result, Manager *manager, Manager::Session::ID sid)</para>
+
+<para>Обработка RPC-запроса на стороне сервера </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_get_user_coupon_1a6425acba2965486d055a994213699122">Client</link> (Rpc::Data *argument, Rpc::Data *result, Manager *manager, Manager::Session::ID sid)</para>
+
+<para>Обработка RPC-ответа на стороне клиента </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_get_user_coupon_1aaf7a0b7d88805c3071a892a7eb45e7d6">OnTimeout</link> ()</para>
+
+<para>Обработка таймаута RPC-запроса (клиентская сторона) </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>RPC-класс для обработки запросов/ответов о купонах пользователя </para>
+
+
+
+<para>Наследует базовый функционал RPC. Реализует логику обработки на стороне сервера и клиента, а также обработку таймаутов (клиентская сторона). </para>
+<para>
+Definition at line <link linkend="_getusercoupon_8hpp_source_1l00030">30</link> of file <link linkend="_getusercoupon_8hpp_source">getusercoupon.hpp</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_g_n_e_t_1_1_get_user_coupon_1a6425acba2965486d055a994213699122"/><section>
+    <title>Client()</title>
+<indexterm><primary>Client</primary><secondary>GNET::GetUserCoupon</secondary></indexterm>
+<indexterm><primary>GNET::GetUserCoupon</primary><secondary>Client</secondary></indexterm>
+<para><computeroutput>void GNET::GetUserCoupon::Client (Rpc::Data * argument, Rpc::Data * result, Manager * manager, Manager::Session::ID sid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Обработка RPC-ответа на стороне клиента </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>argument</entry><entry>
+<para>Входные данные (GetUserCouponArg) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>result</entry><entry>
+<para>Выходные данные (GetUserCouponRes) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>manager</entry><entry>
+<para>Менеджер сессий </para>
+</entry>
+                            </row>
+                            <row>
+<entry>sid</entry><entry>
+<para>Идентификатор сессии</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <para><link linkend="_todo_1_todo000020">Todo</link> 
+<para>Реализовать клиентскую логику обработки ответа. </para>
+</para></para>
+<para>
+Definition at line <link linkend="_getusercoupon_8hpp_source_1l00062">62</link> of file <link linkend="_getusercoupon_8hpp_source">getusercoupon.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_get_user_coupon_1aaf7a0b7d88805c3071a892a7eb45e7d6"/><section>
+    <title>OnTimeout()</title>
+<indexterm><primary>OnTimeout</primary><secondary>GNET::GetUserCoupon</secondary></indexterm>
+<indexterm><primary>GNET::GetUserCoupon</primary><secondary>OnTimeout</secondary></indexterm>
+<para><computeroutput>void GNET::GetUserCoupon::OnTimeout ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Обработка таймаута RPC-запроса (клиентская сторона) </para>
+</para>
+
+<para><para><link linkend="_todo_1_todo000021">Todo</link> 
+<para>Реализовать реакцию на таймаут (например, повторный запрос или уведомление). </para>
+</para></para>
+<para>
+Definition at line <link linkend="_getusercoupon_8hpp_source_1l00073">73</link> of file <link linkend="_getusercoupon_8hpp_source">getusercoupon.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_get_user_coupon_1a6fe67ac1c3e044ed8f94f8299894ed4b"/><section>
+    <title>Server()</title>
+<indexterm><primary>Server</primary><secondary>GNET::GetUserCoupon</secondary></indexterm>
+<indexterm><primary>GNET::GetUserCoupon</primary><secondary>Server</secondary></indexterm>
+<para><computeroutput>void GNET::GetUserCoupon::Server (Rpc::Data * argument, Rpc::Data * result, Manager * manager, Manager::Session::ID sid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Обработка RPC-запроса на стороне сервера </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>argument</entry><entry>
+<para>Входные данные (GetUserCouponArg) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>result</entry><entry>
+<para>Выходные данные (GetUserCouponRes) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>manager</entry><entry>
+<para>Менеджер сессий </para>
+</entry>
+                            </row>
+                            <row>
+<entry>sid</entry><entry>
+<para>Идентификатор сессии</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <para><link linkend="_todo_1_todo000019">Todo</link> 
+<para>Реализовать логику преобразования аргументов и формирования ответа. Сейчас аргументы и результаты закомментированы. </para>
+</para></para>
+<para>
+Definition at line <link linkend="_getusercoupon_8hpp_source_1l00047">47</link> of file <link linkend="_getusercoupon_8hpp_source">getusercoupon.hpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_getusercoupon_8hpp">getusercoupon.hpp</link></section>
+</section>

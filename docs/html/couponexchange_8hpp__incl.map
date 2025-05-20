@@ -1,0 +1,17 @@
+<map id="D:/pwsrc2.0/docs/gauthd/couponexchange.hpp" name="D:/pwsrc2.0/docs/gauthd/couponexchange.hpp">
+<area shape="rect" id="Node000001" title="Заголовочный файл класса CouponExchange для обработки RPC&#45;запросов обмена купонов." alt="" coords="225,5,392,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,96,81,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="241,51,96,95,95,90,239,46"/>
+<area shape="rect" id="Node000003" href="$callid_8hxx.html" title=" " alt="" coords="105,96,181,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="267,51,184,91,182,86,265,46"/>
+<area shape="rect" id="Node000004" href="$state_8hxx.html" title=" " alt="" coords="205,96,281,123"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="294,50,265,86,261,82,289,47"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="305,96,442,123"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="327,47,356,82,352,86,323,50"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="466,96,604,123"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="368,46,486,88,484,93,366,51"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="627,96,747,123"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="393,43,613,90,612,95,392,48"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="204,171,282,197"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="246,123,246,155,240,155,240,123"/>
+</map>

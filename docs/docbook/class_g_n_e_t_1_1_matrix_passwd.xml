@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_n_e_t_1_1_matrix_passwd" xml:lang="en-US">
+<title>GNET::MatrixPasswd Class Reference</title>
+<indexterm><primary>GNET::MatrixPasswd</primary></indexterm>
+<para>
+
+<para>RPC-прокси для обработки запросов аутентификации </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;matrixpasswd.hpp&gt;</computeroutput>
+</para>
+Inheritance diagram for GNET::MatrixPasswd:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_matrix_passwd__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for GNET::MatrixPasswd:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_matrix_passwd__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_g_n_e_t_1_1_matrix_passwd_1af45af4a5f03943d956586f3bf91b74c3">SendFailLogin</link> ()</para>
+
+<para>Отправка уведомления о неудачной аутентификации </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_g_n_e_t_1_1_matrix_passwd_1a0f80330092cea479275f52d0aed196e2">SendAntibrut</link> (unsigned int ip)</para>
+
+<para>Блокировка IP при множественных неудачных попытках </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_g_n_e_t_1_1_matrix_passwd_1a96a9864bc0fe94677d1a2fcf0427b333">Delivery</link> (Manager::Session::ID proxy_sid, const OctetsStream &amp;osArg)</para>
+
+<para>Основной метод обработки запроса </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_matrix_passwd_1a1edb3a11cca6f15d1f9425f785c90ac3">PostProcess</link> (Manager::Session::ID proxy_sid, const OctetsStream &amp;osArg, const OctetsStream &amp;osRes)</para>
+
+<para>Постобработка ответа (заглушка) </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_matrix_passwd_1a49e518e124edd52c62c64df91a25834e">OnTimeout</link> ()</para>
+
+<para>Обработчик таймаута (заглушка) </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>RPC-прокси для обработки запросов аутентификации </para>
+
+
+
+<para>Наследует функциональность ProxyRpc и реализует:<itemizedlist>
+<listitem>
+<para>Проверку учетных данных</para>
+</listitem><listitem>
+<para>Защиту от брутфорс-атак</para>
+</listitem><listitem>
+<para>Взаимодействие с MySQL базой</para>
+</listitem><listitem>
+<para>Формирование ответов клиенту </para>
+</listitem></itemizedlist>
+</para>
+<para>
+Definition at line <link linkend="_matrixpasswd_8hpp_source_1l00040">40</link> of file <link linkend="_matrixpasswd_8hpp_source">matrixpasswd.hpp</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_g_n_e_t_1_1_matrix_passwd_1a96a9864bc0fe94677d1a2fcf0427b333"/><section>
+    <title>Delivery()</title>
+<indexterm><primary>Delivery</primary><secondary>GNET::MatrixPasswd</secondary></indexterm>
+<indexterm><primary>GNET::MatrixPasswd</primary><secondary>Delivery</secondary></indexterm>
+<para><computeroutput>bool GNET::MatrixPasswd::Delivery (Manager::Session::ID proxy_sid, const OctetsStream &amp; osArg)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Основной метод обработки запроса </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>proxy_sid</entry><entry>
+<para>Идентификатор сессии прокси </para>
+</entry>
+                            </row>
+                            <row>
+<entry>osArg</entry><entry>
+<para>Входные данные в виде OctetsStream </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>false - всегда возвращает false</para>
+</formalpara>
+Алгоритм работы:<orderedlist>
+<listitem>
+<para>Проверка защиты от брутфорса</para>
+</listitem><listitem>
+<para>Валидация формата логина</para>
+</listitem><listitem>
+<para>Запрос в БД за матричным паролем</para>
+</listitem><listitem>
+<para>Формирование ответа клиенту </para>
+</listitem></orderedlist>
+</para>
+<para>
+Definition at line <link linkend="_matrixpasswd_8hpp_source_1l00095">95</link> of file <link linkend="_matrixpasswd_8hpp_source">matrixpasswd.hpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_matrix_passwd_a96a9864bc0fe94677d1a2fcf0427b333_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_matrix_passwd_1a49e518e124edd52c62c64df91a25834e"/><section>
+    <title>OnTimeout()</title>
+<indexterm><primary>OnTimeout</primary><secondary>GNET::MatrixPasswd</secondary></indexterm>
+<indexterm><primary>GNET::MatrixPasswd</primary><secondary>OnTimeout</secondary></indexterm>
+<para><computeroutput>void GNET::MatrixPasswd::OnTimeout ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Обработчик таймаута (заглушка) </para>
+</para>
+<para>
+Definition at line <link linkend="_matrixpasswd_8hpp_source_1l00144">144</link> of file <link linkend="_matrixpasswd_8hpp_source">matrixpasswd.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_matrix_passwd_1a1edb3a11cca6f15d1f9425f785c90ac3"/><section>
+    <title>PostProcess()</title>
+<indexterm><primary>PostProcess</primary><secondary>GNET::MatrixPasswd</secondary></indexterm>
+<indexterm><primary>GNET::MatrixPasswd</primary><secondary>PostProcess</secondary></indexterm>
+<para><computeroutput>void GNET::MatrixPasswd::PostProcess (Manager::Session::ID proxy_sid, const OctetsStream &amp; osArg, const OctetsStream &amp; osRes)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Постобработка ответа (заглушка) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>proxy_sid</entry><entry>
+<para>Идентификатор сессии прокси </para>
+</entry>
+                            </row>
+                            <row>
+<entry>osArg</entry><entry>
+<para>Аргументы запроса </para>
+</entry>
+                            </row>
+                            <row>
+<entry>osRes</entry><entry>
+<para>Результат выполнения </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_matrixpasswd_8hpp_source_1l00136">136</link> of file <link linkend="_matrixpasswd_8hpp_source">matrixpasswd.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_matrix_passwd_1a0f80330092cea479275f52d0aed196e2"/><section>
+    <title>SendAntibrut()</title>
+<indexterm><primary>SendAntibrut</primary><secondary>GNET::MatrixPasswd</secondary></indexterm>
+<indexterm><primary>GNET::MatrixPasswd</primary><secondary>SendAntibrut</secondary></indexterm>
+<para><computeroutput>bool GNET::MatrixPasswd::SendAntibrut (unsigned int ip)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Блокировка IP при множественных неудачных попытках </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ip</entry><entry>
+<para>IPv4-адрес для блокировки в сетевом порядке байт </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>false - индикатор прекращения обработки</para>
+</formalpara>
+<orderedlist>
+<listitem>
+<para>Добавляет IP в черный список через ipset</para>
+</listitem><listitem>
+<para>Логирует действие</para>
+</listitem><listitem>
+<para>Отправляет клиенту ERR_ACCOUNTLOCKED </para>
+</listitem></orderedlist>
+</para>
+<para>
+Definition at line <link linkend="_matrixpasswd_8hpp_source_1l00069">69</link> of file <link linkend="_matrixpasswd_8hpp_source">matrixpasswd.hpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_matrix_passwd_a0f80330092cea479275f52d0aed196e2_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_matrix_passwd_1af45af4a5f03943d956586f3bf91b74c3"/><section>
+    <title>SendFailLogin()</title>
+<indexterm><primary>SendFailLogin</primary><secondary>GNET::MatrixPasswd</secondary></indexterm>
+<indexterm><primary>GNET::MatrixPasswd</primary><secondary>SendFailLogin</secondary></indexterm>
+<para><computeroutput>bool GNET::MatrixPasswd::SendFailLogin ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Отправка уведомления о неудачной аутентификации </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>false - индикатор прекращения обработки</para>
+</formalpara>
+Устанавливает код ошибки ERR_INVALID_ACCOUNT и отправляет ответ спонсору. </para>
+<para>
+Definition at line <link linkend="_matrixpasswd_8hpp_source_1l00053">53</link> of file <link linkend="_matrixpasswd_8hpp_source">matrixpasswd.hpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_matrix_passwd_af45af4a5f03943d956586f3bf91b74c3_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_matrixpasswd_8hpp">matrixpasswd.hpp</link></section>
+</section>

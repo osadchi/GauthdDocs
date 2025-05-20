@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['validlogin_0',['ValidLogin',['../class_g_mysql_client.html#a477a9db403d718b8ea1fb2f3e8ba2561',1,'GMysqlClient']]],
-  ['validuser_1',['ValidUser',['../class_g_n_e_t_1_1_g_auth_server.html#a6b6bcb2c5dab0f794112337c7fcc556e',1,'GNET::GAuthServer']]]
+  ['usercreatime_0',['UserCreatime',['../class_g_mysql_client.html#ac581c4885d0cd84f507760d32177b4f3',1,'GMysqlClient']]],
+  ['usergmprivilege_1',['UserGMPrivilege',['../class_g_mysql_client.html#a916a21bf80a3b7aaaebaebf1855a429b',1,'GMysqlClient']]],
+  ['userinfo_2',['UserInfo',['../struct_g_n_e_t_1_1_user_info.html#a440c795e6198fbf419bc96ee97862788',1,'GNET::UserInfo::UserInfo()'],['../struct_g_n_e_t_1_1_user_info.html#ae886aad051bc6dd970480c7bc51d23b8',1,'GNET::UserInfo::UserInfo(unsigned int _s, unsigned int _l, char _z)']]]
 ];

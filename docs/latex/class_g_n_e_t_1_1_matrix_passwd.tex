@@ -1,0 +1,202 @@
+\doxysection{GNET\+::Matrix\+Passwd Class Reference}
+\hypertarget{class_g_n_e_t_1_1_matrix_passwd}{}\label{class_g_n_e_t_1_1_matrix_passwd}\index{GNET::MatrixPasswd@{GNET::MatrixPasswd}}
+
+
+RPC-\/прокси для обработки запросов аутентификации  
+
+
+
+
+{\ttfamily \#include $<$matrixpasswd.\+hpp$>$}
+
+
+
+Inheritance diagram for GNET\+::Matrix\+Passwd\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{class_g_n_e_t_1_1_matrix_passwd__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GNET\+::Matrix\+Passwd\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{class_g_n_e_t_1_1_matrix_passwd__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_g_n_e_t_1_1_matrix_passwd_af45af4a5f03943d956586f3bf91b74c3}{Send\+Fail\+Login}} ()
+\begin{DoxyCompactList}\small\item\em Отправка уведомления о неудачной аутентификации \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_g_n_e_t_1_1_matrix_passwd_a0f80330092cea479275f52d0aed196e2}{Send\+Antibrut}} (unsigned int ip)
+\begin{DoxyCompactList}\small\item\em Блокировка IP при множественных неудачных попытках \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_g_n_e_t_1_1_matrix_passwd_a96a9864bc0fe94677d1a2fcf0427b333}{Delivery}} (Manager\+::\+Session\+::\+ID proxy\+\_\+sid, const Octets\+Stream \&os\+Arg)
+\begin{DoxyCompactList}\small\item\em Основной метод обработки запроса \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_matrix_passwd_a1edb3a11cca6f15d1f9425f785c90ac3}{Post\+Process}} (Manager\+::\+Session\+::\+ID proxy\+\_\+sid, const Octets\+Stream \&os\+Arg, const Octets\+Stream \&os\+Res)
+\begin{DoxyCompactList}\small\item\em Постобработка ответа (заглушка) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_matrix_passwd_a49e518e124edd52c62c64df91a25834e}{On\+Timeout}} ()
+\begin{DoxyCompactList}\small\item\em Обработчик таймаута (заглушка) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+RPC-\/прокси для обработки запросов аутентификации 
+
+Наследует функциональность Proxy\+Rpc и реализует\+:
+\begin{DoxyItemize}
+\item Проверку учетных данных
+\item Защиту от брутфорс-\/атак
+\item Взаимодействие с My\+SQL базой
+\item Формирование ответов клиенту 
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{matrixpasswd_8hpp_source_l00040}{40}} of file \mbox{\hyperlink{matrixpasswd_8hpp_source}{matrixpasswd.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_n_e_t_1_1_matrix_passwd_a96a9864bc0fe94677d1a2fcf0427b333}\index{GNET::MatrixPasswd@{GNET::MatrixPasswd}!Delivery@{Delivery}}
+\index{Delivery@{Delivery}!GNET::MatrixPasswd@{GNET::MatrixPasswd}}
+\doxysubsubsection{\texorpdfstring{Delivery()}{Delivery()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_matrix_passwd_a96a9864bc0fe94677d1a2fcf0427b333} 
+bool GNET\+::\+Matrix\+Passwd\+::\+Delivery (\begin{DoxyParamCaption}\item[{Manager\+::\+Session\+::\+ID}]{proxy\+\_\+sid}{, }\item[{const Octets\+Stream \&}]{os\+Arg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Основной метод обработки запроса 
+
+
+\begin{DoxyParams}{Parameters}
+{\em proxy\+\_\+sid} & Идентификатор сессии прокси \\
+\hline
+{\em os\+Arg} & Входные данные в виде Octets\+Stream \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false -\/ всегда возвращает false
+\end{DoxyReturn}
+Алгоритм работы\+:
+\begin{DoxyEnumerate}
+\item Проверка защиты от брутфорса
+\item Валидация формата логина
+\item Запрос в БД за матричным паролем
+\item Формирование ответа клиенту 
+\end{DoxyEnumerate}
+
+Definition at line \mbox{\hyperlink{matrixpasswd_8hpp_source_l00095}{95}} of file \mbox{\hyperlink{matrixpasswd_8hpp_source}{matrixpasswd.\+hpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_n_e_t_1_1_matrix_passwd_a96a9864bc0fe94677d1a2fcf0427b333_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_g_n_e_t_1_1_matrix_passwd_a49e518e124edd52c62c64df91a25834e}\index{GNET::MatrixPasswd@{GNET::MatrixPasswd}!OnTimeout@{OnTimeout}}
+\index{OnTimeout@{OnTimeout}!GNET::MatrixPasswd@{GNET::MatrixPasswd}}
+\doxysubsubsection{\texorpdfstring{OnTimeout()}{OnTimeout()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_matrix_passwd_a49e518e124edd52c62c64df91a25834e} 
+void GNET\+::\+Matrix\+Passwd\+::\+On\+Timeout (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Обработчик таймаута (заглушка) 
+
+
+
+Definition at line \mbox{\hyperlink{matrixpasswd_8hpp_source_l00144}{144}} of file \mbox{\hyperlink{matrixpasswd_8hpp_source}{matrixpasswd.\+hpp}}.
+
+\Hypertarget{class_g_n_e_t_1_1_matrix_passwd_a1edb3a11cca6f15d1f9425f785c90ac3}\index{GNET::MatrixPasswd@{GNET::MatrixPasswd}!PostProcess@{PostProcess}}
+\index{PostProcess@{PostProcess}!GNET::MatrixPasswd@{GNET::MatrixPasswd}}
+\doxysubsubsection{\texorpdfstring{PostProcess()}{PostProcess()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_matrix_passwd_a1edb3a11cca6f15d1f9425f785c90ac3} 
+void GNET\+::\+Matrix\+Passwd\+::\+Post\+Process (\begin{DoxyParamCaption}\item[{Manager\+::\+Session\+::\+ID}]{proxy\+\_\+sid}{, }\item[{const Octets\+Stream \&}]{os\+Arg}{, }\item[{const Octets\+Stream \&}]{os\+Res}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Постобработка ответа (заглушка) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em proxy\+\_\+sid} & Идентификатор сессии прокси \\
+\hline
+{\em os\+Arg} & Аргументы запроса \\
+\hline
+{\em os\+Res} & Результат выполнения \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{matrixpasswd_8hpp_source_l00136}{136}} of file \mbox{\hyperlink{matrixpasswd_8hpp_source}{matrixpasswd.\+hpp}}.
+
+\Hypertarget{class_g_n_e_t_1_1_matrix_passwd_a0f80330092cea479275f52d0aed196e2}\index{GNET::MatrixPasswd@{GNET::MatrixPasswd}!SendAntibrut@{SendAntibrut}}
+\index{SendAntibrut@{SendAntibrut}!GNET::MatrixPasswd@{GNET::MatrixPasswd}}
+\doxysubsubsection{\texorpdfstring{SendAntibrut()}{SendAntibrut()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_matrix_passwd_a0f80330092cea479275f52d0aed196e2} 
+bool GNET\+::\+Matrix\+Passwd\+::\+Send\+Antibrut (\begin{DoxyParamCaption}\item[{unsigned int}]{ip}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Блокировка IP при множественных неудачных попытках 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ip} & IPv4-\/адрес для блокировки в сетевом порядке байт \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false -\/ индикатор прекращения обработки
+\end{DoxyReturn}
+
+\begin{DoxyEnumerate}
+\item Добавляет IP в черный список через ipset
+\item Логирует действие
+\item Отправляет клиенту ERR\+\_\+\+ACCOUNTLOCKED 
+\end{DoxyEnumerate}
+
+Definition at line \mbox{\hyperlink{matrixpasswd_8hpp_source_l00069}{69}} of file \mbox{\hyperlink{matrixpasswd_8hpp_source}{matrixpasswd.\+hpp}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{class_g_n_e_t_1_1_matrix_passwd_a0f80330092cea479275f52d0aed196e2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_g_n_e_t_1_1_matrix_passwd_af45af4a5f03943d956586f3bf91b74c3}\index{GNET::MatrixPasswd@{GNET::MatrixPasswd}!SendFailLogin@{SendFailLogin}}
+\index{SendFailLogin@{SendFailLogin}!GNET::MatrixPasswd@{GNET::MatrixPasswd}}
+\doxysubsubsection{\texorpdfstring{SendFailLogin()}{SendFailLogin()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_matrix_passwd_af45af4a5f03943d956586f3bf91b74c3} 
+bool GNET\+::\+Matrix\+Passwd\+::\+Send\+Fail\+Login (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Отправка уведомления о неудачной аутентификации 
+
+\begin{DoxyReturn}{Returns}
+false -\/ индикатор прекращения обработки
+\end{DoxyReturn}
+Устанавливает код ошибки ERR\+\_\+\+INVALID\+\_\+\+ACCOUNT и отправляет ответ спонсору. 
+
+Definition at line \mbox{\hyperlink{matrixpasswd_8hpp_source_l00053}{53}} of file \mbox{\hyperlink{matrixpasswd_8hpp_source}{matrixpasswd.\+hpp}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{class_g_n_e_t_1_1_matrix_passwd_af45af4a5f03943d956586f3bf91b74c3_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{matrixpasswd_8hpp}{matrixpasswd.\+hpp}}\end{DoxyCompactItemize}

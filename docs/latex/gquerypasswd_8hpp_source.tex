@@ -1,0 +1,77 @@
+\doxysection{D\+:/pwsrc2.0/docs/gauthd/gquerypasswd.hpp}
+\hypertarget{gquerypasswd_8hpp_source}{}\label{gquerypasswd_8hpp_source}\mbox{\hyperlink{gquerypasswd_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00007}00007\ \textcolor{preprocessor}{\#ifndef\ \_\_GNET\_GQUERYPASSWD\_HPP}}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#define\ \_\_GNET\_GQUERYPASSWD\_HPP}}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}rpcdefs.h"{}}}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{callid_8hxx}{callid.hxx}}"{}}}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{state_8hxx}{state.hxx}}"{}}}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}security.h"{}}}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}gquerypasswdarg"{}}}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}gquerypasswdres"{}}}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00017}00017\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00019}00019\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_g_n_e_t}{GNET}}}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00020}00020\ \{}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00030}\mbox{\hyperlink{class_g_n_e_t_1_1_g_query_passwd}{00030}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_n_e_t_1_1_g_query_passwd}{GQueryPasswd}}\ :\ \textcolor{keyword}{public}\ Rpc}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00031}00031\ \{}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00032}\mbox{\hyperlink{gquerypasswd_8hpp_ad33ee56a94384ada0aa3cf9315e88591}{00032}}\ \textcolor{preprocessor}{\#define\ RPC\_BASECLASS\ Rpc\ \ }}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00033}00033\ \textcolor{preprocessor}{\ \ \ \ \#include\ "{}gquerypasswd"{}}\ }
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00034}00034\ \textcolor{preprocessor}{\#undef\ RPC\_BASECLASS}}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00036}00036\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00050}\mbox{\hyperlink{class_g_n_e_t_1_1_g_query_passwd_a7601c8e80ac2d38efc76c8a023896d4e}{00050}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_e_t_1_1_g_query_passwd_a7601c8e80ac2d38efc76c8a023896d4e}{Server}}(Rpc::Data\ *argument,\ Rpc::Data\ *result,\ Manager\ *manager,\ Manager::Session::ID\ sid)}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00051}00051\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00052}00052\ \ \ \ \ \ \ \ \ GQueryPasswdArg\ *arg\ =\ \textcolor{keyword}{static\_cast<}GQueryPasswdArg*\textcolor{keyword}{>}(argument);}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00053}00053\ \ \ \ \ \ \ \ \ GQueryPasswdRes\ *res\ =\ \textcolor{keyword}{static\_cast<}GQueryPasswdRes*\textcolor{keyword}{>}(result);}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00054}00054\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00055}00055\ \ \ \ \ \ \ \ \ Octets\ password;}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Преобразование\ account\ в\ числовой\ userid}}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00057}00057\ \ \ \ \ \ \ \ \ res-\/>userid\ =\ std::atoi(std::string(}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(arg-\/>account.begin()),\ }
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ arg-\/>account.size()).c\_str());}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00060}00060\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Проверка\ валидности\ userid}}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (res-\/>userid\ \%\ 16\ !=\ 0\ ||\ res-\/>userid\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ res-\/>retcode\ =\ ERR\_INVALID\_ACCOUNT;}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00067}00067\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00068}00068\ \ \ \ \ \ \ \ \ password\ =\ arg-\/>account;}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00069}00069\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Генерация\ MD5-\/хеша}}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00071}00071\ \ \ \ \ \ \ \ \ MD5Hash\ md5;}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00072}00072\ \ \ \ \ \ \ \ \ Octets\ digest;}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00073}00073\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00074}00074\ \ \ \ \ \ \ \ \ md5.Update(arg-\/>account);}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00075}00075\ \ \ \ \ \ \ \ \ md5.Update(password);}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00076}00076\ \ \ \ \ \ \ \ \ md5.Final(digest);}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00077}00077\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00078}00078\ \ \ \ \ \ \ \ \ res-\/>response.swap(digest);}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00079}00079\ \ \ \ \ \ \ \ \ res-\/>retcode\ =\ ERR\_SUCCESS;}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00080}00080\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00090}\mbox{\hyperlink{class_g_n_e_t_1_1_g_query_passwd_a15c95c81230be5795439a7d9df0fe395}{00090}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_e_t_1_1_g_query_passwd_a15c95c81230be5795439a7d9df0fe395}{Client}}(Rpc::Data\ *argument,\ Rpc::Data\ *result,\ Manager\ *manager,\ Manager::Session::ID\ sid)}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00091}00091\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ GQueryPasswdArg\ *arg\ =\ static\_cast<GQueryPasswdArg*>(argument);}}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ GQueryPasswdRes\ *res\ =\ static\_cast<GQueryPasswdRes*>(result);}}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO:\ Реализовать\ клиентскую\ логику}}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00095}00095\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00102}\mbox{\hyperlink{class_g_n_e_t_1_1_g_query_passwd_ae5668da612a602d47616af3169a73a41}{00102}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_e_t_1_1_g_query_passwd_ae5668da612a602d47616af3169a73a41}{OnTimeout}}()}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00103}00103\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00104}00104\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO:\ Реализовать\ обработку\ таймаутов}}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00105}00105\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00106}00106\ \};}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00108}00108\ \}\ \textcolor{comment}{//\ namespace\ GNET}}
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{gquerypasswd_8hpp_source_l00110}00110\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_GNET\_GQUERYPASSWD\_HPP}}
+
+\end{DoxyCode}

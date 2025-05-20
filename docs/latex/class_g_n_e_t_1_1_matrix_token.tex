@@ -1,0 +1,131 @@
+\doxysection{GNET\+::Matrix\+Token Class Reference}
+\hypertarget{class_g_n_e_t_1_1_matrix_token}{}\label{class_g_n_e_t_1_1_matrix_token}\index{GNET::MatrixToken@{GNET::MatrixToken}}
+
+
+Класс для обработки RPC-\/запросов матричных токенов  
+
+
+
+
+{\ttfamily \#include $<$matrixtoken.\+hpp$>$}
+
+
+
+Inheritance diagram for GNET\+::Matrix\+Token\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{class_g_n_e_t_1_1_matrix_token__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GNET\+::Matrix\+Token\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{class_g_n_e_t_1_1_matrix_token__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_g_n_e_t_1_1_matrix_token_afa6e24621cac8593c4e95ed22cc12338}{Delivery}} (Manager\+::\+Session\+::\+ID proxy\+\_\+sid, const Octets\+Stream \&os\+Arg)
+\begin{DoxyCompactList}\small\item\em Метод доставки RPC-\/запроса \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_matrix_token_a784d6fa1f7f2a7fd6df54da5fb83c885}{Post\+Process}} (Manager\+::\+Session\+::\+ID proxy\+\_\+sid, const Octets\+Stream \&os\+Arg, const Octets\+Stream \&os\+Res)
+\begin{DoxyCompactList}\small\item\em Постобработка результатов RPC-\/запроса \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_matrix_token_a328616521dbc10643cfc652f9a93fd07}{On\+Timeout}} ()
+\begin{DoxyCompactList}\small\item\em Обработчик таймаута запроса \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс для обработки RPC-\/запросов матричных токенов 
+
+Наследует функциональность Proxy\+Rpc и реализует специфичную логику обработки токенов, включая доставку запросов, постобработку и обработку таймаутов. 
+
+Definition at line \mbox{\hyperlink{matrixtoken_8hpp_source_l00036}{36}} of file \mbox{\hyperlink{matrixtoken_8hpp_source}{matrixtoken.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_n_e_t_1_1_matrix_token_afa6e24621cac8593c4e95ed22cc12338}\index{GNET::MatrixToken@{GNET::MatrixToken}!Delivery@{Delivery}}
+\index{Delivery@{Delivery}!GNET::MatrixToken@{GNET::MatrixToken}}
+\doxysubsubsection{\texorpdfstring{Delivery()}{Delivery()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_matrix_token_afa6e24621cac8593c4e95ed22cc12338} 
+bool GNET\+::\+Matrix\+Token\+::\+Delivery (\begin{DoxyParamCaption}\item[{Manager\+::\+Session\+::\+ID}]{proxy\+\_\+sid}{, }\item[{const Octets\+Stream \&}]{os\+Arg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Метод доставки RPC-\/запроса 
+
+
+\begin{DoxyParams}{Parameters}
+{\em proxy\+\_\+sid} & Идентификатор прокси-\/сессии \\
+\hline
+{\em os\+Arg} & Входные данные запроса в виде Octet\+Stream \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Результат обработки запроса
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000033}{Todo}}]Требуется реализация логики отправки протокола через GAuth\+Client \end{DoxyRefDesc}
+\begin{DoxyNote}{Note}
+В текущей реализации всегда возвращает false (заглушка) 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{matrixtoken_8hpp_source_l00055}{55}} of file \mbox{\hyperlink{matrixtoken_8hpp_source}{matrixtoken.\+hpp}}.
+
+\Hypertarget{class_g_n_e_t_1_1_matrix_token_a328616521dbc10643cfc652f9a93fd07}\index{GNET::MatrixToken@{GNET::MatrixToken}!OnTimeout@{OnTimeout}}
+\index{OnTimeout@{OnTimeout}!GNET::MatrixToken@{GNET::MatrixToken}}
+\doxysubsubsection{\texorpdfstring{OnTimeout()}{OnTimeout()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_matrix_token_a328616521dbc10643cfc652f9a93fd07} 
+void GNET\+::\+Matrix\+Token\+::\+On\+Timeout (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Обработчик таймаута запроса 
+
+\begin{DoxyNote}{Note}
+В текущей реализации не содержит логики 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+Реализован только на клиентской стороне 
+\end{DoxyWarning}
+
+
+Definition at line \mbox{\hyperlink{matrixtoken_8hpp_source_l00104}{104}} of file \mbox{\hyperlink{matrixtoken_8hpp_source}{matrixtoken.\+hpp}}.
+
+\Hypertarget{class_g_n_e_t_1_1_matrix_token_a784d6fa1f7f2a7fd6df54da5fb83c885}\index{GNET::MatrixToken@{GNET::MatrixToken}!PostProcess@{PostProcess}}
+\index{PostProcess@{PostProcess}!GNET::MatrixToken@{GNET::MatrixToken}}
+\doxysubsubsection{\texorpdfstring{PostProcess()}{PostProcess()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_matrix_token_a784d6fa1f7f2a7fd6df54da5fb83c885} 
+void GNET\+::\+Matrix\+Token\+::\+Post\+Process (\begin{DoxyParamCaption}\item[{Manager\+::\+Session\+::\+ID}]{proxy\+\_\+sid}{, }\item[{const Octets\+Stream \&}]{os\+Arg}{, }\item[{const Octets\+Stream \&}]{os\+Res}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Постобработка результатов RPC-\/запроса 
+
+
+\begin{DoxyParams}{Parameters}
+{\em proxy\+\_\+sid} & Идентификатор прокси-\/сессии \\
+\hline
+{\em os\+Arg} & Входные аргументы запроса \\
+\hline
+{\em os\+Res} & Результаты выполнения запроса\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000034}{Todo}}]Требуется реализация обработки результатов \end{DoxyRefDesc}
+
+
+Definition at line \mbox{\hyperlink{matrixtoken_8hpp_source_l00084}{84}} of file \mbox{\hyperlink{matrixtoken_8hpp_source}{matrixtoken.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{matrixtoken_8hpp}{matrixtoken.\+hpp}}\end{DoxyCompactItemize}

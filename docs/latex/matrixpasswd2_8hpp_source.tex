@@ -1,0 +1,63 @@
+\doxysection{D\+:/pwsrc2.0/docs/gauthd/matrixpasswd2.hpp}
+\hypertarget{matrixpasswd2_8hpp_source}{}\label{matrixpasswd2_8hpp_source}\mbox{\hyperlink{matrixpasswd2_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#ifndef\ \_\_GNET\_MATRIXPASSWD2\_HPP}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00011}00011\ \textcolor{preprocessor}{\#define\ \_\_GNET\_MATRIXPASSWD2\_HPP}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}rpcdefs.h"{}}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{callid_8hxx}{callid.hxx}}"{}}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{state_8hxx}{state.hxx}}"{}}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}matrixpasswdarg"{}}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00017}00017\ \textcolor{preprocessor}{\#include\ "{}matrixpasswd2res"{}}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00018}00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gmysqlclient_8hpp}{gmysqlclient.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00020}00020\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_g_n_e_t}{GNET}}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00021}00021\ \{}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00033}\mbox{\hyperlink{class_g_n_e_t_1_1_matrix_passwd2}{00033}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_n_e_t_1_1_matrix_passwd2}{MatrixPasswd2}}\ :\ \textcolor{keyword}{public}\ ProxyRpc}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00034}00034\ \{}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00035}\mbox{\hyperlink{matrixpasswd2_8hpp_ad33ee56a94384ada0aa3cf9315e88591}{00035}}\ \textcolor{preprocessor}{\#define\ RPC\_BASECLASS\ ProxyRpc}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00036}00036\ \textcolor{preprocessor}{\ \ \ \ \#include\ "{}matrixpasswd2"{}}\ \ \textcolor{comment}{//\ Генерируемый\ RPC-\/код}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00037}00037\ \textcolor{preprocessor}{\#undef\ RPC\_BASECLASS}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00039}00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00048}\mbox{\hyperlink{class_g_n_e_t_1_1_matrix_passwd2_a33af4c45fa48d7bf6dc251ab5178f3e5}{00048}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_g_n_e_t_1_1_matrix_passwd2_a33af4c45fa48d7bf6dc251ab5178f3e5}{Delivery}}(Manager::Session::ID\ proxy\_sid,\ \textcolor{keyword}{const}\ OctetsStream\&\ osArg)}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00049}00049\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Пример\ закомментированной\ реализации:}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ MatrixPasswdArg\ arg;}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ osArg\ >>\ arg;}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if(\ GAuthClient::GetInstance()-\/>SendProtocol(\ *this\ )\ }}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \{}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ return\ true;}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \}}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ else}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \{}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ SetResult(MatrixPasswd2Res(ERR\_DELIVER\_SEND));}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ SendToSponsor();}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ return\ false;}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \}}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00064}00064\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00074}\mbox{\hyperlink{class_g_n_e_t_1_1_matrix_passwd2_a433faf7b2ff9ec3e3e7cf91a8fc7fb8d}{00074}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_e_t_1_1_matrix_passwd2_a433faf7b2ff9ec3e3e7cf91a8fc7fb8d}{PostProcess}}(Manager::Session::ID\ proxy\_sid,\ \textcolor{keyword}{const}\ OctetsStream\&\ osArg,\ \textcolor{keyword}{const}\ OctetsStream\&\ osRes)}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00075}00075\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Пример\ закомментированной\ реализации:}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ MatrixPasswdArg\ arg;}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ osArg\ >>\ arg;}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ MatrixPasswd2Res\ res;}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ osRes\ >>\ res;}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ SetResult(\ \&res\ );\ //\ Обновление\ результатов}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00082}00082\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00090}\mbox{\hyperlink{class_g_n_e_t_1_1_matrix_passwd2_abd67d4f58dcf3a3a917209810ead7a7c}{00090}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_e_t_1_1_matrix_passwd2_abd67d4f58dcf3a3a917209810ead7a7c}{OnTimeout}}()}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00091}00091\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Клиентская\ логика\ обработки\ таймаута}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00093}00093\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00094}00094\ \};}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00096}00096\ \}\ \textcolor{comment}{//\ namespace\ GNET}}
+\DoxyCodeLine{\Hypertarget{matrixpasswd2_8hpp_source_l00097}00097\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

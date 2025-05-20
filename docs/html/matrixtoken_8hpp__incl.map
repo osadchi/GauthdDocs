@@ -1,0 +1,30 @@
+<map id="D:/pwsrc2.0/docs/gauthd/matrixtoken.hpp" name="D:/pwsrc2.0/docs/gauthd/matrixtoken.hpp">
+<area shape="rect" id="Node000001" title="RPC&#45;класс для работы с матричными токенами авторизации" alt="" coords="217,5,384,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,96,81,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="235,51,96,94,95,89,233,46"/>
+<area shape="rect" id="Node000003" href="$callid_8hxx.html" title=" " alt="" coords="105,96,181,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="261,51,182,91,180,86,259,46"/>
+<area shape="rect" id="Node000004" href="$state_8hxx.html" title=" " alt="" coords="205,96,281,123"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="288,50,263,85,259,82,283,47"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="305,96,413,123"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="318,47,343,82,339,85,313,50"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="437,96,545,123"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="350,46,448,87,446,92,348,51"/>
+<area shape="rect" id="Node000008" href="$gmysqlclient_8hpp.html" title="MySQL клиент для работы с базой данных игрового сервера" alt="" coords="569,96,688,123"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="385,46,563,89,562,94,384,51"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="242,171,321,197"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="252,122,270,156,266,158,247,124"/>
+<area shape="poly" id="edge10_Node000008_Node000005" title=" " alt="" coords="569,126,337,174,336,169,568,121"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="363,171,470,197"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="592,126,469,168,467,163,591,121"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="493,171,550,197"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="611,125,554,164,551,159,608,121"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="574,171,642,197"/>
+<area shape="poly" id="edge11_Node000008_Node000011" title=" " alt="" coords="627,124,618,157,613,155,622,122"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="666,171,766,197"/>
+<area shape="poly" id="edge12_Node000008_Node000012" title=" " alt="" coords="645,121,691,159,688,163,642,125"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="790,171,858,197"/>
+<area shape="poly" id="edge13_Node000008_Node000013" title=" " alt="" coords="663,121,777,162,775,167,662,126"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="883,171,958,197"/>
+<area shape="poly" id="edge14_Node000008_Node000014" title=" " alt="" coords="680,121,868,167,867,172,679,126"/>
+</map>

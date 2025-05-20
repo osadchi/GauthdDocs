@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_n_e_t_1_1_coupon_exchange" xml:lang="en-US">
+<title>GNET::CouponExchange Class Reference</title>
+<indexterm><primary>GNET::CouponExchange</primary></indexterm>
+<para>
+
+<para>Класс для обработки RPC-запросов обмена купонов между клиентом и сервером. @inherits Rpc. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;couponexchange.hpp&gt;</computeroutput>
+</para>
+Inheritance diagram for GNET::CouponExchange:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_coupon_exchange__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for GNET::CouponExchange:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_coupon_exchange__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_coupon_exchange_1a7c5ab980776a17d33d24643df2f88723">Server</link> (Rpc::Data *argument, Rpc::Data *result, Manager *manager, Manager::Session::ID sid)</para>
+
+<para>Обработка RPC-запроса на стороне сервера. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_coupon_exchange_1a2724fc3e9de704a29e7c3404e8e5851d">Client</link> (Rpc::Data *argument, Rpc::Data *result, Manager *manager, Manager::Session::ID sid)</para>
+
+<para>Обработка RPC-запроса на стороне клиента. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_coupon_exchange_1a6cb455f6c3cb08734cc8238c540161c4">OnTimeout</link> ()</para>
+
+<para>Метод обработки таймаута RPC-запроса. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Класс для обработки RPC-запросов обмена купонов между клиентом и сервером. @inherits Rpc. </para>
+
+
+
+<para>Данный класс предоставляет методы для обработки запросов на сервере и клиенте, а также обработки таймаутов при ожидании ответа. </para>
+<para>
+Definition at line <link linkend="_couponexchange_8hpp_source_1l00030">30</link> of file <link linkend="_couponexchange_8hpp_source">couponexchange.hpp</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_g_n_e_t_1_1_coupon_exchange_1a2724fc3e9de704a29e7c3404e8e5851d"/><section>
+    <title>Client()</title>
+<indexterm><primary>Client</primary><secondary>GNET::CouponExchange</secondary></indexterm>
+<indexterm><primary>GNET::CouponExchange</primary><secondary>Client</secondary></indexterm>
+<para><computeroutput>void GNET::CouponExchange::Client (Rpc::Data * argument, Rpc::Data * result, Manager * manager, Manager::Session::ID sid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Обработка RPC-запроса на стороне клиента. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>argument</entry><entry>
+<para>Указатель на данные аргументов RPC (тип CouponExchangeArg). </para>
+</entry>
+                            </row>
+                            <row>
+<entry>out</entry><entry>result</entry><entry>
+<para>Указатель на данные результата RPC (тип CouponExchangeRes). </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>manager</entry><entry>
+<para>Указатель на менеджер сессий. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>sid</entry><entry>
+<para>Идентификатор сессии. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <para><link linkend="_todo_1_todo000014">Todo</link> 
+<para>Требуется реализация клиентской части обработки. </para>
+</para></para>
+<para>
+Definition at line <link linkend="_couponexchange_8hpp_source_1l00060">60</link> of file <link linkend="_couponexchange_8hpp_source">couponexchange.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_coupon_exchange_1a6cb455f6c3cb08734cc8238c540161c4"/><section>
+    <title>OnTimeout()</title>
+<indexterm><primary>OnTimeout</primary><secondary>GNET::CouponExchange</secondary></indexterm>
+<indexterm><primary>GNET::CouponExchange</primary><secondary>OnTimeout</secondary></indexterm>
+<para><computeroutput>void GNET::CouponExchange::OnTimeout ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Метод обработки таймаута RPC-запроса. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Вызывается только на клиентской стороне при истечении времени ожидания ответа. </para>
+</note>
+<para><link linkend="_todo_1_todo000015">Todo</link> 
+<para>Требуется реализация обработки таймаута. </para>
+</para></para>
+<para>
+Definition at line <link linkend="_couponexchange_8hpp_source_1l00072">72</link> of file <link linkend="_couponexchange_8hpp_source">couponexchange.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_coupon_exchange_1a7c5ab980776a17d33d24643df2f88723"/><section>
+    <title>Server()</title>
+<indexterm><primary>Server</primary><secondary>GNET::CouponExchange</secondary></indexterm>
+<indexterm><primary>GNET::CouponExchange</primary><secondary>Server</secondary></indexterm>
+<para><computeroutput>void GNET::CouponExchange::Server (Rpc::Data * argument, Rpc::Data * result, Manager * manager, Manager::Session::ID sid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Обработка RPC-запроса на стороне сервера. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>argument</entry><entry>
+<para>Указатель на данные аргументов RPC (тип CouponExchangeArg). </para>
+</entry>
+                            </row>
+                            <row>
+<entry>out</entry><entry>result</entry><entry>
+<para>Указатель на данные результата RPC (тип CouponExchangeRes). </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>manager</entry><entry>
+<para>Указатель на менеджер сессий. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>sid</entry><entry>
+<para>Идентификатор сессии. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>Для использования необходимо раскомментировать преобразование типов и реализовать логику. </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_couponexchange_8hpp_source_1l00045">45</link> of file <link linkend="_couponexchange_8hpp_source">couponexchange.hpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_couponexchange_8hpp">couponexchange.hpp</link></section>
+</section>

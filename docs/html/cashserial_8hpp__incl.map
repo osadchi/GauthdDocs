@@ -1,0 +1,20 @@
+<map id="D:/pwsrc2.0/docs/gauthd/cashserial.hpp" name="D:/pwsrc2.0/docs/gauthd/cashserial.hpp">
+<area shape="rect" id="Node000001" title="Заголовочный файл класса CashSerial для обработки RPC&#45;операций с денежными сериями" alt="" coords="270,5,437,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,96,81,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="274,51,96,97,95,92,273,46"/>
+<area shape="rect" id="Node000003" href="$callid_8hxx.html" title=" " alt="" coords="105,96,181,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="300,51,191,93,189,88,298,46"/>
+<area shape="rect" id="Node000004" href="$state_8hxx.html" title=" " alt="" coords="205,96,281,123"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="327,51,274,89,271,85,324,46"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="304,96,403,123"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="356,49,356,80,351,80,351,49"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="427,96,526,123"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="387,46,446,85,443,90,384,51"/>
+<area shape="rect" id="Node000008" href="$gauthserver_8hpp.html" title="Заголовочный файл, содержащий определения классов для аутентификации и управления сессиями." alt="" coords="550,96,664,123"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="420,46,553,88,552,93,418,51"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="688,96,768,123"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="438,43,674,93,673,98,437,48"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="385,171,464,197"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="276,121,379,162,377,167,274,126"/>
+<area shape="poly" id="edge8_Node000008_Node000005" title=" " alt="" coords="576,126,472,167,470,162,574,121"/>
+</map>

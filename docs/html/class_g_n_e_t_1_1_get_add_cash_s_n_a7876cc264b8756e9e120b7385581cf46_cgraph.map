@@ -1,0 +1,19 @@
+<map id="GNET::GetAddCashSN::PostProcess" name="GNET::GetAddCashSN::PostProcess">
+<area shape="rect" id="Node000001" title="Постобработка результатов RPC&#45;запроса" alt="" coords="5,124,165,167"/>
+<area shape="rect" id="Node000002" href="$class_g_mysql_client.html#aca8d88358cbbd6033e81272381cb0911" title=" " alt="" coords="226,5,417,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,122,151,81,180,60,211,42,227,35,229,40,214,46,183,64,155,85,109,126"/>
+<area shape="rect" id="Node000003" href="$class_g_mysql_client.html#afa65eb70f3df9ead6d515aa084f3f415" title=" " alt="" coords="213,56,430,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="135,121,212,92,239,84,241,89,214,97,137,126"/>
+<area shape="rect" id="Node000004" href="$class_g_mysql_client.html#ad4ac431eba947493223affceccff7990" title=" " alt="" coords="227,107,416,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="165,134,211,129,212,134,165,139"/>
+<area shape="rect" id="Node000005" href="$class_g_mysql_client.html#a87a90c9a2b827da79f451728f4109850" title="Получить экземпляр класса (Singleton)" alt="" coords="232,157,411,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="165,151,217,157,216,162,165,156"/>
+<area shape="rect" id="Node000006" href="$class_g_n_e_t_1_1_g_auth_server.html#a2fb6223e8492fcbc74f9b21ee12f25e7" title="Получить экземпляр синглтона." alt="" coords="247,208,396,251"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="139,165,214,193,234,200,232,205,212,199,137,170"/>
+<area shape="rect" id="Node000008" href="$class_g_mysql_client.html#a5ad2854f8238ad2008cf0358adf9325b" title="Обновление статуса записи в usecashnow." alt="" coords="216,275,426,301"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="105,165,151,214,181,239,214,260,227,267,225,271,211,265,178,243,148,218,102,169"/>
+<area shape="rect" id="Node000007" href="$class_g_n_e_t_1_1_g_auth_server.html#a807dbbef9b25bce26260a6cbbd4edd01" title="Конструктор по умолчанию." alt="" coords="493,208,641,251"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="396,227,477,227,477,232,396,232"/>
+<area shape="rect" id="Node000009" href="$class_g_mysql_client.html#a1be593d128e947bbb05fdee22e9c2a89" title="Выполнить SQL запрос" alt="" coords="478,275,656,301"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="427,285,462,285,462,291,427,291"/>
+</map>

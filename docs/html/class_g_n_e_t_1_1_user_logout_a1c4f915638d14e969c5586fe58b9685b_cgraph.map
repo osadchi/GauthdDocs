@@ -1,0 +1,33 @@
+<map id="GNET::UserLogout::Server" name="GNET::UserLogout::Server">
+<area shape="rect" id="Node000001" title="Обработка запроса выхода пользователя на стороне сервера" alt="" coords="5,233,184,260"/>
+<area shape="rect" id="Node000002" href="$class_g_mysql_client.html#a8875011e1658a40cefc82eac737bba58" title="Логирование действия входа/выхода (специальный функционал)" alt="" coords="235,69,423,96"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,231,156,177,192,146,230,118,266,100,269,104,233,122,195,150,160,181,109,235"/>
+<area shape="rect" id="Node000007" href="$class_g_mysql_client.html#a3e52c51fa1af93cb93da4547f877dba6" title="Выполнение shell&#45;команды при выходе пользователя" alt="" coords="247,183,410,209"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="159,230,248,211,250,216,160,235"/>
+<area shape="rect" id="Node000008" href="$class_g_mysql_client.html#a623a50fa9c2dbe90519ac099bfa492f0" title="Получить ID приложения" alt="" coords="255,233,403,260"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="184,244,239,244,239,249,184,249"/>
+<area shape="rect" id="Node000009" href="$class_g_mysql_client.html#a87a90c9a2b827da79f451728f4109850" title="Получить экземпляр класса (Singleton)" alt="" coords="239,284,418,311"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="160,258,250,278,248,283,159,263"/>
+<area shape="rect" id="Node000010" href="$class_g_n_e_t_1_1_g_auth_server.html#a2fb6223e8492fcbc74f9b21ee12f25e7" title="Получить экземпляр синглтона." alt="" coords="255,335,403,377"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="119,258,170,288,233,320,247,326,245,331,231,325,168,293,116,263"/>
+<area shape="rect" id="Node000012" href="$class_g_mysql_client.html#acb10864e5152be98cb60ca379e5401bc" title="Получить ID зоны" alt="" coords="245,401,413,428"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="107,259,156,321,192,357,233,387,244,393,241,397,230,392,188,361,152,325,103,262"/>
+<area shape="rect" id="Node000013" href="$class_g_mysql_client.html#a524bc45740cb01aabdbf2b012407925f" title="Запись информации о выходе пользователя из онлайн" alt="" coords="232,132,426,159"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="115,231,167,200,231,168,250,161,252,166,233,173,169,204,118,235"/>
+<area shape="rect" id="Node000003" href="$class_g_mysql_client.html#a2c15bbf59d3fb1b73005ad07a8dba455" title="Преобразование IP адреса в строку" alt="" coords="484,5,650,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="380,66,499,34,500,39,382,71"/>
+<area shape="rect" id="Node000004" href="$class_g_mysql_client.html#a197d13b53a9987edf047df74c8d73a2e" title="Получить данные пользователя" alt="" coords="474,56,659,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="423,75,458,73,459,78,424,80"/>
+<area shape="rect" id="Node000006" href="$class_g_mysql_client.html#a1be593d128e947bbb05fdee22e9c2a89" title="Выполнить SQL запрос" alt="" coords="478,107,656,133"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="418,94,462,101,462,106,418,99"/>
+<area shape="rect" id="Node000005" href="$class_g_mysql_client.html#ab7ff1536bda77626eaecf55da93aab92" title="Найти пользователя по ID." alt="" coords="707,107,865,133"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="628,81,711,100,710,105,627,86"/>
+<area shape="rect" id="Node000011" href="$class_g_n_e_t_1_1_g_auth_server.html#a807dbbef9b25bce26260a6cbbd4edd01" title="Конструктор по умолчанию." alt="" coords="492,335,641,377"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="403,353,477,353,477,359,403,359"/>
+<area shape="poly" id="edge16_Node000013_Node000006" title=" " alt="" coords="426,132,462,128,462,134,427,138"/>
+<area shape="rect" id="Node000014" href="$class_g_mysql_client.html#a8b60b7430a3413aeae8f36df7bbf7f57" title=" " alt="" coords="498,208,636,235"/>
+<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="392,157,427,168,451,181,475,194,494,200,492,205,473,198,449,186,425,173,390,162"/>
+<area shape="rect" id="Node000015" href="$class_g_mysql_client.html#af95566b524271d47c9e9baddb7efda4a" title="Удалить пользователя из онлайн&#45;списка" alt="" coords="488,157,645,184"/>
+<area shape="poly" id="edge14_Node000013_Node000015" title=" " alt="" coords="427,153,473,158,473,163,426,158"/>
+<area shape="poly" id="edge15_Node000015_Node000005" title=" " alt="" coords="627,154,710,135,711,140,628,159"/>
+</map>

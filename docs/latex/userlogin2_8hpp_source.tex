@@ -1,0 +1,69 @@
+\doxysection{D\+:/pwsrc2.0/docs/gauthd/userlogin2.hpp}
+\hypertarget{userlogin2_8hpp_source}{}\label{userlogin2_8hpp_source}\mbox{\hyperlink{userlogin2_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#ifndef\ \_\_GNET\_USERLOGIN2\_HPP}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00007}00007\ \textcolor{preprocessor}{\#define\ \_\_GNET\_USERLOGIN2\_HPP}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}rpcdefs.h"{}}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{callid_8hxx}{callid.hxx}}"{}}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{state_8hxx}{state.hxx}}"{}}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}userlogin2arg"{}}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}userlogin2res"{}}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gmysqlclient_8hpp}{gmysqlclient.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00016}00016\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_g_n_e_t}{GNET}}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00017}00017\ \{}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00026}\mbox{\hyperlink{class_g_n_e_t_1_1_user_login2}{00026}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_n_e_t_1_1_user_login2}{UserLogin2}}\ :\ \textcolor{keyword}{public}\ ProxyRpc}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00027}00027\ \{}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00029}00029\ \textcolor{comment}{//\ Секция\ макросов\ для\ RPC-\/системы}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00030}00030\ \textcolor{preprocessor}{\#define\ RPC\_BASECLASS\ ProxyRpc}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00031}00031\ \textcolor{preprocessor}{\ \ \ \ \#include\ "{}userlogin2"{}}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00032}00032\ \textcolor{preprocessor}{\#undef\ RPC\_BASECLASS}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00035}00035\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00045}\mbox{\hyperlink{class_g_n_e_t_1_1_user_login2_a7d61288662e68a7168dbb4d026483086}{00045}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_g_n_e_t_1_1_user_login2_a7d61288662e68a7168dbb4d026483086}{Delivery}}(Manager::Session::ID\ proxy\_sid,\ \textcolor{keyword}{const}\ OctetsStream\&\ osArg)}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00046}00046\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO:\ Реализация\ требует\ доработки}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00050}00050\ \textcolor{comment}{\ \ \ \ \ \ \ \ UserLogin2Arg\ arg;}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00051}00051\ \textcolor{comment}{\ \ \ \ \ \ \ \ osArg\ >>\ arg;}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00052}00052\ \textcolor{comment}{\ \ \ \ \ \ \ \ if(\ GAuthClient::GetInstance()-\/>SendProtocol(\ *this\ )\ )}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00053}00053\ \textcolor{comment}{\ \ \ \ \ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00054}00054\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ return\ true;}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00055}00055\ \textcolor{comment}{\ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00056}00056\ \textcolor{comment}{\ \ \ \ \ \ \ \ else}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00057}00057\ \textcolor{comment}{\ \ \ \ \ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00058}00058\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ SetResult(UserLogin2Res(ERR\_DELIVER\_SEND));}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00059}00059\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ SendToSponsor();}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00060}00060\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ return\ false;}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00061}00061\ \textcolor{comment}{\ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00062}00062\ \textcolor{comment}{\ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00063}00063\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00073}\mbox{\hyperlink{class_g_n_e_t_1_1_user_login2_ac662ac896d30d4f07db6a465fbb20ca3}{00073}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_e_t_1_1_user_login2_ac662ac896d30d4f07db6a465fbb20ca3}{PostProcess}}(Manager::Session::ID\ proxy\_sid,\ \textcolor{keyword}{const}\ OctetsStream\&\ osArg,\ \textcolor{keyword}{const}\ OctetsStream\&\ osRes)}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00074}00074\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO:\ Реализация\ требует\ доработки}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00077}00077\ \textcolor{comment}{\ \ \ \ \ \ \ \ UserLogin2Arg\ arg;}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00078}00078\ \textcolor{comment}{\ \ \ \ \ \ \ \ osArg\ >>\ arg;}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00079}00079\ \textcolor{comment}{\ \ \ \ \ \ \ \ UserLogin2Res\ res;}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00080}00080\ \textcolor{comment}{\ \ \ \ \ \ \ \ osRes\ >>\ res;}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00081}00081\ \textcolor{comment}{\ \ \ \ \ \ \ \ SetResult(\ \&res\ );}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00082}00082\ \textcolor{comment}{\ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00083}00083\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00091}\mbox{\hyperlink{class_g_n_e_t_1_1_user_login2_a7d87dc03996960a49065f50388d624ef}{00091}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_e_t_1_1_user_login2_a7d87dc03996960a49065f50388d624ef}{OnTimeout}}()}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00092}00092\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO:\ Реализация\ для\ клиентской\ части}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00094}00094\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00095}00095\ \};}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00097}00097\ \}\ \textcolor{comment}{//\ namespace\ GNET}}
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{userlogin2_8hpp_source_l00099}00099\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_GNET\_USERLOGIN2\_HPP}}
+
+\end{DoxyCode}

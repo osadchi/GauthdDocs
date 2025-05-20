@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_cashserial_8hpp" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/cashserial.hpp File Reference</title>
+<indexterm><primary>D:/pwsrc2.0/docs/gauthd/cashserial.hpp</primary></indexterm>
+<para>
+
+<para>Заголовочный файл класса CashSerial для обработки RPC-операций с денежными сериями </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;rpcdefs.h&quot;<?linebreak?>#include &quot;callid.hxx&quot;<?linebreak?>#include &quot;state.hxx&quot;<?linebreak?>#include &quot;cashserialarg&quot;<?linebreak?>#include &quot;cashserialres&quot;<?linebreak?>#include &quot;gauthserver.hpp&quot;<?linebreak?>#include &quot;cashserial&quot;<?linebreak?></programlisting>Include dependency graph for cashserial.hpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="cashserial_8hpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_cash_serial">GNET::CashSerial</link></para>
+
+<para>Прокси-класс для обработки RPC-запросов денежных серий </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_g_n_e_t">GNET</link></para>
+
+<para>Основное пространство имен для сетевых компонентов системы. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_cashserial_8hpp_1ad33ee56a94384ada0aa3cf9315e88591">RPC_BASECLASS</link>&#160;&#160;&#160;ProxyRpc</para>
+
+<para>Включение сгенерированного RPC-кода </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Заголовочный файл класса CashSerial для обработки RPC-операций с денежными сериями </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Ваше имя или команда </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>Дата последнего изменения </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>1.0 @license Ваша лицензия (если есть)</para>
+</formalpara>
+Класс реализует прокси-механизм для работы с денежными сериями через систему аутентификации. Является частью модуля <link linkend="_namespace_g_n_e_t">GNET</link>. Использует сериализацию аргументов и результатов операций. </para>
+<para>
+Definition in file <link linkend="_cashserial_8hpp_source">cashserial.hpp</link>.</para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_cashserial_8hpp_1ad33ee56a94384ada0aa3cf9315e88591"/><section>
+    <title>RPC_BASECLASS</title>
+<indexterm><primary>RPC_BASECLASS</primary><secondary>cashserial.hpp</secondary></indexterm>
+<indexterm><primary>cashserial.hpp</primary><secondary>RPC_BASECLASS</secondary></indexterm>
+<para><computeroutput>#define RPC_BASECLASS&#160;&#160;&#160;ProxyRpc</computeroutput></para><para>
+
+<para>Включение сгенерированного RPC-кода </para>
+</para>
+
+<para>Базовый класс для RPC-генерации </para>
+<para>
+Definition at line <link linkend="_cashserial_8hpp_source_1l00037">37</link> of file <link linkend="_cashserial_8hpp_source">cashserial.hpp</link>.</para>
+</section>
+</section>
+</section>

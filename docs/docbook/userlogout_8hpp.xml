@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_userlogout_8hpp" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/userlogout.hpp File Reference</title>
+<indexterm><primary>D:/pwsrc2.0/docs/gauthd/userlogout.hpp</primary></indexterm>
+<para>
+
+<para>Заголовочный файл для обработки процедуры выхода пользователя из системы </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;rpcdefs.h&quot;<?linebreak?>#include &quot;callid.hxx&quot;<?linebreak?>#include &quot;state.hxx&quot;<?linebreak?>#include &quot;gmysqlclient.hpp&quot;<?linebreak?>#include &quot;userlogoutarg&quot;<?linebreak?>#include &quot;userlogoutres&quot;<?linebreak?>#include &quot;userlogout&quot;<?linebreak?></programlisting>Include dependency graph for userlogout.hpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="userlogout_8hpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_user_logout">GNET::UserLogout</link></para>
+
+<para>RPC-класс для обработки запросов выхода пользователя </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_g_n_e_t">GNET</link></para>
+
+<para>Основное пространство имен для сетевых компонентов системы. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_userlogout_8hpp_1ad33ee56a94384ada0aa3cf9315e88591">RPC_BASECLASS</link>&#160;&#160;&#160;Rpc</para>
+
+<para>Включение RPC-специфичной реализации </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Заголовочный файл для обработки процедуры выхода пользователя из системы </para>
+<para>
+Definition in file <link linkend="_userlogout_8hpp_source">userlogout.hpp</link>.</para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_userlogout_8hpp_1ad33ee56a94384ada0aa3cf9315e88591"/><section>
+    <title>RPC_BASECLASS</title>
+<indexterm><primary>RPC_BASECLASS</primary><secondary>userlogout.hpp</secondary></indexterm>
+<indexterm><primary>userlogout.hpp</primary><secondary>RPC_BASECLASS</secondary></indexterm>
+<para><computeroutput>#define RPC_BASECLASS&#160;&#160;&#160;Rpc</computeroutput></para><para>
+
+<para>Включение RPC-специфичной реализации </para>
+</para>
+
+<para>Макрос для указания базового RPC-класса </para>
+<para>
+Definition at line <link linkend="_userlogout_8hpp_source_1l00029">29</link> of file <link linkend="_userlogout_8hpp_source">userlogout.hpp</link>.</para>
+</section>
+</section>
+</section>

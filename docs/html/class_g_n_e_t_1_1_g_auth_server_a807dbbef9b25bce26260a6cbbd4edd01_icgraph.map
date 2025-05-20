@@ -1,13 +1,21 @@
 <map id="GNET::GAuthServer::GAuthServer" name="GNET::GAuthServer::GAuthServer">
-<area shape="rect" id="Node000001" title="Конструктор по умолчанию." alt="" coords="429,89,577,132"/>
-<area shape="rect" id="Node000002" href="$class_g_n_e_t_1_1_g_auth_server.html#a2fb6223e8492fcbc74f9b21ee12f25e7" title="Получить экземпляр синглтона." alt="" coords="233,89,381,132"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="414,113,381,113,381,108,414,108"/>
-<area shape="rect" id="Node000003" href="$gauthd_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Главная функция программы." alt="" coords="70,5,120,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="257,84,184,46,119,26,121,21,186,42,259,79"/>
-<area shape="rect" id="Node000004" href="$class_g_n_e_t_1_1_accounting_request.html#aa11c0d3bdfe8aecec33fab6e918126cc" title="Основной метод обработки запроса." alt="" coords="5,56,185,99"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="217,99,185,94,186,89,218,94"/>
-<area shape="rect" id="Node000005" href="$class_g_n_e_t_1_1_announce_zoneid.html#af13174f610fa4dc7525ab104c856ac91" title="&lt; Включение автоматически сгенерированных данных протокола" alt="" coords="14,123,176,165"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="218,127,177,134,176,129,217,122"/>
-<area shape="rect" id="Node000006" href="$class_g_n_e_t_1_1_status_announce.html#ae5a6d07d7f9047b0d0a53cce09ed94b9" title="Обработчик протокола" alt="" coords="14,189,176,232"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="258,142,186,180,159,191,157,186,184,175,255,138"/>
+<area shape="rect" id="Node000001" title="Конструктор по умолчанию." alt="" coords="435,207,583,249"/>
+<area shape="rect" id="Node000002" href="$class_g_n_e_t_1_1_g_auth_server.html#a2fb6223e8492fcbc74f9b21ee12f25e7" title="Получить экземпляр синглтона." alt="" coords="239,207,387,249"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="420,231,387,231,387,225,420,225"/>
+<area shape="rect" id="Node000003" href="$class_g_n_e_t_1_1_cash_serial.html#a03f2b9373bf375c22ece6bc72da361ac" title="Отправка запроса на сервер аутентификации" alt="" coords="5,5,191,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="295,193,278,158,254,118,225,79,189,46,169,35,171,30,192,42,229,76,259,115,283,155,300,191"/>
+<area shape="rect" id="Node000004" href="$class_g_n_e_t_1_1_get_add_cash_s_n.html#a06926b845f30285181cfa325f2ad5ba7" title="Обрабатывает доставку RPC&#45;запроса" alt="" coords="18,56,178,99"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="282,196,241,153,189,113,168,102,170,97,192,108,244,149,286,193"/>
+<area shape="rect" id="Node000005" href="$gauthd_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Главная функция программы." alt="" coords="73,123,123,149"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="263,201,190,164,122,144,124,138,192,159,265,196"/>
+<area shape="rect" id="Node000006" href="$class_g_n_e_t_1_1_get_add_cash_s_n.html#a7876cc264b8756e9e120b7385581cf46" title="Постобработка результатов RPC&#45;запроса" alt="" coords="18,173,178,216"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="223,217,178,210,179,204,224,212"/>
+<area shape="rect" id="Node000007" href="$class_g_n_e_t_1_1_accounting_request.html#aa11c0d3bdfe8aecec33fab6e918126cc" title="Основной метод обработки запроса." alt="" coords="8,240,188,283"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="224,244,189,250,188,245,223,239"/>
+<area shape="rect" id="Node000008" href="$class_g_n_e_t_1_1_announce_zoneid.html#af13174f610fa4dc7525ab104c856ac91" title="&lt; Включение автоматически сгенерированных данных протокола" alt="" coords="17,307,179,349"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="264,260,192,297,164,309,162,304,190,292,261,255"/>
+<area shape="rect" id="Node000009" href="$class_g_n_e_t_1_1_status_announce.html#ae5a6d07d7f9047b0d0a53cce09ed94b9" title="Обработчик протокола" alt="" coords="17,373,179,416"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="290,264,248,315,221,341,192,364,172,375,169,370,189,359,218,337,244,311,286,261"/>
+<area shape="rect" id="Node000010" href="$class_g_n_e_t_1_1_user_logout.html#a1c4f915638d14e969c5586fe58b9685b" title="Обработка запроса выхода пользователя на стороне сервера" alt="" coords="9,440,187,467"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="302,265,285,304,262,348,231,392,192,430,172,442,169,437,189,426,227,389,257,345,281,301,297,263"/>
 </map>

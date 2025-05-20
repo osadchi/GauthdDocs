@@ -1,0 +1,42 @@
+<map id="D:/pwsrc2.0/docs/gauthd/getaddcashsn.hpp" name="D:/pwsrc2.0/docs/gauthd/getaddcashsn.hpp">
+<area shape="rect" id="Node000001" title="Заголовочный файл для обработки запросов генерации серийных номеров пополнения баланса" alt="" coords="349,5,516,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,171,81,197"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="349,42,254,63,204,79,156,98,108,129,68,162,65,157,105,124,154,94,202,73,253,58,348,37"/>
+<area shape="rect" id="Node000003" href="$callid_8hxx.html" title=" " alt="" coords="105,171,181,197"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="349,35,306,42,262,54,220,72,182,98,162,126,151,156,146,155,157,123,178,94,217,68,261,49,305,37,348,30"/>
+<area shape="rect" id="Node000004" href="$state_8hxx.html" title=" " alt="" coords="300,171,375,197"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="407,50,385,72,365,97,352,127,345,156,339,154,347,125,361,95,381,68,404,46"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="692,96,812,123"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="515,46,688,89,686,94,514,51"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="836,96,956,123"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="517,40,821,92,820,98,516,45"/>
+<area shape="rect" id="Node000008" href="$gmysqlclient_8hpp.html" title="MySQL клиент для работы с базой данных игрового сервера" alt="" coords="549,96,668,123"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="479,46,568,87,566,92,477,51"/>
+<area shape="rect" id="Node000015" href="$gauthserver_8hpp.html" title="Заголовочный файл, содержащий определения классов для аутентификации и управления сессиями." alt="" coords="375,96,490,123"/>
+<area shape="poly" id="edge15_Node000001_Node000015" title=" " alt="" coords="435,49,435,80,430,80,430,49"/>
+<area shape="rect" id="Node000016" href="$addcash_8hpp.html" title="Заголовочный файл, содержащий объявление класса AddCash для обработки протокола добавления средств." alt="" coords="193,96,288,123"/>
+<area shape="poly" id="edge17_Node000001_Node000016" title=" " alt="" coords="384,51,285,92,283,87,382,46"/>
+<area shape="rect" id="Node000018" title=" " alt="" coords="981,96,1084,123"/>
+<area shape="poly" id="edge22_Node000001_Node000018" title=" " alt="" coords="517,34,717,58,966,93,965,98,716,64,516,40"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="373,245,452,272"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="353,196,391,233,387,237,349,200"/>
+<area shape="poly" id="edge10_Node000008_Node000005" title=" " alt="" coords="669,118,681,120,766,124,879,125,935,128,986,136,1029,149,1058,169,1065,184,1058,199,1046,207,1027,215,969,227,803,244,617,255,467,259,467,254,616,249,803,239,968,222,1025,210,1044,203,1054,196,1060,184,1054,172,1026,153,985,141,935,134,879,130,766,129,680,125,668,123"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="450,171,556,197"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="591,125,535,164,532,159,588,121"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="580,171,637,197"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="611,123,611,155,606,155,606,123"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="661,171,729,197"/>
+<area shape="poly" id="edge11_Node000008_Node000011" title=" " alt="" coords="625,121,670,159,667,163,622,125"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="753,171,853,197"/>
+<area shape="poly" id="edge12_Node000008_Node000012" title=" " alt="" coords="643,121,756,162,754,167,641,126"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="877,171,945,197"/>
+<area shape="poly" id="edge13_Node000008_Node000013" title=" " alt="" coords="665,121,863,167,861,172,664,126"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="970,171,1044,197"/>
+<area shape="poly" id="edge14_Node000008_Node000014" title=" " alt="" coords="669,118,955,168,954,173,668,123"/>
+<area shape="poly" id="edge16_Node000015_Node000005" title=" " alt="" coords="433,124,419,230,413,229,428,123"/>
+<area shape="poly" id="edge18_Node000016_Node000002" title=" " alt="" coords="207,126,93,167,91,162,205,121"/>
+<area shape="poly" id="edge19_Node000016_Node000003" title=" " alt="" coords="225,125,173,164,170,159,222,121"/>
+<area shape="poly" id="edge20_Node000016_Node000004" title=" " alt="" coords="259,121,311,159,307,164,256,125"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="205,171,276,197"/>
+<area shape="poly" id="edge21_Node000016_Node000017" title=" " alt="" coords="243,123,243,155,238,155,238,123"/>
+</map>

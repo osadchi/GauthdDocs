@@ -35,17 +35,49 @@
 \label{todo__todo000012}%
 \Hypertarget{todo__todo000012}%
 Реализовать логику обработки запроса.  
-\item[Class \doxylink{class_g_n_e_t_1_1_discount_announce}{GNET\+::Discount\+Announce} ]\hfill \\
+\item[Member \doxylink{class_g_n_e_t_1_1_cash_serial_a03f2b9373bf375c22ece6bc72da361ac}{GNET\+::Cash\+Serial\+::Delivery} (Manager\+::\+Session\+::\+ID proxy\+\_\+sid, const Octets\+Stream \&os\+Arg)]\hfill \\
 \label{todo__todo000013}%
 \Hypertarget{todo__todo000013}%
-Реализовать обработку протокола в методе Process()  
-\item[Member \doxylink{class_g_n_e_t_1_1_game2_a_u_a778ef1862d9abe838530c75c45882fb7}{GNET\+::Game2\+AU\+::Process} (Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)]\hfill \\
+Реализовать десериализацию аргументов (раскомментировать код)  
+\item[Member \doxylink{class_g_n_e_t_1_1_coupon_exchange_a2724fc3e9de704a29e7c3404e8e5851d}{GNET\+::Coupon\+Exchange\+::Client} (Rpc\+::\+Data \texorpdfstring{$\ast$}{*}argument, Rpc\+::\+Data \texorpdfstring{$\ast$}{*}result, Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)]\hfill \\
 \label{todo__todo000014}%
 \Hypertarget{todo__todo000014}%
+Требуется реализация клиентской части обработки.  
+\item[Member \doxylink{class_g_n_e_t_1_1_coupon_exchange_a6cb455f6c3cb08734cc8238c540161c4}{GNET\+::Coupon\+Exchange\+::On\+Timeout} ()]\hfill \\
+\label{todo__todo000015}%
+\Hypertarget{todo__todo000015}%
+Требуется реализация обработки таймаута.  
+\item[Class \doxylink{class_g_n_e_t_1_1_discount_announce}{GNET\+::Discount\+Announce} ]\hfill \\
+\label{todo__todo000016}%
+\Hypertarget{todo__todo000016}%
+Реализовать обработку протокола в методе Process()  
+\item[Member \doxylink{class_g_n_e_t_1_1_game2_a_u_a778ef1862d9abe838530c75c45882fb7}{GNET\+::Game2\+AU\+::Process} (Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)]\hfill \\
+\label{todo__todo000017}%
+\Hypertarget{todo__todo000017}%
 Требуется реализация логики обработки сообщения  
-\item[Member \doxylink{class_g_n_e_t_1_1_key_exchange_a59d9dff58cb00261d155d622d24af391}{GNET\+::Key\+Exchange\+::Process} (Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)]\hfill \\
+\item[Member \doxylink{class_g_n_e_t_1_1_get_user_coupon_a6425acba2965486d055a994213699122}{GNET\+::Get\+User\+Coupon\+::Client} (Rpc\+::\+Data \texorpdfstring{$\ast$}{*}argument, Rpc\+::\+Data \texorpdfstring{$\ast$}{*}result, Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)]\hfill \\
+\label{todo__todo000020}%
+\Hypertarget{todo__todo000020}%
+Реализовать клиентскую логику обработки ответа.  
+\item[Member \doxylink{class_g_n_e_t_1_1_get_user_coupon_aaf7a0b7d88805c3071a892a7eb45e7d6}{GNET\+::Get\+User\+Coupon\+::On\+Timeout} ()]\hfill \\
+\label{todo__todo000021}%
+\Hypertarget{todo__todo000021}%
+Реализовать реакцию на таймаут (например, повторный запрос или уведомление).  
+\item[Member \doxylink{class_g_n_e_t_1_1_get_user_coupon_a6fe67ac1c3e044ed8f94f8299894ed4b}{GNET\+::Get\+User\+Coupon\+::Server} (Rpc\+::\+Data \texorpdfstring{$\ast$}{*}argument, Rpc\+::\+Data \texorpdfstring{$\ast$}{*}result, Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)]\hfill \\
 \label{todo__todo000019}%
 \Hypertarget{todo__todo000019}%
+Реализовать логику преобразования аргументов и формирования ответа. Сейчас аргументы и результаты закомментированы.  
+\item[Member \doxylink{class_g_n_e_t_1_1_g_query_passwd_a15c95c81230be5795439a7d9df0fe395}{GNET\+::GQuery\+Passwd\+::Client} (Rpc\+::\+Data \texorpdfstring{$\ast$}{*}argument, Rpc\+::\+Data \texorpdfstring{$\ast$}{*}result, Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)]\hfill \\
+\label{todo__todo000025}%
+\Hypertarget{todo__todo000025}%
+Реализовать клиентскую обработку  
+\item[Member \doxylink{class_g_n_e_t_1_1_g_query_passwd_ae5668da612a602d47616af3169a73a41}{GNET\+::GQuery\+Passwd\+::On\+Timeout} ()]\hfill \\
+\label{todo__todo000026}%
+\Hypertarget{todo__todo000026}%
+Реализовать обработку таймаутов для клиента  
+\item[Member \doxylink{class_g_n_e_t_1_1_key_exchange_a59d9dff58cb00261d155d622d24af391}{GNET\+::Key\+Exchange\+::Process} (Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)]\hfill \\
+\label{todo__todo000027}%
+\Hypertarget{todo__todo000027}%
 Реализовать обработку обмена ключами 
 
 
@@ -55,21 +87,41 @@
 
 
 Реализовать обработку ошибок  
+\item[Member \doxylink{class_g_n_e_t_1_1_matrix_passwd2_a33af4c45fa48d7bf6dc251ab5178f3e5}{GNET\+::Matrix\+Passwd2\+::Delivery} (Manager\+::\+Session\+::\+ID proxy\+\_\+sid, const Octets\+Stream \&os\+Arg)]\hfill \\
+\label{todo__todo000030}%
+\Hypertarget{todo__todo000030}%
+Требуется реализация логики отправки протокола аутентификации  
+\item[Member \doxylink{class_g_n_e_t_1_1_matrix_passwd2_abd67d4f58dcf3a3a917209810ead7a7c}{GNET\+::Matrix\+Passwd2\+::On\+Timeout} ()]\hfill \\
+\label{todo__todo000032}%
+\Hypertarget{todo__todo000032}%
+Реализовать логику обработки таймаута  
+\item[Member \doxylink{class_g_n_e_t_1_1_matrix_passwd2_a433faf7b2ff9ec3e3e7cf91a8fc7fb8d}{GNET\+::Matrix\+Passwd2\+::Post\+Process} (Manager\+::\+Session\+::\+ID proxy\+\_\+sid, const Octets\+Stream \&os\+Arg, const Octets\+Stream \&os\+Res)]\hfill \\
+\label{todo__todo000031}%
+\Hypertarget{todo__todo000031}%
+Требуется реализация обработки результатов  
+\item[Member \doxylink{class_g_n_e_t_1_1_matrix_token_afa6e24621cac8593c4e95ed22cc12338}{GNET\+::Matrix\+Token\+::Delivery} (Manager\+::\+Session\+::\+ID proxy\+\_\+sid, const Octets\+Stream \&os\+Arg)]\hfill \\
+\label{todo__todo000033}%
+\Hypertarget{todo__todo000033}%
+Требуется реализация логики отправки протокола через GAuth\+Client  
+\item[Member \doxylink{class_g_n_e_t_1_1_matrix_token_a784d6fa1f7f2a7fd6df54da5fb83c885}{GNET\+::Matrix\+Token\+::Post\+Process} (Manager\+::\+Session\+::\+ID proxy\+\_\+sid, const Octets\+Stream \&os\+Arg, const Octets\+Stream \&os\+Res)]\hfill \\
+\label{todo__todo000034}%
+\Hypertarget{todo__todo000034}%
+Требуется реализация обработки результатов  
 \item[Member \doxylink{class_g_n_e_t_1_1_s_s_o_get_ticket_req_a7d2f631129750466c71a3c53910adad9}{GNET\+::SSOGet\+Ticket\+Req\+::Process} (Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)]\hfill \\
-\label{todo__todo000023}%
-\Hypertarget{todo__todo000023}%
+\label{todo__todo000036}%
+\Hypertarget{todo__todo000036}%
 Требуется реализация логики обработки запроса 
 \item[Member \doxylink{class_g_n_e_t_1_1_status_announce_ae5a6d07d7f9047b0d0a53cce09ed94b9}{GNET\+::Status\+Announce\+::Process} (Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)]\hfill \\
-\label{todo__todo000024}%
-\Hypertarget{todo__todo000024}%
+\label{todo__todo000037}%
+\Hypertarget{todo__todo000037}%
 Реализовать обработку ошибок при работе с картой пользователей  
 \item[Member \doxylink{class_g_n_e_t_1_1_sys_send_mail3___re_ac8efa0a3f269852ac072bef063dbfc81}{GNET\+::Sys\+Send\+Mail3\+\_\+\+Re\+::Process} (Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)]\hfill \\
-\label{todo__todo000025}%
-\Hypertarget{todo__todo000025}%
+\label{todo__todo000038}%
+\Hypertarget{todo__todo000038}%
 Требуется реализация логики обработки  
 \item[Member \doxylink{class_g_n_e_t_1_1_sys_send_mail___re_aee9b57bf0d0707a080303a041e0dab0d}{GNET\+::Sys\+Send\+Mail\+\_\+\+Re\+::Process} (Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)]\hfill \\
-\label{todo__todo000026}%
-\Hypertarget{todo__todo000026}%
+\label{todo__todo000039}%
+\Hypertarget{todo__todo000039}%
 Реализовать логику обработки ответа от сервера. Сейчас метод содержит заглушку и требует реализации обработки\+:
 \begin{DoxyItemize}
 \item Анализ кода ответа
@@ -78,11 +130,31 @@
 \item Ведение статистики отправки 
 \end{DoxyItemize}
 \item[Member \doxylink{class_g_n_e_t_1_1_trans_buy_point_aad328b963d528b2d8a695e3793c73529}{GNET\+::Trans\+Buy\+Point\+::Process} (Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)]\hfill \\
-\label{todo__todo000027}%
-\Hypertarget{todo__todo000027}%
+\label{todo__todo000040}%
+\Hypertarget{todo__todo000040}%
 Реализовать обработку транзакций, включая проверку данных, выполнение платежа и обновление состояния системы  
+\item[Member \doxylink{class_g_n_e_t_1_1_user_login2_a7d61288662e68a7168dbb4d026483086}{GNET\+::User\+Login2\+::Delivery} (Manager\+::\+Session\+::\+ID proxy\+\_\+sid, const Octets\+Stream \&os\+Arg)]\hfill \\
+\label{todo__todo000042}%
+\Hypertarget{todo__todo000042}%
+Реализовать обработку запроса через GAuth\+Client  
+\item[Member \doxylink{class_g_n_e_t_1_1_user_login2_a7d87dc03996960a49065f50388d624ef}{GNET\+::User\+Login2\+::On\+Timeout} ()]\hfill \\
+\label{todo__todo000044}%
+\Hypertarget{todo__todo000044}%
+Реализовать обработку таймаутов для клиентской части  
+\item[Member \doxylink{class_g_n_e_t_1_1_user_login2_ac662ac896d30d4f07db6a465fbb20ca3}{GNET\+::User\+Login2\+::Post\+Process} (Manager\+::\+Session\+::\+ID proxy\+\_\+sid, const Octets\+Stream \&os\+Arg, const Octets\+Stream \&os\+Res)]\hfill \\
+\label{todo__todo000043}%
+\Hypertarget{todo__todo000043}%
+Реализовать обработку результатов авторизации  
+\item[Member \doxylink{class_g_n_e_t_1_1_user_logout_a3367c6ce9755247ab27fd85957a50ebf}{GNET\+::User\+Logout\+::Client} (Rpc\+::\+Data \texorpdfstring{$\ast$}{*}argument, Rpc\+::\+Data \texorpdfstring{$\ast$}{*}result, Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)]\hfill \\
+\label{todo__todo000045}%
+\Hypertarget{todo__todo000045}%
+Реализовать клиентскую часть логики  
+\item[Member \doxylink{class_g_n_e_t_1_1_user_logout_ae14b8440e018c0aabe72b1843f292753}{GNET\+::User\+Logout\+::On\+Timeout} ()]\hfill \\
+\label{todo__todo000046}%
+\Hypertarget{todo__todo000046}%
+Реализовать обработку таймаутов для клиентской части  
 \item[Member \doxylink{class_g_n_e_t_1_1_verify_master___re_a549010699fc4534896e58ff3aef11b9d}{GNET\+::Verify\+Master\+\_\+\+Re\+::Process} (Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)]\hfill \\
-\label{todo__todo000028}%
-\Hypertarget{todo__todo000028}%
+\label{todo__todo000047}%
+\Hypertarget{todo__todo000047}%
 Реализовать обработку ответа верификации 
 \end{DoxyRefList}

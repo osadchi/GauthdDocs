@@ -1,0 +1,127 @@
+\doxysection{GNET\+::Get\+User\+Coupon Class Reference}
+\hypertarget{class_g_n_e_t_1_1_get_user_coupon}{}\label{class_g_n_e_t_1_1_get_user_coupon}\index{GNET::GetUserCoupon@{GNET::GetUserCoupon}}
+
+
+RPC-\/класс для обработки запросов/ответов о купонах пользователя  
+
+
+
+
+{\ttfamily \#include $<$getusercoupon.\+hpp$>$}
+
+
+
+Inheritance diagram for GNET\+::Get\+User\+Coupon\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{class_g_n_e_t_1_1_get_user_coupon__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GNET\+::Get\+User\+Coupon\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{class_g_n_e_t_1_1_get_user_coupon__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_get_user_coupon_a6fe67ac1c3e044ed8f94f8299894ed4b}{Server}} (Rpc\+::\+Data \texorpdfstring{$\ast$}{*}argument, Rpc\+::\+Data \texorpdfstring{$\ast$}{*}result, Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)
+\begin{DoxyCompactList}\small\item\em Обработка RPC-\/запроса на стороне сервера \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_get_user_coupon_a6425acba2965486d055a994213699122}{Client}} (Rpc\+::\+Data \texorpdfstring{$\ast$}{*}argument, Rpc\+::\+Data \texorpdfstring{$\ast$}{*}result, Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)
+\begin{DoxyCompactList}\small\item\em Обработка RPC-\/ответа на стороне клиента \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_get_user_coupon_aaf7a0b7d88805c3071a892a7eb45e7d6}{On\+Timeout}} ()
+\begin{DoxyCompactList}\small\item\em Обработка таймаута RPC-\/запроса (клиентская сторона) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+RPC-\/класс для обработки запросов/ответов о купонах пользователя 
+
+Наследует базовый функционал RPC. Реализует логику обработки на стороне сервера и клиента, а также обработку таймаутов (клиентская сторона). 
+
+Definition at line \mbox{\hyperlink{getusercoupon_8hpp_source_l00030}{30}} of file \mbox{\hyperlink{getusercoupon_8hpp_source}{getusercoupon.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_n_e_t_1_1_get_user_coupon_a6425acba2965486d055a994213699122}\index{GNET::GetUserCoupon@{GNET::GetUserCoupon}!Client@{Client}}
+\index{Client@{Client}!GNET::GetUserCoupon@{GNET::GetUserCoupon}}
+\doxysubsubsection{\texorpdfstring{Client()}{Client()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_get_user_coupon_a6425acba2965486d055a994213699122} 
+void GNET\+::\+Get\+User\+Coupon\+::\+Client (\begin{DoxyParamCaption}\item[{Rpc\+::\+Data \texorpdfstring{$\ast$}{*}}]{argument}{, }\item[{Rpc\+::\+Data \texorpdfstring{$\ast$}{*}}]{result}{, }\item[{Manager \texorpdfstring{$\ast$}{*}}]{manager}{, }\item[{Manager\+::\+Session\+::\+ID}]{sid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Обработка RPC-\/ответа на стороне клиента 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argument} & Входные данные (Get\+User\+Coupon\+Arg) \\
+\hline
+{\em result} & Выходные данные (Get\+User\+Coupon\+Res) \\
+\hline
+{\em manager} & Менеджер сессий \\
+\hline
+{\em sid} & Идентификатор сессии\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000020}{Todo}}]Реализовать клиентскую логику обработки ответа. \end{DoxyRefDesc}
+
+
+Definition at line \mbox{\hyperlink{getusercoupon_8hpp_source_l00062}{62}} of file \mbox{\hyperlink{getusercoupon_8hpp_source}{getusercoupon.\+hpp}}.
+
+\Hypertarget{class_g_n_e_t_1_1_get_user_coupon_aaf7a0b7d88805c3071a892a7eb45e7d6}\index{GNET::GetUserCoupon@{GNET::GetUserCoupon}!OnTimeout@{OnTimeout}}
+\index{OnTimeout@{OnTimeout}!GNET::GetUserCoupon@{GNET::GetUserCoupon}}
+\doxysubsubsection{\texorpdfstring{OnTimeout()}{OnTimeout()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_get_user_coupon_aaf7a0b7d88805c3071a892a7eb45e7d6} 
+void GNET\+::\+Get\+User\+Coupon\+::\+On\+Timeout (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Обработка таймаута RPC-\/запроса (клиентская сторона) 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000021}{Todo}}]Реализовать реакцию на таймаут (например, повторный запрос или уведомление). \end{DoxyRefDesc}
+
+
+Definition at line \mbox{\hyperlink{getusercoupon_8hpp_source_l00073}{73}} of file \mbox{\hyperlink{getusercoupon_8hpp_source}{getusercoupon.\+hpp}}.
+
+\Hypertarget{class_g_n_e_t_1_1_get_user_coupon_a6fe67ac1c3e044ed8f94f8299894ed4b}\index{GNET::GetUserCoupon@{GNET::GetUserCoupon}!Server@{Server}}
+\index{Server@{Server}!GNET::GetUserCoupon@{GNET::GetUserCoupon}}
+\doxysubsubsection{\texorpdfstring{Server()}{Server()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_get_user_coupon_a6fe67ac1c3e044ed8f94f8299894ed4b} 
+void GNET\+::\+Get\+User\+Coupon\+::\+Server (\begin{DoxyParamCaption}\item[{Rpc\+::\+Data \texorpdfstring{$\ast$}{*}}]{argument}{, }\item[{Rpc\+::\+Data \texorpdfstring{$\ast$}{*}}]{result}{, }\item[{Manager \texorpdfstring{$\ast$}{*}}]{manager}{, }\item[{Manager\+::\+Session\+::\+ID}]{sid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Обработка RPC-\/запроса на стороне сервера 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argument} & Входные данные (Get\+User\+Coupon\+Arg) \\
+\hline
+{\em result} & Выходные данные (Get\+User\+Coupon\+Res) \\
+\hline
+{\em manager} & Менеджер сессий \\
+\hline
+{\em sid} & Идентификатор сессии\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000019}{Todo}}]Реализовать логику преобразования аргументов и формирования ответа. Сейчас аргументы и результаты закомментированы. \end{DoxyRefDesc}
+
+
+Definition at line \mbox{\hyperlink{getusercoupon_8hpp_source_l00047}{47}} of file \mbox{\hyperlink{getusercoupon_8hpp_source}{getusercoupon.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{getusercoupon_8hpp}{getusercoupon.\+hpp}}\end{DoxyCompactItemize}

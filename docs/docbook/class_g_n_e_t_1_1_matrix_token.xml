@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_n_e_t_1_1_matrix_token" xml:lang="en-US">
+<title>GNET::MatrixToken Class Reference</title>
+<indexterm><primary>GNET::MatrixToken</primary></indexterm>
+<para>
+
+<para>Класс для обработки RPC-запросов матричных токенов </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;matrixtoken.hpp&gt;</computeroutput>
+</para>
+Inheritance diagram for GNET::MatrixToken:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_matrix_token__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for GNET::MatrixToken:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_matrix_token__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_g_n_e_t_1_1_matrix_token_1afa6e24621cac8593c4e95ed22cc12338">Delivery</link> (Manager::Session::ID proxy_sid, const OctetsStream &amp;osArg)</para>
+
+<para>Метод доставки RPC-запроса </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_matrix_token_1a784d6fa1f7f2a7fd6df54da5fb83c885">PostProcess</link> (Manager::Session::ID proxy_sid, const OctetsStream &amp;osArg, const OctetsStream &amp;osRes)</para>
+
+<para>Постобработка результатов RPC-запроса </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_matrix_token_1a328616521dbc10643cfc652f9a93fd07">OnTimeout</link> ()</para>
+
+<para>Обработчик таймаута запроса </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Класс для обработки RPC-запросов матричных токенов </para>
+
+
+
+<para>Наследует функциональность ProxyRpc и реализует специфичную логику обработки токенов, включая доставку запросов, постобработку и обработку таймаутов. </para>
+<para>
+Definition at line <link linkend="_matrixtoken_8hpp_source_1l00036">36</link> of file <link linkend="_matrixtoken_8hpp_source">matrixtoken.hpp</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_g_n_e_t_1_1_matrix_token_1afa6e24621cac8593c4e95ed22cc12338"/><section>
+    <title>Delivery()</title>
+<indexterm><primary>Delivery</primary><secondary>GNET::MatrixToken</secondary></indexterm>
+<indexterm><primary>GNET::MatrixToken</primary><secondary>Delivery</secondary></indexterm>
+<para><computeroutput>bool GNET::MatrixToken::Delivery (Manager::Session::ID proxy_sid, const OctetsStream &amp; osArg)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Метод доставки RPC-запроса </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>proxy_sid</entry><entry>
+<para>Идентификатор прокси-сессии </para>
+</entry>
+                            </row>
+                            <row>
+<entry>osArg</entry><entry>
+<para>Входные данные запроса в виде OctetStream </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>bool Результат обработки запроса</para>
+</formalpara>
+<para><link linkend="_todo_1_todo000033">Todo</link> 
+<para>Требуется реализация логики отправки протокола через GAuthClient </para>
+</para><note><title>Note</title>
+
+<para>В текущей реализации всегда возвращает false (заглушка) </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_matrixtoken_8hpp_source_1l00055">55</link> of file <link linkend="_matrixtoken_8hpp_source">matrixtoken.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_matrix_token_1a328616521dbc10643cfc652f9a93fd07"/><section>
+    <title>OnTimeout()</title>
+<indexterm><primary>OnTimeout</primary><secondary>GNET::MatrixToken</secondary></indexterm>
+<indexterm><primary>GNET::MatrixToken</primary><secondary>OnTimeout</secondary></indexterm>
+<para><computeroutput>void GNET::MatrixToken::OnTimeout ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Обработчик таймаута запроса </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>В текущей реализации не содержит логики </para>
+</note>
+<warning><title>Warning</title>
+
+<para>Реализован только на клиентской стороне </para>
+</warning>
+</para>
+<para>
+Definition at line <link linkend="_matrixtoken_8hpp_source_1l00104">104</link> of file <link linkend="_matrixtoken_8hpp_source">matrixtoken.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_matrix_token_1a784d6fa1f7f2a7fd6df54da5fb83c885"/><section>
+    <title>PostProcess()</title>
+<indexterm><primary>PostProcess</primary><secondary>GNET::MatrixToken</secondary></indexterm>
+<indexterm><primary>GNET::MatrixToken</primary><secondary>PostProcess</secondary></indexterm>
+<para><computeroutput>void GNET::MatrixToken::PostProcess (Manager::Session::ID proxy_sid, const OctetsStream &amp; osArg, const OctetsStream &amp; osRes)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Постобработка результатов RPC-запроса </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>proxy_sid</entry><entry>
+<para>Идентификатор прокси-сессии </para>
+</entry>
+                            </row>
+                            <row>
+<entry>osArg</entry><entry>
+<para>Входные аргументы запроса </para>
+</entry>
+                            </row>
+                            <row>
+<entry>osRes</entry><entry>
+<para>Результаты выполнения запроса</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <para><link linkend="_todo_1_todo000034">Todo</link> 
+<para>Требуется реализация обработки результатов </para>
+</para></para>
+<para>
+Definition at line <link linkend="_matrixtoken_8hpp_source_1l00084">84</link> of file <link linkend="_matrixtoken_8hpp_source">matrixtoken.hpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_matrixtoken_8hpp">matrixtoken.hpp</link></section>
+</section>

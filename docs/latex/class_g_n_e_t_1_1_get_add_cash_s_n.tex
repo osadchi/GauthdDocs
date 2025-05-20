@@ -1,0 +1,143 @@
+\doxysection{GNET\+::Get\+Add\+Cash\+SN Class Reference}
+\hypertarget{class_g_n_e_t_1_1_get_add_cash_s_n}{}\label{class_g_n_e_t_1_1_get_add_cash_s_n}\index{GNET::GetAddCashSN@{GNET::GetAddCashSN}}
+
+
+RPC-\/класс для обработки запросов генерации серийных номеров пополнения  
+
+
+
+
+{\ttfamily \#include $<$getaddcashsn.\+hpp$>$}
+
+
+
+Inheritance diagram for GNET\+::Get\+Add\+Cash\+SN\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{class_g_n_e_t_1_1_get_add_cash_s_n__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GNET\+::Get\+Add\+Cash\+SN\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{class_g_n_e_t_1_1_get_add_cash_s_n__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_g_n_e_t_1_1_get_add_cash_s_n_a06926b845f30285181cfa325f2ad5ba7}{Delivery}} (Manager\+::\+Session\+::\+ID proxy\+\_\+sid, const Octets\+Stream \&os\+Arg)
+\begin{DoxyCompactList}\small\item\em Обрабатывает доставку RPC-\/запроса \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_get_add_cash_s_n_a7876cc264b8756e9e120b7385581cf46}{Post\+Process}} (Manager\+::\+Session\+::\+ID proxy\+\_\+sid, const Octets\+Stream \&os\+Arg, const Octets\+Stream \&os\+Res)
+\begin{DoxyCompactList}\small\item\em Постобработка результатов RPC-\/запроса \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_get_add_cash_s_n_ab4ea4a38d4e7bb2d48c89bac5b299914}{On\+Timeout}} ()
+\begin{DoxyCompactList}\small\item\em Обработчик таймаута запроса \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+RPC-\/класс для обработки запросов генерации серийных номеров пополнения 
+
+Наследует функциональность Proxy\+Rpc и взаимодействует с базой данных через \doxylink{class_g_mysql_client}{GMysql\+Client}, а также отправляет ответы через \doxylink{class_g_n_e_t_1_1_g_auth_server}{GAuth\+Server}. 
+
+Definition at line \mbox{\hyperlink{getaddcashsn_8hpp_source_l00028}{28}} of file \mbox{\hyperlink{getaddcashsn_8hpp_source}{getaddcashsn.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_n_e_t_1_1_get_add_cash_s_n_a06926b845f30285181cfa325f2ad5ba7}\index{GNET::GetAddCashSN@{GNET::GetAddCashSN}!Delivery@{Delivery}}
+\index{Delivery@{Delivery}!GNET::GetAddCashSN@{GNET::GetAddCashSN}}
+\doxysubsubsection{\texorpdfstring{Delivery()}{Delivery()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_get_add_cash_s_n_a06926b845f30285181cfa325f2ad5ba7} 
+bool GNET\+::\+Get\+Add\+Cash\+SN\+::\+Delivery (\begin{DoxyParamCaption}\item[{Manager\+::\+Session\+::\+ID}]{proxy\+\_\+sid}{, }\item[{const Octets\+Stream \&}]{os\+Arg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Обрабатывает доставку RPC-\/запроса 
+
+
+\begin{DoxyParams}{Parameters}
+{\em proxy\+\_\+sid} & Идентификатор сессии прокси \\
+\hline
+{\em os\+Arg} & Входные данные в виде Octets\+Stream \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true если запрос успешно отправлен, false в случае ошибки 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+При ошибке отправляет спонсору результат ERR\+\_\+\+DELIVER\+\_\+\+SEND 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{getaddcashsn_8hpp_source_l00059}{59}} of file \mbox{\hyperlink{getaddcashsn_8hpp_source}{getaddcashsn.\+hpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_n_e_t_1_1_get_add_cash_s_n_a06926b845f30285181cfa325f2ad5ba7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_g_n_e_t_1_1_get_add_cash_s_n_ab4ea4a38d4e7bb2d48c89bac5b299914}\index{GNET::GetAddCashSN@{GNET::GetAddCashSN}!OnTimeout@{OnTimeout}}
+\index{OnTimeout@{OnTimeout}!GNET::GetAddCashSN@{GNET::GetAddCashSN}}
+\doxysubsubsection{\texorpdfstring{OnTimeout()}{OnTimeout()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_get_add_cash_s_n_ab4ea4a38d4e7bb2d48c89bac5b299914} 
+void GNET\+::\+Get\+Add\+Cash\+SN\+::\+On\+Timeout (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Обработчик таймаута запроса 
+
+\begin{DoxyNote}{Note}
+В текущей реализации не выполняет действий (закомментирован) 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{getaddcashsn_8hpp_source_l00115}{115}} of file \mbox{\hyperlink{getaddcashsn_8hpp_source}{getaddcashsn.\+hpp}}.
+
+\Hypertarget{class_g_n_e_t_1_1_get_add_cash_s_n_a7876cc264b8756e9e120b7385581cf46}\index{GNET::GetAddCashSN@{GNET::GetAddCashSN}!PostProcess@{PostProcess}}
+\index{PostProcess@{PostProcess}!GNET::GetAddCashSN@{GNET::GetAddCashSN}}
+\doxysubsubsection{\texorpdfstring{PostProcess()}{PostProcess()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_get_add_cash_s_n_a7876cc264b8756e9e120b7385581cf46} 
+void GNET\+::\+Get\+Add\+Cash\+SN\+::\+Post\+Process (\begin{DoxyParamCaption}\item[{Manager\+::\+Session\+::\+ID}]{proxy\+\_\+sid}{, }\item[{const Octets\+Stream \&}]{os\+Arg}{, }\item[{const Octets\+Stream \&}]{os\+Res}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Постобработка результатов RPC-\/запроса 
+
+
+\begin{DoxyParams}{Parameters}
+{\em proxy\+\_\+sid} & Идентификатор сессии прокси \\
+\hline
+{\em os\+Arg} & Входные аргументы \\
+\hline
+{\em os\+Res} & Результаты выполнения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Обновляет статус операции в БД, инициирует пополнение баланса при успехе 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{getaddcashsn_8hpp_source_l00079}{79}} of file \mbox{\hyperlink{getaddcashsn_8hpp_source}{getaddcashsn.\+hpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_n_e_t_1_1_get_add_cash_s_n_a7876cc264b8756e9e120b7385581cf46_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{getaddcashsn_8hpp}{getaddcashsn.\+hpp}}\end{DoxyCompactItemize}

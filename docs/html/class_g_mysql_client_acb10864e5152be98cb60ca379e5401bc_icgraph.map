@@ -1,5 +1,7 @@
 <map id="GMysqlClient::GetZoneid" name="GMysqlClient::GetZoneid">
-<area shape="rect" id="Node000001" title="Получить ID зоны" alt="" coords="232,13,400,40"/>
+<area shape="rect" id="Node000001" title="Получить ID зоны" alt="" coords="232,43,400,69"/>
 <area shape="rect" id="Node000002" href="$class_g_n_e_t_1_1_query_user_privilege.html#a9571b9d65b613b5d264da5df13d866f6" title="Обрабатывает запрос привилегий пользователя" alt="" coords="5,5,184,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,29,184,29,184,24,216,24"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,45,184,41,184,36,217,40"/>
+<area shape="rect" id="Node000003" href="$class_g_n_e_t_1_1_user_logout.html#a1c4f915638d14e969c5586fe58b9685b" title="Обработка запроса выхода пользователя на стороне сервера" alt="" coords="5,72,184,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="217,72,184,76,184,71,216,67"/>
 </map>

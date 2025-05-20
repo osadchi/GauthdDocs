@@ -1,0 +1,70 @@
+\doxysection{D\+:/pwsrc2.0/docs/gauthd/matrixtoken.hpp}
+\hypertarget{matrixtoken_8hpp_source}{}\label{matrixtoken_8hpp_source}\mbox{\hyperlink{matrixtoken_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00014}00014\ \textcolor{preprocessor}{\#ifndef\ \_\_GNET\_MATRIXTOKEN\_HPP}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00015}00015\ \textcolor{preprocessor}{\#define\ \_\_GNET\_MATRIXTOKEN\_HPP}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00017}00017\ \textcolor{preprocessor}{\#include\ "{}rpcdefs.h"{}}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00018}00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{callid_8hxx}{callid.hxx}}"{}}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00019}00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{state_8hxx}{state.hxx}}"{}}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00020}00020\ \textcolor{preprocessor}{\#include\ "{}matrixtokenarg"{}}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00021}00021\ \textcolor{preprocessor}{\#include\ "{}matrixtokenres"{}}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00022}00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gmysqlclient_8hpp}{gmysqlclient.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00024}00024\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_g_n_e_t}{GNET}}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00025}00025\ \{}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00036}\mbox{\hyperlink{class_g_n_e_t_1_1_matrix_token}{00036}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_n_e_t_1_1_matrix_token}{MatrixToken}}\ :\ \textcolor{keyword}{public}\ ProxyRpc}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00037}00037\ \{}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00039}00039\ \textcolor{preprocessor}{\#define\ RPC\_BASECLASS\ ProxyRpc}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00040}00040\ \textcolor{preprocessor}{\ \ \ \ \#include\ "{}matrixtoken"{}}\ \ \textcolor{comment}{//\ Включение\ RPC-\/специфичных\ макросов}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00041}00041\ \textcolor{preprocessor}{\#undef\ RPC\_BASECLASS}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00044}00044\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00055}\mbox{\hyperlink{class_g_n_e_t_1_1_matrix_token_afa6e24621cac8593c4e95ed22cc12338}{00055}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_g_n_e_t_1_1_matrix_token_afa6e24621cac8593c4e95ed22cc12338}{Delivery}}(Manager::Session::ID\ proxy\_sid,\ \textcolor{keyword}{const}\ OctetsStream\&\ osArg)}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00056}00056\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Реализация\ заглушки\ (TODO)}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00060}00060\ \textcolor{comment}{\ \ \ \ \ \ \ \ MatrixTokenArg\ arg;}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00061}00061\ \textcolor{comment}{\ \ \ \ \ \ \ \ osArg\ >>\ arg;}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00062}00062\ \textcolor{comment}{\ \ \ \ \ \ \ \ if(GAuthClient::GetInstance()-\/>SendProtocol(*this))}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00063}00063\ \textcolor{comment}{\ \ \ \ \ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00064}00064\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ return\ true;}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00065}00065\ \textcolor{comment}{\ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00066}00066\ \textcolor{comment}{\ \ \ \ \ \ \ \ else}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00067}00067\ \textcolor{comment}{\ \ \ \ \ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00068}00068\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ SetResult(MatrixTokenRes(ERR\_DELIVER\_SEND));}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00069}00069\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ SendToSponsor();}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00070}00070\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ return\ false;}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00071}00071\ \textcolor{comment}{\ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00072}00072\ \textcolor{comment}{\ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00073}00073\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00084}\mbox{\hyperlink{class_g_n_e_t_1_1_matrix_token_a784d6fa1f7f2a7fd6df54da5fb83c885}{00084}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_e_t_1_1_matrix_token_a784d6fa1f7f2a7fd6df54da5fb83c885}{PostProcess}}(Manager::Session::ID\ proxy\_sid,}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ OctetsStream\&\ osArg,}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ OctetsStream\&\ osRes)}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00087}00087\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO:\ Реализация\ постобработки}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00090}00090\ \textcolor{comment}{\ \ \ \ \ \ \ \ MatrixTokenArg\ arg;}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00091}00091\ \textcolor{comment}{\ \ \ \ \ \ \ \ osArg\ >>\ arg;}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00092}00092\ \textcolor{comment}{\ \ \ \ \ \ \ \ MatrixTokenRes\ res;}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00093}00093\ \textcolor{comment}{\ \ \ \ \ \ \ \ osRes\ >>\ res;}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00094}00094\ \textcolor{comment}{\ \ \ \ \ \ \ \ SetResult(\&res);}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00095}00095\ \textcolor{comment}{\ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00096}00096\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00104}\mbox{\hyperlink{class_g_n_e_t_1_1_matrix_token_a328616521dbc10643cfc652f9a93fd07}{00104}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_e_t_1_1_matrix_token_a328616521dbc10643cfc652f9a93fd07}{OnTimeout}}()}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00105}00105\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00106}00106\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO:\ Реализация\ для\ клиентской\ части}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00107}00107\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00108}00108\ \};}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00110}00110\ \};\ \textcolor{comment}{//\ namespace\ GNET}}
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{matrixtoken_8hpp_source_l00112}00112\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_GNET\_MATRIXTOKEN\_HPP}}
+
+\end{DoxyCode}

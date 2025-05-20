@@ -37,7 +37,7 @@ Collaboration diagram for GNET::DiscountAnnounce:<para>
 
 <para>Наследуется от базового класса Protocol и используется для рассылки информации об изменениях в системе скидок между серверами и клиентами. Содержит данные о маркетинговых акциях и специальных предложениях от продавцов.</para>
 
-<para><para><link linkend="_todo_1_todo000013">Todo</link> 
+<para><para><link linkend="_todo_1_todo000016">Todo</link> 
 <para>Реализовать обработку протокола в методе Process() </para>
 </para></para>
 <para>

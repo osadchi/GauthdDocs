@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_n_e_t_1_1_g_query_passwd" xml:lang="en-US">
+<title>GNET::GQueryPasswd Class Reference</title>
+<indexterm><primary>GNET::GQueryPasswd</primary></indexterm>
+<para>
+
+<para>Класс для обработки RPC-запросов проверки паролей </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;gquerypasswd.hpp&gt;</computeroutput>
+</para>
+Inheritance diagram for GNET::GQueryPasswd:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_g_query_passwd__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for GNET::GQueryPasswd:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_g_query_passwd__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_g_query_passwd_1a7601c8e80ac2d38efc76c8a023896d4e">Server</link> (Rpc::Data *argument, Rpc::Data *result, Manager *manager, Manager::Session::ID sid)</para>
+
+<para>Метод обработки запроса на стороне сервера </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_g_query_passwd_1a15c95c81230be5795439a7d9df0fe395">Client</link> (Rpc::Data *argument, Rpc::Data *result, Manager *manager, Manager::Session::ID sid)</para>
+
+<para>Метод обработки запроса на стороне клиента (заглушка) </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_g_query_passwd_1ae5668da612a602d47616af3169a73a41">OnTimeout</link> ()</para>
+
+<para>Обработчик таймаута запроса (клиентская часть) </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Класс для обработки RPC-запросов проверки паролей </para>
+
+
+
+<para>Наследует базовый функционал RPC и реализует логику обработки запросов на стороне сервера и клиента (клиентская часть пока не реализована). </para>
+<para>
+Definition at line <link linkend="_gquerypasswd_8hpp_source_1l00030">30</link> of file <link linkend="_gquerypasswd_8hpp_source">gquerypasswd.hpp</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_g_n_e_t_1_1_g_query_passwd_1a15c95c81230be5795439a7d9df0fe395"/><section>
+    <title>Client()</title>
+<indexterm><primary>Client</primary><secondary>GNET::GQueryPasswd</secondary></indexterm>
+<indexterm><primary>GNET::GQueryPasswd</primary><secondary>Client</secondary></indexterm>
+<para><computeroutput>void GNET::GQueryPasswd::Client (Rpc::Data * argument, Rpc::Data * result, Manager * manager, Manager::Session::ID sid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Метод обработки запроса на стороне клиента (заглушка) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>argument</entry><entry>
+<para>Входные данные </para>
+</entry>
+                            </row>
+                            <row>
+<entry>out</entry><entry>result</entry><entry>
+<para>Выходные данные </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>manager</entry><entry>
+<para>Менеджер сессий </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>sid</entry><entry>
+<para>Идентификатор сессии </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <para><link linkend="_todo_1_todo000025">Todo</link> 
+<para>Реализовать клиентскую обработку </para>
+</para></para>
+<para>
+Definition at line <link linkend="_gquerypasswd_8hpp_source_1l00090">90</link> of file <link linkend="_gquerypasswd_8hpp_source">gquerypasswd.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_g_query_passwd_1ae5668da612a602d47616af3169a73a41"/><section>
+    <title>OnTimeout()</title>
+<indexterm><primary>OnTimeout</primary><secondary>GNET::GQueryPasswd</secondary></indexterm>
+<indexterm><primary>GNET::GQueryPasswd</primary><secondary>OnTimeout</secondary></indexterm>
+<para><computeroutput>void GNET::GQueryPasswd::OnTimeout ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Обработчик таймаута запроса (клиентская часть) </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>В текущей реализации не используется </para>
+</note>
+<para><link linkend="_todo_1_todo000026">Todo</link> 
+<para>Реализовать обработку таймаутов для клиента </para>
+</para></para>
+<para>
+Definition at line <link linkend="_gquerypasswd_8hpp_source_1l00102">102</link> of file <link linkend="_gquerypasswd_8hpp_source">gquerypasswd.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_g_query_passwd_1a7601c8e80ac2d38efc76c8a023896d4e"/><section>
+    <title>Server()</title>
+<indexterm><primary>Server</primary><secondary>GNET::GQueryPasswd</secondary></indexterm>
+<indexterm><primary>GNET::GQueryPasswd</primary><secondary>Server</secondary></indexterm>
+<para><computeroutput>void GNET::GQueryPasswd::Server (Rpc::Data * argument, Rpc::Data * result, Manager * manager, Manager::Session::ID sid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Метод обработки запроса на стороне сервера </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>argument</entry><entry>
+<para>Входные данные запроса (GQueryPasswdArg) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>out</entry><entry>result</entry><entry>
+<para>Выходные данные ответа (GQueryPasswdRes) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>manager</entry><entry>
+<para>Менеджер сессий </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>sid</entry><entry>
+<para>Идентификатор сессии</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                Выполняет следующие действия:<orderedlist>
+<listitem>
+<para>Преобразует account в userid</para>
+</listitem><listitem>
+<para>Проверяет валидность userid (должен быть кратен 16 и не нулевой)</para>
+</listitem><listitem>
+<para>Генерирует MD5-хеш на основе account и password</para>
+</listitem><listitem>
+<para>Заполняет структуру ответа </para>
+</listitem></orderedlist>
+</para>
+<para>
+Definition at line <link linkend="_gquerypasswd_8hpp_source_1l00050">50</link> of file <link linkend="_gquerypasswd_8hpp_source">gquerypasswd.hpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_gquerypasswd_8hpp">gquerypasswd.hpp</link></section>
+</section>

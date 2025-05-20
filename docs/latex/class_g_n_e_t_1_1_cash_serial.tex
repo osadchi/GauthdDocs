@@ -1,0 +1,147 @@
+\doxysection{GNET\+::Cash\+Serial Class Reference}
+\hypertarget{class_g_n_e_t_1_1_cash_serial}{}\label{class_g_n_e_t_1_1_cash_serial}\index{GNET::CashSerial@{GNET::CashSerial}}
+
+
+Прокси-\/класс для обработки RPC-\/запросов денежных серий  
+
+
+
+
+{\ttfamily \#include $<$cashserial.\+hpp$>$}
+
+
+
+Inheritance diagram for GNET\+::Cash\+Serial\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{class_g_n_e_t_1_1_cash_serial__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GNET\+::Cash\+Serial\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{class_g_n_e_t_1_1_cash_serial__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_g_n_e_t_1_1_cash_serial_a03f2b9373bf375c22ece6bc72da361ac}{Delivery}} (Manager\+::\+Session\+::\+ID proxy\+\_\+sid, const Octets\+Stream \&os\+Arg)
+\begin{DoxyCompactList}\small\item\em Отправка запроса на сервер аутентификации \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_cash_serial_a624684760028d37c85f24cc86667b84e}{Post\+Process}} (Manager\+::\+Session\+::\+ID proxy\+\_\+sid, const Octets\+Stream \&os\+Arg, const Octets\+Stream \&os\+Res)
+\begin{DoxyCompactList}\small\item\em Постобработка полученного ответа \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_cash_serial_a7d6240470d85e658fbb1719b98fd9737}{On\+Timeout}} ()
+\begin{DoxyCompactList}\small\item\em Обработчик таймаута запроса \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Прокси-\/класс для обработки RPC-\/запросов денежных серий 
+
+@inherits Proxy\+Rpc
+
+\begin{DoxyNote}{Note}
+Автоматически генерирует базовый RPC-\/функционал через макрос RPC\+\_\+\+BASECLASS. Для работы требует подключения реализации cashserial (сгенерированной RPC-\/системой) 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{cashserial_8hpp_source_l00035}{35}} of file \mbox{\hyperlink{cashserial_8hpp_source}{cashserial.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_n_e_t_1_1_cash_serial_a03f2b9373bf375c22ece6bc72da361ac}\index{GNET::CashSerial@{GNET::CashSerial}!Delivery@{Delivery}}
+\index{Delivery@{Delivery}!GNET::CashSerial@{GNET::CashSerial}}
+\doxysubsubsection{\texorpdfstring{Delivery()}{Delivery()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_cash_serial_a03f2b9373bf375c22ece6bc72da361ac} 
+bool GNET\+::\+Cash\+Serial\+::\+Delivery (\begin{DoxyParamCaption}\item[{Manager\+::\+Session\+::\+ID}]{proxy\+\_\+sid}{, }\item[{const Octets\+Stream \&}]{os\+Arg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Отправка запроса на сервер аутентификации 
+
+
+\begin{DoxyParams}{Parameters}
+{\em proxy\+\_\+sid} & Идентификатор прокси-\/сессии \\
+\hline
+{\em os\+Arg} & Поток с сериализованными аргументами типа Cash\+Serial\+Arg \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ запрос успешно отправлен, 
+
+false -\/ ошибка отправки, результат установлен в ERR\+\_\+\+DELIVER\+\_\+\+SEND
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000013}{Todo}}]Реализовать десериализацию аргументов (раскомментировать код) \end{DoxyRefDesc}
+\begin{DoxyNote}{Note}
+При ошибке автоматически отправляет результат спонсору 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{cashserial_8hpp_source_l00053}{53}} of file \mbox{\hyperlink{cashserial_8hpp_source}{cashserial.\+hpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_n_e_t_1_1_cash_serial_a03f2b9373bf375c22ece6bc72da361ac_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_g_n_e_t_1_1_cash_serial_a7d6240470d85e658fbb1719b98fd9737}\index{GNET::CashSerial@{GNET::CashSerial}!OnTimeout@{OnTimeout}}
+\index{OnTimeout@{OnTimeout}!GNET::CashSerial@{GNET::CashSerial}}
+\doxysubsubsection{\texorpdfstring{OnTimeout()}{OnTimeout()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_cash_serial_a7d6240470d85e658fbb1719b98fd9737} 
+void GNET\+::\+Cash\+Serial\+::\+On\+Timeout (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Обработчик таймаута запроса 
+
+\begin{DoxyWarning}{Warning}
+Реализация требуется только на клиентской стороне 
+\end{DoxyWarning}
+
+
+Definition at line \mbox{\hyperlink{cashserial_8hpp_source_l00098}{98}} of file \mbox{\hyperlink{cashserial_8hpp_source}{cashserial.\+hpp}}.
+
+\Hypertarget{class_g_n_e_t_1_1_cash_serial_a624684760028d37c85f24cc86667b84e}\index{GNET::CashSerial@{GNET::CashSerial}!PostProcess@{PostProcess}}
+\index{PostProcess@{PostProcess}!GNET::CashSerial@{GNET::CashSerial}}
+\doxysubsubsection{\texorpdfstring{PostProcess()}{PostProcess()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_cash_serial_a624684760028d37c85f24cc86667b84e} 
+void GNET\+::\+Cash\+Serial\+::\+Post\+Process (\begin{DoxyParamCaption}\item[{Manager\+::\+Session\+::\+ID}]{proxy\+\_\+sid}{, }\item[{const Octets\+Stream \&}]{os\+Arg}{, }\item[{const Octets\+Stream \&}]{os\+Res}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Постобработка полученного ответа 
+
+
+\begin{DoxyParams}{Parameters}
+{\em proxy\+\_\+sid} & Идентификатор прокси-\/сессии \\
+\hline
+{\em os\+Arg} & Поток с исходными аргументами запроса \\
+\hline
+{\em os\+Res} & Поток с полученными результатами\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+После модификации результатов необходимо вызвать Set\+Result() 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+Не забудьте раскомментировать код обработки аргументов 
+\end{DoxyWarning}
+
+
+Definition at line \mbox{\hyperlink{cashserial_8hpp_source_l00081}{81}} of file \mbox{\hyperlink{cashserial_8hpp_source}{cashserial.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{cashserial_8hpp}{cashserial.\+hpp}}\end{DoxyCompactItemize}

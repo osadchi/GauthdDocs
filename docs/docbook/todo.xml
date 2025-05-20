@@ -38,17 +38,49 @@
 
 <para><anchor xml:id="_todo_1_todo000012"/>Реализовать логику обработки запроса.  </para>
 </listitem>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_cash_serial_1a03f2b9373bf375c22ece6bc72da361ac">GNET::CashSerial::Delivery</link>  (Manager::Session::ID proxy_sid, const OctetsStream &amp;osArg)</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000013"/>Реализовать десериализацию аргументов (раскомментировать код)  </para>
+</listitem>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_coupon_exchange_1a2724fc3e9de704a29e7c3404e8e5851d">GNET::CouponExchange::Client</link>  (Rpc::Data *argument, Rpc::Data *result, Manager *manager, Manager::Session::ID sid)</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000014"/>Требуется реализация клиентской части обработки.  </para>
+</listitem>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_coupon_exchange_1a6cb455f6c3cb08734cc8238c540161c4">GNET::CouponExchange::OnTimeout</link>  ()</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000015"/>Требуется реализация обработки таймаута.  </para>
+</listitem>
 <varlistentry><term>Class <link linkend="_class_g_n_e_t_1_1_discount_announce">GNET::DiscountAnnounce</link>  </term></varlistentry>
 <listitem>
-<para><anchor xml:id="_todo_1_todo000013"/>Реализовать обработку протокола в методе Process()  </para>
+<para><anchor xml:id="_todo_1_todo000016"/>Реализовать обработку протокола в методе Process()  </para>
 </listitem>
 <varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_game2_a_u_1a778ef1862d9abe838530c75c45882fb7">GNET::Game2AU::Process</link>  (Manager *manager, Manager::Session::ID sid)</term></varlistentry>
 <listitem>
-<para><anchor xml:id="_todo_1_todo000014"/>Требуется реализация логики обработки сообщения  </para>
+<para><anchor xml:id="_todo_1_todo000017"/>Требуется реализация логики обработки сообщения  </para>
+</listitem>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_get_user_coupon_1a6425acba2965486d055a994213699122">GNET::GetUserCoupon::Client</link>  (Rpc::Data *argument, Rpc::Data *result, Manager *manager, Manager::Session::ID sid)</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000020"/>Реализовать клиентскую логику обработки ответа.  </para>
+</listitem>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_get_user_coupon_1aaf7a0b7d88805c3071a892a7eb45e7d6">GNET::GetUserCoupon::OnTimeout</link>  ()</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000021"/>Реализовать реакцию на таймаут (например, повторный запрос или уведомление).  </para>
+</listitem>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_get_user_coupon_1a6fe67ac1c3e044ed8f94f8299894ed4b">GNET::GetUserCoupon::Server</link>  (Rpc::Data *argument, Rpc::Data *result, Manager *manager, Manager::Session::ID sid)</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000019"/>Реализовать логику преобразования аргументов и формирования ответа. Сейчас аргументы и результаты закомментированы.  </para>
+</listitem>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_g_query_passwd_1a15c95c81230be5795439a7d9df0fe395">GNET::GQueryPasswd::Client</link>  (Rpc::Data *argument, Rpc::Data *result, Manager *manager, Manager::Session::ID sid)</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000025"/>Реализовать клиентскую обработку  </para>
+</listitem>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_g_query_passwd_1ae5668da612a602d47616af3169a73a41">GNET::GQueryPasswd::OnTimeout</link>  ()</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000026"/>Реализовать обработку таймаутов для клиента  </para>
 </listitem>
 <varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_key_exchange_1a59d9dff58cb00261d155d622d24af391">GNET::KeyExchange::Process</link>  (Manager *manager, Manager::Session::ID sid)</term></varlistentry>
 <listitem>
-<para><anchor xml:id="_todo_1_todo000019"/>Реализовать обработку обмена ключами </para>
+<para><anchor xml:id="_todo_1_todo000027"/>Реализовать обработку обмена ключами </para>
 
 <para></para>
 
@@ -58,21 +90,41 @@
 
 <para>Реализовать обработку ошибок  </para>
 </listitem>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_matrix_passwd2_1a33af4c45fa48d7bf6dc251ab5178f3e5">GNET::MatrixPasswd2::Delivery</link>  (Manager::Session::ID proxy_sid, const OctetsStream &amp;osArg)</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000030"/>Требуется реализация логики отправки протокола аутентификации  </para>
+</listitem>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_matrix_passwd2_1abd67d4f58dcf3a3a917209810ead7a7c">GNET::MatrixPasswd2::OnTimeout</link>  ()</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000032"/>Реализовать логику обработки таймаута  </para>
+</listitem>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_matrix_passwd2_1a433faf7b2ff9ec3e3e7cf91a8fc7fb8d">GNET::MatrixPasswd2::PostProcess</link>  (Manager::Session::ID proxy_sid, const OctetsStream &amp;osArg, const OctetsStream &amp;osRes)</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000031"/>Требуется реализация обработки результатов  </para>
+</listitem>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_matrix_token_1afa6e24621cac8593c4e95ed22cc12338">GNET::MatrixToken::Delivery</link>  (Manager::Session::ID proxy_sid, const OctetsStream &amp;osArg)</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000033"/>Требуется реализация логики отправки протокола через GAuthClient  </para>
+</listitem>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_matrix_token_1a784d6fa1f7f2a7fd6df54da5fb83c885">GNET::MatrixToken::PostProcess</link>  (Manager::Session::ID proxy_sid, const OctetsStream &amp;osArg, const OctetsStream &amp;osRes)</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000034"/>Требуется реализация обработки результатов  </para>
+</listitem>
 <varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_s_s_o_get_ticket_req_1a7d2f631129750466c71a3c53910adad9">GNET::SSOGetTicketReq::Process</link>  (Manager *manager, Manager::Session::ID sid)</term></varlistentry>
 <listitem>
-<para><anchor xml:id="_todo_1_todo000023"/>Требуется реализация логики обработки запроса </para>
+<para><anchor xml:id="_todo_1_todo000036"/>Требуется реализация логики обработки запроса </para>
 </listitem>
 <varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_status_announce_1ae5a6d07d7f9047b0d0a53cce09ed94b9">GNET::StatusAnnounce::Process</link>  (Manager *manager, Manager::Session::ID sid)</term></varlistentry>
 <listitem>
-<para><anchor xml:id="_todo_1_todo000024"/>Реализовать обработку ошибок при работе с картой пользователей  </para>
+<para><anchor xml:id="_todo_1_todo000037"/>Реализовать обработку ошибок при работе с картой пользователей  </para>
 </listitem>
 <varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_sys_send_mail3___re_1ac8efa0a3f269852ac072bef063dbfc81">GNET::SysSendMail3_Re::Process</link>  (Manager *manager, Manager::Session::ID sid)</term></varlistentry>
 <listitem>
-<para><anchor xml:id="_todo_1_todo000025"/>Требуется реализация логики обработки  </para>
+<para><anchor xml:id="_todo_1_todo000038"/>Требуется реализация логики обработки  </para>
 </listitem>
 <varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_sys_send_mail___re_1aee9b57bf0d0707a080303a041e0dab0d">GNET::SysSendMail_Re::Process</link>  (Manager *manager, Manager::Session::ID sid)</term></varlistentry>
 <listitem>
-<para><anchor xml:id="_todo_1_todo000026"/>Реализовать логику обработки ответа от сервера. Сейчас метод содержит заглушку и требует реализации обработки:<itemizedlist>
+<para><anchor xml:id="_todo_1_todo000039"/>Реализовать логику обработки ответа от сервера. Сейчас метод содержит заглушку и требует реализации обработки:<itemizedlist>
 <listitem>
 <para>Анализ кода ответа</para>
 </listitem><listitem>
@@ -86,11 +138,31 @@
 </listitem>
 <varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_trans_buy_point_1aad328b963d528b2d8a695e3793c73529">GNET::TransBuyPoint::Process</link>  (Manager *manager, Manager::Session::ID sid)</term></varlistentry>
 <listitem>
-<para><anchor xml:id="_todo_1_todo000027"/>Реализовать обработку транзакций, включая проверку данных, выполнение платежа и обновление состояния системы  </para>
+<para><anchor xml:id="_todo_1_todo000040"/>Реализовать обработку транзакций, включая проверку данных, выполнение платежа и обновление состояния системы  </para>
+</listitem>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_user_login2_1a7d61288662e68a7168dbb4d026483086">GNET::UserLogin2::Delivery</link>  (Manager::Session::ID proxy_sid, const OctetsStream &amp;osArg)</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000042"/>Реализовать обработку запроса через GAuthClient  </para>
+</listitem>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_user_login2_1a7d87dc03996960a49065f50388d624ef">GNET::UserLogin2::OnTimeout</link>  ()</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000044"/>Реализовать обработку таймаутов для клиентской части  </para>
+</listitem>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_user_login2_1ac662ac896d30d4f07db6a465fbb20ca3">GNET::UserLogin2::PostProcess</link>  (Manager::Session::ID proxy_sid, const OctetsStream &amp;osArg, const OctetsStream &amp;osRes)</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000043"/>Реализовать обработку результатов авторизации  </para>
+</listitem>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_user_logout_1a3367c6ce9755247ab27fd85957a50ebf">GNET::UserLogout::Client</link>  (Rpc::Data *argument, Rpc::Data *result, Manager *manager, Manager::Session::ID sid)</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000045"/>Реализовать клиентскую часть логики  </para>
+</listitem>
+<varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_user_logout_1ae14b8440e018c0aabe72b1843f292753">GNET::UserLogout::OnTimeout</link>  ()</term></varlistentry>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000046"/>Реализовать обработку таймаутов для клиентской части  </para>
 </listitem>
 <varlistentry><term>Member <link linkend="_class_g_n_e_t_1_1_verify_master___re_1a549010699fc4534896e58ff3aef11b9d">GNET::VerifyMaster_Re::Process</link>  (Manager *manager, Manager::Session::ID sid)</term></varlistentry>
 <listitem>
-<para><anchor xml:id="_todo_1_todo000028"/>Реализовать обработку ответа верификации </para>
+<para><anchor xml:id="_todo_1_todo000047"/>Реализовать обработку ответа верификации </para>
 </listitem>
 </variablelist>
 </para>

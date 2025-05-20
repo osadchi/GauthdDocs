@@ -1,0 +1,145 @@
+\doxysection{GNET\+::User\+Logout Class Reference}
+\hypertarget{class_g_n_e_t_1_1_user_logout}{}\label{class_g_n_e_t_1_1_user_logout}\index{GNET::UserLogout@{GNET::UserLogout}}
+
+
+RPC-\/класс для обработки запросов выхода пользователя  
+
+
+
+
+{\ttfamily \#include $<$userlogout.\+hpp$>$}
+
+
+
+Inheritance diagram for GNET\+::User\+Logout\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=179pt]{class_g_n_e_t_1_1_user_logout__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GNET\+::User\+Logout\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=179pt]{class_g_n_e_t_1_1_user_logout__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_user_logout_a1c4f915638d14e969c5586fe58b9685b}{Server}} (Rpc\+::\+Data \texorpdfstring{$\ast$}{*}argument, Rpc\+::\+Data \texorpdfstring{$\ast$}{*}result, Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)
+\begin{DoxyCompactList}\small\item\em Обработка запроса выхода пользователя на стороне сервера \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_user_logout_a3367c6ce9755247ab27fd85957a50ebf}{Client}} (Rpc\+::\+Data \texorpdfstring{$\ast$}{*}argument, Rpc\+::\+Data \texorpdfstring{$\ast$}{*}result, Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)
+\begin{DoxyCompactList}\small\item\em Обработка запроса выхода на стороне клиента (заглушка) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_user_logout_ae14b8440e018c0aabe72b1843f292753}{On\+Timeout}} ()
+\begin{DoxyCompactList}\small\item\em Обработчик таймаута RPC-\/запроса \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+RPC-\/класс для обработки запросов выхода пользователя 
+
+Наследует функциональность базового RPC-\/класса и реализует логику обработки выхода пользователя на стороне сервера и клиента 
+
+Definition at line \mbox{\hyperlink{userlogout_8hpp_source_l00027}{27}} of file \mbox{\hyperlink{userlogout_8hpp_source}{userlogout.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_n_e_t_1_1_user_logout_a3367c6ce9755247ab27fd85957a50ebf}\index{GNET::UserLogout@{GNET::UserLogout}!Client@{Client}}
+\index{Client@{Client}!GNET::UserLogout@{GNET::UserLogout}}
+\doxysubsubsection{\texorpdfstring{Client()}{Client()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_user_logout_a3367c6ce9755247ab27fd85957a50ebf} 
+void GNET\+::\+User\+Logout\+::\+Client (\begin{DoxyParamCaption}\item[{Rpc\+::\+Data \texorpdfstring{$\ast$}{*}}]{argument}{, }\item[{Rpc\+::\+Data \texorpdfstring{$\ast$}{*}}]{result}{, }\item[{Manager \texorpdfstring{$\ast$}{*}}]{manager}{, }\item[{Manager\+::\+Session\+::\+ID}]{sid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Обработка запроса выхода на стороне клиента (заглушка) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em argument} & Входные данные RPC-\/запроса \\
+\hline
+\mbox{\texttt{ out}}  & {\em result} & Результаты выполнения \\
+\hline
+\mbox{\texttt{ in}}  & {\em manager} & Менеджер сессий \\
+\hline
+\mbox{\texttt{ in}}  & {\em sid} & Идентификатор сессии\\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+В текущей реализации не выполняет действий 
+\end{DoxyWarning}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000045}{Todo}}]Реализовать клиентскую часть логики \end{DoxyRefDesc}
+
+
+Definition at line \mbox{\hyperlink{userlogout_8hpp_source_l00087}{87}} of file \mbox{\hyperlink{userlogout_8hpp_source}{userlogout.\+hpp}}.
+
+\Hypertarget{class_g_n_e_t_1_1_user_logout_ae14b8440e018c0aabe72b1843f292753}\index{GNET::UserLogout@{GNET::UserLogout}!OnTimeout@{OnTimeout}}
+\index{OnTimeout@{OnTimeout}!GNET::UserLogout@{GNET::UserLogout}}
+\doxysubsubsection{\texorpdfstring{OnTimeout()}{OnTimeout()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_user_logout_ae14b8440e018c0aabe72b1843f292753} 
+void GNET\+::\+User\+Logout\+::\+On\+Timeout (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Обработчик таймаута RPC-\/запроса 
+
+\begin{DoxyNote}{Note}
+В текущей реализации не выполняет действий 
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000046}{Todo}}]Реализовать обработку таймаутов для клиентской части \end{DoxyRefDesc}
+
+
+Definition at line \mbox{\hyperlink{userlogout_8hpp_source_l00100}{100}} of file \mbox{\hyperlink{userlogout_8hpp_source}{userlogout.\+hpp}}.
+
+\Hypertarget{class_g_n_e_t_1_1_user_logout_a1c4f915638d14e969c5586fe58b9685b}\index{GNET::UserLogout@{GNET::UserLogout}!Server@{Server}}
+\index{Server@{Server}!GNET::UserLogout@{GNET::UserLogout}}
+\doxysubsubsection{\texorpdfstring{Server()}{Server()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_user_logout_a1c4f915638d14e969c5586fe58b9685b} 
+void GNET\+::\+User\+Logout\+::\+Server (\begin{DoxyParamCaption}\item[{Rpc\+::\+Data \texorpdfstring{$\ast$}{*}}]{argument}{, }\item[{Rpc\+::\+Data \texorpdfstring{$\ast$}{*}}]{result}{, }\item[{Manager \texorpdfstring{$\ast$}{*}}]{manager}{, }\item[{Manager\+::\+Session\+::\+ID}]{sid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Обработка запроса выхода пользователя на стороне сервера 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em argument} & Указатель на входные данные RPC-\/запроса (User\+Logout\+Arg) \\
+\hline
+\mbox{\texttt{ out}}  & {\em result} & Указатель на структуру для результатов (User\+Logout\+Res) \\
+\hline
+\mbox{\texttt{ in}}  & {\em manager} & Указатель на менеджер сессий \\
+\hline
+\mbox{\texttt{ in}}  & {\em sid} & Идентификатор сессии\\
+\hline
+\end{DoxyParams}
+Выполняет\+:
+\begin{DoxyEnumerate}
+\item Обновление статуса пользователя в базе данных
+\item Запись информации о выходе в лог
+\item Очистку связанных данных
+\item Обновление карты активных пользователей 
+\end{DoxyEnumerate}
+
+Definition at line \mbox{\hyperlink{userlogout_8hpp_source_l00048}{48}} of file \mbox{\hyperlink{userlogout_8hpp_source}{userlogout.\+hpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_n_e_t_1_1_user_logout_a1c4f915638d14e969c5586fe58b9685b_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{userlogout_8hpp}{userlogout.\+hpp}}\end{DoxyCompactItemize}

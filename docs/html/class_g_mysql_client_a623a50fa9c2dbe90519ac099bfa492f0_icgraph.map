@@ -1,5 +1,7 @@
 <map id="GMysqlClient::GetAid" name="GMysqlClient::GetAid">
-<area shape="rect" id="Node000001" title="Получить ID приложения" alt="" coords="253,5,401,32"/>
+<area shape="rect" id="Node000001" title="Получить ID приложения" alt="" coords="253,31,401,57"/>
 <area shape="rect" id="Node000002" href="$class_g_n_e_t_1_1_add_cash___re.html#a4ed01ac8071caf53c9a4031c12cbda6e" title="Основной метод обработки протокола." alt="" coords="5,5,205,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="237,21,205,21,205,16,237,16"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="237,36,205,33,205,27,238,31"/>
+<area shape="rect" id="Node000003" href="$class_g_n_e_t_1_1_user_logout.html#a1c4f915638d14e969c5586fe58b9685b" title="Обработка запроса выхода пользователя на стороне сервера" alt="" coords="16,56,194,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="238,57,195,62,194,56,237,52"/>
 </map>

@@ -1,5 +1,7 @@
 <map id="GMysqlClient::AddrToStr" name="GMysqlClient::AddrToStr">
-<area shape="rect" id="Node000001" title="Преобразование IP адреса в строку" alt="" coords="242,5,408,32"/>
-<area shape="rect" id="Node000002" href="$class_g_mysql_client.html#a8875011e1658a40cefc82eac737bba58" title="Логирование действия входа/выхода (специальный функционал)" alt="" coords="5,5,194,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="226,21,194,21,194,16,226,16"/>
+<area shape="rect" id="Node000001" title="Преобразование IP адреса в строку" alt="" coords="468,5,634,32"/>
+<area shape="rect" id="Node000002" href="$class_g_mysql_client.html#a8875011e1658a40cefc82eac737bba58" title="Логирование действия входа/выхода (специальный функционал)" alt="" coords="232,5,420,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="452,21,420,21,420,16,452,16"/>
+<area shape="rect" id="Node000003" href="$class_g_n_e_t_1_1_user_logout.html#a1c4f915638d14e969c5586fe58b9685b" title="Обработка запроса выхода пользователя на стороне сервера" alt="" coords="5,5,184,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="216,21,184,21,184,16,216,16"/>
 </map>

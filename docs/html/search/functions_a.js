@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['run_0',['Run',['../class_g_n_e_t_1_1_check_timer.html#afb7c8e11b1f82f73a44f2b6db53427e2',1,'GNET::CheckTimer']]]
+  ['querygmprivilege_0',['QueryGMPrivilege',['../class_g_mysql_client.html#aee26570bd0c44f31da836916cf77ec23',1,'GMysqlClient']]]
 ];

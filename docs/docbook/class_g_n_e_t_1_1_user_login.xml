@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_n_e_t_1_1_user_login" xml:lang="en-US">
+<title>GNET::UserLogin Class Reference</title>
+<indexterm><primary>GNET::UserLogin</primary></indexterm>
+<para>
+
+<para>Класс для обработки процедуры входа пользователя -сервис аутентификации </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;userlogin.hpp&gt;</computeroutput>
+</para>
+Inheritance diagram for GNET::UserLogin:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_user_login__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for GNET::UserLogin:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_user_login__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+
+<para>Класс для обработки процедуры входа пользователя -сервис аутентификации </para>
+
+
+
+<para>Наследует базовую функциональность RPC и добавляет специфичную обработку операций входа пользователя, включая взаимодействие с базой данных и управление сессиями </para>
+<para>
+Definition at line <link linkend="_userlogin_8hpp_source_1l00035">35</link> of file <link linkend="_userlogin_8hpp_source">userlogin.hpp</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_userlogin_8hpp">userlogin.hpp</link></section>
+</section>

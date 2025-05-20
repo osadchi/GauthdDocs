@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_matrixpasswd_8hpp_source" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/matrixpasswd.hpp</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_matrixpasswd_8hpp_source_1l00001"/>00001 
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00012"/>00012 
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00013"/>00013 <emphasis role="preprocessor">#ifndef&#32;__GNET_MATRIXPASSWD_HPP</emphasis>
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00014"/>00014 <emphasis role="preprocessor">#define&#32;__GNET_MATRIXPASSWD_HPP</emphasis>
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00015"/>00015 
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00016"/>00016 <emphasis role="preprocessor">#include&#32;&quot;rpcdefs.h&quot;</emphasis>
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00017"/>00017 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_callid_8hxx">callid.hxx</link>&quot;</emphasis>
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00018"/>00018 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_state_8hxx">state.hxx</link>&quot;</emphasis>
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00019"/>00019 <emphasis role="preprocessor">#include&#32;&quot;matrixpasswdarg&quot;</emphasis>
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00020"/>00020 <emphasis role="preprocessor">#include&#32;&quot;matrixpasswdres&quot;</emphasis>
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00021"/>00021 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_gmysqlclient_8hpp">gmysqlclient.hpp</link>&quot;</emphasis>
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00022"/>00022 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_gauthserver_8hpp">gauthserver.hpp</link>&quot;</emphasis>
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00023"/>00023 
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00025"/><link linkend="_matrixpasswd_8hpp_1aeb5f19cf92b439ff40d7572e0b0e2f39">00025</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_matrixpasswd_8hpp_1aeb5f19cf92b439ff40d7572e0b0e2f39">lib_sev_dump</link>(<emphasis role="keywordtype">void</emphasis>&#32;*Src,&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;len,&#32;<emphasis role="keywordtype">char</emphasis>*&#32;name);
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00026"/>00026 
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00027"/>00027 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_g_n_e_t">GNET</link>
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00028"/>00028 {
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00029"/>00029 
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00040"/><link linkend="_class_g_n_e_t_1_1_matrix_passwd">00040</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_g_n_e_t_1_1_matrix_passwd">MatrixPasswd</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;ProxyRpc
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00041"/>00041 {
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00042"/><link linkend="_matrixpasswd_8hpp_1ad33ee56a94384ada0aa3cf9315e88591">00042</link> <emphasis role="preprocessor">#define&#32;RPC_BASECLASS&#32;ProxyRpc&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00043"/>00043 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#include&#32;&quot;matrixpasswd&quot;</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00044"/>00044 <emphasis role="preprocessor">#undef&#32;RPC_BASECLASS</emphasis>
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00045"/>00045 
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00046"/>00046 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00053"/><link linkend="_class_g_n_e_t_1_1_matrix_passwd_1af45af4a5f03943d956586f3bf91b74c3">00053</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_matrix_passwd_1af45af4a5f03943d956586f3bf91b74c3">SendFailLogin</link>()
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00054"/>00054 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetResult(MatrixPasswdRes(ERR_INVALID_ACCOUNT));
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SendToSponsor();
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00058"/>00058 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00059"/>00059 
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00069"/><link linkend="_class_g_n_e_t_1_1_matrix_passwd_1a0f80330092cea479275f52d0aed196e2">00069</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_matrix_passwd_1a0f80330092cea479275f52d0aed196e2">SendAntibrut</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;ip)
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00070"/>00070 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;in_addr&#32;ip_t;
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ip_t.s_addr&#32;=&#32;(<emphasis role="keywordtype">unsigned</emphasis>&#32;long)ip;
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;UserIp&#32;=&#32;inet_ntoa(ip_t);
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;line[64];
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sprintf(line,&#32;<emphasis role="stringliteral">&quot;ipset&#32;add&#32;Antibrut&#32;%s&#32;2&gt;&amp;1&#32;&amp;&#32;\n&quot;</emphasis>,&#32;UserIp);
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;system(line);
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(line);
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetResult(MatrixPasswdRes(ERR_ACCOUNTLOCKED));
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SendToSponsor();
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00081"/>00081 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00082"/>00082 
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00095"/><link linkend="_class_g_n_e_t_1_1_matrix_passwd_1a96a9864bc0fe94677d1a2fcf0427b333">00095</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_matrix_passwd_1a96a9864bc0fe94677d1a2fcf0427b333">Delivery</link>(Manager::Session::ID&#32;proxy_sid,&#32;<emphasis role="keyword">const</emphasis>&#32;OctetsStream&amp;&#32;osArg)
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00096"/>00096 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;MatrixPasswdArg&#32;arg;
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;osArg&#32;&gt;&gt;&#32;arg;
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00099"/>00099 
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_mysql_client">GMysqlClient</link>&#32;*db&#32;=&#32;<link linkend="_class_g_mysql_client_1a87a90c9a2b827da79f451728f4109850">GMysqlClient::GetInstance</link>();
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(db-&gt;<link linkend="_class_g_mysql_client_1abe6e61839f3cca64f864f4a9078b0ba5">AddAntibrutUser</link>(arg.loginip)&#32;&gt;&#32;8)
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_matrix_passwd_1a0f80330092cea479275f52d0aed196e2">SendAntibrut</link>(arg.loginip);
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00103"/>00103 
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;lsize&#32;=&#32;arg.account.size();
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!lsize&#32;||&#32;lsize&#32;&gt;&#32;32&#32;||
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;!db-&gt;<link linkend="_class_g_mysql_client_1a477a9db403d718b8ea1fb2f3e8ba2561">ValidLogin</link>(arg.account.begin(),&#32;lsize)&#32;||
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;!db-&gt;<link linkend="_class_g_mysql_client_1a50e93bdf74da424077e864ba8bbfe42c">IsActive</link>())
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_matrix_passwd_1af45af4a5f03943d956586f3bf91b74c3">SendFailLogin</link>();
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00109"/>00109 
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;userid&#32;=&#32;0;
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;passwd[64]&#32;=&#32;{0};
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;login[64]&#32;=&#32;{0};
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy(login,&#32;arg.account.begin(),&#32;lsize);
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00114"/>00114 
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;db-&gt;<link linkend="_class_g_mysql_client_1ae74167391b7e749c390203ea4f0ec5e5">MatrixPasswd</link>(userid,&#32;login,&#32;passwd,&#32;arg.loginip);
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!userid&#32;||&#32;userid&#32;%&#32;16)
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_matrix_passwd_1af45af4a5f03943d956586f3bf91b74c3">SendFailLogin</link>();
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00118"/>00118 
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;MatrixPasswdRes&#32;res;
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;res.retcode&#32;=&#32;0;
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;res.userid&#32;=&#32;userid;
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;res.algorithm&#32;=&#32;0;
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;res.response.replace(passwd,&#32;16);
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;res.matrix.clear();
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetResult(&amp;res);
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SendToSponsor();
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00128"/>00128 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00129"/>00129 
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00136"/><link linkend="_class_g_n_e_t_1_1_matrix_passwd_1a1edb3a11cca6f15d1f9425f785c90ac3">00136</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_matrix_passwd_1a1edb3a11cca6f15d1f9425f785c90ac3">PostProcess</link>(Manager::Session::ID&#32;proxy_sid,&#32;<emphasis role="keyword">const</emphasis>&#32;OctetsStream&amp;&#32;osArg,&#32;<emphasis role="keyword">const</emphasis>&#32;OctetsStream&amp;&#32;osRes)
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00137"/>00137 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00138"/>00138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;TODO&#32;Реализовать&#32;при&#32;необходимости</emphasis>
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00139"/>00139 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00140"/>00140 
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00144"/><link linkend="_class_g_n_e_t_1_1_matrix_passwd_1a49e518e124edd52c62c64df91a25834e">00144</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_matrix_passwd_1a49e518e124edd52c62c64df91a25834e">OnTimeout</link>()
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00145"/>00145 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00146"/>00146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;TODO&#32;Реализовать&#32;для&#32;клиентской&#32;части</emphasis>
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00147"/>00147 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00148"/>00148 };
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00149"/>00149 
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00150"/>00150 }&#32;<emphasis role="comment">//&#32;namespace&#32;GNET</emphasis>
+<anchor xml:id="_matrixpasswd_8hpp_source_1l00151"/>00151 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

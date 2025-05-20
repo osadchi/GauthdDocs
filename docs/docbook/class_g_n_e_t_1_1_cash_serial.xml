@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_n_e_t_1_1_cash_serial" xml:lang="en-US">
+<title>GNET::CashSerial Class Reference</title>
+<indexterm><primary>GNET::CashSerial</primary></indexterm>
+<para>
+
+<para>Прокси-класс для обработки RPC-запросов денежных серий </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;cashserial.hpp&gt;</computeroutput>
+</para>
+Inheritance diagram for GNET::CashSerial:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_cash_serial__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for GNET::CashSerial:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_cash_serial__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_g_n_e_t_1_1_cash_serial_1a03f2b9373bf375c22ece6bc72da361ac">Delivery</link> (Manager::Session::ID proxy_sid, const OctetsStream &amp;osArg)</para>
+
+<para>Отправка запроса на сервер аутентификации </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_cash_serial_1a624684760028d37c85f24cc86667b84e">PostProcess</link> (Manager::Session::ID proxy_sid, const OctetsStream &amp;osArg, const OctetsStream &amp;osRes)</para>
+
+<para>Постобработка полученного ответа </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_cash_serial_1a7d6240470d85e658fbb1719b98fd9737">OnTimeout</link> ()</para>
+
+<para>Обработчик таймаута запроса </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Прокси-класс для обработки RPC-запросов денежных серий </para>
+
+
+
+<para>@inherits ProxyRpc</para>
+
+<para><note><title>Note</title>
+
+<para>Автоматически генерирует базовый RPC-функционал через макрос RPC_BASECLASS. Для работы требует подключения реализации cashserial (сгенерированной RPC-системой) </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_cashserial_8hpp_source_1l00035">35</link> of file <link linkend="_cashserial_8hpp_source">cashserial.hpp</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_g_n_e_t_1_1_cash_serial_1a03f2b9373bf375c22ece6bc72da361ac"/><section>
+    <title>Delivery()</title>
+<indexterm><primary>Delivery</primary><secondary>GNET::CashSerial</secondary></indexterm>
+<indexterm><primary>GNET::CashSerial</primary><secondary>Delivery</secondary></indexterm>
+<para><computeroutput>bool GNET::CashSerial::Delivery (Manager::Session::ID proxy_sid, const OctetsStream &amp; osArg)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Отправка запроса на сервер аутентификации </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>proxy_sid</entry><entry>
+<para>Идентификатор прокси-сессии </para>
+</entry>
+                            </row>
+                            <row>
+<entry>osArg</entry><entry>
+<para>Поток с сериализованными аргументами типа CashSerialArg </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true - запрос успешно отправлен, </para>
+
+<para>false - ошибка отправки, результат установлен в ERR_DELIVER_SEND</para>
+</formalpara>
+<para><link linkend="_todo_1_todo000013">Todo</link> 
+<para>Реализовать десериализацию аргументов (раскомментировать код) </para>
+</para><note><title>Note</title>
+
+<para>При ошибке автоматически отправляет результат спонсору </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_cashserial_8hpp_source_1l00053">53</link> of file <link linkend="_cashserial_8hpp_source">cashserial.hpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_cash_serial_a03f2b9373bf375c22ece6bc72da361ac_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_cash_serial_1a7d6240470d85e658fbb1719b98fd9737"/><section>
+    <title>OnTimeout()</title>
+<indexterm><primary>OnTimeout</primary><secondary>GNET::CashSerial</secondary></indexterm>
+<indexterm><primary>GNET::CashSerial</primary><secondary>OnTimeout</secondary></indexterm>
+<para><computeroutput>void GNET::CashSerial::OnTimeout ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Обработчик таймаута запроса </para>
+</para>
+
+<para><warning><title>Warning</title>
+
+<para>Реализация требуется только на клиентской стороне </para>
+</warning>
+</para>
+<para>
+Definition at line <link linkend="_cashserial_8hpp_source_1l00098">98</link> of file <link linkend="_cashserial_8hpp_source">cashserial.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_cash_serial_1a624684760028d37c85f24cc86667b84e"/><section>
+    <title>PostProcess()</title>
+<indexterm><primary>PostProcess</primary><secondary>GNET::CashSerial</secondary></indexterm>
+<indexterm><primary>GNET::CashSerial</primary><secondary>PostProcess</secondary></indexterm>
+<para><computeroutput>void GNET::CashSerial::PostProcess (Manager::Session::ID proxy_sid, const OctetsStream &amp; osArg, const OctetsStream &amp; osRes)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Постобработка полученного ответа </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>proxy_sid</entry><entry>
+<para>Идентификатор прокси-сессии </para>
+</entry>
+                            </row>
+                            <row>
+<entry>osArg</entry><entry>
+<para>Поток с исходными аргументами запроса </para>
+</entry>
+                            </row>
+                            <row>
+<entry>osRes</entry><entry>
+<para>Поток с полученными результатами</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>После модификации результатов необходимо вызвать SetResult() </para>
+</note>
+<warning><title>Warning</title>
+
+<para>Не забудьте раскомментировать код обработки аргументов </para>
+</warning>
+</para>
+<para>
+Definition at line <link linkend="_cashserial_8hpp_source_1l00081">81</link> of file <link linkend="_cashserial_8hpp_source">cashserial.hpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_cashserial_8hpp">cashserial.hpp</link></section>
+</section>

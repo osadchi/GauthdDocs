@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_n_e_t_1_1_user_login2" xml:lang="en-US">
+<title>GNET::UserLogin2 Class Reference</title>
+<indexterm><primary>GNET::UserLogin2</primary></indexterm>
+<para>
+
+<para>Класс для обработки RPC-запросов авторизации пользователей </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;userlogin2.hpp&gt;</computeroutput>
+</para>
+Inheritance diagram for GNET::UserLogin2:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_user_login2__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for GNET::UserLogin2:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_user_login2__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_g_n_e_t_1_1_user_login2_1a7d61288662e68a7168dbb4d026483086">Delivery</link> (Manager::Session::ID proxy_sid, const OctetsStream &amp;osArg)</para>
+
+<para>Метод для доставки и обработки запроса авторизации </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_user_login2_1ac662ac896d30d4f07db6a465fbb20ca3">PostProcess</link> (Manager::Session::ID proxy_sid, const OctetsStream &amp;osArg, const OctetsStream &amp;osRes)</para>
+
+<para>Пост-обработка результатов авторизации </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_user_login2_1a7d87dc03996960a49065f50388d624ef">OnTimeout</link> ()</para>
+
+<para>Обработчик таймаута запроса </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Класс для обработки RPC-запросов авторизации пользователей </para>
+
+
+
+<para>Наследует функциональность ProxyRpc и реализует обработку запросов входа пользователя, взаимодействие с базой данных и обработку результатов авторизации. </para>
+<para>
+Definition at line <link linkend="_userlogin2_8hpp_source_1l00026">26</link> of file <link linkend="_userlogin2_8hpp_source">userlogin2.hpp</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_g_n_e_t_1_1_user_login2_1a7d61288662e68a7168dbb4d026483086"/><section>
+    <title>Delivery()</title>
+<indexterm><primary>Delivery</primary><secondary>GNET::UserLogin2</secondary></indexterm>
+<indexterm><primary>GNET::UserLogin2</primary><secondary>Delivery</secondary></indexterm>
+<para><computeroutput>bool GNET::UserLogin2::Delivery (Manager::Session::ID proxy_sid, const OctetsStream &amp; osArg)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Метод для доставки и обработки запроса авторизации </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>proxy_sid</entry><entry>
+<para>Идентификатор прокси-сессии </para>
+</entry>
+                            </row>
+                            <row>
+<entry>osArg</entry><entry>
+<para>Поток данных с аргументами запроса </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true если запрос успешно обработан, false в случае ошибки</para>
+</formalpara>
+<para><link linkend="_todo_1_todo000042">Todo</link> 
+<para>Реализовать обработку запроса через GAuthClient </para>
+</para><note><title>Note</title>
+
+<para>Текущая реализация всегда возвращает false </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_userlogin2_8hpp_source_1l00045">45</link> of file <link linkend="_userlogin2_8hpp_source">userlogin2.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_user_login2_1a7d87dc03996960a49065f50388d624ef"/><section>
+    <title>OnTimeout()</title>
+<indexterm><primary>OnTimeout</primary><secondary>GNET::UserLogin2</secondary></indexterm>
+<indexterm><primary>GNET::UserLogin2</primary><secondary>OnTimeout</secondary></indexterm>
+<para><computeroutput>void GNET::UserLogin2::OnTimeout ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Обработчик таймаута запроса </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Реализация требуется на стороне клиента</para>
+</note>
+<para><link linkend="_todo_1_todo000044">Todo</link> 
+<para>Реализовать обработку таймаутов для клиентской части </para>
+</para></para>
+<para>
+Definition at line <link linkend="_userlogin2_8hpp_source_1l00091">91</link> of file <link linkend="_userlogin2_8hpp_source">userlogin2.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_user_login2_1ac662ac896d30d4f07db6a465fbb20ca3"/><section>
+    <title>PostProcess()</title>
+<indexterm><primary>PostProcess</primary><secondary>GNET::UserLogin2</secondary></indexterm>
+<indexterm><primary>GNET::UserLogin2</primary><secondary>PostProcess</secondary></indexterm>
+<para><computeroutput>void GNET::UserLogin2::PostProcess (Manager::Session::ID proxy_sid, const OctetsStream &amp; osArg, const OctetsStream &amp; osRes)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Пост-обработка результатов авторизации </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>proxy_sid</entry><entry>
+<para>Идентификатор прокси-сессии </para>
+</entry>
+                            </row>
+                            <row>
+<entry>osArg</entry><entry>
+<para>Поток данных с аргументами запроса </para>
+</entry>
+                            </row>
+                            <row>
+<entry>osRes</entry><entry>
+<para>Поток данных с результатами обработки</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <para><link linkend="_todo_1_todo000043">Todo</link> 
+<para>Реализовать обработку результатов авторизации </para>
+</para></para>
+<para>
+Definition at line <link linkend="_userlogin2_8hpp_source_1l00073">73</link> of file <link linkend="_userlogin2_8hpp_source">userlogin2.hpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_userlogin2_8hpp">userlogin2.hpp</link></section>
+</section>

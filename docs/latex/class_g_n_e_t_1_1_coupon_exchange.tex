@@ -1,0 +1,131 @@
+\doxysection{GNET\+::Coupon\+Exchange Class Reference}
+\hypertarget{class_g_n_e_t_1_1_coupon_exchange}{}\label{class_g_n_e_t_1_1_coupon_exchange}\index{GNET::CouponExchange@{GNET::CouponExchange}}
+
+
+Класс для обработки RPC-\/запросов обмена купонов между клиентом и сервером. @inherits Rpc.  
+
+
+
+
+{\ttfamily \#include $<$couponexchange.\+hpp$>$}
+
+
+
+Inheritance diagram for GNET\+::Coupon\+Exchange\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{class_g_n_e_t_1_1_coupon_exchange__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GNET\+::Coupon\+Exchange\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{class_g_n_e_t_1_1_coupon_exchange__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_coupon_exchange_a7c5ab980776a17d33d24643df2f88723}{Server}} (Rpc\+::\+Data \texorpdfstring{$\ast$}{*}argument, Rpc\+::\+Data \texorpdfstring{$\ast$}{*}result, Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)
+\begin{DoxyCompactList}\small\item\em Обработка RPC-\/запроса на стороне сервера. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_coupon_exchange_a2724fc3e9de704a29e7c3404e8e5851d}{Client}} (Rpc\+::\+Data \texorpdfstring{$\ast$}{*}argument, Rpc\+::\+Data \texorpdfstring{$\ast$}{*}result, Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)
+\begin{DoxyCompactList}\small\item\em Обработка RPC-\/запроса на стороне клиента. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_coupon_exchange_a6cb455f6c3cb08734cc8238c540161c4}{On\+Timeout}} ()
+\begin{DoxyCompactList}\small\item\em Метод обработки таймаута RPC-\/запроса. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс для обработки RPC-\/запросов обмена купонов между клиентом и сервером. @inherits Rpc. 
+
+Данный класс предоставляет методы для обработки запросов на сервере и клиенте, а также обработки таймаутов при ожидании ответа. 
+
+Definition at line \mbox{\hyperlink{couponexchange_8hpp_source_l00030}{30}} of file \mbox{\hyperlink{couponexchange_8hpp_source}{couponexchange.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_n_e_t_1_1_coupon_exchange_a2724fc3e9de704a29e7c3404e8e5851d}\index{GNET::CouponExchange@{GNET::CouponExchange}!Client@{Client}}
+\index{Client@{Client}!GNET::CouponExchange@{GNET::CouponExchange}}
+\doxysubsubsection{\texorpdfstring{Client()}{Client()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_coupon_exchange_a2724fc3e9de704a29e7c3404e8e5851d} 
+void GNET\+::\+Coupon\+Exchange\+::\+Client (\begin{DoxyParamCaption}\item[{Rpc\+::\+Data \texorpdfstring{$\ast$}{*}}]{argument}{, }\item[{Rpc\+::\+Data \texorpdfstring{$\ast$}{*}}]{result}{, }\item[{Manager \texorpdfstring{$\ast$}{*}}]{manager}{, }\item[{Manager\+::\+Session\+::\+ID}]{sid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Обработка RPC-\/запроса на стороне клиента. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em argument} & Указатель на данные аргументов RPC (тип Coupon\+Exchange\+Arg). \\
+\hline
+\mbox{\texttt{ out}}  & {\em result} & Указатель на данные результата RPC (тип Coupon\+Exchange\+Res). \\
+\hline
+\mbox{\texttt{ in}}  & {\em manager} & Указатель на менеджер сессий. \\
+\hline
+\mbox{\texttt{ in}}  & {\em sid} & Идентификатор сессии. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000014}{Todo}}]Требуется реализация клиентской части обработки. \end{DoxyRefDesc}
+
+
+Definition at line \mbox{\hyperlink{couponexchange_8hpp_source_l00060}{60}} of file \mbox{\hyperlink{couponexchange_8hpp_source}{couponexchange.\+hpp}}.
+
+\Hypertarget{class_g_n_e_t_1_1_coupon_exchange_a6cb455f6c3cb08734cc8238c540161c4}\index{GNET::CouponExchange@{GNET::CouponExchange}!OnTimeout@{OnTimeout}}
+\index{OnTimeout@{OnTimeout}!GNET::CouponExchange@{GNET::CouponExchange}}
+\doxysubsubsection{\texorpdfstring{OnTimeout()}{OnTimeout()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_coupon_exchange_a6cb455f6c3cb08734cc8238c540161c4} 
+void GNET\+::\+Coupon\+Exchange\+::\+On\+Timeout (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Метод обработки таймаута RPC-\/запроса. 
+
+\begin{DoxyNote}{Note}
+Вызывается только на клиентской стороне при истечении времени ожидания ответа. 
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000015}{Todo}}]Требуется реализация обработки таймаута. \end{DoxyRefDesc}
+
+
+Definition at line \mbox{\hyperlink{couponexchange_8hpp_source_l00072}{72}} of file \mbox{\hyperlink{couponexchange_8hpp_source}{couponexchange.\+hpp}}.
+
+\Hypertarget{class_g_n_e_t_1_1_coupon_exchange_a7c5ab980776a17d33d24643df2f88723}\index{GNET::CouponExchange@{GNET::CouponExchange}!Server@{Server}}
+\index{Server@{Server}!GNET::CouponExchange@{GNET::CouponExchange}}
+\doxysubsubsection{\texorpdfstring{Server()}{Server()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_coupon_exchange_a7c5ab980776a17d33d24643df2f88723} 
+void GNET\+::\+Coupon\+Exchange\+::\+Server (\begin{DoxyParamCaption}\item[{Rpc\+::\+Data \texorpdfstring{$\ast$}{*}}]{argument}{, }\item[{Rpc\+::\+Data \texorpdfstring{$\ast$}{*}}]{result}{, }\item[{Manager \texorpdfstring{$\ast$}{*}}]{manager}{, }\item[{Manager\+::\+Session\+::\+ID}]{sid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Обработка RPC-\/запроса на стороне сервера. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em argument} & Указатель на данные аргументов RPC (тип Coupon\+Exchange\+Arg). \\
+\hline
+\mbox{\texttt{ out}}  & {\em result} & Указатель на данные результата RPC (тип Coupon\+Exchange\+Res). \\
+\hline
+\mbox{\texttt{ in}}  & {\em manager} & Указатель на менеджер сессий. \\
+\hline
+\mbox{\texttt{ in}}  & {\em sid} & Идентификатор сессии. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Для использования необходимо раскомментировать преобразование типов и реализовать логику. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{couponexchange_8hpp_source_l00045}{45}} of file \mbox{\hyperlink{couponexchange_8hpp_source}{couponexchange.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{couponexchange_8hpp}{couponexchange.\+hpp}}\end{DoxyCompactItemize}

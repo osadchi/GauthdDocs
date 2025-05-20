@@ -1,0 +1,111 @@
+\doxysection{D\+:/pwsrc2.0/docs/gauthd/userlogin.hpp}
+\hypertarget{userlogin_8hpp_source}{}\label{userlogin_8hpp_source}\mbox{\hyperlink{userlogin_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#ifndef\ \_\_GNET\_USERLOGIN\_HPP}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00011}00011\ \textcolor{preprocessor}{\#define\ \_\_GNET\_USERLOGIN\_HPP}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}rpcdefs.h"{}}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{callid_8hxx}{callid.hxx}}"{}}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{state_8hxx}{state.hxx}}"{}}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00017}00017\ \textcolor{preprocessor}{\#include\ "{}userloginarg"{}}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00018}00018\ \textcolor{preprocessor}{\#include\ "{}userloginres"{}}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00019}00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gmysqlclient_8hpp}{gmysqlclient.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00020}00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gauthserver_8hpp}{gauthserver.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00021}00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{kickoutuser_8hpp}{kickoutuser.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00023}00023\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_g_n_e_t}{GNET}}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00024}00024\ \{}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00035}\mbox{\hyperlink{class_g_n_e_t_1_1_user_login}{00035}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_n_e_t_1_1_user_login}{UserLogin}}\ :\ \textcolor{keyword}{public}\ Rpc}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00036}00036\ \{}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00037}\mbox{\hyperlink{userlogin_8hpp_ad33ee56a94384ada0aa3cf9315e88591}{00037}}\ \textcolor{preprocessor}{\#define\ RPC\_BASECLASS\ Rpc}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00038}00038\ \textcolor{preprocessor}{\ \ \ \ \#include\ "{}userlogin"{}}\ \ }
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00039}00039\ \textcolor{preprocessor}{\#undef\ RPC\_BASECLASS}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00063}00063\ \ \ \ \ \textcolor{keywordtype}{void}\ Server(Rpc::Data\ *argument,\ Rpc::Data\ *result,\ Manager\ *manager,\ Manager::Session::ID\ sid)}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00064}00064\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00065}00065\ \ \ \ \ \ \ \ \ UserLoginArg\ *arg\ =\ (UserLoginArg\ *)argument;}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00066}00066\ \ \ \ \ \ \ \ \ UserLoginRes\ *res\ =\ (UserLoginRes\ *)result;}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server}{GAuthServer}}*\ ausm\ =\ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a2fb6223e8492fcbc74f9b21ee12f25e7}{GAuthServer::GetInstance}}();}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ zoneid;}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00070}00070\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Блокировка\ доступа\ к\ карте\ зон}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ Thread::Mutex::Scoped\ l(ausm-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a6632c6441ea93e9bbe7999301534e593}{locker\_zonemap}});\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(ausm-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a6f4c1af94c9642a78383d593f4b3fc60}{zonemap}}.find(sid)\ ==\ ausm-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a6f4c1af94c9642a78383d593f4b3fc60}{zonemap}}.end())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ zoneid\ =\ ausm-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a6f4c1af94c9642a78383d593f4b3fc60}{zonemap}}[sid];\ \ }
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ IsGM\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ creatime\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ zid\ =\ zoneid;}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ zonelocalsid\ =\ arg-\/>localsid;}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ overwrite\ =\ arg-\/>blkickuser;}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00083}00083\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_mysql_client}{GMysqlClient}}\ *db\ =\ \mbox{\hyperlink{class_g_mysql_client_a87a90c9a2b827da79f451728f4109850}{GMysqlClient::GetInstance}}();}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Обновление\ информации\ о\ подключении\ в\ БД}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00086}00086\ \ \ \ \ \ \ \ \ db-\/>\mbox{\hyperlink{class_g_mysql_client_a7c6a4b72d981e0c88568e453221dd06a}{OnlineRecord}}(arg-\/>userid,\ db-\/>\mbox{\hyperlink{class_g_mysql_client_a623a50fa9c2dbe90519ac099bfa492f0}{GetAid}}(),\ zid,\ zonelocalsid,\ overwrite);}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00087}00087\ \ \ \ \ \ \ \ \ db-\/>\mbox{\hyperlink{class_g_mysql_client_ac581c4885d0cd84f507760d32177b4f3}{UserCreatime}}(arg-\/>userid,\ creatime);}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00088}00088\ \ \ \ \ \ \ \ \ db-\/>\mbox{\hyperlink{class_g_mysql_client_a916a21bf80a3b7aaaebaebf1855a429b}{UserGMPrivilege}}(arg-\/>userid,\ zid,\ IsGM);}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00089}00089\ \ \ \ \ \ \ \ \ db-\/>\mbox{\hyperlink{class_g_mysql_client_a8875011e1658a40cefc82eac737bba58}{AlexAddLogin}}(arg-\/>userid,\ 1);}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Проверка\ согласованности\ идентификаторов\ зоны}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(zid\ !=\ zoneid\ ||\ zonelocalsid\ !=\ arg-\/>localsid)}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}UserLogin::Server\ zid\ !=\ zoneid\ ||\ zonelocalsid\ !=\ arg-\/>localsid\ \(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Обработка\ конфликта\ сессий\ с\ блокировкой\ записи}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00098}00098\ \ \ \ \ \ \ \ \ Thread::RWLock::WRScoped\ l(ausm-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a03dccad867b02013d61e8dde6785f3af}{locker\_map}});}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(ausm-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_afcb09daf81ca16050c3e2467cb48c762}{usermap}}.find(arg-\/>userid)\ !=\ ausm-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_afcb09daf81ca16050c3e2467cb48c762}{usermap}}.end())}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(arg-\/>blkickuser)}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Отправка\ команды\ отключения\ предыдущей\ сессии}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ausm-\/>Send(ausm-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_afcb09daf81ca16050c3e2467cb48c762}{usermap}}[arg-\/>userid].sid,\ }
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_n_e_t_1_1_kickout_user}{KickoutUser}}(arg-\/>userid,\ ausm-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_afcb09daf81ca16050c3e2467cb48c762}{usermap}}[arg-\/>userid].localsid));}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ res-\/>retcode\ =\ ERR\_MULTILOGIN;}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00112}00112\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00114}00114\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Заполнение\ результата}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00115}00115\ \ \ \ \ \ \ \ \ res-\/>retcode\ =\ ERR\_SUCCESS;}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00116}00116\ \ \ \ \ \ \ \ \ res-\/>blIsGM\ =\ IsGM;}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00117}00117\ \ \ \ \ \ \ \ \ res-\/>func\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00118}00118\ \ \ \ \ \ \ \ \ res-\/>funcparm\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00119}00119\ \ \ \ \ \ \ \ \ res-\/>remain\_playtime\ =\ creatime;}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00120}00120\ \ \ \ \ \ \ \ \ res-\/>free\_time\_left\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00121}00121\ \ \ \ \ \ \ \ \ res-\/>free\_time\_end\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00123}00123\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Обновление\ информации\ о\ пользователе}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00124}00124\ \ \ \ \ \ \ \ \ ausm-\/>\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_afcb09daf81ca16050c3e2467cb48c762}{usermap}}[arg-\/>userid]\ =\ \mbox{\hyperlink{struct_g_n_e_t_1_1_user_info}{UserInfo}}(sid,\ arg-\/>localsid,\ zoneid);}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00125}00125\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00126}00126\ \ \ \ \ \ \ \ \ DEBUG\_PRINT(\textcolor{stringliteral}{"{}gauthd::userlogin:\ user(id=\%d,localsid=\%d)\ login\ successfully\ from\ zone\ \%d\(\backslash\)n"{}},}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arg-\/>userid,\ arg-\/>localsid,\ zoneid);}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00128}00128\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00138}00138\ \ \ \ \ \textcolor{keywordtype}{void}\ Client(Rpc::Data\ *argument,\ Rpc::Data\ *result,\ Manager\ *manager,\ Manager::Session::ID\ sid)}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00139}00139\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00140}00140\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO:\ Реализовать\ клиентскую\ обработку}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00141}00141\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ UserLoginArg\ *arg\ =\ (UserLoginArg\ *)argument;}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00142}00142\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ UserLoginRes\ *res\ =\ (UserLoginRes\ *)result;}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00143}00143\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00144}00144\ }
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00151}00151\ \ \ \ \ \textcolor{keywordtype}{void}\ OnTimeout()}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00152}00152\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00153}00153\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO:\ Реализовать\ обработку\ таймаутов\ для\ клиента}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00154}00154\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00155}00155\ \};}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00156}00156\ }
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00157}00157\ \};}
+\DoxyCodeLine{\Hypertarget{userlogin_8hpp_source_l00158}00158\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

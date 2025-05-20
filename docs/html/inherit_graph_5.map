@@ -1,5 +1,15 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" title=" " alt="" coords="5,5,130,32"/>
-<area shape="rect" id="Node000001" href="$class_g_n_e_t_1_1_check_timer.html" title="Periodic task manager for financial and security checks." alt="" coords="178,5,314,32"/>
-<area shape="poly" id="edge37_Node000000_Node000001" title=" " alt="" coords="146,16,177,16,177,21,146,21"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,132,85,159"/>
+<area shape="rect" id="Node000001" href="$class_g_n_e_t_1_1_cash_serial.html" title="Прокси&#45;класс для обработки RPC&#45;запросов денежных серий" alt="" coords="148,5,277,32"/>
+<area shape="poly" id="edge37_Node000000_Node000001" title=" " alt="" coords="61,117,91,78,131,42,154,30,156,35,134,46,95,82,65,120"/>
+<area shape="rect" id="Node000002" href="$class_g_n_e_t_1_1_get_add_cash_s_n.html" title="RPC&#45;класс для обработки запросов генерации серийных номеров пополнения" alt="" coords="133,56,292,83"/>
+<area shape="poly" id="edge38_Node000000_Node000002" title=" " alt="" coords="78,121,132,92,161,81,163,86,134,97,81,126"/>
+<area shape="rect" id="Node000003" href="$class_g_n_e_t_1_1_matrix_passwd.html" title="RPC&#45;прокси для обработки запросов аутентификации" alt="" coords="138,107,286,133"/>
+<area shape="poly" id="edge39_Node000000_Node000003" title=" " alt="" coords="100,134,137,129,138,134,101,140"/>
+<area shape="rect" id="Node000004" href="$class_g_n_e_t_1_1_matrix_passwd2.html" title="Прокси&#45;класс для обработки RPC&#45;запросов проверки матричного пароля @inherits ProxyRpc." alt="" coords="135,157,290,184"/>
+<area shape="poly" id="edge40_Node000000_Node000004" title=" " alt="" coords="100,151,135,156,134,162,100,156"/>
+<area shape="rect" id="Node000005" href="$class_g_n_e_t_1_1_matrix_token.html" title="Класс для обработки RPC&#45;запросов матричных токенов" alt="" coords="144,208,280,235"/>
+<area shape="poly" id="edge41_Node000000_Node000005" title=" " alt="" coords="81,165,134,194,163,205,161,210,132,198,78,170"/>
+<area shape="rect" id="Node000006" href="$class_g_n_e_t_1_1_user_login2.html" title="Класс для обработки RPC&#45;запросов авторизации пользователей" alt="" coords="147,259,278,285"/>
+<area shape="poly" id="edge42_Node000000_Node000006" title=" " alt="" coords="65,170,95,209,134,244,156,256,154,260,131,249,91,212,61,174"/>
 </map>

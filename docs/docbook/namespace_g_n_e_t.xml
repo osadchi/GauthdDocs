@@ -70,9 +70,17 @@
 
 <para>Класс для обработки биллинг-запросов в системе. </para>
 </listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_cash_serial">CashSerial</link></para>
+
+<para>Прокси-класс для обработки RPC-запросов денежных серий </para>
+</listitem>
             <listitem><para>class <link linkend="_class_g_n_e_t_1_1_check_timer">CheckTimer</link></para>
 
 <para>Periodic task manager for financial and security checks. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_coupon_exchange">CouponExchange</link></para>
+
+<para>Класс для обработки RPC-запросов обмена купонов между клиентом и сервером. @inherits Rpc. </para>
 </listitem>
             <listitem><para>class <link linkend="_class_g_n_e_t_1_1_discount_announce">DiscountAnnounce</link></para>
 
@@ -90,9 +98,17 @@
 
 <para>Main authentication server class handling sessions and user validation. </para>
 </listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_get_add_cash_s_n">GetAddCashSN</link></para>
+
+<para>RPC-класс для обработки запросов генерации серийных номеров пополнения </para>
+</listitem>
             <listitem><para>class <link linkend="_class_g_n_e_t_1_1_get_player_i_d_by_name___re">GetPlayerIDByName_Re</link></para>
 
 <para>Класс протокола для ответов на запрос получения ID игрока по имени @inherits Protocol. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_get_user_coupon">GetUserCoupon</link></para>
+
+<para>RPC-класс для обработки запросов/ответов о купонах пользователя </para>
 </listitem>
             <listitem><para>class <link linkend="_class_g_n_e_t_1_1_g_m_forbid_sell_point">GMForbidSellPoint</link></para>
 
@@ -106,6 +122,10 @@
 
 <para>Протокол блокировки чата пользователя </para>
 </listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_g_query_passwd">GQueryPasswd</link></para>
+
+<para>Класс для обработки RPC-запросов проверки паролей </para>
+</listitem>
             <listitem><para>class <link linkend="_class_g_n_e_t_1_1_key_exchange">KeyExchange</link></para>
 
 <para>Протокол обмена криптографическими ключами </para>
@@ -117,6 +137,18 @@
             <listitem><para>class <link linkend="_class_g_n_e_t_1_1_matrix_failure">MatrixFailure</link></para>
 
 <para>Класс протокола для обработки ошибок матрицы </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_matrix_passwd">MatrixPasswd</link></para>
+
+<para>RPC-прокси для обработки запросов аутентификации </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_matrix_passwd2">MatrixPasswd2</link></para>
+
+<para>Прокси-класс для обработки RPC-запросов проверки матричного пароля @inherits ProxyRpc. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_matrix_token">MatrixToken</link></para>
+
+<para>Класс для обработки RPC-запросов матричных токенов </para>
 </listitem>
             <listitem><para>class <link linkend="_class_g_n_e_t_1_1_query_user_forbid">QueryUserForbid</link></para>
 
@@ -157,6 +189,18 @@
             <listitem><para>struct <link linkend="_struct_g_n_e_t_1_1_user_info">UserInfo</link></para>
 
 <para>Структура для хранения информации о пользователе. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_user_login">UserLogin</link></para>
+
+<para>Класс для обработки процедуры входа пользователя -сервис аутентификации </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_user_login2">UserLogin2</link></para>
+
+<para>Класс для обработки RPC-запросов авторизации пользователей </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_user_logout">UserLogout</link></para>
+
+<para>RPC-класс для обработки запросов выхода пользователя </para>
 </listitem>
             <listitem><para>class <link linkend="_class_g_n_e_t_1_1_verify_master">VerifyMaster</link></para>
 </listitem>

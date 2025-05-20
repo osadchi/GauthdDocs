@@ -1,0 +1,93 @@
+\doxysection{D\+:/pwsrc2.0/docs/gauthd/getaddcashsn.hpp}
+\hypertarget{getaddcashsn_8hpp_source}{}\label{getaddcashsn_8hpp_source}\mbox{\hyperlink{getaddcashsn_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#ifndef\ \_\_GNET\_GETADDCASHSN\_HPP}}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00007}00007\ \textcolor{preprocessor}{\#define\ \_\_GNET\_GETADDCASHSN\_HPP}}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}rpcdefs.h"{}}}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{callid_8hxx}{callid.hxx}}"{}}}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{state_8hxx}{state.hxx}}"{}}}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}getaddcashsnarg"{}}}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}getaddcashsnres"{}}}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gmysqlclient_8hpp}{gmysqlclient.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gauthserver_8hpp}{gauthserver.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{addcash_8hpp}{addcash.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00018}00018\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_g_n_e_t}{GNET}}}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00019}00019\ \{}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00028}\mbox{\hyperlink{class_g_n_e_t_1_1_get_add_cash_s_n}{00028}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_n_e_t_1_1_get_add_cash_s_n}{GetAddCashSN}}\ :\ \textcolor{keyword}{public}\ ProxyRpc}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00029}00029\ \{}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00030}\mbox{\hyperlink{getaddcashsn_8hpp_ad33ee56a94384ada0aa3cf9315e88591}{00030}}\ \textcolor{preprocessor}{\#define\ RPC\_BASECLASS\ ProxyRpc}}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00031}00031\ \textcolor{preprocessor}{\ \ \ \ \#include\ "{}getaddcashsn"{}}\ }
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00032}00032\ \textcolor{preprocessor}{\#undef\ RPC\_BASECLASS}}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00034}00034\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordtype}{void}\ SendFailCash(\textcolor{keywordtype}{int}\ userid,\ \textcolor{keywordtype}{int}\ status)}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00042}00042\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00043}00043\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}GetAddCashSN::SendFailCash:\ userid\ =\ \%d\ \(\backslash\)n"{}},\ userid);}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_mysql_client}{GMysqlClient}}\ *db\ =\ \mbox{\hyperlink{class_g_mysql_client_a87a90c9a2b827da79f451728f4109850}{GMysqlClient::GetInstance}}();}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ idx\ =\ db-\/>\mbox{\hyperlink{class_g_mysql_client_ad4ac431eba947493223affceccff7990}{GetCashUser}}(userid);}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ *\ creatime\ =\ db-\/>\mbox{\hyperlink{class_g_mysql_client_afa65eb70f3df9ead6d515aa084f3f415}{GetCashCreaTime}}(idx);}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00047}00047\ \ \ \ \ \ \ \ \ db-\/>\mbox{\hyperlink{class_g_mysql_client_a315b9d03daf23fd3ccf9089290e155b7}{DeleteErrorRow}}(status,\ userid,\ creatime);}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00048}00048\ \ \ \ \ \ \ \ \ db-\/>\mbox{\hyperlink{class_g_mysql_client_a01a8870566416cb8446699c93cd1557b}{DelCashUser}}(idx);}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00049}00049\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00051}00051\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00059}\mbox{\hyperlink{class_g_n_e_t_1_1_get_add_cash_s_n_a06926b845f30285181cfa325f2ad5ba7}{00059}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_g_n_e_t_1_1_get_add_cash_s_n_a06926b845f30285181cfa325f2ad5ba7}{Delivery}}(Manager::Session::ID\ proxy\_sid,\ \textcolor{keyword}{const}\ OctetsStream\&\ osArg)}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00060}00060\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a2fb6223e8492fcbc74f9b21ee12f25e7}{GAuthServer::GetInstance}}()-\/>Send(proxy\_sid,\ *\textcolor{keyword}{this}\ )\ )}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00064}00064\ \ \ \ \ \ \ \ \ GetAddCashSNArg\ arg;}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00065}00065\ \ \ \ \ \ \ \ \ osArg\ >>\ arg;}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00066}00066\ \ \ \ \ \ \ \ \ SetResult(GetAddCashSNRes(ERR\_DELIVER\_SEND));}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00067}00067\ \ \ \ \ \ \ \ \ SendToSponsor();}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00068}00068\ \ \ \ \ \ \ \ \ SendFailCash(arg.userid,\ 0);}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00070}00070\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00079}\mbox{\hyperlink{class_g_n_e_t_1_1_get_add_cash_s_n_a7876cc264b8756e9e120b7385581cf46}{00079}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_e_t_1_1_get_add_cash_s_n_a7876cc264b8756e9e120b7385581cf46}{PostProcess}}(Manager::Session::ID\ proxy\_sid,\ \textcolor{keyword}{const}\ OctetsStream\&\ osArg,\ \textcolor{keyword}{const}\ OctetsStream\&\ osRes)}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00080}00080\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00081}00081\ \ \ \ \ \ \ \ \ GetAddCashSNArg\ arg;}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00082}00082\ \ \ \ \ \ \ \ \ osArg\ >>\ arg;}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00083}00083\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00084}00084\ \ \ \ \ \ \ \ \ GetAddCashSNRes\ res;}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00085}00085\ \ \ \ \ \ \ \ \ osRes\ >>\ res;}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00086}00086\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_mysql_client}{GMysqlClient}}\ *db\ =\ \mbox{\hyperlink{class_g_mysql_client_a87a90c9a2b827da79f451728f4109850}{GMysqlClient::GetInstance}}();}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(res.retcode\ !=\ 0)\ \{\ }
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ SendFailCash(res.userid,\ 1);\ }
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};\ }
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00092}00092\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ idx\ =\ db-\/>\mbox{\hyperlink{class_g_mysql_client_ad4ac431eba947493223affceccff7990}{GetCashUser}}(res.userid);}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cash\ =\ db-\/>\mbox{\hyperlink{class_g_mysql_client_aca8d88358cbbd6033e81272381cb0911}{GetCashCash}}(idx);}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ *\ creatime\ =\ db-\/>\mbox{\hyperlink{class_g_mysql_client_afa65eb70f3df9ead6d515aa084f3f415}{GetCashCreaTime}}(idx);}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00096}00096\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!creatime\ ||\ !cash)\ \{\ }
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ SendFailCash(res.userid,\ 1);\ }
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};\ }
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00101}00101\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ result\ =\ db-\/>\mbox{\hyperlink{class_g_mysql_client_a5ad2854f8238ad2008cf0358adf9325b}{SetUseCashNow}}(1,\ res.sn,\ res.userid,\ creatime);}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ result\ )}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00104}00104\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_n_e_t_1_1_add_cash}{AddCash}}\ Cash\ =\ \mbox{\hyperlink{class_g_n_e_t_1_1_add_cash}{AddCash}}(res.userid,\ res.zoneid,\ res.sn,\ cash\ );}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a2fb6223e8492fcbc74f9b21ee12f25e7}{GAuthServer::GetInstance}}()-\/>Send(proxy\_sid,\ \&Cash);}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00107}00107\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00108}00108\ \ \ \ \ \ \ \ \ SetResult(\ \&res\ );}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00109}00109\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00115}\mbox{\hyperlink{class_g_n_e_t_1_1_get_add_cash_s_n_ab4ea4a38d4e7bb2d48c89bac5b299914}{00115}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_e_t_1_1_get_add_cash_s_n_ab4ea4a38d4e7bb2d48c89bac5b299914}{OnTimeout}}(\ )}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00116}00116\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00117}00117\ \ \ \ \ \ \ \ \ \textcolor{comment}{//SendFailCash();}}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00118}00118\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00119}00119\ \};}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00121}00121\ \};}
+\DoxyCodeLine{\Hypertarget{getaddcashsn_8hpp_source_l00122}00122\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

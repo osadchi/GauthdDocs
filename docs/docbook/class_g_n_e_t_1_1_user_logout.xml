@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_n_e_t_1_1_user_logout" xml:lang="en-US">
+<title>GNET::UserLogout Class Reference</title>
+<indexterm><primary>GNET::UserLogout</primary></indexterm>
+<para>
+
+<para>RPC-класс для обработки запросов выхода пользователя </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;userlogout.hpp&gt;</computeroutput>
+</para>
+Inheritance diagram for GNET::UserLogout:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_user_logout__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for GNET::UserLogout:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_user_logout__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_user_logout_1a1c4f915638d14e969c5586fe58b9685b">Server</link> (Rpc::Data *argument, Rpc::Data *result, Manager *manager, Manager::Session::ID sid)</para>
+
+<para>Обработка запроса выхода пользователя на стороне сервера </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_user_logout_1a3367c6ce9755247ab27fd85957a50ebf">Client</link> (Rpc::Data *argument, Rpc::Data *result, Manager *manager, Manager::Session::ID sid)</para>
+
+<para>Обработка запроса выхода на стороне клиента (заглушка) </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_user_logout_1ae14b8440e018c0aabe72b1843f292753">OnTimeout</link> ()</para>
+
+<para>Обработчик таймаута RPC-запроса </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>RPC-класс для обработки запросов выхода пользователя </para>
+
+
+
+<para>Наследует функциональность базового RPC-класса и реализует логику обработки выхода пользователя на стороне сервера и клиента </para>
+<para>
+Definition at line <link linkend="_userlogout_8hpp_source_1l00027">27</link> of file <link linkend="_userlogout_8hpp_source">userlogout.hpp</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_g_n_e_t_1_1_user_logout_1a3367c6ce9755247ab27fd85957a50ebf"/><section>
+    <title>Client()</title>
+<indexterm><primary>Client</primary><secondary>GNET::UserLogout</secondary></indexterm>
+<indexterm><primary>GNET::UserLogout</primary><secondary>Client</secondary></indexterm>
+<para><computeroutput>void GNET::UserLogout::Client (Rpc::Data * argument, Rpc::Data * result, Manager * manager, Manager::Session::ID sid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Обработка запроса выхода на стороне клиента (заглушка) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>argument</entry><entry>
+<para>Входные данные RPC-запроса </para>
+</entry>
+                            </row>
+                            <row>
+<entry>out</entry><entry>result</entry><entry>
+<para>Результаты выполнения </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>manager</entry><entry>
+<para>Менеджер сессий </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>sid</entry><entry>
+<para>Идентификатор сессии</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <warning><title>Warning</title>
+
+<para>В текущей реализации не выполняет действий </para>
+</warning>
+<para><link linkend="_todo_1_todo000045">Todo</link> 
+<para>Реализовать клиентскую часть логики </para>
+</para></para>
+<para>
+Definition at line <link linkend="_userlogout_8hpp_source_1l00087">87</link> of file <link linkend="_userlogout_8hpp_source">userlogout.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_user_logout_1ae14b8440e018c0aabe72b1843f292753"/><section>
+    <title>OnTimeout()</title>
+<indexterm><primary>OnTimeout</primary><secondary>GNET::UserLogout</secondary></indexterm>
+<indexterm><primary>GNET::UserLogout</primary><secondary>OnTimeout</secondary></indexterm>
+<para><computeroutput>void GNET::UserLogout::OnTimeout ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Обработчик таймаута RPC-запроса </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>В текущей реализации не выполняет действий </para>
+</note>
+<para><link linkend="_todo_1_todo000046">Todo</link> 
+<para>Реализовать обработку таймаутов для клиентской части </para>
+</para></para>
+<para>
+Definition at line <link linkend="_userlogout_8hpp_source_1l00100">100</link> of file <link linkend="_userlogout_8hpp_source">userlogout.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_user_logout_1a1c4f915638d14e969c5586fe58b9685b"/><section>
+    <title>Server()</title>
+<indexterm><primary>Server</primary><secondary>GNET::UserLogout</secondary></indexterm>
+<indexterm><primary>GNET::UserLogout</primary><secondary>Server</secondary></indexterm>
+<para><computeroutput>void GNET::UserLogout::Server (Rpc::Data * argument, Rpc::Data * result, Manager * manager, Manager::Session::ID sid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Обработка запроса выхода пользователя на стороне сервера </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>argument</entry><entry>
+<para>Указатель на входные данные RPC-запроса (UserLogoutArg) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>out</entry><entry>result</entry><entry>
+<para>Указатель на структуру для результатов (UserLogoutRes) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>manager</entry><entry>
+<para>Указатель на менеджер сессий </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>sid</entry><entry>
+<para>Идентификатор сессии</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                Выполняет:<orderedlist>
+<listitem>
+<para>Обновление статуса пользователя в базе данных</para>
+</listitem><listitem>
+<para>Запись информации о выходе в лог</para>
+</listitem><listitem>
+<para>Очистку связанных данных</para>
+</listitem><listitem>
+<para>Обновление карты активных пользователей </para>
+</listitem></orderedlist>
+</para>
+<para>
+Definition at line <link linkend="_userlogout_8hpp_source_1l00048">48</link> of file <link linkend="_userlogout_8hpp_source">userlogout.hpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_user_logout_a1c4f915638d14e969c5586fe58b9685b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_userlogout_8hpp">userlogout.hpp</link></section>
+</section>

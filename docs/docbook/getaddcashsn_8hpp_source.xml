@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_getaddcashsn_8hpp_source" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/getaddcashsn.hpp</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_getaddcashsn_8hpp_source_1l00001"/>00001 
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00005"/>00005 
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00006"/>00006 <emphasis role="preprocessor">#ifndef&#32;__GNET_GETADDCASHSN_HPP</emphasis>
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00007"/>00007 <emphasis role="preprocessor">#define&#32;__GNET_GETADDCASHSN_HPP</emphasis>
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00008"/>00008 
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00009"/>00009 <emphasis role="preprocessor">#include&#32;&quot;rpcdefs.h&quot;</emphasis>
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00010"/>00010 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_callid_8hxx">callid.hxx</link>&quot;</emphasis>
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00011"/>00011 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_state_8hxx">state.hxx</link>&quot;</emphasis>
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00012"/>00012 <emphasis role="preprocessor">#include&#32;&quot;getaddcashsnarg&quot;</emphasis>
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00013"/>00013 <emphasis role="preprocessor">#include&#32;&quot;getaddcashsnres&quot;</emphasis>
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00014"/>00014 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_gmysqlclient_8hpp">gmysqlclient.hpp</link>&quot;</emphasis>
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00015"/>00015 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_gauthserver_8hpp">gauthserver.hpp</link>&quot;</emphasis>
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00016"/>00016 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_addcash_8hpp">addcash.hpp</link>&quot;</emphasis>
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00017"/>00017 
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00018"/>00018 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_g_n_e_t">GNET</link>
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00019"/>00019 {
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00020"/>00020 
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00028"/><link linkend="_class_g_n_e_t_1_1_get_add_cash_s_n">00028</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_g_n_e_t_1_1_get_add_cash_s_n">GetAddCashSN</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;ProxyRpc
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00029"/>00029 {
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00030"/><link linkend="_getaddcashsn_8hpp_1ad33ee56a94384ada0aa3cf9315e88591">00030</link> <emphasis role="preprocessor">#define&#32;RPC_BASECLASS&#32;ProxyRpc</emphasis>
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00031"/>00031 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#include&#32;&quot;getaddcashsn&quot;</emphasis>&#32;
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00032"/>00032 <emphasis role="preprocessor">#undef&#32;RPC_BASECLASS</emphasis>
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00033"/>00033 
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00034"/>00034 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;SendFailCash(<emphasis role="keywordtype">int</emphasis>&#32;userid,&#32;<emphasis role="keywordtype">int</emphasis>&#32;status)
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00042"/>00042 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;GetAddCashSN::SendFailCash:&#32;userid&#32;=&#32;%d&#32;\n&quot;</emphasis>,&#32;userid);
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_mysql_client">GMysqlClient</link>&#32;*db&#32;=&#32;<link linkend="_class_g_mysql_client_1a87a90c9a2b827da79f451728f4109850">GMysqlClient::GetInstance</link>();
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;idx&#32;=&#32;db-&gt;<link linkend="_class_g_mysql_client_1ad4ac431eba947493223affceccff7990">GetCashUser</link>(userid);
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;creatime&#32;=&#32;db-&gt;<link linkend="_class_g_mysql_client_1afa65eb70f3df9ead6d515aa084f3f415">GetCashCreaTime</link>(idx);
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;db-&gt;<link linkend="_class_g_mysql_client_1a315b9d03daf23fd3ccf9089290e155b7">DeleteErrorRow</link>(status,&#32;userid,&#32;creatime);
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;db-&gt;<link linkend="_class_g_mysql_client_1a01a8870566416cb8446699c93cd1557b">DelCashUser</link>(idx);
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00049"/>00049 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00050"/>00050 
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00051"/>00051 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00059"/><link linkend="_class_g_n_e_t_1_1_get_add_cash_s_n_1a06926b845f30285181cfa325f2ad5ba7">00059</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_get_add_cash_s_n_1a06926b845f30285181cfa325f2ad5ba7">Delivery</link>(Manager::Session::ID&#32;proxy_sid,&#32;<emphasis role="keyword">const</emphasis>&#32;OctetsStream&amp;&#32;osArg)
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00060"/>00060 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a2fb6223e8492fcbc74f9b21ee12f25e7">GAuthServer::GetInstance</link>()-&gt;Send(proxy_sid,&#32;*<emphasis role="keyword">this</emphasis>&#32;)&#32;)
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GetAddCashSNArg&#32;arg;
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;osArg&#32;&gt;&gt;&#32;arg;
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetResult(GetAddCashSNRes(ERR_DELIVER_SEND));
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SendToSponsor();
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SendFailCash(arg.userid,&#32;0);
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00070"/>00070 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00071"/>00071 
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00079"/><link linkend="_class_g_n_e_t_1_1_get_add_cash_s_n_1a7876cc264b8756e9e120b7385581cf46">00079</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_get_add_cash_s_n_1a7876cc264b8756e9e120b7385581cf46">PostProcess</link>(Manager::Session::ID&#32;proxy_sid,&#32;<emphasis role="keyword">const</emphasis>&#32;OctetsStream&amp;&#32;osArg,&#32;<emphasis role="keyword">const</emphasis>&#32;OctetsStream&amp;&#32;osRes)
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00080"/>00080 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GetAddCashSNArg&#32;arg;
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;osArg&#32;&gt;&gt;&#32;arg;
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GetAddCashSNRes&#32;res;
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;osRes&#32;&gt;&gt;&#32;res;
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_mysql_client">GMysqlClient</link>&#32;*db&#32;=&#32;<link linkend="_class_g_mysql_client_1a87a90c9a2b827da79f451728f4109850">GMysqlClient::GetInstance</link>();
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(res.retcode&#32;!=&#32;0)&#32;{&#32;
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SendFailCash(res.userid,&#32;1);&#32;
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;&#32;
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;idx&#32;=&#32;db-&gt;<link linkend="_class_g_mysql_client_1ad4ac431eba947493223affceccff7990">GetCashUser</link>(res.userid);
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;cash&#32;=&#32;db-&gt;<link linkend="_class_g_mysql_client_1aca8d88358cbbd6033e81272381cb0911">GetCashCash</link>(idx);
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;creatime&#32;=&#32;db-&gt;<link linkend="_class_g_mysql_client_1afa65eb70f3df9ead6d515aa084f3f415">GetCashCreaTime</link>(idx);
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(!creatime&#32;||&#32;!cash)&#32;{&#32;
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SendFailCash(res.userid,&#32;1);&#32;
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;&#32;
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;result&#32;=&#32;db-&gt;<link linkend="_class_g_mysql_client_1a5ad2854f8238ad2008cf0358adf9325b">SetUseCashNow</link>(1,&#32;res.sn,&#32;res.userid,&#32;creatime);
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(&#32;result&#32;)
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_n_e_t_1_1_add_cash">AddCash</link>&#32;Cash&#32;=&#32;<link linkend="_class_g_n_e_t_1_1_add_cash">AddCash</link>(res.userid,&#32;res.zoneid,&#32;res.sn,&#32;cash&#32;);
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_n_e_t_1_1_g_auth_server_1a2fb6223e8492fcbc74f9b21ee12f25e7">GAuthServer::GetInstance</link>()-&gt;Send(proxy_sid,&#32;&amp;Cash);
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SetResult(&#32;&amp;res&#32;);
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00109"/>00109 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00110"/>00110 
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00115"/><link linkend="_class_g_n_e_t_1_1_get_add_cash_s_n_1ab4ea4a38d4e7bb2d48c89bac5b299914">00115</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_g_n_e_t_1_1_get_add_cash_s_n_1ab4ea4a38d4e7bb2d48c89bac5b299914">OnTimeout</link>(&#32;)
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00116"/>00116 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//SendFailCash();</emphasis>
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00118"/>00118 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00119"/>00119 };
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00120"/>00120 
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00121"/>00121 };
+<anchor xml:id="_getaddcashsn_8hpp_source_1l00122"/>00122 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

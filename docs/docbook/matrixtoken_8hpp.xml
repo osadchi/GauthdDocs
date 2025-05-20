@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_matrixtoken_8hpp" xml:lang="en-US">
+<title>D:/pwsrc2.0/docs/gauthd/matrixtoken.hpp File Reference</title>
+<indexterm><primary>D:/pwsrc2.0/docs/gauthd/matrixtoken.hpp</primary></indexterm>
+<para>
+
+<para>RPC-класс для работы с матричными токенами авторизации </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;rpcdefs.h&quot;<?linebreak?>#include &quot;callid.hxx&quot;<?linebreak?>#include &quot;state.hxx&quot;<?linebreak?>#include &quot;matrixtokenarg&quot;<?linebreak?>#include &quot;matrixtokenres&quot;<?linebreak?>#include &quot;gmysqlclient.hpp&quot;<?linebreak?></programlisting>Include dependency graph for matrixtoken.hpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="matrixtoken_8hpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_g_n_e_t_1_1_matrix_token">GNET::MatrixToken</link></para>
+
+<para>Класс для обработки RPC-запросов матричных токенов </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_g_n_e_t">GNET</link></para>
+
+<para>Основное пространство имен для сетевых компонентов системы. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>RPC-класс для работы с матричными токенами авторизации </para>
+
+<para><formalpara><title>Author</title>
+
+<para>[Ваше имя или команда] </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>1.0 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>[Дата создания]</para>
+</formalpara>
+Этот класс реализует прокси-механизм для обработки токенов матричной авторизации, взаимодействуя с системой аутентификации и базой данных. </para>
+<para>
+Definition in file <link linkend="_matrixtoken_8hpp_source">matrixtoken.hpp</link>.</para>
+</section>
+</section>

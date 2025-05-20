@@ -1,0 +1,7 @@
+<map id="GNET::GetAddCashSN::Delivery" name="GNET::GetAddCashSN::Delivery">
+<area shape="rect" id="Node000001" title="Обрабатывает доставку RPC&#45;запроса" alt="" coords="5,5,165,48"/>
+<area shape="rect" id="Node000002" href="$class_g_n_e_t_1_1_g_auth_server.html#a2fb6223e8492fcbc74f9b21ee12f25e7" title="Получить экземпляр синглтона." alt="" coords="213,5,361,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,24,197,24,197,29,165,29"/>
+<area shape="rect" id="Node000003" href="$class_g_n_e_t_1_1_g_auth_server.html#a807dbbef9b25bce26260a6cbbd4edd01" title="Конструктор по умолчанию." alt="" coords="409,5,557,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="361,24,393,24,393,29,361,29"/>
+</map>

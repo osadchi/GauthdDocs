@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_n_e_t_1_1_matrix_passwd2" xml:lang="en-US">
+<title>GNET::MatrixPasswd2 Class Reference</title>
+<indexterm><primary>GNET::MatrixPasswd2</primary></indexterm>
+<para>
+
+<para>Прокси-класс для обработки RPC-запросов проверки матричного пароля @inherits ProxyRpc. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;matrixpasswd2.hpp&gt;</computeroutput>
+</para>
+Inheritance diagram for GNET::MatrixPasswd2:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_matrix_passwd2__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for GNET::MatrixPasswd2:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_n_e_t_1_1_matrix_passwd2__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_g_n_e_t_1_1_matrix_passwd2_1a33af4c45fa48d7bf6dc251ab5178f3e5">Delivery</link> (Manager::Session::ID proxy_sid, const OctetsStream &amp;osArg)</para>
+
+<para>Метод доставки RPC-запроса </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_matrix_passwd2_1a433faf7b2ff9ec3e3e7cf91a8fc7fb8d">PostProcess</link> (Manager::Session::ID proxy_sid, const OctetsStream &amp;osArg, const OctetsStream &amp;osRes)</para>
+
+<para>Постобработка результатов RPC-запроса </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_g_n_e_t_1_1_matrix_passwd2_1abd67d4f58dcf3a3a917209810ead7a7c">OnTimeout</link> ()</para>
+
+<para>Обработчик таймаута соединения </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Прокси-класс для обработки RPC-запросов проверки матричного пароля @inherits ProxyRpc. </para>
+
+
+
+<para>Класс реализует:<itemizedlist>
+<listitem>
+<para>Обработку доставки RPC-запросов</para>
+</listitem><listitem>
+<para>Постобработку результатов</para>
+</listitem><listitem>
+<para>Таймауты соединения (клиентская сторона) </para>
+</listitem></itemizedlist>
+</para>
+<para>
+Definition at line <link linkend="_matrixpasswd2_8hpp_source_1l00033">33</link> of file <link linkend="_matrixpasswd2_8hpp_source">matrixpasswd2.hpp</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_g_n_e_t_1_1_matrix_passwd2_1a33af4c45fa48d7bf6dc251ab5178f3e5"/><section>
+    <title>Delivery()</title>
+<indexterm><primary>Delivery</primary><secondary>GNET::MatrixPasswd2</secondary></indexterm>
+<indexterm><primary>GNET::MatrixPasswd2</primary><secondary>Delivery</secondary></indexterm>
+<para><computeroutput>bool GNET::MatrixPasswd2::Delivery (Manager::Session::ID proxy_sid, const OctetsStream &amp; osArg)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Метод доставки RPC-запроса </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>proxy_sid</entry><entry>
+<para>Идентификатор прокси-сессии </para>
+</entry>
+                            </row>
+                            <row>
+<entry>osArg</entry><entry>
+<para>Входные данные в виде OctetStream </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true - запрос успешно доставлен, false - ошибка доставки</para>
+</formalpara>
+<para><link linkend="_todo_1_todo000030">Todo</link> 
+<para>Требуется реализация логики отправки протокола аутентификации </para>
+</para></para>
+<para>
+Definition at line <link linkend="_matrixpasswd2_8hpp_source_1l00048">48</link> of file <link linkend="_matrixpasswd2_8hpp_source">matrixpasswd2.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_matrix_passwd2_1abd67d4f58dcf3a3a917209810ead7a7c"/><section>
+    <title>OnTimeout()</title>
+<indexterm><primary>OnTimeout</primary><secondary>GNET::MatrixPasswd2</secondary></indexterm>
+<indexterm><primary>GNET::MatrixPasswd2</primary><secondary>OnTimeout</secondary></indexterm>
+<para><computeroutput>void GNET::MatrixPasswd2::OnTimeout ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Обработчик таймаута соединения </para>
+</para>
+
+<para><warning><title>Warning</title>
+
+<para>Реализация требуется только на клиентской стороне</para>
+</warning>
+<para><link linkend="_todo_1_todo000032">Todo</link> 
+<para>Реализовать логику обработки таймаута </para>
+</para></para>
+<para>
+Definition at line <link linkend="_matrixpasswd2_8hpp_source_1l00090">90</link> of file <link linkend="_matrixpasswd2_8hpp_source">matrixpasswd2.hpp</link>.</para>
+</section>
+<anchor xml:id="_class_g_n_e_t_1_1_matrix_passwd2_1a433faf7b2ff9ec3e3e7cf91a8fc7fb8d"/><section>
+    <title>PostProcess()</title>
+<indexterm><primary>PostProcess</primary><secondary>GNET::MatrixPasswd2</secondary></indexterm>
+<indexterm><primary>GNET::MatrixPasswd2</primary><secondary>PostProcess</secondary></indexterm>
+<para><computeroutput>void GNET::MatrixPasswd2::PostProcess (Manager::Session::ID proxy_sid, const OctetsStream &amp; osArg, const OctetsStream &amp; osRes)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Постобработка результатов RPC-запроса </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>proxy_sid</entry><entry>
+<para>Идентификатор прокси-сессии </para>
+</entry>
+                            </row>
+                            <row>
+<entry>osArg</entry><entry>
+<para>Входные аргументы запроса </para>
+</entry>
+                            </row>
+                            <row>
+<entry>osRes</entry><entry>
+<para>Полученные результаты</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <para><link linkend="_todo_1_todo000031">Todo</link> 
+<para>Требуется реализация обработки результатов </para>
+</para></para>
+<para>
+Definition at line <link linkend="_matrixpasswd2_8hpp_source_1l00074">74</link> of file <link linkend="_matrixpasswd2_8hpp_source">matrixpasswd2.hpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+D:/pwsrc2.0/docs/gauthd/<link linkend="_matrixpasswd2_8hpp">matrixpasswd2.hpp</link></section>
+</section>

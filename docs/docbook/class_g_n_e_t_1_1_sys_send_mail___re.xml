@@ -84,7 +84,7 @@ Parameters</title>
                     </table>
                     </para>
                 </formalpara>
-                <para><link linkend="_todo_1_todo000026">Todo</link> 
+                <para><link linkend="_todo_1_todo000039">Todo</link> 
 <para>Реализовать логику обработки ответа от сервера. Сейчас метод содержит заглушку и требует реализации обработки:<itemizedlist>
 <listitem>
 <para>Анализ кода ответа</para>

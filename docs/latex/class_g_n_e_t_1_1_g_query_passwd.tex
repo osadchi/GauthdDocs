@@ -1,0 +1,134 @@
+\doxysection{GNET\+::GQuery\+Passwd Class Reference}
+\hypertarget{class_g_n_e_t_1_1_g_query_passwd}{}\label{class_g_n_e_t_1_1_g_query_passwd}\index{GNET::GQueryPasswd@{GNET::GQueryPasswd}}
+
+
+Класс для обработки RPC-\/запросов проверки паролей  
+
+
+
+
+{\ttfamily \#include $<$gquerypasswd.\+hpp$>$}
+
+
+
+Inheritance diagram for GNET\+::GQuery\+Passwd\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{class_g_n_e_t_1_1_g_query_passwd__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GNET\+::GQuery\+Passwd\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{class_g_n_e_t_1_1_g_query_passwd__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_g_query_passwd_a7601c8e80ac2d38efc76c8a023896d4e}{Server}} (Rpc\+::\+Data \texorpdfstring{$\ast$}{*}argument, Rpc\+::\+Data \texorpdfstring{$\ast$}{*}result, Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)
+\begin{DoxyCompactList}\small\item\em Метод обработки запроса на стороне сервера \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_g_query_passwd_a15c95c81230be5795439a7d9df0fe395}{Client}} (Rpc\+::\+Data \texorpdfstring{$\ast$}{*}argument, Rpc\+::\+Data \texorpdfstring{$\ast$}{*}result, Manager \texorpdfstring{$\ast$}{*}manager, Manager\+::\+Session\+::\+ID sid)
+\begin{DoxyCompactList}\small\item\em Метод обработки запроса на стороне клиента (заглушка) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_n_e_t_1_1_g_query_passwd_ae5668da612a602d47616af3169a73a41}{On\+Timeout}} ()
+\begin{DoxyCompactList}\small\item\em Обработчик таймаута запроса (клиентская часть) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс для обработки RPC-\/запросов проверки паролей 
+
+Наследует базовый функционал RPC и реализует логику обработки запросов на стороне сервера и клиента (клиентская часть пока не реализована). 
+
+Definition at line \mbox{\hyperlink{gquerypasswd_8hpp_source_l00030}{30}} of file \mbox{\hyperlink{gquerypasswd_8hpp_source}{gquerypasswd.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_n_e_t_1_1_g_query_passwd_a15c95c81230be5795439a7d9df0fe395}\index{GNET::GQueryPasswd@{GNET::GQueryPasswd}!Client@{Client}}
+\index{Client@{Client}!GNET::GQueryPasswd@{GNET::GQueryPasswd}}
+\doxysubsubsection{\texorpdfstring{Client()}{Client()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_g_query_passwd_a15c95c81230be5795439a7d9df0fe395} 
+void GNET\+::\+GQuery\+Passwd\+::\+Client (\begin{DoxyParamCaption}\item[{Rpc\+::\+Data \texorpdfstring{$\ast$}{*}}]{argument}{, }\item[{Rpc\+::\+Data \texorpdfstring{$\ast$}{*}}]{result}{, }\item[{Manager \texorpdfstring{$\ast$}{*}}]{manager}{, }\item[{Manager\+::\+Session\+::\+ID}]{sid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Метод обработки запроса на стороне клиента (заглушка) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em argument} & Входные данные \\
+\hline
+\mbox{\texttt{ out}}  & {\em result} & Выходные данные \\
+\hline
+\mbox{\texttt{ in}}  & {\em manager} & Менеджер сессий \\
+\hline
+\mbox{\texttt{ in}}  & {\em sid} & Идентификатор сессии \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000025}{Todo}}]Реализовать клиентскую обработку \end{DoxyRefDesc}
+
+
+Definition at line \mbox{\hyperlink{gquerypasswd_8hpp_source_l00090}{90}} of file \mbox{\hyperlink{gquerypasswd_8hpp_source}{gquerypasswd.\+hpp}}.
+
+\Hypertarget{class_g_n_e_t_1_1_g_query_passwd_ae5668da612a602d47616af3169a73a41}\index{GNET::GQueryPasswd@{GNET::GQueryPasswd}!OnTimeout@{OnTimeout}}
+\index{OnTimeout@{OnTimeout}!GNET::GQueryPasswd@{GNET::GQueryPasswd}}
+\doxysubsubsection{\texorpdfstring{OnTimeout()}{OnTimeout()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_g_query_passwd_ae5668da612a602d47616af3169a73a41} 
+void GNET\+::\+GQuery\+Passwd\+::\+On\+Timeout (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Обработчик таймаута запроса (клиентская часть) 
+
+\begin{DoxyNote}{Note}
+В текущей реализации не используется 
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000026}{Todo}}]Реализовать обработку таймаутов для клиента \end{DoxyRefDesc}
+
+
+Definition at line \mbox{\hyperlink{gquerypasswd_8hpp_source_l00102}{102}} of file \mbox{\hyperlink{gquerypasswd_8hpp_source}{gquerypasswd.\+hpp}}.
+
+\Hypertarget{class_g_n_e_t_1_1_g_query_passwd_a7601c8e80ac2d38efc76c8a023896d4e}\index{GNET::GQueryPasswd@{GNET::GQueryPasswd}!Server@{Server}}
+\index{Server@{Server}!GNET::GQueryPasswd@{GNET::GQueryPasswd}}
+\doxysubsubsection{\texorpdfstring{Server()}{Server()}}
+{\footnotesize\ttfamily \label{class_g_n_e_t_1_1_g_query_passwd_a7601c8e80ac2d38efc76c8a023896d4e} 
+void GNET\+::\+GQuery\+Passwd\+::\+Server (\begin{DoxyParamCaption}\item[{Rpc\+::\+Data \texorpdfstring{$\ast$}{*}}]{argument}{, }\item[{Rpc\+::\+Data \texorpdfstring{$\ast$}{*}}]{result}{, }\item[{Manager \texorpdfstring{$\ast$}{*}}]{manager}{, }\item[{Manager\+::\+Session\+::\+ID}]{sid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Метод обработки запроса на стороне сервера 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em argument} & Входные данные запроса (GQuery\+Passwd\+Arg) \\
+\hline
+\mbox{\texttt{ out}}  & {\em result} & Выходные данные ответа (GQuery\+Passwd\+Res) \\
+\hline
+\mbox{\texttt{ in}}  & {\em manager} & Менеджер сессий \\
+\hline
+\mbox{\texttt{ in}}  & {\em sid} & Идентификатор сессии\\
+\hline
+\end{DoxyParams}
+Выполняет следующие действия\+:
+\begin{DoxyEnumerate}
+\item Преобразует account в userid
+\item Проверяет валидность userid (должен быть кратен 16 и не нулевой)
+\item Генерирует MD5-\/хеш на основе account и password
+\item Заполняет структуру ответа 
+\end{DoxyEnumerate}
+
+Definition at line \mbox{\hyperlink{gquerypasswd_8hpp_source_l00050}{50}} of file \mbox{\hyperlink{gquerypasswd_8hpp_source}{gquerypasswd.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/pwsrc2.\+0/docs/gauthd/\mbox{\hyperlink{gquerypasswd_8hpp}{gquerypasswd.\+hpp}}\end{DoxyCompactItemize}

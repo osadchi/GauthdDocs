@@ -1,0 +1,65 @@
+\doxysection{D\+:/pwsrc2.0/docs/gauthd/cashserial.hpp}
+\hypertarget{cashserial_8hpp_source}{}\label{cashserial_8hpp_source}\mbox{\hyperlink{cashserial_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00013}00013\ \textcolor{preprocessor}{\#ifndef\ \_\_GNET\_CASHSERIAL\_HPP}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00014}00014\ \textcolor{preprocessor}{\#define\ \_\_GNET\_CASHSERIAL\_HPP}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}rpcdefs.h"{}}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00017}00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{callid_8hxx}{callid.hxx}}"{}}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00018}00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{state_8hxx}{state.hxx}}"{}}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00019}00019\ \textcolor{preprocessor}{\#include\ "{}cashserialarg"{}}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00020}00020\ \textcolor{preprocessor}{\#include\ "{}cashserialres"{}}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00021}00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gauthserver_8hpp}{gauthserver.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00023}00023\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_g_n_e_t}{GNET}}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00024}00024\ \{}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00035}\mbox{\hyperlink{class_g_n_e_t_1_1_cash_serial}{00035}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_g_n_e_t_1_1_cash_serial}{CashSerial}}\ :\ \textcolor{keyword}{public}\ ProxyRpc}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00036}00036\ \{}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00037}\mbox{\hyperlink{cashserial_8hpp_ad33ee56a94384ada0aa3cf9315e88591}{00037}}\ \textcolor{preprocessor}{\#define\ RPC\_BASECLASS\ ProxyRpc\ \ }}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00038}00038\ \textcolor{preprocessor}{\ \ \ \ \#include\ "{}cashserial"{}}\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00039}00039\ \textcolor{preprocessor}{\#undef\ RPC\_BASECLASS}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00041}00041\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00053}\mbox{\hyperlink{class_g_n_e_t_1_1_cash_serial_a03f2b9373bf375c22ece6bc72da361ac}{00053}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_g_n_e_t_1_1_cash_serial_a03f2b9373bf375c22ece6bc72da361ac}{Delivery}}(Manager::Session::ID\ proxy\_sid,\ \textcolor{keyword}{const}\ OctetsStream\&\ osArg)}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00054}00054\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO:\ Uncomment\ and\ implement}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ CashSerialArg\ arg;}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ osArg\ >>\ arg;}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00058}00058\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_g_n_e_t_1_1_g_auth_server_a2fb6223e8492fcbc74f9b21ee12f25e7}{GAuthServer::GetInstance}}()-\/>Send(proxy\_sid,\ *\textcolor{keyword}{this}))}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ SetResult(CashSerialRes(ERR\_DELIVER\_SEND));}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ SendToSponsor();}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00069}00069\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00081}\mbox{\hyperlink{class_g_n_e_t_1_1_cash_serial_a624684760028d37c85f24cc86667b84e}{00081}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_e_t_1_1_cash_serial_a624684760028d37c85f24cc86667b84e}{PostProcess}}(Manager::Session::ID\ proxy\_sid,\ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ OctetsStream\&\ osArg,\ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ OctetsStream\&\ osRes)}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00084}00084\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO:\ Uncomment\ and\ implement}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ CashSerialArg\ arg;}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ osArg\ >>\ arg;}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ CashSerialRes\ res;}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ osRes\ >>\ res;}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ SetResult(\&res);}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00091}00091\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00098}\mbox{\hyperlink{class_g_n_e_t_1_1_cash_serial_a7d6240470d85e658fbb1719b98fd9737}{00098}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_g_n_e_t_1_1_cash_serial_a7d6240470d85e658fbb1719b98fd9737}{OnTimeout}}()}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00099}00099\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO:\ Client-\/side\ implementation}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00101}00101\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00102}00102\ \};}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00104}00104\ \};\ \textcolor{comment}{//\ namespace\ GNET}}
+\DoxyCodeLine{\Hypertarget{cashserial_8hpp_source_l00105}00105\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
